@@ -1,0 +1,66 @@
+# Law data: Income-tax Act, 1961 and Income-tax Rules, 1962, for FY 2025-26 (AY 2026-27).
+# Conventions are in params/README.md. status "verified" means the value was read from the primary
+# text in sources/; verified_by stays empty until a team member has cross-checked it against the PDF page.
+scope: india_tax_year
+act_id: IT1961
+rules_id: RULES1962
+label: FY 2025-26 (AY 2026-27)
+tax_year: 2025
+valid_from: 2025-04-01
+valid_to: 2026-03-31
+params:
+  # ---- Presumptive taxation of specified professions (s.44ADA) ----
+  presumptive.profession.rate_percent: {value: 50, unit: percent, sources: ["IT1961:s44ADA(1)"], status: verified}
+  presumptive.profession.higher_actual_profit_allowed: {value: true, sources: ["IT1961:s44ADA(1)"], status: verified, note: "A sum higher than 50% may be claimed."}
+  presumptive.profession.limit_inr: {value: 5000000, unit: INR, sources: ["IT1961:s44ADA(1)"], status: verified, note: "Gross receipts not exceeding Rs 50 lakh."}
+  presumptive.profession.limit_low_cash_inr: {value: 7500000, unit: INR, sources: ["IT1961:s44ADA(1)"], status: verified, note: "First proviso: Rs 75 lakh where cash receipts are 5% or less."}
+  presumptive.profession.low_cash_max_percent: {value: 5, unit: percent, sources: ["IT1961:s44ADA(1)"], status: verified}
+  presumptive.profession.non_account_payee_cheque_counts_as_cash: {value: true, sources: ["IT1961:s44ADA(1)"], status: verified, note: "Second proviso."}
+  presumptive.profession.eligible_entities: {value: [individual, non_llp_firm], sources: ["IT1961:s44ADA(1)"], status: verified, note: "A Hindu undivided family is not eligible for the profession scheme."}
+  presumptive.profession.resident_required: {value: true, sources: ["IT1961:s44ADA(1)"], status: verified}
+  presumptive.profession.other_deductions_allowed: {value: false, sources: ["IT1961:s44ADA(2)"], status: verified, note: "Deductions under ss.30 to 38 are deemed already given."}
+  presumptive.profession.books_audit_if_lower_profit_and_income_above_exemption: {value: true, sources: ["IT1961:s44ADA(4)"], status: verified}
+  presumptive.profession.books_required_when_declaring_at_or_above_rate: {value: false, sources: ["CBDT_FAQ_ITR4:Q16"], status: verified, note: "CBDT guidance (ITR-4 FAQ Q16), not statute text."}
+  presumptive.specified_profession.includes_information_technology: {value: true, sources: ["NOTIF385E_2001:all", "IT1961:s44AA(1)"], status: verified, note: "CBDT notified information technology under s.44AA(1) by S.O. 385(E), 4 May 2001."}
+  # ---- Tax audit and books ----
+  audit.profession.receipts_threshold_inr: {value: 5000000, unit: INR, sources: ["IT1961:s44AB"], status: verified, note: "Clause (b): gross receipts in profession exceeding Rs 50 lakh."}
+  audit.exempt_if_declared_as_presumptive: {value: true, sources: ["IT1961:s44AB"], status: verified, note: "First proviso: s.44AB does not apply to a person declaring profits under s.44ADA(1)."}
+  # ---- Tax rates ----
+  regime.new.slabs: {value: [[0, 400000, 0], [400000, 800000, 5], [800000, 1200000, 10], [1200000, 1600000, 15], [1600000, 2000000, 20], [2000000, 2400000, 25], [2400000, null, 30]], unit: "[lower_inr, upper_inr, rate_percent]", sources: ["IT1961:s115BAC(1A)"], status: verified, note: "The extracted table layout was scrambled; rows were checked against the six 5%-step rates in order."}
+  regime.new.rebate.max_inr: {value: 60000, unit: INR, sources: ["IT1961:s87A"], status: verified, note: "Proviso, where total income is chargeable under s.115BAC(1A)."}
+  regime.new.rebate.income_limit_inr: {value: 1200000, unit: INR, sources: ["IT1961:s87A"], status: verified}
+  regime.new.rebate.marginal_relief: {value: true, sources: ["IT1961:s87A"], status: verified, note: "Above Rs 12 lakh the tax is capped at the excess over Rs 12 lakh."}
+  regime.old.slabs: {value: [[0, 250000, 0], [250000, 500000, 5], [500000, 1000000, 20], [1000000, null, 30]], unit: "[lower_inr, upper_inr, rate_percent]", sources: ["FA2026:sch1-partIA-paraA(I)"], status: verified, note: "Individuals below 60. Senior-citizen slabs are not modelled."}
+  regime.old.rebate.max_inr: {value: 12500, unit: INR, sources: ["IT1961:s87A"], status: verified}
+  regime.old.rebate.income_limit_inr: {value: 500000, unit: INR, sources: ["IT1961:s87A"], status: verified}
+  regime.old.deductions_modelled: {value: false, status: design_choice, note: "The old-versus-new comparison uses slabs and rebate only, with no Chapter VI-A deductions."}
+  regime.opt_out_form: {value: "Form 10-IEA", sources: ["CBDT_FAQ_ITR4:Q6"], status: verified}
+  regime.switch_back_limit: {value: 1, unit: times, sources: ["CBDT_FAQ_ITR4:Q5"], status: verified, note: "After opting out of the new regime, a person with business income may switch back once in their lifetime."}
+  tax.cess_percent: {value: 4, unit: percent, sources: ["FA2026:s2(6)"], status: verified, note: "Health and Education Cess on income-tax plus surcharge."}
+  tax.surcharge.start_income_inr: {value: 5000000, unit: INR, sources: ["FA2026:sch1-partIA-paraF/T1(1)"], status: verified, note: "Individuals: surcharge applies where total income exceeds Rs 50 lakh. Moot for s.44ADA filers, whose deemed income is at most Rs 37.5 lakh; used only as a guard."}
+  tax.surcharge.first_rate_percent: {value: 10, unit: percent, sources: ["FA2026:sch1-partIA-paraF/T1(1)"], status: verified, note: "10% from Rs 50 lakh to Rs 1 crore; the higher bands (15%, 25%, 37%) are not modelled because they cannot be reached with presumptive professional income. Marginal relief is provided in the same Paragraph."}
+  # ---- Advance tax ----
+  advance_tax.threshold_inr: {value: 10000, unit: INR, sources: ["IT1961:s208"], status: verified}
+  advance_tax.presumptive.single_instalment_due: {value: "03-15", unit: MM-DD, sources: ["IT1961:s211(1)(b)"], status: verified, note: "Assessees declaring profits under s.44AD(1) or s.44ADA(1) pay all advance tax by 15 March."}
+  advance_tax.presumptive.shortfall_interest_percent: {value: 1, unit: percent, sources: ["IT1961:s234C(1)(b)"], status: verified, note: "Simple interest of one per cent on the shortfall from the tax due on the returned income."}
+  # ---- Return ----
+  return.due_date_business_profession_non_audit: {value: "08-31", unit: MM-DD, sources: ["IT1961:s139(1)", "NOTIF47_2026:all"], status: verified, note: "Explanation 2 as substituted by Act 4 of 2026, w.e.f. 1 March 2026; the ITR-3 due-date list also offers 31 August."}
+  # ---- ITR form choice ----
+  itr.presumptive_form: {value: "ITR-4", sources: ["RULES1962:r12(1)(ca)"], status: verified}
+  itr.fallback_form: {value: "ITR-3", sources: ["RULES1962:r12(1)(d)"], status: verified}
+  itr4.total_income_limit_inr: {value: 5000000, unit: INR, sources: ["RULES1962:r12(1)(ca)"], status: verified, note: "Proviso (IF)."}
+  itr4.max_house_properties: {value: 2, sources: ["RULES1962:r12(1)(ca)", "NOTIF45_2026:all"], status: verified, note: "Proviso (IG), as amended by Notification 45/2026."}
+  itr4.ltcg_112a_limit_inr: {value: 125000, unit: INR, sources: ["CBDT_FAQ_ITR4:Q1"], status: verified, note: "Guidance (ITR-4 FAQ), not statute text."}
+  itr4.bars: {value: [foreign_assets, foreign_signing_authority, foreign_source_income, income_apportioned_spouse, company_director, unlisted_equity_shares, total_income_over_limit, house_properties_over_limit, losses, tds_in_hands_of_another, foreign_tax_relief_claimed, agricultural_income_over_5000, special_rate_income, esop_tax_deferred], sources: ["RULES1962:r12(1)(ca)"], status: verified, note: "Provisos (I), (IA), (IB), (IC), (ID), (IE), (IF), (IG), (IH), (IJ), (II), (III), (IV) and (V), (VI). Proviso (IB), income from any source outside India, is the subject of assumption A-16."}
+  # ---- Foreign tax credit ----
+  ftc.form: {value: "Form 67", sources: ["RULES1962:r128(8)"], status: verified}
+  ftc.rule: {value: "Rule 128", sources: ["RULES1962:r128"], status: verified}
+  ftc.credit_is_lower_of_indian_and_foreign_tax: {value: true, sources: ["RULES1962:r128(5)(i)"], status: verified, note: "Computed separately for each source of income and each country."}
+  ftc.excess_over_treaty_rate_ignored: {value: true, sources: ["RULES1962:r128(5)(i)"], status: verified, note: "Proviso: foreign tax above what the treaty allows is ignored."}
+  ftc.rate_conversion: {value: tt_buying_rate_last_day_of_month_before_payment, sources: ["RULES1962:r128(5)(ii)"], status: verified}
+  ftc.disputed_tax_credit_deferred: {value: true, sources: ["RULES1962:r128(4)"], status: verified}
+  ftc.disputed_tax_followup_window_months: {value: 6, unit: months, sources: ["RULES1962:r128(4)"], status: verified, note: "Evidence of settlement within six months from the end of the month in which the dispute is settled."}
+  ftc.disputed_tax_followup_form: {value: null, sources: ["RULES1962:r128(4)"], status: verified, note: "The rule asks for evidence and an undertaking and names no separate form."}
+  ftc.statement_deadline_months_after_year_end: {value: 12, unit: months, sources: ["RULES1962:r128(9)"], status: verified, note: "By the end of the assessment year, which is 12 months after the end of the previous year."}
+  ftc.statement_requires_timely_return: {value: true, sources: ["RULES1962:r128(9)"], status: verified, note: "Return furnished within the time in s.139(1) or (4); an updated return has its own rule."}
+  ftc.accountant_verification_threshold_inr: {value: null, sources: ["RULES1962:r128(8)"], status: verified, note: "Rule 128(8) lists the documents and has no accountant-verification requirement."}

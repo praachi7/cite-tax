@@ -1,0 +1,364 @@
+# Source registry: one row per source file, with the tags used for retrieval.
+# tax_year_first / tax_year_last use the year in which the tax year STARTS
+# (FY 2025-26 = 2025, Tax Year 2026-27 = 2026). null means open-ended.
+# authority_rank: 1 statute and rules; 2 notifications and forms; 3 treaty and protocol;
+# 4 guidance (explains, does not bind); 5 secondary commentary (never cited as authority).
+# cite_prefix is the part of a citation ID before the colon, e.g. IT2025 in IT2025:s58(2)/T3.
+sources:
+- id: IT1961
+  cite_prefix: IT1961
+  file: Income_Tax_Act_1961_as_amended_by_FA_Act_2026 (1).pdf
+  title: Income-tax Act, 1961, as amended up to Finance Act 2026
+  act_id: IT1961
+  doc_type: statute
+  authority_rank: 1
+  tax_year_first: null
+  tax_year_last: 2025
+  valid_from: null
+  valid_to: '2026-03-31'
+  publisher: Income Tax Department, Government of India
+  note: Consolidated text; year-specific clauses are marked inside, so tag them individually.
+- id: IT2025
+  cite_prefix: IT2025
+  file: Income_Tax_Act_2025_as_amended_by_FA_Act_2026.pdf
+  title: Income-tax Act, 2025 (30 of 2025), as amended up to Finance Act 2026
+  act_id: IT2025
+  doc_type: statute
+  authority_rank: 1
+  tax_year_first: 2026
+  tax_year_last: null
+  valid_from: '2026-04-01'
+  valid_to: null
+  publisher: Income Tax Department, Government of India
+- id: RULES1962
+  cite_prefix: RULES1962
+  file: Income-tax-Rules-1962_2026-04-01_05-44-55_6f86ac_en.pdf
+  title: Income-tax Rules, 1962, consolidated as of 1 April 2026
+  act_id: RULES1962
+  doc_type: rule
+  authority_rank: 1
+  tax_year_first: null
+  tax_year_last: 2025
+  valid_from: null
+  valid_to: '2026-03-31'
+  publisher: Income Tax Department, Government of India
+  note: 'About 104 MB: over GitHub''s 100 MB file limit, so never commit this PDF.'
+- id: RULES2026
+  cite_prefix: RULES2026
+  file: Income-tax-Rules-2026_20-3-2026.pdf
+  title: Income-tax Rules, 2026 (G.S.R. 198(E), 20 March 2026)
+  act_id: RULES2026
+  doc_type: rule
+  authority_rank: 1
+  tax_year_first: 2026
+  tax_year_last: null
+  valid_from: '2026-04-01'
+  valid_to: null
+  publisher: Income Tax Department, Government of India
+  note: Printed from incometaxindia.gov.in on 19 Sep 2026.
+- id: FA2025
+  cite_prefix: FA2025
+  file: Finance Act, 2025.pdf
+  title: Finance Act, 2025 (No. 7 of 2025)
+  act_id: FA2025
+  doc_type: statute
+  authority_rank: 1
+  tax_year_first: null
+  tax_year_last: null
+  valid_from: null
+  valid_to: null
+  publisher: Gazette of India
+  note: Kept for traceability only.
+- id: FA2026
+  cite_prefix: FA2026
+  file: Finance-Act-2026.pdf
+  title: Finance Act, 2026 (No. 1 of 2026)
+  act_id: FA2026
+  doc_type: statute
+  authority_rank: 1
+  tax_year_first: 2025
+  tax_year_last: null
+  valid_from: null
+  valid_to: null
+  publisher: Gazette of India
+  note: s.2 sets rates for AY 2026-27 under the 1961 Act; s.3 sets rates for Tax Year 2026-27 under the 2025 Act;
+    s.144 amends the Black Money Act.
+- id: NOTIF45_2026
+  cite_prefix: NOTIF45_2026
+  file: Notification No.45_2026.pdf
+  title: 'CBDT Notification G.S.R. 226(E), 30 March 2026 (Second Amendment Rules): Rule 12, ITR-1 and ITR-4'
+  act_id: RULES1962
+  doc_type: notification
+  authority_rank: 2
+  tax_year_first: 2025
+  tax_year_last: 2025
+  valid_from: '2026-03-30'
+  valid_to: null
+  publisher: CBDT
+  note: Applies to returns for AY 2026-27.
+- id: NOTIF47_2026
+  cite_prefix: NOTIF47_2026
+  file: Notification_No_47_2026.pdf
+  title: 'CBDT Notification G.S.R. 228(E), 30 March 2026 (Fourth Amendment Rules): Form ITR-3 for AY 2026-27'
+  act_id: RULES1962
+  doc_type: notification
+  authority_rank: 2
+  tax_year_first: 2025
+  tax_year_last: 2025
+  valid_from: '2026-03-30'
+  valid_to: null
+  publisher: CBDT
+  note: Does not contain ITR-4.
+- id: NOTIF64_2026
+  cite_prefix: NOTIF64_2026
+  file: Notification-no-64-2026.pdf
+  title: 'CBDT Notification G.S.R. 286(E), 16 April 2026: corrections to Income-tax Rules, 2026'
+  act_id: RULES2026
+  doc_type: notification
+  authority_rank: 2
+  tax_year_first: 2026
+  tax_year_last: null
+  valid_from: '2026-04-16'
+  valid_to: null
+  publisher: CBDT
+  note: Contains no corrections to Rule 76.
+- id: NOTIF385E_2001
+  cite_prefix: NOTIF385E_2001
+  file: CBDT_Notification_385E_2001_IT_profession.txt
+  title: 'CBDT Notification S.O. 385(E), 4 May 2001: information technology notified under s.44AA(1)'
+  act_id: IT1961
+  doc_type: notification
+  authority_rank: 2
+  tax_year_first: null
+  tax_year_last: null
+  valid_from: '2001-05-04'
+  valid_to: null
+  publisher: CBDT
+  note: Supplied by the team as text because the official page blocks automated download. Notification No. 116/F.
+    No. 23/FB/2001-TPL.
+- id: FORM44
+  cite_prefix: FORM44
+  file: form-no-44.pdf
+  title: 'Form No. 44 (Rule 76(10)): Statement of income from outside India and Foreign Tax Credit'
+  act_id: RULES2026
+  doc_type: form
+  authority_rank: 2
+  tax_year_first: 2026
+  tax_year_last: null
+  valid_from: '2026-04-01'
+  valid_to: null
+  publisher: Income Tax Department, Government of India
+- id: FORM67
+  cite_prefix: FORM67
+  file: itr62form67.pdf
+  title: 'Form No. 67 (Rule 128): Statement of foreign income and tax deducted or paid'
+  act_id: RULES1962
+  doc_type: form
+  authority_rank: 2
+  tax_year_first: null
+  tax_year_last: 2025
+  valid_from: null
+  valid_to: '2026-03-31'
+  publisher: Income Tax Department, Government of India
+- id: CBDT_FAQ_PRES
+  cite_prefix: CBDT_FAQ_PRES
+  file: FAQs on Tax on Presumptive Taxation Scheme.pdf
+  title: CBDT FAQs on presumptive taxation (2025-Act version, cites s.58 and s.62)
+  act_id: CBDT
+  doc_type: faq
+  authority_rank: 4
+  tax_year_first: 2026
+  tax_year_last: null
+  valid_from: null
+  valid_to: null
+  publisher: CBDT
+  note: 'Guidance, not law. Q17: no books under s.62 when declaring 50% or more.'
+- id: CBDT_FAQ_TRANS
+  cite_prefix: CBDT_FAQ_TRANS
+  file: FAQs-on-Interplay-and-Transition.pdf
+  title: CBDT FAQs on the interplay and transition from the 1961 Act to the 2025 Act
+  act_id: CBDT
+  doc_type: faq
+  authority_rank: 4
+  tax_year_first: null
+  tax_year_last: null
+  valid_from: null
+  valid_to: null
+  publisher: CBDT
+  note: Guidance, not law.
+- id: CBDT_FAQ_ITR4
+  cite_prefix: CBDT_FAQ_ITR4
+  file: ITR-4 (Sugam) Online FAQs.pdf
+  title: e-Filing portal FAQs on ITR-4 (Sugam), AY 2026-27
+  act_id: CBDT
+  doc_type: faq
+  authority_rank: 4
+  tax_year_first: 2025
+  tax_year_last: 2025
+  valid_from: null
+  valid_to: null
+  publisher: Income Tax Department e-filing portal
+  note: Guidance, not law.
+- id: DTAA_US
+  cite_prefix: DTAA_US
+  file: India–US Convention (1989).pdf
+  title: India-US Convention (1989) with Protocol, Exchanges of Notes and Memorandum of Understanding (TIAS 90-1218)
+  act_id: DTAA_US
+  doc_type: treaty
+  authority_rank: 3
+  tax_year_first: null
+  tax_year_last: null
+  valid_from: '1990-12-18'
+  valid_to: null
+  publisher: US Treasury / TIAS
+  note: 'One file holds the Convention, the Protocol and the Article 12 MoU: chunk them separately and tag the parts
+    as protocol and mou. In force 18 Dec 1990; effective in India from 1 Apr 1991.'
+- id: DTAA_US_TE
+  cite_prefix: DTAA_US_TE
+  file: IRS_India_Technical_Explanation_1989.pdf
+  title: Technical Explanation of the India-US Convention and Protocol (US Treasury)
+  act_id: DTAA_US
+  doc_type: us_guidance
+  authority_rank: 4
+  tax_year_first: null
+  tax_year_last: null
+  valid_from: '1990-12-18'
+  valid_to: null
+  publisher: US Treasury (via IRS)
+  note: US-side commentary; explains, does not bind.
+- id: IRC_S861
+  cite_prefix: IRC
+  file: US_IRC_s861_govinfo_2024_edition.pdf
+  title: '26 U.S.C. section 861: income from sources within the United States (2024 edition)'
+  act_id: IRC
+  doc_type: us_statute
+  authority_rank: 1
+  tax_year_first: null
+  tax_year_last: null
+  valid_from: null
+  valid_to: null
+  publisher: U.S. Government Publishing Office
+- id: IRC_S862
+  cite_prefix: IRC
+  file: US_IRC_s862_govinfo_2024_edition.pdf
+  title: '26 U.S.C. section 862: income from sources without the United States (2024 edition)'
+  act_id: IRC
+  doc_type: us_statute
+  authority_rank: 1
+  tax_year_first: null
+  tax_year_last: null
+  valid_from: null
+  valid_to: null
+  publisher: U.S. Government Publishing Office
+- id: IRS_PUB515
+  cite_prefix: IRS_PUB515
+  file: IRS_Pub_515_2026.pdf
+  title: 'IRS Publication 515: Withholding of Tax on Nonresident Aliens and Foreign Entities (for use in 2026)'
+  act_id: IRS
+  doc_type: us_guidance
+  authority_rank: 4
+  tax_year_first: 2026
+  tax_year_last: 2026
+  valid_from: null
+  valid_to: null
+  publisher: IRS
+  note: US tax years are calendar years.
+- id: IRS_PUB519
+  cite_prefix: IRS_PUB519
+  file: IRS_Pub_519_US_Tax_Guide_for_Aliens_2025.pdf
+  title: 'IRS Publication 519: U.S. Tax Guide for Aliens (for 2025 returns)'
+  act_id: IRS
+  doc_type: us_guidance
+  authority_rank: 4
+  tax_year_first: 2025
+  tax_year_last: 2025
+  valid_from: null
+  valid_to: null
+  publisher: IRS
+  note: Covers the substantial presence test.
+- id: IRS_PUB901
+  cite_prefix: IRS_PUB901
+  file: IRS_Pub_901.pdf
+  title: 'IRS Publication 901: U.S. Tax Treaties (Rev. September 2024)'
+  act_id: IRS
+  doc_type: us_guidance
+  authority_rank: 4
+  tax_year_first: null
+  tax_year_last: null
+  valid_from: null
+  valid_to: null
+  publisher: IRS
+- id: IRS_W8BEN
+  cite_prefix: IRS_W8BEN
+  file: IRS_W-8BEN_instructions.pdf
+  title: Instructions for Form W-8BEN (Rev. October 2021)
+  act_id: IRS
+  doc_type: us_guidance
+  authority_rank: 4
+  tax_year_first: null
+  tax_year_last: null
+  valid_from: null
+  valid_to: null
+  publisher: IRS
+- id: IRS_F8233
+  cite_prefix: IRS_F8233
+  file: IRS_Form_8233.pdf
+  title: IRS Form 8233 (Rev. September 2018)
+  act_id: IRS
+  doc_type: form
+  authority_rank: 2
+  tax_year_first: null
+  tax_year_last: null
+  valid_from: null
+  valid_to: null
+  publisher: IRS
+- id: IRS_F8833
+  cite_prefix: IRS_F8833
+  file: IRS_Form_8833.pdf
+  title: IRS Form 8833 (Rev. December 2022)
+  act_id: IRS
+  doc_type: form
+  authority_rank: 2
+  tax_year_first: null
+  tax_year_last: null
+  valid_from: null
+  valid_to: null
+  publisher: IRS
+- id: IRS_1040NR
+  cite_prefix: IRS_1040NR
+  file: IRS_Form_1040-NR_instructions.pdf
+  title: 2025 Instructions for Form 1040-NR
+  act_id: IRS
+  doc_type: us_guidance
+  authority_rank: 4
+  tax_year_first: 2025
+  tax_year_last: 2025
+  valid_from: null
+  valid_to: null
+  publisher: IRS
+- id: IRS_1099
+  cite_prefix: IRS_1099
+  file: IRS_1099-NEC_instructions.pdf
+  title: Instructions for Forms 1099-MISC and 1099-NEC (Rev. December 2026)
+  act_id: IRS
+  doc_type: us_guidance
+  authority_rank: 4
+  tax_year_first: 2026
+  tax_year_last: null
+  valid_from: null
+  valid_to: null
+  publisher: IRS
+  note: Relevant only to US-person payees; out of scope for version 1.
+- id: CGST
+  cite_prefix: CGST
+  file: CGST_Act_2017_as_on_30-09-2020.pdf
+  title: Central Goods and Services Tax Act, 2017 (consolidated as on 30 Sep 2020)
+  act_id: CGST
+  doc_type: statute
+  authority_rank: 1
+  tax_year_first: null
+  tax_year_last: null
+  valid_from: null
+  valid_to: null
+  publisher: CBIC
+  note: 'A 2020 consolidation: check later amendments before relying on thresholds.'

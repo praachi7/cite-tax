@@ -1,0 +1,174 @@
+# Sources manifest: where each source file came from, with a checksum.
+# The PDFs themselves are NOT committed (the folder sources/ is git-ignored and one file exceeds
+# GitHub's 100 MB limit). Re-create them from the urls below, then run
+#   python scripts/update_manifest.py --check
+# url: null means the file was downloaded manually; find it on the publisher's site.
+sources:
+- id: IT1961
+  file: Income_Tax_Act_1961_as_amended_by_FA_Act_2026 (1).pdf
+  size_bytes: 6212350
+  sha256: ecdd7ea6ef58415848a0bca8f88854c23f52dcb830e9ce7eb42b4520f30db2fc
+  url: null
+  url_note: downloaded manually
+- id: IT2025
+  file: Income_Tax_Act_2025_as_amended_by_FA_Act_2026.pdf
+  size_bytes: 3299341
+  sha256: d54a0ed6a91673d1a4fbcef9b5e472c3efe441139fae38f85a5a0c5b2cfc998b
+  url: null
+  url_note: downloaded manually
+- id: RULES1962
+  file: Income-tax-Rules-1962_2026-04-01_05-44-55_6f86ac_en.pdf
+  size_bytes: 103643017
+  sha256: e5ef4405ccb7feb490c6c4ceab16acbd3a307f38ef99a7a32dc57fb7c82115b3
+  url: null
+  url_note: downloaded manually
+- id: RULES2026
+  file: Income-tax-Rules-2026_20-3-2026.pdf
+  size_bytes: 72207553
+  sha256: 67730d485781efe2879867b108c29196d90c18ce7a8d75d573d97fe4e55b1dba
+  url: null
+  url_note: downloaded manually
+- id: FA2025
+  file: Finance Act, 2025.pdf
+  size_bytes: 1643207
+  sha256: 1b7c61b42a330291385d074c929b29f3a2bec36f3b8d395e81bcf03a8d202204
+  url: null
+  url_note: downloaded manually
+- id: FA2026
+  file: Finance-Act-2026.pdf
+  size_bytes: 2462442
+  sha256: 78da8b8fa9d83ac4948260d5427c3f05ae49afef90e2cbdb8cf5b85a3adc7137
+  url: null
+  url_note: downloaded manually
+- id: NOTIF45_2026
+  file: Notification No.45_2026.pdf
+  size_bytes: 920052
+  sha256: b7ca15d6ca15c16ac8ad8c62cce86bc4b50b9208bcc07370298bff8515911964
+  url: null
+  url_note: downloaded manually
+- id: NOTIF47_2026
+  file: Notification_No_47_2026.pdf
+  size_bytes: 1358802
+  sha256: 25ef127233492a8821e20c8e9b1cb9ef95a879ecbf2b2b367cb7bf2681064d48
+  url: null
+  url_note: downloaded manually
+- id: NOTIF64_2026
+  file: Notification-no-64-2026.pdf
+  size_bytes: 350481
+  sha256: bce115aff116e31d7087b02e87f5fe2b44c844abbfe6d1a2e95de53fe5e395da
+  url: null
+  url_note: downloaded manually
+- id: NOTIF385E_2001
+  file: CBDT_Notification_385E_2001_IT_profession.txt
+  size_bytes: 565
+  sha256: 0a44dcffabb46f2b918123c0161aa972e2bde78eb93e517a54e722d2b6d809f1
+  url: https://www.incometaxindia.gov.in/w/385e-notification-385-e-date-of-issue-4/5/2001
+  url_note: official page returns 403 to scripts; open it in a browser
+- id: FORM44
+  file: form-no-44.pdf
+  size_bytes: 479991
+  sha256: a02a99f2ef890d37d1e6461d766d6f559081ed5813cbc68047c1bff7b1cf5f9b
+  url: https://www.incometaxindia.gov.in/documents/d/guest/fn-44
+  url_note: from the research report; not re-fetched
+- id: FORM67
+  file: itr62form67.pdf
+  size_bytes: 15936
+  sha256: 0adbe43e6be95d9aa51e8d1109e61f921a29540de9ed353b2e1599fe51025479
+  url: null
+  url_note: downloaded manually
+- id: CBDT_FAQ_PRES
+  file: FAQs on Tax on Presumptive Taxation Scheme.pdf
+  size_bytes: 189406
+  sha256: 341ad810d0396eabb9c316a5a184c884a3d57ceb32282ab0868e88b10bc31853
+  url: https://www.incometaxindia.gov.in/documents/d/guest/faqs-on-tax-on-presumptive-taxation-scheme
+  url_note: from the research report; not re-fetched
+- id: CBDT_FAQ_TRANS
+  file: FAQs-on-Interplay-and-Transition.pdf
+  size_bytes: 4533716
+  sha256: 0b21c7063d19a81c91b5e2a8911458c003589c2a023c262954dea7fb968917ce
+  url: https://www.incometaxindia.gov.in/documents/81799/11848482/FAQs-on-Interplay-and-Transition.pdf/05f80c1a-073c-a5d7-fb6f-55509242be53?t=1774082865717
+  url_note: from the research report; not re-fetched
+- id: CBDT_FAQ_ITR4
+  file: ITR-4 (Sugam) Online FAQs.pdf
+  size_bytes: 169571
+  sha256: 41600ff0e7a6c9983d6a6fcbfd9450ae9aa48394d3b77c6e0722bfb4f91e6aa4
+  url: null
+  url_note: downloaded manually
+- id: DTAA_US
+  file: India–US Convention (1989).pdf
+  size_bytes: 2564182
+  sha256: b0d64da3fce51580cc0f43b1fb56c6f8c6aaf7936f6c192d9781279d948b2007
+  url: null
+  url_note: downloaded manually
+- id: DTAA_US_TE
+  file: IRS_India_Technical_Explanation_1989.pdf
+  size_bytes: 518191
+  sha256: 94d9a766f518eef3c3943e8015fdaff1e57fabed74cc4c2a311982c1018887da
+  url: https://www.irs.gov/pub/irs-trty/inditech.pdf
+  url_note: fetched 31 Oct 2026
+- id: IRC_S861
+  file: US_IRC_s861_govinfo_2024_edition.pdf
+  size_bytes: 174674
+  sha256: c38cb27c825ab07171efd092b2390cf27d9888b863e4270ca4ef6830691d77f5
+  url: https://www.govinfo.gov/content/pkg/USCODE-2024-title26/pdf/USCODE-2024-title26-subtitleA-chap1-subchapN-partI-sec861.pdf
+  url_note: fetched 31 Oct 2026
+- id: IRC_S862
+  file: US_IRC_s862_govinfo_2024_edition.pdf
+  size_bytes: 139901
+  sha256: 2f43e73c28cd44741a4c802539b694e1216278b9b85f64da1b1f9a757d63e44d
+  url: https://www.govinfo.gov/content/pkg/USCODE-2024-title26/pdf/USCODE-2024-title26-subtitleA-chap1-subchapN-partI-sec862.pdf
+  url_note: fetched 31 Oct 2026
+- id: IRS_PUB515
+  file: IRS_Pub_515_2026.pdf
+  size_bytes: 1965855
+  sha256: 5b8ecb50ba25aaa07da88e2b3d949f4b416bcb0a50d78bd8999bd27a50cbba78
+  url: https://www.irs.gov/pub/irs-pdf/p515.pdf
+  url_note: fetched 31 Oct 2026
+- id: IRS_PUB519
+  file: IRS_Pub_519_US_Tax_Guide_for_Aliens_2025.pdf
+  size_bytes: 2080184
+  sha256: c220ed64473d9f26b09784e45d5c4e05b052caace1263278bb6dc2060796ed85
+  url: https://www.irs.gov/pub/irs-pdf/p519.pdf
+  url_note: fetched 31 Oct 2026
+- id: IRS_PUB901
+  file: IRS_Pub_901.pdf
+  size_bytes: 1437149
+  sha256: 8b5654b6b3c1bcc9f63889a78ecbc3793d4b7907750ec9d409c41427073c4469
+  url: https://www.irs.gov/pub/irs-pdf/p901.pdf
+  url_note: fetched 31 Oct 2026
+- id: IRS_W8BEN
+  file: IRS_W-8BEN_instructions.pdf
+  size_bytes: 195248
+  sha256: b655c9e4c18772fab6cef12ec5fdb19a9e183b982c6ec0e2bb1578862e042cd1
+  url: https://www.irs.gov/pub/irs-pdf/iw8ben.pdf
+  url_note: fetched 31 Oct 2026
+- id: IRS_F8233
+  file: IRS_Form_8233.pdf
+  size_bytes: 73975
+  sha256: 6a614673727fcb21fa8b3d2a9d5c0cb05ed1b18e7344a858125d2c91007abd9a
+  url: https://www.irs.gov/pub/irs-pdf/f8233.pdf
+  url_note: fetched 31 Oct 2026
+- id: IRS_F8833
+  file: IRS_Form_8833.pdf
+  size_bytes: 94455
+  sha256: e678fe7cb1042cc6c388a2c1b44ff5cc9e262c939465f9c2fffdbb33c653f5ff
+  url: https://www.irs.gov/pub/irs-pdf/f8833.pdf
+  url_note: fetched 31 Oct 2026
+- id: IRS_1040NR
+  file: IRS_Form_1040-NR_instructions.pdf
+  size_bytes: 710735
+  sha256: f2602b839b17de4541b8c353668121757cac13ff9d7a78f34c7ee14edfe19fee
+  url: https://www.irs.gov/pub/irs-pdf/i1040nr.pdf
+  url_note: fetched 31 Oct 2026
+- id: IRS_1099
+  file: IRS_1099-NEC_instructions.pdf
+  size_bytes: 312867
+  sha256: 883fb800e5100ff74a37fb0427d0c16c14031a2421a058254f71c66f8c03087e
+  url: https://www.irs.gov/pub/irs-pdf/i1099mec.pdf
+  url_note: fetched 31 Oct 2026
+- id: CGST
+  file: CGST_Act_2017_as_on_30-09-2020.pdf
+  size_bytes: 1846889
+  sha256: 4db47a4ed2af6e61864049facb85b2dad940590df5239967062efd19d2d40fb4
+  url: https://cbic-gst.gov.in/pdf/CGST-Act-Updated-30092020.pdf
+  url_note: fetched 31 Oct 2026

@@ -1,0 +1,107 @@
+# Assumptions register: points of law the sources do not fully settle.
+# There is no chartered accountant for this project, so each point uses the
+# conservative default (the choice whose downside is smallest if it is wrong), shows both readings to the
+# user with their citations, and can be switched through its config flag without any code change.
+#
+# status: resolved  = the sources now settle the point; the flag stays only as a safety switch.
+#         contested = the sources do not settle it; the interface must show an "Interpretation uncertain" notice.
+# Each reading has a flag_value: the value config_flag takes if that reading is applied.
+# used_by lists the parameter keys (in params/) that the assumption affects.
+assumptions:
+  - id: A-3
+    question: Is information technology a specified profession for FY 2025-26 under the 1961 Act?
+    status: resolved
+    default: a
+    default_reason: Treating IT as eligible follows the CBDT notification. The 2025 Act names IT in the statute itself (s.62(4)).
+    config_flag: it_specified_profession_1961
+    config_default: true
+    used_by:
+      - presumptive.specified_profession.includes_information_technology
+    readings:
+      - key: a
+        statement: "Yes. CBDT notified information technology as a profession for s.44AA(1) by Notification S.O. 385(E) of 4 May 2001, and s.44ADA(1) applies to a profession referred to in s.44AA(1)."
+        citations: ["NOTIF385E_2001:all", "IT1961:s44AA(1)", "IT1961:s44ADA(1)"]
+        flag_value: true
+      - key: b
+        statement: "Unclear. The seven professions named in the statute and Rule 6F do not list information technology; eligibility would rest only on the notification."
+        citations: ["IT1961:s44AA(1)", "RULES1962:r6F"]
+        flag_value: false
+    secondary_references:
+      - "CBDT presumptive-taxation FAQ lists the information technology profession (2025-Act version, item 11)."
+    note: Resolved on 31 Oct 2026 when the text of S.O. 385(E) was supplied.
+
+  - id: A-5
+    question: How is the foreign tax credit capped when Indian income is taxed presumptively?
+    status: contested
+    default: a
+    default_reason: Capping the credit at Indian tax on the deemed income can only under-claim, never over-claim.
+    config_flag: ftc_cap_basis
+    config_default: deemed_income
+    used_by:
+      - ftc.credit_is_lower_of_indian_and_foreign_tax
+    readings:
+      - key: a
+        statement: "The credit is the lower of the foreign tax and the Indian tax attributable to the deemed (50%) income from the US-taxable receipts, apportioned pro rata to total income (including surcharge and cess)."
+        citations:
+          ["RULES1962:r128(5)(i)", "RULES2026:r76(7)(a)", "DTAA_US:art25(2)(a)"]
+        flag_value: deemed_income
+      - key: b
+        statement: "The Indian tax is computed on the gross US receipts, so the cap is higher."
+        citations: ["DTAA_US:art25(2)(a)"]
+        flag_value: gross_receipts
+    secondary_references:
+      - "BCAJ, Practical Issues Relating to Foreign Tax Credit (Dec 2017): covers country-wise and source-wise computation but does not address presumptive income."
+    note: No ruling or CBDT guidance was found. Remote work from India does not give rise to creditable US tax, so this matters only for US-performed work.
+
+  - id: A-12
+    question: Are balances held abroad on payment platforms (Payoneer, Wise, PayPal) foreign assets for Schedule FA and the ITR-4 bar?
+    status: contested
+    default: a
+    default_reason: Disclosing a balance that did not need disclosing costs nothing; failing to disclose one that did can bring penalties.
+    config_flag: platform_wallet_is_foreign_asset
+    config_default: true
+    used_by:
+      - itr4.bars
+    readings:
+      - key: a
+        statement: "Yes. A foreign-currency balance held by a platform in the user's name is a foreign account or asset, so Schedule FA applies and ITR-4 is barred, even if the balance is swept daily."
+        citations:
+          [
+            "RULES1962:r12(1)(ca)",
+            "RULES2026:r164(6)(a)",
+            "RULES2026:r164(6)(b)",
+          ]
+        flag_value: true
+      - key: b
+        statement: "No, if the wallet is only a transit account and the money reaches an Indian bank account without a balance held abroad."
+        citations: ["RULES1962:r12(1)(ca)", "RULES2026:r164(6)(a)"]
+        flag_value: false
+    secondary_references:
+      - "ITRnGST, Schedule FA for Freelancers AY 2026-27 (2026)."
+      - "Remote Munshi, How to disclose foreign assets in your ITR."
+      - "Wisemonk, Which ITR form for freelancers with foreign income (2026)."
+    note: No CBDT or RBI clarification was found. The safest advice is direct credit to an Indian bank account. Finance Act 2026 s.144 does not change the reporting duty in Schedule FA.
+
+  - id: A-16
+    question: Are fees from US clients "income from any source outside India", which bars ITR-4?
+    status: contested
+    default: b
+    default_reason: ITR-3 is valid under either reading, while filing ITR-4 on the wrong reading risks a defective return.
+    config_flag: itr4_foreign_client_income_is_indian_source
+    config_default: false
+    used_by:
+      - itr4.bars
+    readings:
+      - key: a
+        statement: "No. Income from services generally arises where they are rendered, so work done in India for a foreign client is Indian-source income and ITR-4 remains available."
+        citations: ["RULES1962:r12(1)(ca)", "RULES2026:r164(6)(c)"]
+        flag_value: true
+      - key: b
+        statement: "Yes. The payer is abroad and the work is used abroad (compare Ishikawajima-Harima, Supreme Court 2007, which required services to be both rendered and used in India), so the fees are income from a source outside India and ITR-3 is required."
+        citations: ["RULES1962:r12(1)(ca)", "RULES2026:r164(6)(c)"]
+        flag_value: false
+    secondary_references:
+      - "Wisemonk (Oct 2026): services performed from India are Indian-source professional income even when the client is abroad. No authority cited."
+      - "Ishikawajima-Harima Heavy Industries v. DIT (Supreme Court, 2007), via Nishith Desai Associates and Lakshmikumaran & Sridharan summaries. The case concerned non-residents under s.9; its use here is by analogy."
+      - "TaxGuru (23 Jul 2025): a practitioner treats IT-export revenue as foreign-source for Schedule FSI."
+    note: No CBDT clarification was found, and the practitioner guides conflict. The product recommends ITR-3 and shows the ITR-4 alternative.

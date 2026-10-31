@@ -1,0 +1,67 @@
+# Law data: Income-tax Act, 2025 and Income-tax Rules, 2026, for Tax Year 2026-27.
+# Same keys as params/it1961_fy2025-26.yaml (the validator enforces this). Conventions are in params/README.md.
+# status "verified" means the value was read from the primary text in sources/; verified_by stays empty
+# until a team member has cross-checked it against the PDF page.
+scope: india_tax_year
+act_id: IT2025
+rules_id: RULES2026
+label: Tax Year 2026-27
+tax_year: 2026
+valid_from: 2026-04-01
+valid_to: null
+params:
+  # ---- Presumptive taxation of specified professions (s.58(2), Table Sl. 3) ----
+  presumptive.profession.rate_percent: {value: 50, unit: percent, sources: ["IT2025:s58(2)/T3"], status: verified}
+  presumptive.profession.higher_actual_profit_allowed: {value: true, sources: ["IT2025:s58(2)/T3"], status: verified, note: "50% of gross receipts or profit claimed, whichever is higher."}
+  presumptive.profession.limit_inr: {value: 5000000, unit: INR, sources: ["IT2025:s58(2)/T3"], status: verified, note: "Gross receipts not exceeding Rs 50 lakh."}
+  presumptive.profession.limit_low_cash_inr: {value: 7500000, unit: INR, sources: ["IT2025:s58(2)/T3"], status: verified, note: "Rs 75 lakh where cash receipts are 5% or less."}
+  presumptive.profession.low_cash_max_percent: {value: 5, unit: percent, sources: ["IT2025:s58(2)/T3"], status: verified}
+  presumptive.profession.non_account_payee_cheque_counts_as_cash: {value: true, sources: ["IT2025:s58(9)"], status: verified}
+  presumptive.profession.eligible_entities: {value: [individual, non_llp_firm], sources: ["IT2025:s58(11)(b)"], status: verified, note: "A Hindu undivided family is not eligible for the profession row; it qualifies only for the business row under s.58(11)(a)."}
+  presumptive.profession.resident_required: {value: true, sources: ["IT2025:s58(11)(b)"], status: verified}
+  presumptive.profession.other_deductions_allowed: {value: false, sources: ["IT2025:s58(4)"], status: verified}
+  presumptive.profession.books_audit_if_lower_profit_and_income_above_exemption: {value: true, sources: ["IT2025:s58(3)"], status: verified}
+  presumptive.profession.books_required_when_declaring_at_or_above_rate: {value: false, sources: ["CBDT_FAQ_PRES:Q17"], status: verified, note: "CBDT guidance (presumptive FAQ Q17), not statute text. s.62(1) itself has no carve-out."}
+  presumptive.specified_profession.includes_information_technology: {value: true, sources: ["IT2025:s62(4)"], status: verified, note: "s.62(4)(a) names information technology."}
+  # ---- Tax audit and books ----
+  audit.profession.receipts_threshold_inr: {value: 5000000, unit: INR, sources: ["IT2025:s63(1)/T1(c)"], status: verified, note: "Table Sl. 1(c): gross receipts in profession exceeding Rs 50 lakh."}
+  audit.exempt_if_declared_as_presumptive: {value: true, sources: ["IT2025:s63(2)"], status: verified}
+  # ---- Tax rates ----
+  regime.new.slabs: {value: [[0, 400000, 0], [400000, 800000, 5], [800000, 1200000, 10], [1200000, 1600000, 15], [1600000, 2000000, 20], [2000000, 2400000, 25], [2400000, null, 30]], unit: "[lower_inr, upper_inr, rate_percent]", sources: ["IT2025:s202(1)"], status: verified, note: "Identical to the 1961-Act slabs for FY 2025-26."}
+  regime.new.rebate.max_inr: {value: 60000, unit: INR, sources: ["IT2025:s156(2)(a)"], status: verified}
+  regime.new.rebate.income_limit_inr: {value: 1200000, unit: INR, sources: ["IT2025:s156(2)(a)"], status: verified}
+  regime.new.rebate.marginal_relief: {value: true, sources: ["IT2025:s156(2)(b)"], status: verified}
+  regime.old.slabs: {value: [[0, 250000, 0], [250000, 500000, 5], [500000, 1000000, 20], [1000000, null, 30]], unit: "[lower_inr, upper_inr, rate_percent]", sources: ["FA2026:sch1-partIB-paraA(I)"], status: verified, note: "Individuals below 60. Senior-citizen slabs are not modelled."}
+  regime.old.rebate.max_inr: {value: 12500, unit: INR, sources: ["IT2025:s156(1)"], status: verified}
+  regime.old.rebate.income_limit_inr: {value: 500000, unit: INR, sources: ["IT2025:s156(1)"], status: verified}
+  regime.old.deductions_modelled: {value: false, status: design_choice, note: "The old-versus-new comparison uses slabs and rebate only, with no deductions."}
+  regime.opt_out_form: {value: return_of_income, sources: ["IT2025:s202(4)", "RULES2026:r136"], status: verified, note: "There is no separate form: Rule 136 says the option under s.202(4) is exercised or withdrawn in the return of income furnished under s.263(1) for that tax year. This replaces Form 10-IEA."}
+  regime.switch_back_limit: {value: 1, unit: times, sources: ["IT2025:s202(4)(a)(iii)"], status: verified, note: "Once withdrawn, the person is never again eligible to opt out while they have business or professional income (s.202(4)(a)(iv))."}
+  tax.cess_percent: {value: 4, unit: percent, sources: ["FA2026:s3(15)"], status: verified, note: "Health and Education Cess on income-tax plus surcharge, at 4%."}
+  tax.surcharge.start_income_inr: {value: 5000000, unit: INR, sources: ["FA2026:sch1-partIB-paraF/T1(1)"], status: verified, note: "Individuals: surcharge applies where total income exceeds Rs 50 lakh. Moot for s.58(2) Sl. 3 filers, whose deemed income is at most Rs 37.5 lakh; used only as a guard."}
+  tax.surcharge.first_rate_percent: {value: 10, unit: percent, sources: ["FA2026:sch1-partIB-paraF/T1(1)"], status: verified, note: "10% from Rs 50 lakh to Rs 1 crore; the higher bands are not modelled because they cannot be reached with presumptive professional income."}
+  # ---- Advance tax ----
+  advance_tax.threshold_inr: {value: 10000, unit: INR, sources: ["IT2025:s404"], status: verified}
+  advance_tax.presumptive.single_instalment_due: {value: "03-15", unit: MM-DD, sources: ["IT2025:s408(2)"], status: verified, note: "Applies to a person declaring profits under s.58(2), Table Sl. 1 or 3."}
+  advance_tax.presumptive.shortfall_interest_percent: {value: 1, unit: percent, sources: ["IT2025:s425(3)"], status: verified, note: "Simple interest at 1% on the shortfall from the tax due on the returned income."}
+  # ---- Return ----
+  return.due_date_business_profession_non_audit: {value: "08-31", unit: MM-DD, sources: ["IT2025:s263(1)/T3"], status: verified, note: "Table Sl. 3: income from business or profession where s.172 does not apply."}
+  # ---- ITR form choice ----
+  itr.presumptive_form: {value: "ITR-4", sources: ["RULES2026:r164(5)"], status: verified}
+  itr.fallback_form: {value: "ITR-3", sources: ["RULES2026:r164(7)"], status: verified}
+  itr4.total_income_limit_inr: {value: 5000000, unit: INR, sources: ["RULES2026:r164(6)(h)"], status: verified}
+  itr4.max_house_properties: {value: 2, sources: ["RULES2026:r164(6)(i)"], status: verified}
+  itr4.ltcg_112a_limit_inr: {value: 125000, unit: INR, sources: ["RULES2026:r164(5)(b)"], status: verified, note: "Long-term capital gains under s.198 not exceeding Rs 1,25,000."}
+  itr4.bars: {value: [foreign_assets, foreign_signing_authority, foreign_source_income, income_apportioned_spouse, deduction_s93_claimed, company_director, unlisted_equity_shares, total_income_over_limit, house_properties_over_limit, losses, tds_in_hands_of_another, foreign_tax_relief_claimed, agricultural_income_over_5000, esop_tax_deferred, special_rate_income], sources: ["RULES2026:r164(6)"], status: verified, note: "Rule 164(6)(a) to (o). The deduction_s93_claimed bar is new in the 2025 regime. Clause (c), income from any source outside India, is the subject of assumption A-16."}
+  # ---- Foreign tax credit ----
+  ftc.form: {value: "Form 44", sources: ["RULES2026:r76(10)", "FORM44:all"], status: verified}
+  ftc.rule: {value: "Rule 76", sources: ["RULES2026:r76"], status: verified}
+  ftc.credit_is_lower_of_indian_and_foreign_tax: {value: true, sources: ["RULES2026:r76(7)(a)"], status: verified, note: "Computed separately for each source of income and each country."}
+  ftc.excess_over_treaty_rate_ignored: {value: true, sources: ["RULES2026:r76(7)(a)"], status: verified}
+  ftc.rate_conversion: {value: tt_buying_rate_last_day_of_month_before_payment, sources: ["RULES2026:r76(7)(b)"], status: verified}
+  ftc.disputed_tax_credit_deferred: {value: true, sources: ["RULES2026:r76(5)"], status: verified}
+  ftc.disputed_tax_followup_window_months: {value: 6, unit: months, sources: ["RULES2026:r76(6)"], status: verified}
+  ftc.disputed_tax_followup_form: {value: "Form 45", sources: ["RULES2026:r76(15)"], status: verified}
+  ftc.statement_deadline_months_after_year_end: {value: 12, unit: months, sources: ["RULES2026:r76(12)"], status: verified}
+  ftc.statement_requires_timely_return: {value: true, sources: ["RULES2026:r76(12)"], status: verified, note: "Return furnished within the time in s.263(1) or (4); an updated return has its own rule in r76(13)."}
+  ftc.accountant_verification_threshold_inr: {value: 100000, unit: INR, sources: ["RULES2026:r76(16)(b)"], status: verified, note: "Verification by an accountant where foreign tax paid equals or exceeds Rs 1,00,000."}

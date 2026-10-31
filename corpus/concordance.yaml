@@ -1,0 +1,30 @@
+# Concordance: how provisions of the 1961 Act and Rules 1962 map to the 2025 Act and Rules 2026.
+# Use it so that a query in the old numbering reaches the provision that applies to the chosen year.
+# status: verified = both sides read from the primary text in sources/; to_verify = inferred.
+# verified_by stays empty until a team member has cross-checked the row against the PDF page.
+concordance:
+  # ---- Income-tax Acts: sections ----
+  - {old_ref: "IT1961:s44ADA", new_ref: "IT2025:s58(2)/T3", kind: section, topic: Presumptive taxation of specified professions, status: verified, verified_by: []}
+  - {old_ref: "IT1961:s44AD", new_ref: "IT2025:s58(2)/T1", kind: section, topic: Presumptive taxation of business (6% / 8%), status: verified, verified_by: []}
+  - {old_ref: "IT1961:s44AE", new_ref: "IT2025:s58(2)/T2", kind: section, topic: Presumptive taxation of goods carriages, status: verified, verified_by: []}
+  - {old_ref: "IT1961:s44AA", new_ref: "IT2025:s62", kind: section, topic: Maintenance of books of account, status: verified, verified_by: []}
+  - {old_ref: "IT1961:s44AB", new_ref: "IT2025:s63", kind: section, topic: Tax audit, status: verified, verified_by: []}
+  - {old_ref: "IT1961:s87A", new_ref: "IT2025:s156", kind: section, topic: Rebate for resident individuals, status: verified, verified_by: []}
+  - {old_ref: "IT1961:s90", new_ref: "IT2025:s159", kind: section, topic: Relief where a tax treaty exists, status: verified, verified_by: []}
+  - {old_ref: "IT1961:s91", new_ref: "IT2025:s160", kind: section, topic: Relief where no tax treaty exists, status: verified, verified_by: []}
+  - {old_ref: "IT1961:s115BAC", new_ref: "IT2025:s202", kind: section, topic: "New tax regime, slabs and opt-out", status: verified, verified_by: []}
+  - {old_ref: "IT1961:s139", new_ref: "IT2025:s263", kind: section, topic: Return of income and due dates, status: verified, verified_by: []}
+  - {old_ref: "IT1961:s6", new_ref: "IT2025:s6", kind: section, topic: Residential status, status: verified, verified_by: [], note: Same number in both Acts.}
+  - {old_ref: "IT1961:s208", new_ref: "IT2025:s404", kind: section, topic: "Advance tax threshold (Rs 10,000)", status: verified, verified_by: []}
+  - {old_ref: "IT1961:s209", new_ref: "IT2025:s405", kind: section, topic: Computation of advance tax, status: verified, verified_by: []}
+  - {old_ref: "IT1961:s210", new_ref: "IT2025:s406", kind: section, topic: Advance tax paid on own accord, status: verified, verified_by: []}
+  - {old_ref: "IT1961:s211", new_ref: "IT2025:s408", kind: section, topic: Advance tax instalments and due dates, status: verified, verified_by: [], note: "s.408(2): s.58(2) Sl. 1 or 3 taxpayers pay in one instalment by 15 March."}
+  - {old_ref: "IT1961:s234B", new_ref: "IT2025:s425", kind: section, topic: Interest on advance tax default, status: verified, verified_by: [], note: "Two old sections (234B and 234C) are merged into s.425."}
+  - {old_ref: "IT1961:s234C", new_ref: "IT2025:s425", kind: section, topic: Interest on deferment of advance tax, status: verified, verified_by: []}
+  # ---- Rules ----
+  - {old_ref: "RULES1962:r128", new_ref: "RULES2026:r76", kind: rule, topic: Foreign tax credit, status: verified, verified_by: []}
+  - {old_ref: "RULES1962:r12(1)(ca)", new_ref: "RULES2026:r164(5)", kind: rule, topic: ITR-4 eligibility for presumptive income, status: verified, verified_by: []}
+  - {old_ref: "RULES1962:r12(1)(ca)", new_ref: "RULES2026:r164(6)", kind: rule, topic: Persons barred from ITR-4 (provisos), status: verified, verified_by: []}
+  - {old_ref: "RULES1962:r6F", new_ref: "RULES2026:r46", kind: rule, topic: Books of account of specified professions, status: to_verify, verified_by: [], note: "Inferred correspondence. Rule 46 (2026) does not list information technology, unlike s.62(4); read both rules together before relying on it."}
+  # ---- Forms ----
+  - {old_ref: "FORM67:all", new_ref: "FORM44:all", kind: form, topic: Foreign income and foreign tax credit statement, status: verified, verified_by: []}

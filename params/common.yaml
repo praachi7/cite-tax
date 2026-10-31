@@ -1,0 +1,29 @@
+# Settings that do not depend on the Indian Act or tax year: the India-US treaty, US tax rules,
+# GST, and product settings. Conventions are in params/README.md.
+# US tax years are calendar years for individuals.
+scope: common
+label: Treaty, US, GST and product settings
+params:
+  # ---- India-US Convention, Article 15 (independent personal services) ----
+  treaty.art15.stay_days_threshold: {value: 90, unit: days, sources: ["DTAA_US:art15(1)(b)"], status: verified, note: "The US may tax if the stay amounts to or exceeds 90 days in the aggregate in the relevant taxable year."}
+  treaty.art15.us_exemption_max_days: {value: 89, unit: days, sources: ["IRS_PUB901:india"], status: verified, note: "IRS wording: present for no more than 89 days during the tax year."}
+  treaty.art15.fixed_base_test: {value: true, sources: ["DTAA_US:art15(1)(a)"], status: verified, note: "If a fixed base is regularly available, only income attributable to it may be taxed in the US."}
+  treaty.art15.counting_period: {value: calendar_year, sources: ["DTAA_US:art15(1)(b)", "IRS_PUB901:india"], status: verified, note: "The treaty says the relevant taxable year; the US taxable year of an individual is the calendar year."}
+  treaty.art15.dollar_cap_usd: {value: null, sources: ["IRS_PUB901:india"], status: verified, note: "The IRS entry for India states no dollar limit."}
+  # ---- US source rule and residency ----
+  us.source.deminimis_days: {value: 90, unit: days, sources: ["IRC:s861(a)(3)"], status: verified, note: "Services in the US are not US-source if the person is present for 90 days or fewer, and the pay is $3,000 or less, and the work is for a foreign office or a non-US person."}
+  us.source.deminimis_amount_usd: {value: 3000, unit: USD, sources: ["IRC:s861(a)(3)"], status: verified}
+  us.spt.current_year_min_days: {value: 31, unit: days, sources: ["IRS_PUB519:spt"], status: verified}
+  us.spt.three_year_min_weighted_days: {value: 183, unit: days, sources: ["IRS_PUB519:spt"], status: verified, note: "All current-year days, plus one third of last year's days, plus one sixth of the year before."}
+  # ---- US withholding and forms ----
+  us.w8ben.validity_calendar_years_after_signing: {value: 3, unit: years, sources: ["IRS_W8BEN:validity"], status: verified, note: "Valid from signing to the last day of the third succeeding calendar year."}
+  us.withholding.foreign_person_rate_percent: {value: 30, unit: percent, sources: ["IRS_W8BEN:withholding"], status: verified}
+  us.withholding.backup_rate_percent: {value: 24, unit: percent, sources: ["IRS_W8BEN:withholding"], status: verified}
+  us.form8833.penalty_individual_usd: {value: 1000, unit: USD, sources: ["IRS_PUB901:form8833"], status: verified}
+  us.form8233.claims_exemption_for_services_performed_in_us: {value: true, sources: ["IRS_F8233:all"], status: verified, note: "Form 8233 claims the exemption from withholding on independent personal services of a nonresident alien; W-8BEN is not used for this."}
+  # ---- GST ----
+  gst.aggregate_turnover_includes_exports: {value: true, sources: ["CGST:s2(6)"], status: verified, note: "Aggregate turnover includes exempt supplies and exports of goods or services."}
+  gst.registration_threshold_inr: {value: 2000000, unit: INR, sources: ["CGST:s22(1)"], status: verified, note: "Rs 20 lakh (Rs 10 lakh in special-category states). The separate exemption for service exporters under IGST Notification 10/2017 is not in sources/ and is treated as secondary. The CGST Act in sources/ is a 2020 consolidation."}
+  # ---- Product settings (not law) ----
+  flags.receipts_near_limit_percent: {value: 90, unit: percent, status: design_choice, note: "RECEIPTS_NEAR_LIMIT warns at 90% of the applicable limit (SRS/SDS Table 3.1)."}
+  flags.us_days_warning_threshold: {value: 80, unit: days, status: design_choice, note: "US_DAYS_WARNING fires at 80 US days, ahead of the 90-day treaty trigger (SRS/SDS Table 3.1)."}
