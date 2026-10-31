@@ -1,0 +1,35 @@
+id: P6
+title: Remote work only, no W-8BEN, 30% withheld, Tax Year 2026-27; tests the refund route and that the tax is not creditable
+# Receipts Rs 40 lakh, all done from India for a US client. No Form W-8BEN was given, so the client withheld
+# 30% of the whole amount: Rs 12,00,000. US days in 2026: 0.
+# Hand computation:
+#   source: services performed in India are not US-source                                          [IRC s.861(a)(3), s.862(a)(3)]
+#   so the US has no right to tax it and the treaty is never reached                               [Art. 15]
+#   the withholding is not creditable in India; it is claimed back from the US on Form 1040-NR,
+#   and a valid W-8BEN stops further withholding                                                   [Form 1040-NR, W-8BEN]
+#   India: deemed income 20,00,000; payable 2,08,000 as in P5; no credit, so advance tax 2,08,000
+#   ITR: A-16 default bars ITR-4 (contested); no other bar -> ITR-3, ITR-4 possible under reading a
+input:
+  persona_id: P6
+  tax_year: 2026
+  receipts: {electronic: 4000000}
+  engagements:
+    - {label: US client, country_of_performance: IN, amount_inr: 4000000, client_is_us_person: true, w8ben_on_file: false, us_tax_withheld_inr: 1200000}
+  us_days_by_year: {2026: 0}
+expected:
+  us_source.any_us_source: {value: false, cite: ["IRC:s861(a)(3)", "IRC:s862(a)(3)"], work: "All work was performed in India."}
+  us_source.us_source_inr: {value: 0, cite: ["IRC:s861(a)(3)"], work: "Nothing performed in the US."}
+  treaty.reached: {value: false, cite: ["DTAA_US:art15(1)"], work: "No US-source income, so Article 15 is not reached."}
+  treaty.us_taxable_inr: {value: 0, cite: ["DTAA_US:art15(1)"], work: "The US may tax nothing."}
+  relief.route: {value: refund, cite: ["IRS_1040NR:all"], work: "The withholding was not due, so it is claimed back from the US."}
+  relief.refunds.0.reason: {value: NOT_US_SOURCE, cite: ["IRC:s862(a)(3)"], work: "Services performed outside the US."}
+  relief.refunds.0.amount_inr: {value: 1200000, cite: ["IRS_W8BEN:withholding"], work: "30% of 40,00,000."}
+  relief.refunds.0.forms: {value: ["Form 1040-NR", "Form W-8BEN"], cite: ["IRS_1040NR:all", "IRS_W8BEN:withholding"], work: "1040-NR for the refund; W-8BEN to stop withholding."}
+  relief.ftc: {value: null, cite: ["RULES2026:r76(7)(a)"], work: "No foreign tax was properly payable, so no credit is claimed."}
+  india_tax.in_force.payable: {value: 208000, cite: ["IT2025:s202(1)"], work: "Same income as P5."}
+  compliance.itr_form: {value: ITR-3, cite: ["RULES2026:r164(6)(c)", "RULES2026:r164(7)"], work: "A-16 default: fees from a foreign client bar ITR-4."}
+  compliance.itr_form_reasons: {value: [foreign_source_income], cite: ["RULES2026:r164(6)(c)"], work: "Only the contested A-16 bar applies."}
+  compliance.itr4_possible_under_other_reading: {value: true, cite: ["RULES2026:r164(6)(c)"], work: "Under reading a the bar falls away and ITR-4 is available."}
+  compliance.depends_on_contested: {value: [A-16], cite: ["RULES2026:r164(6)(c)"], work: "The form choice rests on A-16."}
+  compliance.advance_tax.net_tax_inr: {value: 208000, cite: ["IT2025:s404"], work: "No credit to deduct."}
+  flag_codes: {value: [W8BEN_MISSING], cite: ["IRS_W8BEN:withholding"], work: "Tax was withheld and no W-8BEN is on file."}

@@ -1,0 +1,35 @@
+id: P8
+title: A past old-regime opt-out, Tax Year 2026-27; tests the election rules across both Acts
+# The taxpayer used the old regime in 2024 and 2025 (FY 2024-25 and FY 2025-26, the second under the 1961 Act)
+# and now returns to the new regime in Tax Year 2026-27 under the 2025 Act. Receipts Rs 40 lakh, all electronic.
+#   withdrawal of the opt-out: old -> new, the one allowed switch back                     [s.202(4)(a)(iii)]
+#   after it no further opt-out is allowed while business income continues                [s.202(4)(a)(iv)]
+#   no Form 10-IEA: the option is exercised or withdrawn in the return of income           [r.136, RULES2026]
+#   deemed income = 20,00,000; slabs 20,000 + 40,000 + 60,000 + 80,000 = 2,00,000          [s.202(1)]
+#   cess 8,000; payable 2,08,000. Old regime: 12,500 + 1,00,000 + 3,00,000 = 4,12,500; cess 16,500; 4,29,000
+input:
+  persona_id: P8
+  tax_year: 2026
+  receipts: {electronic: 4000000}
+  regime_choice: new
+  election_history:
+    - {tax_year: 2024, regime: old}
+    - {tax_year: 2025, regime: old}
+expected:
+  regime.regime_in_force: {value: new, cite: ["IT2025:s202(4)(a)(iii)"], work: "Withdrawal of the opt-out is allowed once."}
+  regime.overridden: {value: false, cite: ["IT2025:s202(4)(a)(iii)"], work: "Request accepted."}
+  regime.withdrawal_this_year: {value: true, cite: ["IT2025:s202(4)(a)(iii)"], work: "Old in 2025, new in 2026."}
+  regime.opt_out_barred_after: {value: true, cite: ["IT2025:s202(4)(a)(iv)"], work: "No second opt-out."}
+  regime.filing: {value: return_of_income, cite: ["RULES2026:r136"], work: "No separate form: the return carries the election."}
+  income.income: {value: 2000000, cite: ["IT2025:s58(2)/T3"], work: "50% of 40,00,000."}
+  india_tax.in_force.slab_tax: {value: 200000, cite: ["IT2025:s202(1)"], work: "20,000 + 40,000 + 60,000 + 80,000."}
+  india_tax.in_force.cess: {value: 8000, cite: ["FA2026:s3(15)"], work: "4% of 2,00,000."}
+  india_tax.in_force.payable: {value: 208000, cite: ["IT2025:s516"], work: "200,000 + 8,000."}
+  india_tax.other.payable: {value: 429000, cite: ["FA2026:sch1-partIB-paraA(I)"], work: "Old regime 4,12,500 + 16,500."}
+  india_tax.cheaper: {value: new, cite: ["IT2025:s202(1)"], work: "2,08,000 is below 4,29,000."}
+  compliance.itr_form: {value: ITR-3, cite: ["RULES2026:r164(6)(c)", "RULES2026:r164(7)"], work: "A-16 default."}
+  compliance.regime_filing: {value: return_of_income, cite: ["RULES2026:r136"], work: "The withdrawal is made in the return, with no separate form."}
+  compliance.advance_tax.net_tax_inr: {value: 208000, cite: ["IT2025:s404"], work: "No credit."}
+  compliance.advance_tax.schedule: {value: single_instalment, cite: ["IT2025:s408(2)"], work: "s.58(2) Sl.3 declarant."}
+  compliance.return_due_date: {value: "2027-08-31", cite: ["IT2025:s263(1)/T3"], work: "Non-audit."}
+  flag_codes: {value: [], cite: ["IT2025:s202(4)"], work: "The request is within the rule."}

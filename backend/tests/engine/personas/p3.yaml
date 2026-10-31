@@ -1,0 +1,37 @@
+id: P3
+title: Rs 70 lakh receipts with 2% cash, Tax Year 2026-27; tests the Rs 75 lakh limit and no audit under s.63(2)
+# Hand computation (Income-tax Act 2025):
+#   cash = 1,40,000 of 70,00,000 = 2% <= 5%, so the limit is Rs 75 lakh and 70L is within it  [s.58(2)/T3]
+#   70L is 93.3% of 75L, at or above the 90% warning level -> RECEIPTS_NEAR_LIMIT
+#   deemed income = 35,00,000; receipts exceed 50L but s.63(2) exempts a presumptive declarant: no audit
+#   slabs: 20,000 + 40,000 + 60,000 (12-16L at 15%) + 80,000 (16-20L at 20%) + 1,00,000 (20-24L at 25%)
+#          + 3,30,000 (11L above 24L at 30%) = 6,30,000                                   [s.202(1)]
+#   no rebate (income above 12L, relief cap 23L is above tax), no surcharge (below 50L)
+#   cess 4% x 6,30,000 = 25,200; payable 6,55,200
+#   Old regime: 12,500 + 1,00,000 + 7,50,000 = 8,62,500; cess 34,500; 8,97,000
+input:
+  persona_id: P3
+  tax_year: 2026
+  receipts: {electronic: 6860000, cash: 140000}
+expected:
+  receipts_test.cash_share_percent: {value: 2, cite: ["IT2025:s58(2)/T3"], work: "1,40,000 / 70,00,000."}
+  receipts_test.low_cash: {value: true, cite: ["IT2025:s58(2)/T3"], work: "2% is 5% or less."}
+  receipts_test.applicable_limit: {value: 7500000, cite: ["IT2025:s58(2)/T3"], work: "Rs 75 lakh."}
+  receipts_test.within_limit: {value: true, cite: ["IT2025:s58(2)/T3"], work: "70L does not exceed 75L."}
+  income.scheme_available: {value: true, cite: ["IT2025:s58(2)/T3"], work: "Eligible and within the limit."}
+  income.income: {value: 3500000, cite: ["IT2025:s58(2)/T3"], work: "50% of 70,00,000."}
+  income.tax_audit_required: {value: false, cite: ["IT2025:s63(2)"], work: "A person declaring under s.58(2) is outside s.63(1)."}
+  income.books_audit_required: {value: false, cite: ["IT2025:s58(3)"], work: "Profit not declared below 50%."}
+  india_tax.in_force.slab_tax: {value: 630000, cite: ["IT2025:s202(1)"], work: "See the computation above."}
+  india_tax.in_force.rebate: {value: 0, cite: ["IT2025:s156(2)(b)"], work: "Income above 12L; marginal relief cap 23,00,000 exceeds the tax."}
+  india_tax.in_force.surcharge: {value: 0, cite: ["FA2026:sch1-partIB-paraF/T1(1)"], work: "Income is below Rs 50 lakh."}
+  india_tax.in_force.cess: {value: 25200, cite: ["FA2026:s3(15)"], work: "4% of 6,30,000."}
+  india_tax.in_force.payable: {value: 655200, cite: ["IT2025:s516"], work: "630,000 + 25,200; already a multiple of 10."}
+  india_tax.other.payable: {value: 897000, cite: ["FA2026:sch1-partIB-paraA(I)"], work: "Old regime 8,62,500 + 34,500."}
+  compliance.itr_form: {value: ITR-3, cite: ["RULES2026:r164(6)(c)", "RULES2026:r164(7)"], work: "A-16 default."}
+  compliance.advance_tax.required: {value: true, cite: ["IT2025:s404"], work: "6,55,200 is at least Rs 10,000."}
+  compliance.advance_tax.net_tax_inr: {value: 655200, cite: ["IT2025:s404"], work: "No foreign tax credit."}
+  compliance.advance_tax.schedule: {value: single_instalment, cite: ["IT2025:s408(2)"], work: "A s.58(2) Sl.3 declarant pays everything by 15 March."}
+  compliance.advance_tax.instalments.0.due: {value: "2027-03-15", cite: ["IT2025:s408(2)"], work: "15 March at the end of the financial year."}
+  compliance.return_due_date: {value: "2027-08-31", cite: ["IT2025:s263(1)/T3"], work: "No audit under s.63(2)."}
+  flag_codes: {value: [RECEIPTS_NEAR_LIMIT], cite: ["IT2025:s58(2)/T3"], work: "93.3% of the limit is above 90%."}

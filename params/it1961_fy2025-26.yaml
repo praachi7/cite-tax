@@ -39,11 +39,16 @@ params:
   tax.cess_percent: {value: 4, unit: percent, sources: ["FA2026:s2(6)"], status: verified, note: "Health and Education Cess on income-tax plus surcharge."}
   tax.surcharge.start_income_inr: {value: 5000000, unit: INR, sources: ["FA2026:sch1-partIA-paraF/T1(1)"], status: verified, note: "Individuals: surcharge applies where total income exceeds Rs 50 lakh. Moot for s.44ADA filers, whose deemed income is at most Rs 37.5 lakh; used only as a guard."}
   tax.surcharge.first_rate_percent: {value: 10, unit: percent, sources: ["FA2026:sch1-partIA-paraF/T1(1)"], status: verified, note: "10% from Rs 50 lakh to Rs 1 crore; the higher bands (15%, 25%, 37%) are not modelled because they cannot be reached with presumptive professional income. Marginal relief is provided in the same Paragraph."}
+  # ---- Rounding ----
+  rounding.total_income_multiple_inr: {value: 10, unit: INR, sources: ["IT1961:s288A"], status: verified, note: "Total income: ignore paise, then round to the nearest Rs 10 (last figure 5 or more rounds up)."}
+  rounding.payable_multiple_inr: {value: 10, unit: INR, sources: ["IT1961:s288B"], status: verified, note: "Amount payable and refund due: ignore paise, then round to the nearest Rs 10."}
   # ---- Advance tax ----
   advance_tax.threshold_inr: {value: 10000, unit: INR, sources: ["IT1961:s208"], status: verified}
   advance_tax.presumptive.single_instalment_due: {value: "03-15", unit: MM-DD, sources: ["IT1961:s211(1)(b)"], status: verified, note: "Assessees declaring profits under s.44AD(1) or s.44ADA(1) pay all advance tax by 15 March."}
   advance_tax.presumptive.shortfall_interest_percent: {value: 1, unit: percent, sources: ["IT1961:s234C(1)(b)"], status: verified, note: "Simple interest of one per cent on the shortfall from the tax due on the returned income."}
+  advance_tax.regular.instalments: {value: [["06-15", 15], ["09-15", 45], ["12-15", 75], ["03-15", 100]], unit: "[MM-DD, cumulative_percent]", sources: ["IT1961:s211(1)(a)"], status: verified, note: "Every assessee other than one declaring under s.44AD(1) or s.44ADA(1) pays in four instalments; each figure is the minimum cumulative share of the advance tax."}
   # ---- Return ----
+  return.due_date_audit_cases: {value: "10-31", unit: MM-DD, sources: ["IT1961:s139(1)"], status: verified, note: "Explanation 2: 31 October of the assessment year for a person (other than a company) whose accounts are required to be audited."}
   return.due_date_business_profession_non_audit: {value: "08-31", unit: MM-DD, sources: ["IT1961:s139(1)", "NOTIF47_2026:all"], status: verified, note: "Explanation 2 as substituted by Act 4 of 2026, w.e.f. 1 March 2026; the ITR-3 due-date list also offers 31 August."}
   # ---- ITR form choice ----
   itr.presumptive_form: {value: "ITR-4", sources: ["RULES1962:r12(1)(ca)"], status: verified}

@@ -1,0 +1,27 @@
+id: P2
+title: The P1 profile for FY 2025-26 (Income-tax Act 1961); tests Act selection and the concordance
+# Same figures as P1 because the slabs, rebate and rate are identical in the two Acts. What differs, and
+# what this persona must show, is the Act, the section citations and the rule IDs (see trace_expect).
+#   deemed income = 50% x 24,00,000 = 12,00,000 [s.44ADA(1)]; slab tax 60,000 [s.115BAC(1A)];
+#   rebate 60,000 [s.87A proviso]; payable nil. Old regime: 1,79,400 as for P1.
+input:
+  persona_id: P2
+  tax_year: 2025
+  receipts: {electronic: 2400000}
+expected:
+  act.act_id: {value: IT1961, cite: ["IT1961:s44ADA(1)"], work: "FY 2025-26 is governed by the Income-tax Act 1961."}
+  act.rules_id: {value: RULES1962, cite: ["RULES1962:r12(1)(ca)"], work: "Rules 1962 apply with the 1961 Act."}
+  eligibility.eligible: {value: true, cite: ["NOTIF385E_2001:all", "IT1961:s44ADA(1)"], work: "IT is a notified profession under s.44AA(1)."}
+  receipts_test.applicable_limit: {value: 7500000, cite: ["IT1961:s44ADA(1)"], work: "First proviso, cash 0%."}
+  income.income: {value: 1200000, cite: ["IT1961:s44ADA(1)"], work: "50% of 24,00,000."}
+  india_tax.in_force.slab_tax: {value: 60000, cite: ["IT1961:s115BAC(1A)"], work: "20,000 + 40,000."}
+  india_tax.in_force.rebate: {value: 60000, cite: ["IT1961:s87A"], work: "Proviso: rebate up to 60,000 where income is 12L or less."}
+  india_tax.in_force.payable: {value: 0, cite: ["IT1961:s87A"], work: "Nil after rebate."}
+  india_tax.other.payable: {value: 179400, cite: ["FA2026:sch1-partIA-paraA(I)"], work: "Old regime."}
+  compliance.itr_form: {value: ITR-3, cite: ["RULES1962:r12(1)(ca)", "RULES1962:r12(1)(d)"], work: "A-16 default bars ITR-4."}
+  compliance.advance_tax.required: {value: false, cite: ["IT1961:s208"], work: "Nil tax is below Rs 10,000."}
+  compliance.return_due_date: {value: "2026-08-31", cite: ["IT1961:s139(1)"], work: "Assessment year 2026-27, non-audit."}
+trace_expect:
+  has_cite: ["IT1961:s44ADA(1)", "IT1961:s87A", "IT1961:s115BAC(1A)"]
+  lacks_prefix: ["IT2025", "RULES2026"]
+  param_version: it1961_fy2025-26.yaml

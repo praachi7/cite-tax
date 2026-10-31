@@ -1,0 +1,40 @@
+id: P4
+title: Rs 60 lakh receipts with 8% cash, Tax Year 2026-27; the limit falls to Rs 50 lakh so presumptive taxation is unavailable
+# Hand computation (Income-tax Act 2025):
+#   cash = 4,80,000 of 60,00,000 = 8% > 5%, so the limit stays Rs 50 lakh; 60L exceeds it -> scheme unavailable
+#   income must come from books of account: assume books profit of Rs 33,00,000 (55%)          [input]
+#   receipts exceed Rs 50 lakh and the person is not declaring under s.58(2) -> tax audit, s.63(1) Sl.1(c)
+#   slabs: 3,00,000 (to 24L, as in P3) + 2,70,000 (9L at 30%) = 5,70,000                        [s.202(1)]
+#   cess 22,800; payable 5,92,800
+#   Old regime: 12,500 + 1,00,000 + 6,90,000 = 8,02,500; cess 32,100; 8,34,600
+input:
+  persona_id: P4
+  tax_year: 2026
+  receipts: {electronic: 5520000, cash: 480000}
+  declared_profit: 3300000
+expected:
+  receipts_test.cash_share_percent: {value: 8, cite: ["IT2025:s58(2)/T3"], work: "4,80,000 / 60,00,000."}
+  receipts_test.low_cash: {value: false, cite: ["IT2025:s58(2)/T3"], work: "8% is above 5%."}
+  receipts_test.applicable_limit: {value: 5000000, cite: ["IT2025:s58(2)/T3"], work: "Rs 50 lakh."}
+  receipts_test.within_limit: {value: false, cite: ["IT2025:s58(2)/T3"], work: "60L exceeds 50L."}
+  income.scheme_available: {value: false, cite: ["IT2025:s58(2)/T3"], work: "Over the limit."}
+  income.basis: {value: books_profit, cite: ["IT2025:s63(1)/T1(c)"], work: "Tax computed on the books profit."}
+  income.income: {value: 3300000, cite: ["IT2025:s63(1)/T1(c)"], work: "Input books profit."}
+  income.tax_audit_required: {value: true, cite: ["IT2025:s63(1)/T1(c)"], work: "Profession receipts above Rs 50 lakh."}
+  india_tax.in_force.slab_tax: {value: 570000, cite: ["IT2025:s202(1)"], work: "3,00,000 + 2,70,000."}
+  india_tax.in_force.cess: {value: 22800, cite: ["FA2026:s3(15)"], work: "4% of 5,70,000."}
+  india_tax.in_force.payable: {value: 592800, cite: ["IT2025:s516"], work: "570,000 + 22,800."}
+  india_tax.other.payable: {value: 834600, cite: ["FA2026:sch1-partIB-paraA(I)"], work: "Old regime."}
+  compliance.itr_form: {value: ITR-3, cite: ["RULES2026:r164(7)"], work: "Presumptive taxation is unavailable, so the fallback form applies."}
+  compliance.itr_form_reasons: {value: [NOT_PRESUMPTIVE], cite: ["RULES2026:r164(5)"], work: "ITR-4 is only for presumptive income."}
+  compliance.advance_tax.schedule: {value: four_instalments, cite: ["IT2025:s408(1)"], work: "Not a s.58(2) declarant."}
+  compliance.advance_tax.net_tax_inr: {value: 592800, cite: ["IT2025:s404"], work: "No credit."}
+  compliance.advance_tax.instalments.0.due: {value: "2026-06-15", cite: ["IT2025:s408(1)"], work: "First instalment, 15 June."}
+  compliance.advance_tax.instalments.0.cumulative_amount_inr: {value: 88920, cite: ["IT2025:s408(1)"], work: "15% of 5,92,800."}
+  compliance.advance_tax.instalments.1.cumulative_amount_inr: {value: 266760, cite: ["IT2025:s408(1)"], work: "45% of 5,92,800 by 15 September."}
+  compliance.advance_tax.instalments.2.cumulative_amount_inr: {value: 444600, cite: ["IT2025:s408(1)"], work: "75% of 5,92,800 by 15 December."}
+  compliance.advance_tax.instalments.3.due: {value: "2027-03-15", cite: ["IT2025:s408(1)"], work: "Whole amount by 15 March."}
+  compliance.advance_tax.instalments.3.cumulative_amount_inr: {value: 592800, cite: ["IT2025:s408(1)"], work: "100% of 5,92,800."}
+  compliance.return_due_date: {value: "2027-10-31", cite: ["IT2025:s263(1)"], work: "Accounts are required to be audited."}
+  compliance.return_due_basis: {value: audit_case, cite: ["IT2025:s263(1)"], work: "Audit case."}
+  flag_codes: {value: [TAX_AUDIT_REQUIRED], cite: ["IT2025:s63(1)/T1(c)"], work: "Audit bar crossed."}

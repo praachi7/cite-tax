@@ -1,0 +1,31 @@
+id: P7
+title: A Payoneer balance held abroad, Tax Year 2026-27; tests the Schedule FA flag and ITR-3 under A-12
+# Receipts Rs 30 lakh, all electronic, from a US client for work done in India; no US tax withheld. A Payoneer
+# balance is held abroad (a platform wallet in the user's name).
+# Hand computation:
+#   deemed income 15,00,000; slabs: 20,000 + 40,000 + 45,000 (12-15L at 15%) = 1,05,000              [s.202(1)]
+#   income above 12L, so no rebate; marginal relief cap = 15L - 12L = 3,00,000 > tax: no relief       [s.156(2)(b)]
+#   cess 4,200; payable 1,09,200. Old regime: 12,500 + 1,00,000 + 1,50,000 = 2,62,500; cess 10,500; 2,73,000
+#   A-12 default (reading a): a wallet balance held abroad is a foreign asset -> Schedule FA and ITR-4 barred  [r.164(6)(a), (b)]
+#   A-16 default (reading b): fees from a foreign client bar ITR-4 as well                            [r.164(6)(c)]
+#   so ITR-3, resting on both A-12 and A-16; advance tax 1,09,200 once by 15 Mar 2027
+input:
+  persona_id: P7
+  tax_year: 2026
+  receipts: {electronic: 3000000}
+  platform_wallet_balance_abroad: true
+expected:
+  income.income: {value: 1500000, cite: ["IT2025:s58(2)/T3"], work: "50% of 30,00,000."}
+  india_tax.in_force.slab_tax: {value: 105000, cite: ["IT2025:s202(1)"], work: "20,000 + 40,000 + 45,000."}
+  india_tax.in_force.rebate: {value: 0, cite: ["IT2025:s156(2)(b)"], work: "Income above 12L and the relief cap exceeds the tax."}
+  india_tax.in_force.cess: {value: 4200, cite: ["FA2026:s3(15)"], work: "4% of 1,05,000."}
+  india_tax.in_force.payable: {value: 109200, cite: ["IT2025:s516"], work: "1,05,000 + 4,200."}
+  india_tax.other.payable: {value: 273000, cite: ["FA2026:sch1-partIB-paraA(I)"], work: "Old regime 2,62,500 + 10,500."}
+  compliance.itr_form: {value: ITR-3, cite: ["RULES2026:r164(6)(a)", "RULES2026:r164(6)(b)", "RULES2026:r164(7)"], work: "A wallet balance abroad is a foreign asset under A-12 reading a."}
+  compliance.itr_form_reasons: {value: [foreign_assets, foreign_source_income], cite: ["RULES2026:r164(6)(a)", "RULES2026:r164(6)(c)"], work: "A-12 and A-16 defaults."}
+  compliance.depends_on_contested: {value: [A-12, A-16], cite: ["RULES2026:r164(6)(a)", "RULES2026:r164(6)(c)"], work: "Both bars are contested."}
+  compliance.itr4_possible_under_other_reading: {value: true, cite: ["RULES2026:r164(6)"], work: "Both bars are contested, so another reading could allow ITR-4."}
+  compliance.advance_tax.net_tax_inr: {value: 109200, cite: ["IT2025:s404"], work: "No credit."}
+  compliance.advance_tax.schedule: {value: single_instalment, cite: ["IT2025:s408(2)"], work: "s.58(2) Sl.3 declarant."}
+  compliance.return_due_date: {value: "2027-08-31", cite: ["IT2025:s263(1)/T3"], work: "Non-audit."}
+  flag_codes: {value: [SCHEDULE_FA_REQUIRED], cite: ["RULES2026:r164(6)(a)"], work: "The wallet balance must be reported in Schedule FA."}

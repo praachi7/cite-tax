@@ -2,7 +2,7 @@
 
 An AI-assisted decision-support prototype for **India-resident freelancers in specified professions (such as information technology) who work for clients in the United States**. It works out what tax is owed in India, whether the US can tax any of the income, and which filings and documents are needed. Every figure, classification and flag comes with a **verified citation** to the governing law, and the system says so openly when the law is unclear.
 
-> **Status: research and design are complete. Implementation has not started.**
+> **Status: research and design are complete. Phase A (law as data) and Phase B (the deterministic tax engine) are built. The later phases have not started.**
 > This is an educational student project. It does not give legal or tax advice, and it uses synthetic data only.
 
 ## The idea in one paragraph
@@ -59,7 +59,27 @@ The law the system relies on comes from official publications: the Income-tax Ac
 
 ## Running the project
 
-Not available yet. Instructions will be added when the first implementation phase is complete.
+There is no app yet. What exists is the law data (`params/`, `corpus/`), the loader and validator (`backend/lawdata/`), and the tax engine (`backend/engine/`).
+
+```
+python -m venv .venv && .venv/Scripts/pip install -r requirements.txt    # Python 3.12
+.venv/Scripts/python -m pytest -q                                        # all tests
+set PYTHONPATH=backend && python -m lawdata.validate                     # check the law-data files
+```
+
+The engine is a pure function over the parameter files, with no database, language model or network:
+
+```python
+from engine.models import TaxpayerInput
+from engine.pipeline import run
+
+result = run(TaxpayerInput(tax_year=2026, receipts={"electronic": 2400000}))
+result.india_tax.in_force.payable      # Decimal rupees, rounded to Rs 10 as s.516 requires
+result.compliance.itr_form             # "ITR-3" under the default A-16 assumption
+result.trace                           # every step: rule ID, citations, parameter file used
+```
+
+The ten pipeline steps are in `backend/engine/steps/`. Assumption switches (A-3, A-5, A-12, A-16) are passed as an `EngineConfig`, whose defaults come from `corpus/assumptions.yaml`. Test personas P1 to P10 are in `backend/tests/engine/personas/`, each with hand-computed expected values and the statute citation for every figure.
 
 ## Disclaimer
 

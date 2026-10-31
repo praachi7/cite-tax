@@ -1,0 +1,34 @@
+id: P9
+title: A US visit of about 85 days with US tax withheld on the US-performed work, Tax Year 2026-27; tests the Article 15 exemption below 90 days
+# Same receipts and engagements as P5 (Rs 8 lakh done in the US, Rs 32 lakh in India, Rs 2,40,000 withheld by the
+# US client) but only 85 US days in calendar 2026.
+# Hand computation:
+#   substantial presence: 85 days; weighted 85 < 183 -> not met                                    [Pub. 519]
+#   source: the Rs 8 lakh is US-source (the client is a US person, so the s.861(a)(3) exception does not apply)
+#   Article 15: 85 < 90 and no fixed base -> the US may not tax; the IRS says 89 days or fewer is exempt  [Art. 15(1), Pub. 901]
+#   so the Rs 2,40,000 withheld is refundable on Form 1040-NR, and Form 8233 stops future withholding  [Form 1040-NR, Form 8233]
+#   85 days is at or above the 80-day warning level -> US_DAYS_WARNING
+#   India: payable 2,08,000 as in P5; no credit, advance tax 2,08,000; ITR-3 on the A-16 default
+input:
+  persona_id: P9
+  tax_year: 2026
+  receipts: {electronic: 4000000}
+  engagements:
+    - {label: US client, country_of_performance: US, amount_inr: 800000, client_is_us_person: true, us_tax_withheld_inr: 240000}
+    - {label: India work, country_of_performance: IN, amount_inr: 3200000, client_is_us_person: true}
+  us_days_by_year: {2026: 85}
+expected:
+  us_presence.substantial_presence: {value: false, cite: ["IRS_PUB519:spt"], work: "85 weighted days is below 183."}
+  us_source.us_source_inr: {value: 800000, cite: ["IRC:s861(a)(3)"], work: "US-performed work for a US person."}
+  treaty.us_may_tax: {value: false, cite: ["DTAA_US:art15(1)(b)", "IRS_PUB901:india"], work: "85 days is below 90; IRS: 89 days or fewer is exempt."}
+  treaty.basis: {value: exempt, cite: ["DTAA_US:art15(1)(b)"], work: "Neither fixed base nor 90 days."}
+  treaty.us_taxable_inr: {value: 0, cite: ["DTAA_US:art15(1)(b)"], work: "Nothing the US may tax."}
+  relief.route: {value: refund, cite: ["IRS_1040NR:all"], work: "The withheld tax was not due under the treaty."}
+  relief.refunds.0.reason: {value: TREATY_EXEMPT, cite: ["DTAA_US:art15(1)(b)"], work: "US-source but exempt by treaty."}
+  relief.refunds.0.amount_inr: {value: 240000, cite: ["IRS_F8233:all"], work: "The amount withheld."}
+  relief.refunds.0.forms: {value: ["Form 1040-NR", "Form 8233"], cite: ["IRS_1040NR:all", "IRS_F8233:all"], work: "1040-NR for the refund; 8233 for exemption from withholding on services."}
+  relief.ftc: {value: null, cite: ["RULES2026:r76(7)(a)"], work: "No creditable US tax."}
+  india_tax.in_force.payable: {value: 208000, cite: ["IT2025:s202(1)"], work: "Same income as P5."}
+  compliance.itr_form: {value: ITR-3, cite: ["RULES2026:r164(6)(c)", "RULES2026:r164(7)"], work: "A-16 default."}
+  compliance.advance_tax.net_tax_inr: {value: 208000, cite: ["IT2025:s404"], work: "No credit to deduct."}
+  flag_codes: {value: [US_DAYS_WARNING], cite: ["DTAA_US:art15(1)(b)"], work: "85 days is within the warning band and below the trigger."}

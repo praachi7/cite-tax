@@ -1,0 +1,29 @@
+id: P10
+title: Receipts Rs 30 lakh, profit declared at 40%, Tax Year 2026-27; tests tax on the declared profit and the books-and-audit flag
+# Hand computation (Income-tax Act 2025):
+#   presumptive amount = 50% x 30,00,000 = 15,00,000; profit declared = 12,00,000 (40%), which is lower
+#   declared lower and income above the Rs 4,00,000 exemption limit -> books of account and audit    [s.58(3)]
+#   tax is computed on the declared 12,00,000 (decision confirmed for this project)
+#   slabs 60,000, rebate 60,000, payable nil. The flag is raised even though the tax is nil, because the
+#   rule turns on income exceeding the exemption limit and not on tax payable.
+input:
+  persona_id: P10
+  tax_year: 2026
+  receipts: {electronic: 3000000}
+  declared_profit: 1200000
+expected:
+  income.presumptive_amount: {value: 1500000, cite: ["IT2025:s58(2)/T3"], work: "50% of 30,00,000."}
+  income.basis: {value: declared_lower, cite: ["IT2025:s58(3)"], work: "12,00,000 is below 15,00,000."}
+  income.income: {value: 1200000, cite: ["IT2025:s58(3)"], work: "Tax is on the profit declared."}
+  income.exemption_limit: {value: 400000, cite: ["IT2025:s202(1)"], work: "Top of the nil slab."}
+  income.books_audit_required: {value: true, cite: ["IT2025:s58(3)"], work: "12,00,000 exceeds 4,00,000."}
+  income.tax_audit_required: {value: true, cite: ["IT2025:s58(3)"], work: "Audit under the same rule."}
+  india_tax.in_force.slab_tax: {value: 60000, cite: ["IT2025:s202(1)"], work: "20,000 + 40,000."}
+  india_tax.in_force.rebate: {value: 60000, cite: ["IT2025:s156(2)(a)"], work: "Income is within 12L."}
+  india_tax.in_force.payable: {value: 0, cite: ["IT2025:s156(2)(a)"], work: "Nil after rebate."}
+  compliance.itr_form: {value: ITR-3, cite: ["RULES2026:r164(7)"], work: "Profit declared below 50% means books and audit, so not a presumptive return."}
+  compliance.itr_form_reasons: {value: [NOT_PRESUMPTIVE], cite: ["IT2025:s58(3)"], work: "The presumptive scheme is not being used."}
+  compliance.advance_tax.required: {value: false, cite: ["IT2025:s404"], work: "Tax payable is nil."}
+  compliance.return_due_date: {value: "2027-10-31", cite: ["IT2025:s263(1)"], work: "Accounts must be audited."}
+  compliance.return_due_basis: {value: audit_case, cite: ["IT2025:s263(1)"], work: "Audit case."}
+  flag_codes: {value: [BOOKS_AUDIT_REQUIRED], cite: ["IT2025:s58(3)"], work: "Declared below 50% with income above the exemption limit."}

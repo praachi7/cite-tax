@@ -1,0 +1,48 @@
+id: P5
+title: A 95-day US visit with US tax withheld on the US-performed work, Tax Year 2026-27; tests the Article 15 trigger, FTC routing, Form 44 data and ITR-3
+# Receipts Rs 40 lakh, all electronic: Rs 8 lakh for work done in the US, Rs 32 lakh for work done in India.
+# US days in calendar 2026: 95. The US client withheld 30% of the US work: Rs 2,40,000 (a W-8BEN is on file).
+# Hand computation:
+#   substantial presence: 95 days; weighted 95 + 0 + 0 = 95 < 183 -> not met                       [Pub. 519]
+#   source: the Rs 8 lakh was performed in the US -> US-source; the Rs 32 lakh is not              [IRC s.861(a)(3)]
+#   Article 15: 95 days >= 90 -> the US may tax the Rs 8 lakh                                      [Art. 15(1)(b)]
+#   India: deemed income 50% x 40,00,000 = 20,00,000; slab tax 20,000 + 40,000 + 60,000 + 80,000 = 2,00,000;
+#          cess 8,000; payable 2,08,000                                                            [s.58(2)/T3, s.202(1)]
+#   FTC cap (A-5 reading a): tax x US receipts / total receipts = 2,08,000 x 8,00,000 / 40,00,000 = 41,600
+#   credit = lower of foreign tax 2,40,000 and cap 41,600 = 41,600; unrelieved 1,98,400            [r.76(7)(a)]
+#   Form 44 statement due 12 months after 31 Mar 2027 = 31 Mar 2028; foreign tax >= Rs 1 lakh -> accountant verification  [r.76(12), r.76(16)(b)]
+#   ITR: foreign tax relief is claimed -> ITR-4 barred -> ITR-3 (and A-16 default also bars it)    [r.164(6), r.164(7)]
+#   advance tax: 2,08,000 - 41,600 = 1,66,400, in one instalment by 15 Mar 2027                    [s.404, s.408(2)]
+#   return due 31 Aug 2027 (no audit)                                                              [s.263(1)/T3]
+input:
+  persona_id: P5
+  tax_year: 2026
+  receipts: {electronic: 4000000}
+  engagements:
+    - {label: US client, country_of_performance: US, amount_inr: 800000, client_is_us_person: true, us_tax_withheld_inr: 240000}
+    - {label: India work, country_of_performance: IN, amount_inr: 3200000, client_is_us_person: true}
+  us_days_by_year: {2026: 95}
+expected:
+  us_presence.substantial_presence: {value: false, cite: ["IRS_PUB519:spt"], work: "95 current days; weighted total 95 is below 183."}
+  us_source.us_source_inr: {value: 800000, cite: ["IRC:s861(a)(3)"], work: "Only the Rs 8 lakh was performed in the US."}
+  treaty.us_may_tax: {value: true, cite: ["DTAA_US:art15(1)(b)"], work: "95 days is 90 or more."}
+  treaty.basis: {value: days_threshold, cite: ["DTAA_US:art15(1)(b)"], work: "No fixed base; the day count triggers."}
+  treaty.us_taxable_inr: {value: 800000, cite: ["DTAA_US:art15(1)(b)"], work: "The US-performed receipts."}
+  income.income: {value: 2000000, cite: ["IT2025:s58(2)/T3"], work: "50% of 40,00,000."}
+  india_tax.in_force.payable: {value: 208000, cite: ["IT2025:s202(1)"], work: "Slab tax 2,00,000 plus 4% cess 8,000."}
+  relief.route: {value: credit, cite: ["RULES2026:r76(7)(a)"], work: "The US was entitled to tax, so the tax is creditable in India."}
+  relief.ftc.form: {value: "Form 44", cite: ["RULES2026:r76(10)"], work: "2025-Act form."}
+  relief.ftc.foreign_tax_inr: {value: 240000, cite: ["RULES2026:r76(7)(a)"], work: "30% of 8,00,000 withheld."}
+  relief.ftc.cap_inr: {value: 41600, cite: ["RULES2026:r76(7)(a)"], work: "2,08,000 x 8,00,000 / 40,00,000 under A-5 reading a."}
+  relief.ftc.credit_inr: {value: 41600, cite: ["RULES2026:r76(7)(a)"], work: "Lower of 2,40,000 and 41,600."}
+  relief.ftc.unrelieved_inr: {value: 198400, cite: ["RULES2026:r76(7)(a)"], work: "2,40,000 - 41,600."}
+  relief.ftc.statement_due: {value: "2028-03-31", cite: ["RULES2026:r76(12)"], work: "12 months after the year ends on 31 Mar 2027."}
+  relief.ftc.accountant_verification: {value: true, cite: ["RULES2026:r76(16)(b)"], work: "Foreign tax 2,40,000 is at least Rs 1,00,000."}
+  compliance.itr_form: {value: ITR-3, cite: ["RULES2026:r164(6)", "RULES2026:r164(7)"], work: "Foreign tax relief claimed bars ITR-4."}
+  compliance.itr_form_reasons: {value: [foreign_source_income, foreign_tax_relief_claimed], cite: ["RULES2026:r164(6)"], work: "The relief claim is a firm bar; A-16 default adds the other."}
+  compliance.itr4_possible_under_other_reading: {value: false, cite: ["RULES2026:r164(6)"], work: "A firm bar remains under any reading."}
+  compliance.advance_tax.net_tax_inr: {value: 166400, cite: ["IT2025:s404"], work: "2,08,000 - 41,600 credit."}
+  compliance.advance_tax.schedule: {value: single_instalment, cite: ["IT2025:s408(2)"], work: "s.58(2) Sl.3 declarant pays once."}
+  compliance.advance_tax.instalments.0.due: {value: "2027-03-15", cite: ["IT2025:s408(2)"], work: "15 March of the year."}
+  compliance.return_due_date: {value: "2027-08-31", cite: ["IT2025:s263(1)/T3"], work: "Non-audit business or profession income."}
+  flag_codes: {value: [ARTICLE_15_TRIGGERED, US_RETURN_REQUIRED, FTC_CAP_ASSUMPTION, FTC_ACCOUNTANT_VERIFICATION], cite: ["DTAA_US:art15(1)(b)", "RULES2026:r76(16)(b)"], work: "Trigger reached, US return needed, A-5 applied, verification threshold crossed."}

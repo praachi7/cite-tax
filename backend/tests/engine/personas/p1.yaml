@@ -1,0 +1,32 @@
+id: P1
+title: IT consultant, Tax Year 2026-27, Rs 24 lakh receipts, all electronic
+# Hand computation (new regime, Income-tax Act 2025):
+#   deemed income = 50% x 24,00,000 = 12,00,000                          [s.58(2) Sl.3]
+#   slabs: 0-4L nil; 4-8L 5% = 20,000; 8-12L 10% = 40,000 -> 60,000     [s.202(1)]
+#   rebate = lower of tax and 60,000 = 60,000 (income not above 12L)    [s.156(2)(a)]
+#   tax after rebate 0, cess 0, payable 0.
+# Old regime on the same income (no deductions): 12,500 + 1,00,000 + 60,000 = 1,72,500; cess 6,900; 1,79,400.
+input:
+  persona_id: P1
+  tax_year: 2026
+  receipts: {electronic: 2400000}
+expected:
+  act.act_id: {value: IT2025, cite: ["IT2025:s58(2)/T3"], work: "Tax Year 2026 is governed by the Income-tax Act 2025."}
+  eligibility.eligible: {value: true, cite: ["IT2025:s58(11)(b)"], work: "Resident individual, information technology named in s.62(4)."}
+  receipts_test.low_cash: {value: true, cite: ["IT2025:s58(2)/T3"], work: "Cash is 0%, which is 5% or less."}
+  receipts_test.applicable_limit: {value: 7500000, cite: ["IT2025:s58(2)/T3"], work: "Rs 75 lakh limit."}
+  income.basis: {value: presumptive, cite: ["IT2025:s58(2)/T3"], work: "No profit declared, so 50% applies."}
+  income.income: {value: 1200000, cite: ["IT2025:s58(2)/T3"], work: "50% of 24,00,000."}
+  india_tax.in_force.total_income: {value: 1200000, cite: ["IT2025:s516"], work: "Already a multiple of 10."}
+  india_tax.in_force.slab_tax: {value: 60000, cite: ["IT2025:s202(1)"], work: "20,000 + 40,000."}
+  india_tax.in_force.rebate: {value: 60000, cite: ["IT2025:s156(2)(a)"], work: "Lower of tax 60,000 and the 60,000 cap."}
+  india_tax.in_force.cess: {value: 0, cite: ["FA2026:s3(15)"], work: "4% of nil."}
+  india_tax.in_force.payable: {value: 0, cite: ["IT2025:s156(2)(a)"], work: "Nil after rebate."}
+  india_tax.other.payable: {value: 179400, cite: ["FA2026:sch1-partIB-paraA(I)"], work: "Old regime: 1,72,500 + 4% cess 6,900."}
+  india_tax.cheaper: {value: new, cite: ["IT2025:s202(1)"], work: "Nil is below 1,79,400."}
+  compliance.itr_form: {value: ITR-3, cite: ["RULES2026:r164(6)(c)", "RULES2026:r164(7)"], work: "A-16 default: fees from a foreign client are income from a source outside India, which bars ITR-4."}
+  compliance.itr4_possible_under_other_reading: {value: true, cite: ["RULES2026:r164(6)(c)"], work: "Under A-16 reading a the bar falls away and ITR-4 applies."}
+  compliance.advance_tax.required: {value: false, cite: ["IT2025:s404"], work: "Tax payable is nil, below Rs 10,000."}
+  compliance.advance_tax.schedule: {value: none, cite: ["IT2025:s404"], work: "No advance tax."}
+  compliance.return_due_date: {value: "2027-08-31", cite: ["IT2025:s263(1)/T3"], work: "Non-audit business or profession income."}
+  flag_codes: {value: [], cite: ["IT2025:s58(2)/T3"], work: "No flag: far below the limit, profit not declared lower."}
