@@ -1,0 +1,47 @@
+# Documents and legal source PDFs (kept outside the repository)
+/sources
+/docs
+
+# Secrets: never commit API keys. Commit .env.example with names only.
+.env
+.env.*
+!.env.example
+
+# Local tool settings
+.claude/
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+dist/
+build/
+
+# Generated data, rebuilt by scripts from the curated corpus
+/corpus/extracted/
+/corpus/embeddings/
+*.dump
+*.sqlite3
+
+# Docker and databases (local data volumes)
+pgdata/
+postgres-data/
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db
