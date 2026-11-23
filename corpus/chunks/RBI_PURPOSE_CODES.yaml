@@ -1,0 +1,28 @@
+# Corpus chunks for RBI_PURPOSE_CODES: RBI, New purpose codes for reporting forex transactions (FETERS version 6.2)
+# Hand-typed from the PDF (a table); not drafted by scripts/draft_chunks.py. Review against page 7, then set reviewed: true.
+chunks:
+- id: RBI_PC:receipts-08
+  source_id: RBI_PURPOSE_CODES
+  covers:
+  - RBI_PC:P0802
+  - RBI_PC:P0807
+  breadcrumb: RBI purpose codes for forex transactions > B. Receipt purposes > Group 08 Computer & Information Services
+  heading: Receipt purpose codes for computer and information services (P0801 to P0807)
+  text: |-
+    New purpose codes for reporting forex transactions, B. Receipt purposes, group 08: Computer & Information Services.
+    P0801 Hardware consultancy/implementation
+    P0802 Software consultancy/implementation (other than those covered in SOFTEX form)
+    P0803 Data base, data processing charges
+    P0804 Repair and maintenance of computer and software
+    P0805 News agency services
+    P0806 Other information services - Subscription to newspapers, periodicals, etc.
+    P0807 Off site Software Exports
+  tax_year_first: null
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 7
+  is_table: true
+  extraction: hand_typed
+  reviewed: false
+  note: Bank reporting codes, not tax law. The code identifies the purpose of an inward remittance on the bank's records and FIRA / e-FIRA.

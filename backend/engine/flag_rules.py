@@ -277,13 +277,12 @@ RULES: tuple[FlagRule, ...] = (
              "Foreign TIN, foreign tax certificate or DTAA article missing; Form 44 window closing",
              ("ftc.form", "ftc.statement_deadline_months_after_year_end"), _ftc_docs_incomplete),
     FlagRule("FIRA_MISSING", "medium", "Export receipt without FIRA / e-FIRA or purpose code (e.g. P0802)",
-             (), _fira_missing,
-             source_note="RBI purpose codes and FIRA / e-FIRA evidence: secondary, not yet in corpus/registry.yaml "
-                         "(to verify)."),
+             ("gst.export_of_services_requires_foreign_exchange", "flags.fira_purpose_code_required"), _fira_missing,
+             source_note="Purpose codes are RBI reporting codes for banks (guidance, not tax law); a missing code "
+                         "is a documentation gap, not a breach of the Income-tax Act."),
     FlagRule("GST_LUT_MISSING", "medium", "Aggregate turnover of Rs 20L or more and exports without a current LUT",
-             ("gst.registration_threshold_inr", "gst.aggregate_turnover_includes_exports"), _gst_lut_missing,
-             source_note="IGST Act s.16(3) and CGST Rules r.96A (LUT for zero-rated exports): secondary, not yet in "
-                         "corpus/registry.yaml (to verify)."),
+             ("gst.registration_threshold_inr", "gst.aggregate_turnover_includes_exports",
+              "gst.lut_allows_export_without_igst"), _gst_lut_missing),
     FlagRule("ADVANCE_TAX_DUE", "medium", "Tax of Rs 10,000 or more not paid by 15 March",
              ("advance_tax.threshold_inr",), _advance_tax_due,
              case_cite_keys=("advance_tax.presumptive.single_instalment_due",

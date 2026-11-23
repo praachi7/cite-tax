@@ -101,6 +101,43 @@ sources:
     breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27
     q_regex: '^(\d+)\.\s'
 
+  CGST_RULES:
+    mode: anchor
+    breadcrumb: Central Goods and Services Tax Rules 2017
+    units:
+      - id: r96A
+        label: r.96A
+        heading: Export of goods or services under bond or Letter of Undertaking (Form GST RFD-11)
+        start: '^1\[Rule 96A\.'
+
+  IGST_S2:
+    mode: anchor
+    breadcrumb: Integrated Goods and Services Tax Act 2017
+    units:
+      - id: s2(6)
+        label: s.2(6)
+        heading: Definition of export of services
+        start: '^\(6\) "export of services"'
+        end: '^\(7\) '
+
+  IGST_S16:
+    mode: anchor
+    breadcrumb: Integrated Goods and Services Tax Act 2017
+    units:
+      - id: s16(1)
+        label: s.16(1)
+        heading: Zero rated supply (definition)
+        start: '^\(1\) "zero rated supply"'
+        end: '^\(2\) Subject'
+      - id: s16(3)
+        label: s.16(3)
+        heading: Zero rated supply without payment of integrated tax under bond or Letter of Undertaking
+        start: '^2\[\(3\) A registered person'
+        end: '^\(4\) The Government'
+
+  # RBI_PURPOSE_CODES has no entry here: its one chunk (receipt group 08) is a table typed by hand
+  # straight into corpus/chunks/RBI_PURPOSE_CODES.yaml.
+
   # ---- Forms and notifications: the opening pages (title, rule reference, purpose).
   # The form tables extract badly; review may replace them with a short hand-typed outline.
   FORM44:

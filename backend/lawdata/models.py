@@ -44,6 +44,8 @@ class ActId(str, Enum):
     IRS = "IRS"
     CBDT = "CBDT"
     CGST = "CGST"
+    IGST = "IGST"
+    RBI = "RBI"
 
 
 class DocType(str, Enum):
@@ -57,6 +59,7 @@ class DocType(str, Enum):
     mou = "mou"
     us_statute = "us_statute"
     us_guidance = "us_guidance"
+    regulator_guidance = "regulator_guidance"   # e.g. RBI reporting codes: explains practice, does not bind taxpayers
 
 
 class _Strict(BaseModel):

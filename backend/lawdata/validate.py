@@ -25,7 +25,7 @@ RANK_BY_DOCTYPE = {
     DocType.statute: 1, DocType.rule: 1, DocType.us_statute: 1,
     DocType.notification: 2, DocType.form: 2,
     DocType.treaty: 3, DocType.protocol: 3, DocType.mou: 3,
-    DocType.faq: 4, DocType.us_guidance: 4,
+    DocType.faq: 4, DocType.us_guidance: 4, DocType.regulator_guidance: 4,
 }
 
 

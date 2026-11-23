@@ -172,3 +172,27 @@ sources:
   sha256: 4db47a4ed2af6e61864049facb85b2dad940590df5239967062efd19d2d40fb4
   url: https://cbic-gst.gov.in/pdf/CGST-Act-Updated-30092020.pdf
   url_note: fetched 31 Oct 2026
+- id: CGST_RULES
+  file: CGST_Rules_2017_r96A.txt
+  size_bytes: 3515
+  sha256: 0aeafecbc20aa0f52c0244200d2ded24cb4e2d2324283297f3a88d3a0a172b38
+  url: https://taxinformation.cbic.gov.in/content/html/tax_repository/gst/rules/cgst_rules/active/chapter10/rule96a_v1.00.html
+  url_note: HTML page, copied as text by the team on 23 Nov 2026
+- id: IGST_S2
+  file: IGST_Act_2017_s2.txt
+  size_bytes: 8191
+  sha256: 5ebcd27643f402e71c866ea08967b435d0962131436c13807ac871798a3b1a04
+  url: https://taxinformation.cbic.gov.in/content/html/tax_repository/gst/acts/2017_IGST_Act/active/chapteri/section2_v1.00.html
+  url_note: HTML page, copied as text by the team on 23 Nov 2026
+- id: IGST_S16
+  file: IGST_Act_2017_s16.txt
+  size_bytes: 4053
+  sha256: 6754485c98263a7691405cb7b399a4fd96ba48dbe5d239dc5cd6cc7a83fa3b1d
+  url: https://taxinformation.cbic.gov.in/content/html/tax_repository/gst/acts/2017_IGST_Act/active/chaptervii/section16_v1.00.html
+  url_note: HTML page, copied as text by the team on 23 Nov 2026
+- id: RBI_PURPOSE_CODES
+  file: RBI_Purpose_Codes_FETERS_v6.2.pdf
+  size_bytes: 513049
+  sha256: 454980fb9a61ca9f2f7f73415e5b11000ebc17715d503768a602cdecd5ad8744
+  url: https://www.rbi.org.in
+  url_note: downloaded manually from the RBI website on 23 Nov 2026 (file FETERSV62New.pdf); exact page not recorded
