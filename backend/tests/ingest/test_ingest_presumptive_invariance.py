@@ -84,8 +84,10 @@ def test_import_graph_keeps_classification_out_of_the_engine():
     for f in (BACKEND / "ingest").rglob("*.py"):
         engine_mods = {m for m in _imports(f) if m.startswith("engine")}
         assert engine_mods <= {"engine.models"}, f"{f.name} imports {engine_mods}"
-    users = [f.name for f in (BACKEND / "ingest").rglob("*.py") if "engine.models" in set(_imports(f))]
-    assert users == ["receipt_mode.py"]
+    users = sorted(f.name for f in (BACKEND / "ingest").rglob("*.py") if "engine.models" in set(_imports(f)))
+    # Only the two builders of engine inputs may see engine shapes; the classifier never does.
+    assert users == ["receipt_mode.py", "to_engine.py"]
+    assert "classifier" not in {m.lstrip(".").split(".")[0] for m in _imports(BACKEND / "ingest" / "to_engine.py")}
 
 
 def test_ingest_uses_no_language_model_or_network():
