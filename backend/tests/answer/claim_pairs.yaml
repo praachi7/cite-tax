@@ -1,0 +1,67 @@
+# Hand-labelled claim-passage pairs for calibrating the stage 2 judge (Phase D).
+# label: supported = every element of the claim is in the passage;
+#        not_supported = a different number, Act, condition or meaning, or not in the passage at all.
+# (The judge's "partially_supported" counts as not supported here: a sentence is shown as verified only
+# when it is fully supported.)
+# kind says how the claim was made, so errors can be read by type.
+# Labelled by the developer against the chunk text on 23 Nov 2026; a second person should re-check them.
+pairs:
+  # ---- s.58(2) Table Sl. 3 (2025 Act)
+  - {id: C01, chunk: "IT2025:s58(2)/T3", label: supported, kind: paraphrase, claim: "For Tax Year 2026-27, a specified professional's presumptive income is 50% of gross receipts, or a higher profit actually earned."}
+  - {id: C02, chunk: "IT2025:s58(2)/T3", label: supported, kind: paraphrase, claim: "The gross receipts limit rises from fifty lakh to seventy-five lakh rupees if cash receipts are no more than 5% of gross receipts."}
+  - {id: C03, chunk: "IT2025:s58(2)/T3", label: not_supported, kind: wrong_number, claim: "The presumptive scheme for professionals applies only if gross receipts do not exceed one crore rupees."}
+  - {id: C04, chunk: "IT2025:s58(2)/T3", label: not_supported, kind: wrong_number, claim: "Presumptive income for a specified profession is 8% of gross receipts."}
+  # ---- s.58(3) books and audit
+  - {id: C05, chunk: "IT2025:s58(3)", label: supported, kind: paraphrase, claim: "A professional who claims lower profit than the presumptive figure, and whose total income exceeds the amount not chargeable to tax, must keep books under section 62 and get them audited under section 63."}
+  - {id: C06, chunk: "IT2025:s58(3)", label: not_supported, kind: wrong_condition, claim: "Anyone using the presumptive scheme must keep books of account and get them audited."}
+  # ---- s.62(4) specified profession
+  - {id: C07, chunk: "IT2025:s62(4)", label: supported, kind: paraphrase, claim: "Information technology is a specified profession under the 2025 Act."}
+  - {id: C08, chunk: "IT2025:s62(4)", label: not_supported, kind: wrong_condition, claim: "Graphic design is listed as a specified profession."}
+  # ---- advance tax s.408(2)
+  - {id: C09, chunk: "IT2025:s408(2)", label: supported, kind: paraphrase, claim: "A professional declaring income under section 58(2) Table serial 3 pays the whole advance tax on or before 15 March."}
+  - {id: C10, chunk: "IT2025:s408(2)", label: not_supported, kind: wrong_number, claim: "A presumptive professional pays advance tax in four instalments in June, September, December and March."}
+  # ---- rebate s.156(2)
+  - {id: C11, chunk: "IT2025:s156(2)", label: supported, kind: paraphrase, claim: "Under the new regime, a resident individual with income up to twelve lakh rupees gets a rebate of the full tax, capped at ₹60,000."}
+  - {id: C12, chunk: "IT2025:s156(2)", label: not_supported, kind: wrong_number, claim: "The new-regime rebate applies to income up to seven lakh rupees."}
+  - {id: C13, chunk: "IT2025:s156(2)", label: supported, kind: paraphrase, claim: "Just above twelve lakh rupees, the tax cannot exceed the amount by which income exceeds twelve lakh rupees."}
+  # ---- treaty Art. 15(1)
+  - {id: C14, chunk: "DTAA_US:art15(1)", label: supported, kind: paraphrase, claim: "The US may tax an Indian resident's professional income from US work if the person stays in the US for 90 days or more in the taxable year."}
+  - {id: C15, chunk: "DTAA_US:art15(1)", label: supported, kind: paraphrase, claim: "If the professional has a fixed base regularly available in the US, the US may tax only the income attributable to that fixed base."}
+  - {id: C16, chunk: "DTAA_US:art15(1)", label: not_supported, kind: wrong_number, claim: "The US may tax professional income if the person stays in the US for more than 183 days."}
+  - {id: C17, chunk: "DTAA_US:art15(1)", label: not_supported, kind: not_in_passage, claim: "Income from remote work done in India for a US client is exempt from Indian tax under the treaty."}
+  # ---- Rule 76(7) foreign tax credit (2026 Rules)
+  - {id: C18, chunk: "RULES2026:r76(7)", label: supported, kind: paraphrase, claim: "The foreign tax credit is the lower of the Indian tax on that income and the foreign tax paid on it."}
+  - {id: C19, chunk: "RULES2026:r76(7)", label: supported, kind: paraphrase, claim: "Foreign tax paid above what the tax treaty allows is ignored for the credit."}
+  - {id: C20, chunk: "RULES2026:r76(7)", label: not_supported, kind: wrong_condition, claim: "Foreign tax is converted at the RBI reference rate on the date the tax was paid."}
+  - {id: C21, chunk: "RULES2026:r76(7)", label: supported, kind: paraphrase, claim: "Foreign tax is converted at the telegraphic transfer buying rate on the last day of the month before the month in which it was paid or deducted."}
+  # ---- Rule 76(12) Form 44 timing
+  - {id: C22, chunk: "RULES2026:r76(12)", label: supported, kind: paraphrase, claim: "Form 44 must be furnished within twelve months from the end of the tax year, provided the return was filed on time."}
+  - {id: C23, chunk: "RULES2026:r76(12)", label: not_supported, kind: wrong_number, claim: "Form 44 must be filed before the return of income is furnished."}
+  - {id: C24, chunk: "RULES2026:r76(12)", label: not_supported, kind: wrong_act, claim: "Form 67 must be furnished within twelve months from the end of the relevant tax year."}
+  # ---- rounding s.516
+  - {id: C25, chunk: "IT2025:s516", label: supported, kind: paraphrase, claim: "Total income and tax payable are rounded to the nearest multiple of ten rupees."}
+  - {id: C26, chunk: "IT2025:s516", label: not_supported, kind: wrong_number, claim: "Total income is rounded to the nearest hundred rupees."}
+  # ---- CBDT FAQ Q17
+  - {id: C27, chunk: "CBDT_FAQ_PRES:Q17", label: supported, kind: paraphrase, claim: "A professional who declares 50% or more of gross receipts under the presumptive scheme does not need to maintain books of account."}
+  - {id: C28, chunk: "CBDT_FAQ_PRES:Q17", label: not_supported, kind: wrong_condition, claim: "A professional under the presumptive scheme must always maintain books of account under section 62."}
+  # ---- W-8BEN validity
+  - {id: C29, chunk: "IRS_W8BEN:validity", label: supported, kind: paraphrase, claim: "A Form W-8BEN generally stays valid until the last day of the third calendar year after the year it was signed, unless circumstances change."}
+  - {id: C30, chunk: "IRS_W8BEN:validity", label: not_supported, kind: wrong_number, claim: "A Form W-8BEN must be renewed every year."}
+  # ---- Rule 164(6) ITR-4 bars
+  - {id: C31, chunk: "RULES2026:r164(6)", label: supported, kind: paraphrase, claim: "A person with assets located outside India cannot file ITR-4."}
+  - {id: C32, chunk: "RULES2026:r164(6)", label: supported, kind: paraphrase, claim: "A person whose total income exceeds fifty lakh rupees is not eligible to file ITR-4."}
+  - {id: C33, chunk: "RULES2026:r164(6)", label: not_supported, kind: not_in_passage, claim: "Fees from US clients for work done in India are income from a source outside India, so ITR-4 is barred."}
+  # ---- 1961 Act s.44ADA(4)
+  - {id: C34, chunk: "IT1961:s44ADA(4)", label: supported, kind: paraphrase, claim: "For FY 2025-26, a professional claiming profit below the presumptive amount with income above the exemption limit must keep books under section 44AA and get a tax audit under section 44AB."}
+  - {id: C35, chunk: "IT1961:s44ADA(4)", label: not_supported, kind: wrong_act, claim: "A professional claiming lower profit must keep books under section 62 and be audited under section 63."}
+  # ---- US source rule
+  - {id: C36, chunk: "IRC:s862(a)(3)", label: supported, kind: paraphrase, claim: "Pay for personal services performed outside the United States is income from sources without the United States."}
+  - {id: C37, chunk: "IRC:s862(a)(3)", label: not_supported, kind: wrong_condition, claim: "Pay from a US client is always US-source income, wherever the work is done."}
+  # ---- regime opt-out s.202(4)
+  - {id: C38, chunk: "IT2025:s202(4)", label: supported, kind: paraphrase, claim: "A person with business or professional income who opts out of the new regime may withdraw that option only once."}
+  - {id: C39, chunk: "IT2025:s202(4)", label: not_supported, kind: wrong_condition, claim: "A professional can switch between the old and new regimes every year."}
+  # ---- GST registration
+  - {id: C40, chunk: "CGST:s22(1)", label: supported, kind: paraphrase, claim: "A supplier outside the special category States must register for GST when aggregate turnover in a financial year exceeds twenty lakh rupees."}
+  - {id: C41, chunk: "CGST:s22(1)", label: not_supported, kind: wrong_number, claim: "GST registration is required once turnover exceeds forty lakh rupees for service providers."}
+  # ---- 1961 Act s.87A
+  - {id: C42, chunk: "IT1961:s87A", label: not_supported, kind: wrong_number, claim: "Under the old regime, the rebate is the full tax up to ₹60,000 for income up to twelve lakh rupees."}

@@ -1,0 +1,118 @@
+{
+  "date": "2026-11-23",
+  "pairs": 42,
+  "results": [
+    {
+      "model": "openai/gpt-oss-120b",
+      "n": 42,
+      "accuracy": 0.976,
+      "macro_f1": 0.976,
+      "false_support_rate": 0.0,
+      "missed_support_rate": 0.045,
+      "confusion": {
+        "tp": 21,
+        "tn": 20,
+        "fp": 0,
+        "fn": 1
+      },
+      "seconds": 1,
+      "requests_sent": 0,
+      "cache_hits": 42,
+      "errors": [
+        {
+          "id": "C13",
+          "chunk": "IT2025:s156(2)",
+          "label": "supported",
+          "kind": "paraphrase",
+          "claim": "Just above twelve lakh rupees, the tax cannot exceed the amount by which income exceeds twelve lakh rupees.",
+          "verdict": "not_supported",
+          "predicted": "not_supported",
+          "correct": false,
+          "reason": "The passage describes a deduction when tax exceeds the income excess, not that tax is limited to that amount"
+        }
+      ]
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "n": 42,
+      "accuracy": 0.952,
+      "macro_f1": 0.952,
+      "false_support_rate": 0.1,
+      "missed_support_rate": 0.0,
+      "confusion": {
+        "tp": 22,
+        "tn": 18,
+        "fp": 2,
+        "fn": 0
+      },
+      "seconds": 1,
+      "requests_sent": 0,
+      "cache_hits": 42,
+      "errors": [
+        {
+          "id": "C17",
+          "chunk": "DTAA_US:art15(1)",
+          "label": "not_supported",
+          "kind": "not_in_passage",
+          "claim": "Income from remote work done in India for a US client is exempt from Indian tax under the treaty.",
+          "verdict": "supported",
+          "predicted": "supported",
+          "correct": false,
+          "reason": "The treaty exempts income from remote work performed in India for a US client when no fixed base exists and stay is under 90 days, matching the sentence."
+        },
+        {
+          "id": "C33",
+          "chunk": "RULES2026:r164(6)",
+          "label": "not_supported",
+          "kind": "not_in_passage",
+          "claim": "Fees from US clients for work done in India are income from a source outside India, so ITR-4 is barred.",
+          "verdict": "supported",
+          "predicted": "supported",
+          "correct": false,
+          "reason": "The passage states that having income from any source outside India disqualifies filing ITR‑4, matching the claim."
+        }
+      ]
+    },
+    {
+      "model": "qwen/qwen3.8-27b",
+      "n": 42,
+      "accuracy": 0.952,
+      "macro_f1": 0.952,
+      "false_support_rate": 0.05,
+      "missed_support_rate": 0.045,
+      "confusion": {
+        "tp": 21,
+        "tn": 19,
+        "fp": 1,
+        "fn": 1
+      },
+      "seconds": 1,
+      "requests_sent": 0,
+      "cache_hits": 42,
+      "errors": [
+        {
+          "id": "C13",
+          "chunk": "IT2025:s156(2)",
+          "label": "supported",
+          "kind": "paraphrase",
+          "claim": "Just above twelve lakh rupees, the tax cannot exceed the amount by which income exceeds twelve lakh rupees.",
+          "verdict": "not_supported",
+          "predicted": "not_supported",
+          "correct": false,
+          "reason": "The sentence incorrectly states that the tax cannot exceed the excess amount, whereas the passage specifies that the deduction is equal to the amount by which the tax exceeds the excess income (i.e., the tax is reduced to the excess amount, not that the tax itself is capped at that amount in the way phrased, and the sentence omits the condition that the tax must first exceed the excess amount)."
+        },
+        {
+          "id": "C33",
+          "chunk": "RULES2026:r164(6)",
+          "label": "not_supported",
+          "kind": "not_in_passage",
+          "claim": "Fees from US clients for work done in India are income from a source outside India, so ITR-4 is barred.",
+          "verdict": "supported",
+          "predicted": "supported",
+          "correct": false,
+          "reason": "The passage explicitly states in clause (c) that a person is not eligible to file ITR-4 if they have income from any source outside India, which covers the scenario described in the sentence."
+        }
+      ]
+    }
+  ]
+}

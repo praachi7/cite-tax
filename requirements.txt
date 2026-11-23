@@ -12,3 +12,7 @@ transformers==4.57.6
 numpy==2.5.5
 psycopg[binary]==3.2.12
 pgvector==0.4.1
+
+# Phase D (cited answers): Groq's free tier over HTTP; the key is read from .env
+httpx==0.28.1
+python-dotenv==1.1.1

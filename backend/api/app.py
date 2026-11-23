@@ -1,10 +1,10 @@
-"""FastAPI app: POST /tax/estimate and GET /personas.
+"""FastAPI app: POST /tax/estimate, GET /personas and POST /ask (Phase D cited answers).
 
 Run: uvicorn api.app:app --app-dir backend --port 8000
 """
 from __future__ import annotations
 
-from typing import Any, Optional
+from typing import Any, Callable, Optional
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
@@ -46,8 +46,43 @@ class Persona(BaseModel):
     input: dict[str, Any]
 
 
-def create_app() -> FastAPI:
+class AskRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    question: str = Field(min_length=3, max_length=1000)
+    tax_year: int
+
+
+def _default_answerer():
+    """The real Phase D pipeline: retrieval from Postgres, Groq for drafting and judging. Built on first use."""
+    state: dict = {}
+
+    def ask(question: str, tax_year: int):
+        from answer.llm import GroqLLM
+        from answer.pipeline import answer
+        if "llm" not in state:
+            state["llm"] = GroqLLM()
+        return answer(question, tax_year, state["llm"])
+    return ask
+
+
+def create_app(answerer: Optional[Callable] = None) -> FastAPI:
+    """answerer(question, tax_year) -> answer.pipeline.Answer; tests pass a fake."""
     app = FastAPI(title="CiteTax API", version="0.1.0", description=DISCLAIMER)
+    ask_fn = answerer or _default_answerer()
+
+    @app.post("/ask")
+    def ask(req: AskRequest) -> dict:
+        from answer.llm import LLMError
+        try:
+            result = ask_fn(req.question, req.tax_year)
+        except UnsupportedTaxYear as e:
+            raise HTTPException(status_code=400, detail=str(e))
+        except LLMError as e:
+            raise HTTPException(status_code=503, detail=f"language model unavailable: {e}")
+        body = result.to_dict()
+        body["disclaimer"] = DISCLAIMER
+        return body
 
     @app.get("/personas", response_model=list[Persona])
     def personas() -> list[dict]:

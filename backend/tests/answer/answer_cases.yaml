@@ -1,0 +1,25 @@
+# End-to-end Phase D cases: real retrieval and the real model (scripts/eval_answers.py).
+# expect:
+#   status:   allowed statuses (answered | partially_verified | declined)
+#   notices:  assumption ids that must be shown
+#   premise:  true if the false premise must be reported
+#   cite_act: every verified citation must come from this Act (or from sources valid in both years)
+cases:
+  # ---- contested interpretation
+  - {id: X01, slice: contested, year: 2026, q: "Can I file ITR-4 if all my clients are in the US and I work from India?", expect: {notices: [A-16], status: [answered, partially_verified, declined]}}
+  - {id: X02, slice: contested, year: 2026, q: "Do I have to report my Payoneer balance as a foreign asset?", expect: {notices: [A-12], status: [answered, partially_verified, declined]}}
+  - {id: X03, slice: contested, year: 2026, q: "How is the foreign tax credit worked out when my income is presumptive?", expect: {notices: [A-5], status: [answered, partially_verified, declined]}}
+  # ---- false premise
+  - {id: F01, slice: false_premise, year: 2026, q: "Since the presumptive limit for professionals is one crore rupees, can I use it with 90 lakh of receipts?", expect: {premise: true, status: [answered, partially_verified]}}
+  - {id: F02, slice: false_premise, year: 2026, q: "Presumptive income for professionals is 8% of receipts, right?", expect: {premise: true, status: [answered, partially_verified]}}
+  - {id: F03, slice: false_premise, year: 2026, q: "I have to file Form 67 by 31 July for the foreign tax credit, correct?", expect: {premise: true, status: [answered, partially_verified]}}
+  # ---- out of scope
+  - {id: O01, slice: out_of_scope, year: 2026, q: "What is the GST rate on restaurant food?", expect: {status: [declined]}}
+  - {id: O02, slice: out_of_scope, year: 2026, q: "How is HRA exemption calculated for salaried employees?", expect: {status: [declined]}}
+  - {id: O03, slice: out_of_scope, year: 2026, q: "What is the best laptop for programming?", expect: {status: [declined]}}
+  # ---- temporal and plain
+  - {id: T01, slice: temporal, year: 2026, q: "What is the 44ADA gross receipts limit?", expect: {status: [answered, partially_verified], cite_act: IT2025}}
+  - {id: T02, slice: temporal, year: 2025, q: "What does section 58(2) say about presumptive income for professionals?", expect: {status: [answered, partially_verified], cite_act: IT1961}}
+  - {id: P01, slice: plain, year: 2026, q: "When must a presumptive professional pay advance tax?", expect: {status: [answered, partially_verified], cite_act: IT2025}}
+  - {id: P02, slice: plain, year: 2026, q: "Can the US tax me if I work there for 95 days?", expect: {status: [answered, partially_verified]}}
+  - {id: P03, slice: plain, year: 2026, q: "How long does a W-8BEN stay valid?", expect: {status: [answered, partially_verified]}}

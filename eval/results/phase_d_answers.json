@@ -1,0 +1,902 @@
+{
+  "date": "2026-11-23",
+  "model": "openai/gpt-oss-120b",
+  "cases": 14,
+  "passed": 14,
+  "by_slice": {
+    "contested": {
+      "pass": 3,
+      "n": 3
+    },
+    "false_premise": {
+      "pass": 3,
+      "n": 3
+    },
+    "out_of_scope": {
+      "pass": 3,
+      "n": 3
+    },
+    "temporal": {
+      "pass": 2,
+      "n": 2
+    },
+    "plain": {
+      "pass": 3,
+      "n": 3
+    }
+  },
+  "sentence_verdicts": {
+    "supported": 16,
+    "partially_supported": 4,
+    "not_supported": 1
+  },
+  "seconds": 267,
+  "requests_sent": 34,
+  "cache_hits": 0,
+  "rows": [
+    {
+      "id": "X01",
+      "slice": "contested",
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "Can I file ITR-4 if all my clients are in the US and I work from India?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "answered",
+        "sentences": [
+          {
+            "text": "You cannot file ITR‑4 because you have income from a source outside India, which disqualifies you under rule (c) of r.164(6) for Tax Year 2026‑27",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "RULES2026:r164(6)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "The passage states rule (c) of r.164(6) disallows filing ITR‑4 for income from any source outside India for Tax Year 2026‑27 onward, matching the sentence."
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [
+          {
+            "assumption_id": "A-5",
+            "question": "How is the foreign tax credit capped when Indian income is taxed presumptively?",
+            "readings": [
+              {
+                "key": "a",
+                "statement": "The credit is the lower of the foreign tax and the Indian tax attributable to the deemed (50%) income from the US-taxable receipts, apportioned pro rata to total income (including surcharge and cess).",
+                "citations": [
+                  "RULES1962:r128(5)(i)",
+                  "RULES2026:r76(7)(a)",
+                  "DTAA_US:art25(2)(a)"
+                ],
+                "is_default": true
+              },
+              {
+                "key": "b",
+                "statement": "The Indian tax is computed on the gross US receipts, so the cap is higher.",
+                "citations": [
+                  "DTAA_US:art25(2)(a)"
+                ],
+                "is_default": false
+              }
+            ],
+            "default_reason": "Capping the credit at Indian tax on the deemed income can only under-claim, never over-claim.",
+            "config_flag": "ftc_cap_basis",
+            "triggered_by": [
+              "passage: DTAA_US:art25(2)"
+            ],
+            "disclaimer": "Not professionally reviewed: CiteTax has no chartered accountant; this is a documented assumption."
+          },
+          {
+            "assumption_id": "A-12",
+            "question": "Are balances held abroad on payment platforms (Payoneer, Wise, PayPal) foreign assets for Schedule FA and the ITR-4 bar?",
+            "readings": [
+              {
+                "key": "a",
+                "statement": "Yes. A foreign-currency balance held by a platform in the user's name is a foreign account or asset, so Schedule FA applies and ITR-4 is barred, even if the balance is swept daily.",
+                "citations": [
+                  "RULES1962:r12(1)(ca)",
+                  "RULES2026:r164(6)(a)",
+                  "RULES2026:r164(6)(b)"
+                ],
+                "is_default": true
+              },
+              {
+                "key": "b",
+                "statement": "No, if the wallet is only a transit account and the money reaches an Indian bank account without a balance held abroad.",
+                "citations": [
+                  "RULES1962:r12(1)(ca)",
+                  "RULES2026:r164(6)(a)"
+                ],
+                "is_default": false
+              }
+            ],
+            "default_reason": "Disclosing a balance that did not need disclosing costs nothing; failing to disclose one that did can bring penalties.",
+            "config_flag": "platform_wallet_is_foreign_asset",
+            "triggered_by": [
+              "passage: RULES2026:r164(6)"
+            ],
+            "disclaimer": "Not professionally reviewed: CiteTax has no chartered accountant; this is a documented assumption."
+          },
+          {
+            "assumption_id": "A-16",
+            "question": "Are fees from US clients \"income from any source outside India\", which bars ITR-4?",
+            "readings": [
+              {
+                "key": "a",
+                "statement": "No. Income from services generally arises where they are rendered, so work done in India for a foreign client is Indian-source income and ITR-4 remains available.",
+                "citations": [
+                  "RULES1962:r12(1)(ca)",
+                  "RULES2026:r164(6)(c)"
+                ],
+                "is_default": false
+              },
+              {
+                "key": "b",
+                "statement": "Yes. The payer is abroad and the work is used abroad (compare Ishikawajima-Harima, Supreme Court 2007, which required services to be both rendered and used in India), so the fees are income from a source outside India and ITR-3 is required.",
+                "citations": [
+                  "RULES1962:r12(1)(ca)",
+                  "RULES2026:r164(6)(c)"
+                ],
+                "is_default": true
+              }
+            ],
+            "default_reason": "ITR-3 is valid under either reading, while filing ITR-4 on the wrong reading risks a defective return.",
+            "config_flag": "itr4_foreign_client_income_is_indian_source",
+            "triggered_by": [
+              "topic: itr-4",
+              "passage: RULES2026:r164(6)"
+            ],
+            "disclaimer": "Not professionally reviewed: CiteTax has no chartered accountant; this is a documented assumption."
+          }
+        ],
+        "passages": [
+          "RULES2026:r164(6)",
+          "IRS_PUB901:india",
+          "DTAA_US:art25(1)",
+          "DTAA_US:art14(1)",
+          "DTAA_US:art25(2)"
+        ],
+        "retrieval_similarity": 0.64,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 1
+      }
+    },
+    {
+      "id": "X02",
+      "slice": "contested",
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "Do I have to report my Payoneer balance as a foreign asset?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "declined",
+        "sentences": [],
+        "premise_issue": "",
+        "decline_reason": "The provided passages do not contain any rule or provision about reporting foreign assets such as a Payoneer balance under the Indian Income-tax Act.",
+        "notices": [
+          {
+            "assumption_id": "A-12",
+            "question": "Are balances held abroad on payment platforms (Payoneer, Wise, PayPal) foreign assets for Schedule FA and the ITR-4 bar?",
+            "readings": [
+              {
+                "key": "a",
+                "statement": "Yes. A foreign-currency balance held by a platform in the user's name is a foreign account or asset, so Schedule FA applies and ITR-4 is barred, even if the balance is swept daily.",
+                "citations": [
+                  "RULES1962:r12(1)(ca)",
+                  "RULES2026:r164(6)(a)",
+                  "RULES2026:r164(6)(b)"
+                ],
+                "is_default": true
+              },
+              {
+                "key": "b",
+                "statement": "No, if the wallet is only a transit account and the money reaches an Indian bank account without a balance held abroad.",
+                "citations": [
+                  "RULES1962:r12(1)(ca)",
+                  "RULES2026:r164(6)(a)"
+                ],
+                "is_default": false
+              }
+            ],
+            "default_reason": "Disclosing a balance that did not need disclosing costs nothing; failing to disclose one that did can bring penalties.",
+            "config_flag": "platform_wallet_is_foreign_asset",
+            "triggered_by": [
+              "topic: payoneer",
+              "topic: foreign asset"
+            ],
+            "disclaimer": "Not professionally reviewed: CiteTax has no chartered accountant; this is a documented assumption."
+          }
+        ],
+        "passages": [
+          "IRS_W8BEN:withholding",
+          "IRS_PUB515:personal_services",
+          "RULES2026:r76(16)",
+          "IRS_F8233:p1",
+          "FORM44:p1"
+        ],
+        "retrieval_similarity": 0.522,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {}
+    },
+    {
+      "id": "X03",
+      "slice": "contested",
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "How is the foreign tax credit worked out when my income is presumptive?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "partially_verified",
+        "sentences": [
+          {
+            "text": "The foreign tax credit is calculated separately for each source of income and is the lower of the Indian tax payable on that income and the foreign tax actually paid, after conversion at the prescribed rate [P1].",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "RULES2026:r76(7)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "Passage states credit is computed separately per source, is the lower of tax payable and foreign tax paid, and conversion uses a prescribed rate"
+          },
+          {
+            "text": "For a presumptive business under section 58(2) [Table S. No. 1], taxable income is deemed to be 8% of cash/other receipts and 6% of receipts through specified banking or online modes [P2].",
+            "cites": [
+              "P2"
+            ],
+            "chunk_ids": [
+              "CBDT_FAQ_PRES:Q8"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "All details (8% cash/other, 6% specified modes, section 58(2) Table S. No.1) are stated in the passage"
+          },
+          {
+            "text": "For a presumptive professional under section 58(2) [Table S. No. 3], taxable income is deemed to be 50% of total gross receipts, subject to the receipt thresholds described [P3].",
+            "cites": [
+              "P3"
+            ],
+            "chunk_ids": [
+              "CBDT_FAQ_PRES:Q14"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "Passage states taxable income is deemed 50% of total gross receipts and notes receipt thresholds apply"
+          },
+          {
+            "text": "The foreign tax credit is then applied to this deemed presumptive income in the same manner as for normal income, using the lower‑of‑tax‑payable rule and the conversion rule of r.76(7) (a) and (b) [P1].",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "RULES2026:r76(7)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "partially_supported",
+            "reason": "Passage provides the lower‑of‑tax‑payable rule and conversion rule of r.76(7)(a)(b), but does not mention deemed presumptive income or that it is applied in the same manner as for normal income"
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [
+          {
+            "assumption_id": "A-5",
+            "question": "How is the foreign tax credit capped when Indian income is taxed presumptively?",
+            "readings": [
+              {
+                "key": "a",
+                "statement": "The credit is the lower of the foreign tax and the Indian tax attributable to the deemed (50%) income from the US-taxable receipts, apportioned pro rata to total income (including surcharge and cess).",
+                "citations": [
+                  "RULES1962:r128(5)(i)",
+                  "RULES2026:r76(7)(a)",
+                  "DTAA_US:art25(2)(a)"
+                ],
+                "is_default": true
+              },
+              {
+                "key": "b",
+                "statement": "The Indian tax is computed on the gross US receipts, so the cap is higher.",
+                "citations": [
+                  "DTAA_US:art25(2)(a)"
+                ],
+                "is_default": false
+              }
+            ],
+            "default_reason": "Capping the credit at Indian tax on the deemed income can only under-claim, never over-claim.",
+            "config_flag": "ftc_cap_basis",
+            "triggered_by": [
+              "topic: foreign tax credit",
+              "passage: RULES2026:r76(7)"
+            ],
+            "disclaimer": "Not professionally reviewed: CiteTax has no chartered accountant; this is a documented assumption."
+          }
+        ],
+        "passages": [
+          "RULES2026:r76(7)",
+          "CBDT_FAQ_PRES:Q8",
+          "CBDT_FAQ_PRES:Q14",
+          "RULES2026:r76(3)",
+          "RULES2026:r76(1)"
+        ],
+        "retrieval_similarity": 0.712,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 3,
+        "partially_supported": 1
+      }
+    },
+    {
+      "id": "F01",
+      "slice": "false_premise",
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "Since the presumptive limit for professionals is one crore rupees, can I use it with 90 lakh of receipts?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "answered",
+        "sentences": [
+          {
+            "text": "For a specified profession, the presumptive taxation scheme under Section 58(2) [Table S. No. 3] is available only if gross receipts do not exceed Rs. 50 lakh, or Rs. 75 lakh when cash receipts are ≤5% of total receipts.",
+            "cites": [
+              "P3"
+            ],
+            "chunk_ids": [
+              "CBDT_FAQ_PRES:Q5"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "All details about the Rs 50 lakh limit and Rs 75 lakh limit when cash receipts ≤5% are stated in the passage."
+          },
+          {
+            "text": "Since your receipts are Rs. 90 lakh, they exceed both thresholds, so you cannot use the presumptive scheme for the profession.",
+            "cites": [
+              "P3"
+            ],
+            "chunk_ids": [
+              "CBDT_FAQ_PRES:Q5"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "Passage states thresholds of Rs 50 lakh (or Rs 75 lakh with cash receipt condition); 90 lakh exceeds both, so presumptive scheme is not available."
+          }
+        ],
+        "premise_issue": "The question assumes a presumptive limit of one crore rupees for professionals, but the passages set the limit at fifty lakh rupees (or seventy‑five lakh rupees with cash‑receipt conditions).",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "CBDT_FAQ_PRES:Q6",
+          "IT2025:s63(1)/T1",
+          "CBDT_FAQ_PRES:Q5",
+          "CBDT_FAQ_PRES:Q14",
+          "IT2025:s58(2)/T3"
+        ],
+        "retrieval_similarity": 0.639,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 2
+      }
+    },
+    {
+      "id": "F02",
+      "slice": "false_premise",
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "Presumptive income for professionals is 8% of receipts, right?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "partially_verified",
+        "sentences": [
+          {
+            "text": "For specified professions, presumptive income is deemed to be 50% of the total gross receipts, not 8% of receipts.",
+            "cites": [
+              "P3"
+            ],
+            "chunk_ids": [
+              "CBDT_FAQ_PRES:Q14"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "partially_supported",
+            "reason": "Passage confirms 50% of gross receipts for specified professions, but does not mention or refute an 8% rate"
+          },
+          {
+            "text": "This 50% rate applies when gross receipts do not exceed Rs. 50 lakh, or Rs. 75 lakh if cash receipts are ≤5% of total receipts.",
+            "cites": [
+              "P3"
+            ],
+            "chunk_ids": [
+              "CBDT_FAQ_PRES:Q14"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "The passage states the 50% rate applies up to Rs 50 lakh gross receipts, or up to Rs 75 lakh if cash receipts are ≤5% of total receipts."
+          },
+          {
+            "text": "The 8% (or 6%) rates apply only to businesses covered under Table S. No. 1, not to specified professions.",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "CBDT_FAQ_PRES:Q9"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "partially_supported",
+            "reason": "Passage confirms the 8%/6% rates apply to businesses under Table S. No.1, but does not state they do not apply to specified professions"
+          }
+        ],
+        "premise_issue": "Assumes professionals use the 8% rate, but for specified professions the presumptive rate is 50% of gross receipts per Table S. No. 3.",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "CBDT_FAQ_PRES:Q9",
+          "CBDT_FAQ_PRES:Q8",
+          "CBDT_FAQ_PRES:Q14",
+          "IT2025:s58(2)/T3",
+          "IT2025:s58(2)/T1"
+        ],
+        "retrieval_similarity": 0.645,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "partially_supported": 2,
+        "supported": 1
+      }
+    },
+    {
+      "id": "F03",
+      "slice": "false_premise",
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "I have to file Form 67 by 31 July for the foreign tax credit, correct?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "partially_verified",
+        "sentences": [
+          {
+            "text": "For Tax Year 2026‑27 the foreign tax credit is claimed using Form 44, not Form 67, as indicated by the numbering note and the form description in the Act [P1].",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "FORM44:p1"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "partially_supported",
+            "reason": "Passage confirms Form 44 is used for Tax Year 2026‑27 for foreign tax credit, but does not mention Form 67"
+          },
+          {
+            "text": "The statement in Form 44 must be furnished within twelve months from the end of the relevant tax year after the return is filed, per the rule on filing time limits [P4].",
+            "cites": [
+              "P4"
+            ],
+            "chunk_ids": [
+              "RULES2026:r76(12)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "Passage states the Form 44 statement must be furnished within twelve months from the end of the relevant tax year, after the return for that year has been filed"
+          }
+        ],
+        "premise_issue": "The question assumes filing Form 67 by 31 July, but for Tax Year 2026‑27 the required form is Form 44 and it must be furnished within twelve months from the end of the tax year, not by 31 July.",
+        "decline_reason": "",
+        "notices": [
+          {
+            "assumption_id": "A-5",
+            "question": "How is the foreign tax credit capped when Indian income is taxed presumptively?",
+            "readings": [
+              {
+                "key": "a",
+                "statement": "The credit is the lower of the foreign tax and the Indian tax attributable to the deemed (50%) income from the US-taxable receipts, apportioned pro rata to total income (including surcharge and cess).",
+                "citations": [
+                  "RULES1962:r128(5)(i)",
+                  "RULES2026:r76(7)(a)",
+                  "DTAA_US:art25(2)(a)"
+                ],
+                "is_default": true
+              },
+              {
+                "key": "b",
+                "statement": "The Indian tax is computed on the gross US receipts, so the cap is higher.",
+                "citations": [
+                  "DTAA_US:art25(2)(a)"
+                ],
+                "is_default": false
+              }
+            ],
+            "default_reason": "Capping the credit at Indian tax on the deemed income can only under-claim, never over-claim.",
+            "config_flag": "ftc_cap_basis",
+            "triggered_by": [
+              "topic: foreign tax credit",
+              "topic: form 67",
+              "passage: RULES2026:r76(7)"
+            ],
+            "disclaimer": "Not professionally reviewed: CiteTax has no chartered accountant; this is a documented assumption."
+          }
+        ],
+        "passages": [
+          "FORM44:p1",
+          "RULES2026:r76(10)",
+          "RULES2026:r76(7)",
+          "RULES2026:r76(12)",
+          "RULES2026:r76(16)"
+        ],
+        "retrieval_similarity": 0.61,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "partially_supported": 1,
+        "supported": 1
+      }
+    },
+    {
+      "id": "O01",
+      "slice": "out_of_scope",
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "What is the GST rate on restaurant food?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "declined",
+        "sentences": [],
+        "premise_issue": "",
+        "decline_reason": "The provided passages do not contain any information about GST rates for restaurant food.",
+        "notices": [],
+        "passages": [
+          "IT2025:s58(2)/T1",
+          "CBDT_FAQ_PRES:Q9",
+          "IT2025:s202(1)",
+          "CGST:s22(1)",
+          "IRS_PUB515:personal_services"
+        ],
+        "retrieval_similarity": 0.483,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {}
+    },
+    {
+      "id": "O02",
+      "slice": "out_of_scope",
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "How is HRA exemption calculated for salaried employees?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "declined",
+        "sentences": [],
+        "premise_issue": "",
+        "decline_reason": "The provided passages do not contain any information on how HRA exemption is calculated for salaried employees.",
+        "notices": [],
+        "passages": [
+          "IRS_PUB515:personal_services",
+          "IRS_PUB901:india",
+          "IT2025:s202(1)",
+          "IT2025:s58(2)/T2",
+          "IT2025:s58(2)/T3"
+        ],
+        "retrieval_similarity": 0.542,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {}
+    },
+    {
+      "id": "O03",
+      "slice": "out_of_scope",
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "What is the best laptop for programming?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "declined",
+        "sentences": [],
+        "premise_issue": "",
+        "decline_reason": "The corpus has no passage close enough to this question, so CiteTax will not answer it. It covers Indian income tax for IT professionals with US clients.",
+        "notices": [],
+        "passages": [
+          "IT2025:s58(11)",
+          "CBDT_FAQ_PRES:Q1",
+          "CBDT_FAQ_PRES:Q13",
+          "NOTIF64_2026:p3-4",
+          "CBDT_FAQ_PRES:Q23"
+        ],
+        "retrieval_similarity": 0.343,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {}
+    },
+    {
+      "id": "T01",
+      "slice": "temporal",
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "What is the 44ADA gross receipts limit?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "answered",
+        "sentences": [
+          {
+            "text": "The gross receipts limit for the scheme that replaces section 44ADA is Rs 50 lakh, or Rs 75 lakh if cash receipts do not exceed 5 % of total gross receipts",
+            "cites": [
+              "P1",
+              "P5"
+            ],
+            "chunk_ids": [
+              "IT2025:s58(2)/T3",
+              "CBDT_FAQ_PRES:Q14"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "Both passages state the limit is Rs 50 lakh, or Rs 75 lakh if cash receipts ≤5% of gross receipts"
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "IT2025:s58(2)/T3",
+          "CBDT_FAQ_PRES:Q6",
+          "IT2025:s58(2)",
+          "IT2025:s63(1)/T1",
+          "CBDT_FAQ_PRES:Q14"
+        ],
+        "retrieval_similarity": 0.503,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 1
+      }
+    },
+    {
+      "id": "T02",
+      "slice": "temporal",
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "What does section 58(2) say about presumptive income for professionals?",
+        "tax_year": 2025,
+        "act_id": "IT1961",
+        "status": "partially_verified",
+        "sentences": [
+          {
+            "text": "Section 58(2) is now read as section 44ADA, which provides that a resident individual or partnership (not an LLP) engaged in a profession and whose total gross receipts do not exceed fifty lakh rupees shall be deemed to have profits equal to fifty per cent of those receipts (or a higher amount actually earned).",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "IT1961:s44ADA(1)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "not_supported",
+            "reason": "Passage does not state that Section 58(2) is now read as Section 44ADA"
+          },
+          {
+            "text": "If cash receipts are five per cent or less of total gross receipts, the threshold of fifty lakh rupees is treated as seventy‑five lakh rupees.",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "IT1961:s44ADA(1)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "The passage states that when cash receipts are ≤5% of total gross receipts, the fifty lakh rupee threshold is replaced by seventy‑five lakh rupees."
+          },
+          {
+            "text": "Any deduction under sections 30 to 38 is deemed to have been fully accounted for, so no further deduction under those sections is allowed.",
+            "cites": [
+              "P2"
+            ],
+            "chunk_ids": [
+              "IT1961:s44ADA(2)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "The passage states that any deduction under sections 30 to 38 is deemed to have been fully given effect and no further deduction is allowed, matching the sentence."
+          },
+          {
+            "text": "If the assessee’s actual profit is lower than the deemed profit and total income exceeds the exemption limit, he must keep books, get them audited and file a report under section 44AB.",
+            "cites": [
+              "P3"
+            ],
+            "chunk_ids": [
+              "IT1961:s44ADA(4)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "The passage states that if an assessee's actual profit is lower than the deemed profit and total income exceeds the non‑chargeable limit, they must keep books, get them audited and file a report under section 44AB."
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "IT1961:s44ADA(1)",
+          "IT1961:s44ADA(2)",
+          "IT1961:s44ADA(4)",
+          "IT1961:s44AD(1)",
+          "IT1961:s44ADA(3)"
+        ],
+        "retrieval_similarity": 0.624,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "not_supported": 1,
+        "supported": 3
+      }
+    },
+    {
+      "id": "P01",
+      "slice": "plain",
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "When must a presumptive professional pay advance tax?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "answered",
+        "sentences": [
+          {
+            "text": "A presumptive professional who opts for the scheme under Section 58(2) [Table S. No. 3] must pay the entire advance tax liability for the tax year on or before 15 March of that year, instead of multiple instalments.",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "CBDT_FAQ_PRES:Q16"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "The passage states that an assessee opting for Section 58(2) [Table S. No. 3] must pay the entire advance tax by March 15, rather than in multiple instalments."
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "CBDT_FAQ_PRES:Q16",
+          "CBDT_FAQ_PRES:Q24",
+          "CBDT_FAQ_PRES:Q11",
+          "CBDT_FAQ_PRES:Q13",
+          "CBDT_FAQ_PRES:Q14"
+        ],
+        "retrieval_similarity": 0.743,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 1
+      }
+    },
+    {
+      "id": "P02",
+      "slice": "plain",
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "Can the US tax me if I work there for 95 days?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "answered",
+        "sentences": [
+          {
+            "text": "Under the India‑US Convention, because your stay in the United States exceeds 90 days in the taxable year, the income from your personal services may be taxed in the United States as well as India",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "DTAA_US:art15(1)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "Passage states income may be taxed in the other state if stay ≥90 days, matching the sentence"
+          },
+          {
+            "text": "Similarly, US Internal Revenue Code §861(a)(3) provides that the exemption for nonresident aliens applies only when the stay does not exceed a total of 90 days, so a 95‑day stay does not qualify for the exemption",
+            "cites": [
+              "P2"
+            ],
+            "chunk_ids": [
+              "IRC:s861(a)(3)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "The passage states the exemption applies only if the nonresident alien's stay does not exceed 90 days, so a 95‑day stay would not qualify."
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "DTAA_US:art15(1)",
+          "IRC:s861(a)(3)",
+          "IRS_PUB901:india",
+          "IRS_PUB515:personal_services",
+          "DTAA_US:art14(1)"
+        ],
+        "retrieval_similarity": 0.59,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 2
+      }
+    },
+    {
+      "id": "P03",
+      "slice": "plain",
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "How long does a W-8BEN stay valid?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "answered",
+        "sentences": [
+          {
+            "text": "A Form W-8BEN generally remains in effect from the date it is signed until the last day of the third succeeding calendar year, unless a change in circumstances makes the information incorrect, in which case it may remain valid indefinitely under certain conditions.",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "IRS_W8BEN:validity"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "The passage states the same general validity period and the exception for indefinite validity under certain conditions."
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "IRS_W8BEN:validity",
+          "IRS_W8BEN:withholding",
+          "IRS_F8233:p1",
+          "RULES2026:r46(9)",
+          "DTAA_US:art5(2)"
+        ],
+        "retrieval_similarity": 0.755,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 1
+      }
+    }
+  ]
+}

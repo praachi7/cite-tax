@@ -203,6 +203,8 @@ class Assumption(_Strict):
     config_flag: str
     config_default: Any
     used_by: list[str] = Field(default_factory=list)   # parameter keys this assumption affects
+    # Words or phrases that tie a user's question to this point; any match shows the notice (Phase D).
+    topics: list[str] = Field(default_factory=list)
     secondary_references: list[str] = Field(default_factory=list)
     note: Optional[str] = None
 

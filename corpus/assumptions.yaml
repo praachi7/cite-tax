@@ -39,6 +39,7 @@ assumptions:
     config_default: deemed_income
     used_by:
       - ftc.credit_is_lower_of_indian_and_foreign_tax
+    topics: ["foreign tax credit", "ftc", "credit for us tax", "credit for the us tax", "us tax withheld", "double taxation relief", "form 67", "form 44"]
     readings:
       - key: a
         statement: "The credit is the lower of the foreign tax and the Indian tax attributable to the deemed (50%) income from the US-taxable receipts, apportioned pro rata to total income (including surcharge and cess)."
@@ -62,6 +63,7 @@ assumptions:
     config_default: true
     used_by:
       - itr4.bars
+    topics: ["payoneer", "wise account", "wise balance", "via wise", "through wise", "paypal", "wallet", "schedule fa", "foreign asset", "foreign account", "balance abroad"]
     readings:
       - key: a
         statement: "Yes. A foreign-currency balance held by a platform in the user's name is a foreign account or asset, so Schedule FA applies and ITR-4 is barred, even if the balance is swept daily."
@@ -91,6 +93,7 @@ assumptions:
     config_default: false
     used_by:
       - itr4.bars
+    topics: ["itr-4", "itr 4", "itr4", "sugam", "itr-3", "itr 3", "which itr", "which return form", "income from outside india", "source outside india"]
     readings:
       - key: a
         statement: "No. Income from services generally arises where they are rendered, so work done in India for a foreign client is Indian-source income and ITR-4 remains available."

@@ -37,6 +37,7 @@ class Hit:
     authority_rank: int
     score: float
     ranks: dict[str, int] = field(default_factory=dict)  # list name -> 1-based rank
+    similarity: float | None = None  # cosine similarity to the question, when the dense list found it
 
 
 @dataclass
@@ -50,6 +51,16 @@ class RetrievalResult:
 
     def ids(self) -> list[str]:
         return [h.id for h in self.hits]
+
+    @property
+    def top_similarity(self) -> float:
+        """Best cosine similarity among the hits (0 when the dense list was not used)."""
+        return max((h.similarity for h in self.hits if h.similarity is not None), default=0.0)
+
+    @property
+    def exact_matched(self) -> bool:
+        """True when a section, rule, article or form named in the question was found."""
+        return any("exact" in h.ranks for h in self.hits)
 
 
 _COLS = "id, breadcrumb, heading, body, authority_rank"
@@ -74,11 +85,15 @@ def _exact(cur: psycopg.Cursor, refs: QueryRefs, year: int) -> list[str]:
     return out
 
 
-def _dense(cur: psycopg.Cursor, question: str, year: int) -> list[str]:
+def _dense_scored(cur: psycopg.Cursor, question: str, year: int) -> list[tuple[str, float]]:
     q = embed_query(question)
-    rows = cur.execute(f"SELECT id FROM chunks WHERE {YEAR_FILTER} ORDER BY embedding <=> %(q)s LIMIT {LIST_DEPTH}",
-                       {"q": q, "year": year}).fetchall()
-    return [r[0] for r in rows]
+    rows = cur.execute(f"""SELECT id, 1 - (embedding <=> %(q)s) FROM chunks WHERE {YEAR_FILTER}
+                           ORDER BY embedding <=> %(q)s LIMIT {LIST_DEPTH}""", {"q": q, "year": year}).fetchall()
+    return [(r[0], float(r[1])) for r in rows]
+
+
+def _dense(cur: psycopg.Cursor, question: str, year: int) -> list[str]:
+    return [cid for cid, _ in _dense_scored(cur, question, year)]
 
 
 def keyword_terms(question: str, refs: QueryRefs) -> list[str]:
@@ -136,15 +151,18 @@ def retrieve(question: str, tax_year: int, k: int = 8, use: tuple[str, ...] = DE
             lists: dict[str, list[str]] = {}
             if "exact" in use:
                 lists["exact"] = _exact(cur, refs, tax_year)
+            sims: dict[str, float] = {}
             if "dense" in use:
-                lists["dense"] = _dense(cur, question, tax_year)
+                scored = _dense_scored(cur, question, tax_year)
+                lists["dense"] = [cid for cid, _ in scored]
+                sims = dict(scored)
             if "keyword" in use:
                 lists["keyword"] = _keyword(cur, question, refs, tax_year)
             fused = fuse(lists)
             rows = _rows(cur, list(fused), tax_year)
             order = sorted(fused, key=lambda cid: (-fused[cid][0], rows[cid][4], cid))[:k]
-            hits = [Hit(cid, rows[cid][1], rows[cid][2], rows[cid][3], rows[cid][4], fused[cid][0], fused[cid][1])
-                    for cid in order]
+            hits = [Hit(cid, rows[cid][1], rows[cid][2], rows[cid][3], rows[cid][4], fused[cid][0], fused[cid][1],
+                        sims.get(cid)) for cid in order]
             refs_wanted = cur.execute("SELECT DISTINCT unnest(cross_refs) FROM chunks WHERE id = ANY(%(ids)s)",
                                       {"ids": order[:3]}).fetchall()
             extra = [r[0] for r in refs_wanted if r[0] not in order]
