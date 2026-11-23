@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { Cites } from "@/components/Cites";
 import { NoticeCard } from "@/components/NoticeCard";
@@ -7,20 +8,24 @@ import { SourcesPanel } from "@/components/SourcesPanel";
 import { ask } from "@/lib/api";
 import type { AnswerSentence, AskAnswer } from "@/lib/types";
 
+// The support verdicts come from a language model acting as a judge. They are a useful signal, not a
+// verification (Phase H measured false support on real answers), so the labels say "judged".
+const JUDGED = "A language model judged this against the cited passage; it can be wrong, so read the passage.";
+
 const VERDICT: Record<string, { text: string; cls: string; help: string }> = {
-  supported: { text: "Supported", cls: "verdict-supported", help: "The cited passage supports this sentence." },
-  partially_supported: { text: "Partially supported", cls: "verdict-partial", help: "The cited passage supports only part of this sentence." },
-  not_supported: { text: "Not supported", cls: "verdict-not", help: "The cited passage does not support this sentence." },
+  supported: { text: "Judged supported", cls: "verdict-supported", help: `The model judged that the cited passage supports this sentence. ${JUDGED}` },
+  partially_supported: { text: "Judged partly supported", cls: "verdict-partial", help: `The model judged that the cited passage supports only part of this sentence. ${JUDGED}` },
+  not_supported: { text: "Judged not supported", cls: "verdict-not", help: `The model judged that the cited passage does not support this sentence. ${JUDGED}` },
   unsupported_citation: {
-    text: "Unsupported citation",
+    text: "Citation failed the check",
     cls: "verdict-bad-cite",
-    help: "The citation does not exist in the Act version for this tax year, or was not among the passages retrieved.",
+    help: "Exact check: the citation does not exist in the Act version for this tax year, or was not among the passages retrieved.",
   },
 };
 
 const STATUS: Record<string, string> = {
-  answered: "Answered: every sentence is supported by its citation.",
-  partially_verified: "Partially verified: some sentences are not fully supported. They are shown, marked, not hidden.",
+  answered: "Answered: every sentence was judged supported by its citation.",
+  partially_verified: "Partly supported: some sentences were judged not fully supported. They are shown and marked, not hidden.",
   declined: "Declined",
 };
 
@@ -69,8 +74,9 @@ export default function AskPage() {
       <h1>Ask a question</h1>
       <form className="panel" onSubmit={submit}>
         <p className="muted" style={{ marginTop: 0 }}>
-          Answers come only from the curated corpus for the chosen tax year. Each sentence is checked twice: does the cited
-          provision exist in the right Act, and does the passage support the sentence?
+          Answers come only from the curated corpus for the chosen tax year. Each sentence is checked twice: first an
+          exact check that the cited provision exists in the right Act for that year (reliable), then a language model
+          judges whether the passage supports the sentence (helpful but imperfect: read the passage).
         </p>
         <div className="grid">
           <label>Tax year
@@ -114,9 +120,15 @@ export default function AskPage() {
             {answer.status === "declined" ? (
               <p>{answer.decline_reason}</p>
             ) : (
-              <ol className="sentences">
-                {answer.sentences.map((s, k) => <SentenceRow key={k} s={s} />)}
-              </ol>
+              <>
+                <ol className="sentences">
+                  {answer.sentences.map((s, k) => <SentenceRow key={k} s={s} />)}
+                </ol>
+                <p className="not-reviewed">
+                  &ldquo;Judged&rdquo; labels come from a language-model check, not a human or a verification. In testing it
+                  sometimes accepted sentences the passage did not support. <Link href="/evaluation">See the measured rates</Link>.
+                </p>
+              </>
             )}
           </div>
 

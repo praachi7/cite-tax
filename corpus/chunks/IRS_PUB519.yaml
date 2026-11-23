@@ -29,6 +29,27 @@ chunks:
   - 5
   extraction: auto
   reviewed: false
+- id: IRS_PUB519:source_personal_services
+  source_id: IRS_PUB519
+  breadcrumb: IRS Publication 519 (2025) > Source of personal service income > FY 2025-26
+  heading: 'Source of income: personal services, including self-employment, are sourced where performed'
+  text: |-
+    Personal Services
+    All wages and any other compensation for services performed in the United States are considered to be from sources in the United States. The only exceptions to this rule are discussed under Employees of foreign persons, organizations, or offices, later, and under Crew members, earlier.
+    If you are an employee and receive compensation for labor or personal services performed both inside and outside the United States, special rules apply in determining the source of the compensation. Compensation (other than certain fringe benefits) is sourced on a time basis. Certain fringe benefits (such as housing and education) are sourced on a geographical basis.
+    Or you may be permitted to use an alternative basis to determine the source of compensation. See Alternative Basis, later.
+    Multilevel marketing. Certain companies selling products through a multilevel marketing arrangement, such
+    Chapter 2 Source of Income
+    that an upper-tier distributor, who has sponsored a lower-tier distributor, are entitled to a payment from the company based on certain activities of that lower-tier distributor. Generally, depending on the facts, payments from such multilevel marketing companies to independent (nonemployee) distributors (upper-tier distributors) that are based on the sales or purchases of persons whom they have sponsored (lower-tier distributors) constitute income for the performance of personal services in recruiting, training, and supporting the lower-tier distributors. The source of such income is generally based on where the services of the upper-tier distributor are performed and may, depending on the facts, be considered multiyear compensation, with the source of income determined over the period to which such compensation is attributable.
+    Self-employed individuals. If you are self-employed, you determine the source of compensation for labor or personal services from self-employment on the basis that most correctly reflects the proper source of that income under the facts and circumstances of your particular case. In many cases, the facts and circumstances will call for an apportionment on a time basis, as explained next.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 16
+  - 17
+  extraction: auto
+  reviewed: false
 - id: IRS_PUB519:spt_days
   source_id: IRS_PUB519
   breadcrumb: IRS Publication 519 (2025) > Days of presence > FY 2025-26

@@ -3,6 +3,25 @@
 # fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
 # Reviewed or hand-made chunks are never overwritten by the drafter.
 chunks:
+- id: IRS_PUB515:source_personal_services
+  source_id: IRS_PUB515
+  breadcrumb: IRS Publication 515 (2026) > Source of personal service income > FY 2026-27
+  heading: 'Source of income: personal services are sourced where they are performed'
+  text: |-
+    Personal service income (for purposes of chapter 3 withholding). If the income is for personal services performed in the United States, it is from U.S. sources. The place where the services are performed determines the source of the income, regardless of where the contract was made, the place of payment, or the residence of the payer.
+    However, under certain circumstances, payment for personal services performed in the United States is not considered income from sources within the United States.
+    For information on this exception, see Pay for Personal Services Performed, later.
+    If the income is for personal services performed partly in the United States and partly outside the United States, you must make an accurate allocation of income for services performed in the United States based on the facts and circumstances. In most cases, you make this allocation on a time basis. That is, U.S. source income is the amount that results from multiplying the total amount of pay by the following fraction.
+    Number of days services are performed in the United States
+    Total number of days of service for which compensation is paid
+  tax_year_first: 2026
+  tax_year_last: 2026
+  authority_rank: 4
+  pdf_pages:
+  - 35
+  - 36
+  extraction: auto
+  reviewed: false
 - id: IRS_PUB515:personal_services
   source_id: IRS_PUB515
   breadcrumb: IRS Publication 515 (2026) > Pay for personal services > FY 2026-27

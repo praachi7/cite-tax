@@ -207,6 +207,12 @@ sources:
         heading: Substantial presence test
         start: '^Substantial Presence Test$'
         end: '^Days of Presence in the United States$'
+      # Added 23 Nov 2026 after Phase H (post-evaluation fix for HF04): the source rule, including self-employment.
+      - id: source_personal_services
+        label: Source of personal service income
+        heading: "Source of income: personal services, including self-employment, are sourced where performed"
+        start: '^Personal Services$'
+        end: '^Time Basis$'
       - id: spt_days
         label: Days of presence
         heading: "Substantial presence test: which days count as days of presence"
@@ -231,6 +237,12 @@ sources:
     mode: anchor
     breadcrumb: IRS Publication 515 (2026)
     units:
+      # Added 23 Nov 2026 after Phase H (post-evaluation fix for HF04): the plain-language source rule.
+      - id: source_personal_services
+        label: Source of personal service income
+        heading: "Source of income: personal services are sourced where they are performed"
+        start: '^Personal service income \(for purposes of chapter 3 withholding\)'
+        end: '^Multiyear compensation\.'
       - id: personal_services
         label: Pay for personal services
         heading: Withholding on pay for personal services performed by nonresident aliens

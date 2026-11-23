@@ -1,0 +1,120 @@
+{
+  "date": "2026-11-23",
+  "embedding_model": "BAAI/bge-m3",
+  "queries_file": "queries_post_evaluation.yaml",
+  "n_queries": 4,
+  "configs": {
+    "default (exact+dense)": {
+      "overall": {
+        "n": 4,
+        "hit@1": 0.25,
+        "hit@3": 0.25,
+        "hit@5": 0.5,
+        "hit@10": 0.75,
+        "recall@5": 0.25,
+        "mrr": 0.336
+      },
+      "by_category": {
+        "us": {
+          "n": 4,
+          "hit@1": 0.25,
+          "hit@3": 0.25,
+          "hit@5": 0.5,
+          "hit@10": 0.75,
+          "recall@5": 0.25,
+          "mrr": 0.336
+        }
+      },
+      "wrong_act_returned": [],
+      "queries": [
+        {
+          "id": "PE01",
+          "category": "us",
+          "year": 2026,
+          "q": "Does an American company have to deduct US tax from what it pays me for coding I do from Pune?",
+          "expect": [
+            "IRS_PUB515:source_personal_services",
+            "IRS_PUB519:source_personal_services",
+            "IRC:s862(a)(3)",
+            "IRC:s861(a)(3)"
+          ],
+          "top5": [
+            "DTAA_US:art25(2)",
+            "DTAA_US:art14(1)",
+            "IRS_PUB901:india",
+            "DTAA_US:art14(2)",
+            "DTAA_US:art25(1)"
+          ],
+          "first_relevant_rank": null,
+          "recall@5": 0.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "PE02",
+          "category": "us",
+          "year": 2026,
+          "q": "Is my freelance design income US-source if the client is in Texas but I never leave India?",
+          "expect": [
+            "IRS_PUB515:source_personal_services",
+            "IRS_PUB519:source_personal_services",
+            "IRC:s862(a)(3)",
+            "IRC:s861(a)(3)"
+          ],
+          "top5": [
+            "IRS_PUB901:india",
+            "DTAA_US:art15(1)",
+            "IT2025:s6(14)",
+            "IT2025:s6(9)",
+            "IRC:s861(a)(3)"
+          ],
+          "first_relevant_rank": 5,
+          "recall@5": 0.25,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "PE03",
+          "category": "us",
+          "year": 2026,
+          "q": "Where is the source of self-employment income from consulting for a US firm?",
+          "expect": [
+            "IRS_PUB515:source_personal_services",
+            "IRS_PUB519:source_personal_services",
+            "IRC:s862(a)(3)",
+            "IRC:s861(a)(3)"
+          ],
+          "top5": [
+            "IRS_PUB515:source_personal_services",
+            "IRC:s861(a)(3)",
+            "DTAA_US:art15(1)",
+            "IRC:s862(a)(3)",
+            "DTAA_US_TE:art15"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 0.75,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "PE04",
+          "category": "us",
+          "year": 2026,
+          "q": "If I spend two months working in New York and the rest of the year in India, how much of my fee is US income?",
+          "expect": [
+            "IRS_PUB515:source_personal_services",
+            "IRS_PUB519:source_personal_services",
+            "IRC:s861(a)(3)"
+          ],
+          "top5": [
+            "IRS_PUB901:india",
+            "DTAA_US:art25(2)",
+            "DTAA_US:art14(1)",
+            "DTAA_US:art25(1)",
+            "DTAA_US:art15(1)"
+          ],
+          "first_relevant_rank": 7,
+          "recall@5": 0.0,
+          "top_score": 0.01639344262295082
+        }
+      ]
+    }
+  }
+}

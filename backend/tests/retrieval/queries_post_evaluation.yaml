@@ -1,0 +1,12 @@
+# Post-evaluation check (23 Nov 2026), written BEFORE the corpus fix was run.
+# After Phase H, held-out case HF04 ("My US client must withhold 30% on the work I do remotely from India")
+# showed that the US source rule for personal services was missing from what the model saw. Two IRS passages
+# stating that rule were added (IRS_PUB515:source_personal_services, IRS_PUB519:source_personal_services).
+# These four questions are new and worded differently from HF04, so the fix is checked on questions it was not
+# made for. HF04 itself is re-run separately and reported as a post-evaluation result, not a held-out one.
+# expect: any of these passages in the top 5 counts as a hit.
+queries:
+  - {id: PE01, category: us, year: 2026, q: "Does an American company have to deduct US tax from what it pays me for coding I do from Pune?", expect: ["IRS_PUB515:source_personal_services", "IRS_PUB519:source_personal_services", "IRC:s862(a)(3)", "IRC:s861(a)(3)"]}
+  - {id: PE02, category: us, year: 2026, q: "Is my freelance design income US-source if the client is in Texas but I never leave India?", expect: ["IRS_PUB515:source_personal_services", "IRS_PUB519:source_personal_services", "IRC:s862(a)(3)", "IRC:s861(a)(3)"]}
+  - {id: PE03, category: us, year: 2026, q: "Where is the source of self-employment income from consulting for a US firm?", expect: ["IRS_PUB515:source_personal_services", "IRS_PUB519:source_personal_services", "IRC:s862(a)(3)", "IRC:s861(a)(3)"]}
+  - {id: PE04, category: us, year: 2026, q: "If I spend two months working in New York and the rest of the year in India, how much of my fee is US income?", expect: ["IRS_PUB515:source_personal_services", "IRS_PUB519:source_personal_services", "IRC:s861(a)(3)"]}

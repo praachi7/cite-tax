@@ -189,7 +189,26 @@ follow, and its scores would still need checking against our labels. Instead:
 8. **Small sets, one labeller.** 31 held-out answer cases and 35 hand-labelled sentences; a few cases move a rate by
    several points. All labels are by one developer.
 
-## 5. Reproducing
+## 5. Changes made after the evaluation (not part of the measured results)
+
+The results above are frozen: they describe the 300-chunk corpus and the code as evaluated on 23 Nov 2026. Two changes
+were made afterwards, in response to the known failures. Neither was tuned on the held-out sets.
+
+1. **Two IRS passages stating the US source rule for personal services** (IRS_PUB515:source_personal_services and
+   IRS_PUB519:source_personal_services, the latter including the self-employed rule), because HF04 showed that rule was
+   missing from what the model saw. The corpus is now 302 chunks. Checked on four new questions written before the fix
+   was run (`backend/tests/retrieval/queries_post_evaluation.yaml`): 2 of 4 have the source rule in the top 5 (PE03
+   first, PE02 fifth); PE04 ranks it 7th; PE01 ("does an American company have to deduct US tax…") still misses.
+   Re-run on the original and held-out retrieval sets: unchanged (hit@5 0.85 and 0.906; temporal 16/16 and 11/12;
+   no wrong-Act passage). **HF04 itself is not fixed**: re-run after the change, its retrieval and answer are the same,
+   because the question's withholding wording still pulls in withholding and treaty-relief passages. A real fix would
+   ground US-withholding questions in the engine's own source-rule step (step 7) instead of retrieval; that is future
+   work. The answer slices were not re-run.
+2. **The Ask screen now says "judged supported" instead of "supported"**, explains that the first check (the
+   citation exists in the right Act) is exact while the second (support) is a language model's judgement, and links
+   to the Evaluation page for the measured rates. No scoring changed.
+
+## 6. Reproducing
 
 ```
 docker compose up -d db
