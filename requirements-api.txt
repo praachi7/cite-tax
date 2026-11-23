@@ -1,0 +1,6 @@
+# CiteTax Phase G API (Python 3.12). Base requirements plus the web layer; no ML libraries.
+# Install: pip install -r requirements-api.txt
+-r requirements.txt
+fastapi==0.165.0
+uvicorn==0.54.0
+httpx==0.28.1   # used by FastAPI's TestClient in backend/tests/api/
