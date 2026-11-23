@@ -16,6 +16,7 @@ from decimal import Decimal
 from typing import Callable, Optional
 
 from .context import Ctx
+from .money import format_inr
 from .models import (AdvanceTax, Eligibility, FtcReadiness, IndiaTax, PresumptiveIncome, ReceiptsTest,
                      ReliefResult, TreatyResult)
 from .money import D
@@ -64,7 +65,7 @@ class FlagRule:
 
 
 def _rs(x: Decimal) -> str:
-    return f"Rs {x:,.0f}"
+    return format_inr(x)  # Indian digit grouping: Rs 5,98,226
 
 
 def exports_services(ctx: Ctx) -> bool:

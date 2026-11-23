@@ -23,5 +23,19 @@ def round_to_multiple(amount: Decimal, multiple: int) -> Decimal:
     return Decimal((rupees + multiple // 2) // multiple * multiple)
 
 
+def format_inr(amount: Decimal) -> str:
+    """Whole rupees in Indian digit grouping: 598226 -> 'Rs 5,98,226'; 12000000 -> 'Rs 1,20,00,000'."""
+    rupees = int(D(amount).quantize(Decimal(1)))
+    sign, digits = ("-" if rupees < 0 else ""), str(abs(rupees))
+    if len(digits) > 3:
+        head, tail = digits[:-3], digits[-3:]
+        pairs = []
+        while len(head) > 2:
+            pairs.insert(0, head[-2:])
+            head = head[:-2]
+        digits = ",".join([head] + pairs + [tail])
+    return f"Rs {sign}{digits}"
+
+
 def percent_of(amount: Decimal, percent) -> Decimal:
     return amount * D(percent) / Decimal(100)

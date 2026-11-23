@@ -101,3 +101,15 @@ def test_the_form_choice_names_the_act_specific_form_rules():
     assert any(c.startswith("RULES2026:r164") for c in cites)
     cites61 = {c for t in run(make(2025)).trace if t.rule_id == "ENG.10.itr_form" for c in t.citations}
     assert any(c.startswith("RULES1962:r12") for c in cites61)
+
+
+# ---- flag messages use Indian digit grouping ----
+
+@pytest.mark.parametrize("amount, text", [
+    (0, "Rs 0"), (999, "Rs 999"), (1000, "Rs 1,000"), (598226, "Rs 5,98,226"),
+    (5000000, "Rs 50,00,000"), (12000000, "Rs 1,20,00,000"), (-150000, "Rs -1,50,000"),
+])
+def test_format_inr_uses_lakh_and_crore_grouping(amount, text):
+    from decimal import Decimal
+    from engine.money import format_inr
+    assert format_inr(Decimal(amount)) == text
