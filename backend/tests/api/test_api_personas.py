@@ -3,6 +3,7 @@
 The fixture input goes in as JSON and the expected values are checked against the JSON that comes
 back, so this also proves that serialisation keeps every figure exact (Decimal money travels as a string).
 """
+import json
 from decimal import Decimal
 from pathlib import Path
 
@@ -16,6 +17,11 @@ PERSONA_DIR = Path(__file__).resolve().parents[1] / "engine" / "personas"
 FILES = sorted(PERSONA_DIR.glob("p*.yaml"), key=lambda p: int(p.stem[1:]))
 
 client = TestClient(app)
+
+
+def _fixture_input(fx):
+    """The fixture input as a client would send it: YAML dates (e.g. Phase F's as_of) become ISO strings."""
+    return json.loads(json.dumps(fx["input"], default=str))
 
 
 def _dig(data, dotted):
@@ -41,7 +47,7 @@ def test_there_are_ten_persona_fixtures():
 @pytest.mark.parametrize("path", FILES, ids=[p.stem.upper() for p in FILES])
 def test_api_result_matches_hand_computed_fixture(path):
     fx = yaml.safe_load(path.read_text(encoding="utf8"))
-    resp = client.post("/tax/estimate", json={"input": fx["input"]})
+    resp = client.post("/tax/estimate", json={"input": _fixture_input(fx)})
     assert resp.status_code == 200, resp.text
     body = resp.json()
     body["flag_codes"] = [f["code"] for f in body["flags"]]
@@ -56,5 +62,5 @@ def test_persona_from_get_personas_gives_the_same_result_as_the_fixture(path):
     fx = yaml.safe_load(path.read_text(encoding="utf8"))
     listed = next(p for p in client.get("/personas").json() if p["id"] == fx["id"])
     a = client.post("/tax/estimate", json={"input": listed["input"]}).json()
-    b = client.post("/tax/estimate", json={"input": fx["input"]}).json()
+    b = client.post("/tax/estimate", json={"input": _fixture_input(fx)}).json()
     assert a == b

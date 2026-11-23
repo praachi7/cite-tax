@@ -1,4 +1,4 @@
-# CiteTax Phase G API (Python 3.12). Base requirements plus the web layer; no ML libraries.
+# CiteTax Phase G API (Python 3.12). Base requirements (which since Phase C include the retrieval stack) plus the web layer.
 # Install: pip install -r requirements-api.txt
 -r requirements.txt
 fastapi==0.165.0
