@@ -1,0 +1,68 @@
+# Corpus chunks for DTAA_US_TE: Technical Explanation of the India-US Convention and Protocol (US Treasury)
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: DTAA_US_TE:art15
+  source_id: DTAA_US_TE
+  breadcrumb: US Treasury Technical Explanation of the India-US Convention (guidance) > Art. 15
+  heading: 'Technical Explanation: Article 15 (Independent Personal Services)'
+  text: |-
+    ARTICLE 15
+    Independent Personal Services
+    The Convention deals in separate articles with different classes of income from personal
+    services. Article 15 deals with the general class of income from independent personal services,
+    and Article 16 (Dependent Personal Services) deals with the general class of dependent personal
+    service income. Exceptions or additions to these general rules are found in Articles 16 through
+    20 for directors' fees (Article 17); income earned by entertainers and athletes (Article 18);
+    remunerations and pensions in respect of government service (Article 19); private pensions,
+    annuities, alimony, and child support payments (Article 20); payments received by students and
+    apprentices (Article 21); and payments received by professors, teachers, and research scholars
+    (Article 22).
+    Article 15 provides the rule that an individual or firm of individuals (other than a
+    company) who is a resident of a Contracting State and who derives income from the performance
+    of professional services or other independent activities of a similar character will be exempt from
+    tax in respect of that income by the other Contracting State unless certain conditions are
+    satisfied. The income may be taxed in the other Contracting State if the person has a fixed base
+    regularly available to him in the other Contracting State for the purpose of performing his
+    activities and the income is attributable to that fixed base or if the person stays in the other
+    Contracting State for a period or periods amounting to or exceeding in the aggregate 90 days in
+    the relevant taxable year.
+    If, however, the individual is an Indian resident who performs independent personal
+    services in the United States, and he is also a U.S. citizen, the United States may, by virtue of the
+    saving clause of paragraph 3 of Article 1 (General Scope) tax his income without regard to the
+    restrictions of this Article.
+    Amounts described in this Article are not subject to tax under Article 12 (Royalties and
+    Fees for Included Services).
+    The term "fixed base" is not defined in the Convention, but its meaning is understood to
+    be analogous to that of the term "permanent establishment", as defined in Article S (Permanent
+    Establishment). Similarly, some rules of Article 7 (Business profits) for attributing income and
+    expenses to a permanent establishment are relevant for attributing income to a fixed base.
+    However, the taxing right conferred by this Article with respect to income from independent
+    personal services is somewhat more limited than that provided in Article 7 for the taxation of
+    business profits. Both Articles 7 and 15 provide that a Contracting State may tax certain income
+    of a resident of the other Contracting State which is attributable to a permanent establishment or
+    fixed base in the first State. In Article 15, however the income must be attributable to services
+    performed in the first State, while Article 7 does not require that all of the income-generating
+    activities be performed in the State where the permanent establishment is located.
+    Paragraph 2 notes that the term "professional services" includes independent scientific,
+    literary, artistic, educational or teaching activities as well as the independent activities of
+    physicians, lawyers, engineers, architects, dentists, and accountants. Other independent activities
+    of a similar character are also covered by this Article. Article 15 applies to all such services
+    performed by an individual for his own account or by a firm of individuals, where the individual
+    or firm of individuals receives the income and bears the risk of loss arising from the services.
+    The taxation of income of an individual from those types of independent services which are
+    covered by Articles 17 through 22 is governed by the provisions of those Articles.
+    Paragraph III of the protocol (Ad Articles 7, 10, 11, 12, 15, and 23) refers to Article 15.
+    With regard to this Article, Paragraph III of the protocol states the understanding of the
+    Contracting States that income which is attributable to a fixed base, but is deferred and received
+    after the fixed base no longer exists, may, nevertheless, be taxed by the State in which the fixed
+    base was located. It permits the United States to apply Code 864(c)(6)
+  tax_year_first: null
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 39
+  - 40
+  extraction: auto
+  reviewed: false

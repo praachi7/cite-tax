@@ -2,7 +2,7 @@
 
 An AI-assisted decision-support prototype for **India-resident freelancers in specified professions (such as information technology) who work for clients in the United States**. It works out what tax is owed in India, whether the US can tax any of the income, and which filings and documents are needed. Every figure, classification and flag comes with a **verified citation** to the governing law, and the system says so openly when the law is unclear.
 
-> **Status: research and design are complete. Phase A (law as data) and Phase B (the deterministic tax engine) are built. The later phases have not started.**
+> **Status: Phase A (law as data) and Phase B (the deterministic tax engine) are built. Phase C (corpus and retrieval) is built and awaiting hand review of the corpus. The later phases have not started.**
 > This is an educational student project. It does not give legal or tax advice, and it uses synthetic data only.
 
 ## The idea in one paragraph
@@ -34,7 +34,7 @@ Fees for work done physically in India are foreign-source income under US law, s
 
 ## Planned stack
 
-Next.js, FastAPI, PostgreSQL with pgvector, one hosted LLM API, and Docker Compose. The LLM provider and the embedding model will be chosen when the phase that needs them begins.
+Next.js, FastAPI, PostgreSQL with pgvector, BGE-M3 embeddings run locally, one hosted LLM API, and Docker Compose. The LLM provider will be chosen when Phase D begins.
 
 ## Documentation
 
@@ -59,7 +59,7 @@ The law the system relies on comes from official publications: the Income-tax Ac
 
 ## Running the project
 
-There is no app yet. What exists is the law data (`params/`, `corpus/`), the loader and validator (`backend/lawdata/`), and the tax engine (`backend/engine/`).
+There is no app yet. What exists is the law data (`params/`, `corpus/`), the loader and validator (`backend/lawdata/`), the tax engine (`backend/engine/`) and retrieval (`backend/retrieval/`).
 
 ```
 python -m venv .venv && .venv/Scripts/pip install -r requirements.txt    # Python 3.12
@@ -80,6 +80,30 @@ result.trace                           # every step: rule ID, citations, paramet
 ```
 
 The ten pipeline steps are in `backend/engine/steps/`. Assumption switches (A-3, A-5, A-12, A-16) are passed as an `EngineConfig`, whose defaults come from `corpus/assumptions.yaml`. Test personas P1 to P10 are in `backend/tests/engine/personas/`, each with hand-computed expected values and the statute citation for every figure.
+
+### Corpus and retrieval (Phase C)
+
+The corpus is a curated set of passages in `corpus/chunks/<SOURCE>.yaml`, one file per source, drafted from the PDFs according to `corpus/scope.yaml` and then reviewed by hand. Tables are typed by hand. Retrieval filters by tax year in SQL first, then fuses three ranked lists (exact citation match with concordance mapping, BGE-M3 vectors, Postgres full text). The source PDFs must be in `sources/`.
+
+```
+.venv/Scripts/python scripts/extract_text.py          # PDFs -> build/text/ (needs poppler's pdftotext)
+.venv/Scripts/python scripts/draft_chunks.py          # build/text + scope.yaml -> corpus/chunks/ (keeps reviewed chunks)
+python -m lawdata.validate --chunks                   # chunk checks + every cited ID resolves (--strict: all reviewed)
+docker compose up -d db                               # Postgres 17 + pgvector on port 5433
+.venv/Scripts/python scripts/embed_chunks.py          # BGE-M3 on CPU, cached by content hash in build/embeddings/
+.venv/Scripts/python scripts/load_index.py            # rebuild the index from the chunk files
+.venv/Scripts/python scripts/eval_retrieval.py        # labelled queries -> eval/results/phase_c_retrieval.json
+```
+
+```python
+from retrieval.search import retrieve
+res = retrieve("What is the 44ADA limit?", tax_year=2026)
+res.ids()             # ['IT2025:s58(2)/T3', ...]: the 2025 Act provision, never the 1961 text
+res.refs.mappings     # 44ADA -> s.58(2) Table Sl. 3, via the concordance
+res.hits[0].ranks     # which ranked lists found it, and at what rank
+```
+
+Tests marked `db` need the index loaded and are skipped otherwise.
 
 ## Disclaimer
 

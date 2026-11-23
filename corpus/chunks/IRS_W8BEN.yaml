@@ -1,0 +1,60 @@
+# Corpus chunks for IRS_W8BEN: Instructions for Form W-8BEN (Rev. October 2021)
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: IRS_W8BEN:withholding
+  source_id: IRS_W8BEN
+  breadcrumb: Instructions for Form W-8BEN > Purpose of form
+  heading: Purpose of Form W-8BEN and withholding on foreign persons
+  text: |-
+    Purpose of Form
+    Establishing status for chapter 3 purposes. Foreign persons are subject to U.S. tax at a 30% rate on income they receive from U.S. sources that consists of:
+    • Interest (including certain original issue discount (OID)); • Dividends; • Rents; • Royalties; • Premiums; • Annuities; • Compensation for, or in expectation of, services
+    performed;
+    • Substitute payments in a securities lending transaction;
+    or
+    • Other fixed or determinable annual or periodical gains,
+    profits, or income.
+    This tax is imposed on the gross amount paid and is generally collected by withholding under section 1441. A payment is considered to have been made whether it is
+    Sep 29, 2021
+    Cat. No. 25576H
+    made directly to the beneficial owner or to another person, such as an intermediary, agent, or partnership, for the benefit of the beneficial owner.
+    In addition, section 1446(a) requires a partnership conducting a trade or business in the United States to withhold tax on a foreign partner's distributive share of the partnership's effectively connected taxable income. Also, section 1446(f) generally requires a transferee of a partnership interest (or a broker in the case of a transfer of a PTP interest) to withhold on the amount realized from the transfer by a foreign person when any portion of the gain from the transfer would be treated as effectively connected gain under section 864(c)(8). Generally, a foreign person that is a partner in a partnership that submits a Form W-8BEN for purposes of section 1441 or 1442 will satisfy the documentation requirements under section 1446(a) or (f) as well. However, in some cases the documentation requirements of sections 1441 and 1442 do not match the documentation requirements of section 1446(a) or (f). See Regulations sections 1.1446-1 through 1.1446-6 (for documentation requirements under section 1446(a)) and Regulations sections 1.1446(f)-2 and 1.1446(f)-4 (for documentation requirements under section 1446(f)).
+    Note. The owner of a disregarded entity (including an individual), rather than the disregarded entity itself, must submit the appropriate Form W-8BEN for purposes of section 1446(a) or (f), or for chapter 3 or 4 purposes.
+    If you receive certain types of income, you must provide Form W-8BEN to:
+    • Establish that you are not a U.S. person; • Claim that you are the beneficial owner of the income
+    for which Form W-8BEN is being provided or a foreign partner in a partnership subject to section 1446(a); and
+    • If applicable, claim a reduced rate of, or exemption
+    from, withholding as a resident of a foreign country with which the United States has an income tax treaty and who is eligible for treaty benefits.
+    You may also be required to submit Form W-8BEN to claim an exception from domestic information reporting and backup withholding (at the backup withholding rate under section 3406) for certain types of income that are not subject to foreign-person withholding at a rate of 30% under section 1441. Such income includes:
+    • Broker proceeds; • Short-term (183 days or less) OID; • Bank deposit interest; • Foreign source interest, dividends, rents, or royalties; • Proceeds from a wager placed by a nonresident alien
+    individual in the games of blackjack, baccarat, craps, roulette, or big-6 wheel; and
+    • Amounts of United States source gross transportation
+    income, as defined in section 887(b)(1), that are taxable under section 887(a).
+    A withholding agent or payer of the income may rely on a properly completed Form W-8BEN to treat a payment associated with the Form W-8BEN as a payment to a foreign person who beneficially owns the amounts paid. If applicable, the withholding agent may rely on the Form W-8BEN to apply a reduced rate of, or exemption from, withholding at source.
+    Provide Form W-8BEN to the withholding agent or payer before income is paid or credited to you. Failure to provide a Form W-8BEN when requested may lead to withholding at the foreign-person withholding rate of 30% or the backup withholding rate under section 3406.
+    Establishing status for chapter 4 purposes. A foreign financial institution (FFI) may rely on a properly completed Form W-8BEN to establish your chapter 4 status as a foreign person. The Form W-8BEN should be provided to the FFI when requested. Failure to do so could result in 30% withholding on income paid or credited to you as a recalcitrant account holder from sources within the United States. See the definition of Amounts subject to withholding, later.
+    Additional information. For additional information and instructions for the withholding agent, see the Instructions for the Requester of Forms W-8BEN, W-8BEN-E, W-8ECI, W-8EXP, and W-8IMY.
+  tax_year_first: null
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 1
+  - 2
+  extraction: auto
+  reviewed: false
+- id: IRS_W8BEN:validity
+  source_id: IRS_W8BEN
+  breadcrumb: Instructions for Form W-8BEN > Expiration and change in circumstances
+  heading: How long a Form W-8BEN stays valid
+  text: |-
+    Expiration of Form W-8BEN. Generally, a Form W-8BEN will remain in effect for purposes of establishing foreign status for a period starting on the date the form is signed and ending on the last day of the third succeeding calendar year, unless a change in circumstances makes any information on the form incorrect. For example, a Form W-8BEN signed on September 30, 2015, remains valid through December 31, 2018.
+    However, under certain conditions a Form W-8BEN will remain in effect indefinitely until a change of circumstances occurs. To determine the period of validity for Form W-8BEN for purposes of chapter 4, see Regulations section 1.1471-3(c)(6)(ii). To determine the period of validity for Form W-8BEN for purposes of chapter 3, see Regulations section 1.1441-1(e)(4)(ii).
+  tax_year_first: null
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 3
+  extraction: auto
+  reviewed: false

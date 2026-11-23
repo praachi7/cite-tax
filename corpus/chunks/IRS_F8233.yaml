@@ -1,0 +1,64 @@
+# Corpus chunks for IRS_F8233: IRS Form 8233 (Rev. September 2018)
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: IRS_F8233:p1
+  source_id: IRS_F8233
+  breadcrumb: IRS Form 8233 > p.1
+  heading: 'Form 8233: exemption from withholding on compensation for independent personal services'
+  text: |-
+    8233 Form
+    (Rev. September 2018)
+    Department of the Treasury Internal Revenue Service
+    Who Should Use This Form?
+    Exemption From Withholding on Compensation for Independent (and Certain Dependent) Personal
+    Services of a Nonresident Alien Individual
+    OMB No. 1545-0795
+    ▶ Go to www.irs.gov/Form8233 for instructions and the latest information. ▶ See separate instructions.
+    IF you are a nonresident alien individual who is receiving. . .
+    THEN, if you are the beneficial owner of that income, use this form to claim. . .
+    Note: For definitions of terms used in this section and detailed instructions on required withholding forms for each type of income, see Definitions in the instructions.
+    Compensation for independent personal services performed in the United States
+    Compensation for dependent personal services performed in the United States
+    DO NOT Use This Form. . .
+    Noncompensatory scholarship or fellowship income and personal services income from the same withholding agent
+    IF you are a beneficial owner who is. . .
+    Receiving compensation for dependent personal services performed in the United States and you are not claiming a tax treaty withholding exemption for that compensation
+    Receiving noncompensatory scholarship or fellowship income and you are not receiving any personal services income from the same withholding agent
+    A tax treaty withholding exemption (Independent personal services, Business profits) for part or all of that compensation.
+    A tax treaty withholding exemption for part or all of that compensation.
+    A tax treaty withholding exemption for part or all of both types of income.
+    INSTEAD, use. . . Form W-4 (See the Instructions for Form 8233 for how to complete Form W-4.)
+    Form W-8BEN or, if elected by the withholding agent, Form W-4 for the noncompensatory scholarship or fellowship income
+    Claiming only foreign status or treaty benefits with respect to income that is not compensation for personal services
+    Form W-8BEN
+    This exemption is applicable for compensation for calendar year
+    and ending
+    .
+    , or other tax year beginning
+    Part I Identification of Beneficial Owner (See instructions.)
+    1 Name of individual who is the beneficial owner 2 U.S. taxpayer identification number 3 Foreign tax identification number, if any
+    4 Permanent residence address (street, apt. or suite no., or rural route). Do not use a P.O. box.
+    City or town, state or province. Include postal code where appropriate.
+    Country (do not abbreviate)
+    5 Address in the United States (street, apt. or suite no., or rural route). Do not use a P.O. box.
+    City or town, state, and ZIP code
+    Note: Citizens of Canada or Mexico are not required to complete lines 7a and 7b.
+    6 U.S. visa type
+    7a Country issuing passport
+    8 Date of entry into the United States
+    9a Current nonimmigrant status
+    7b Passport number 9b Date your current nonimmigrant status expires
+    10 If you are a foreign student, trainee, professor/teacher, or researcher, check this box . . . . . . . . . . . . . . . . ▶
+    Caution: See the line 10 instructions for the required additional statement you must attach.
+    For Privacy Act and Paperwork Reduction Act Notice, see separate instructions.
+    Cat. No. 62292K
+    Form 8233 (Rev. 9-2018)
+  tax_year_first: null
+  tax_year_last: null
+  authority_rank: 2
+  pdf_pages:
+  - 1
+  extraction: auto
+  reviewed: false

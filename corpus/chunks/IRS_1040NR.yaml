@@ -1,0 +1,26 @@
+# Corpus chunks for IRS_1040NR: 2025 Instructions for Form 1040-NR
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: IRS_1040NR:treaty_disclosure
+  source_id: IRS_1040NR
+  breadcrumb: Instructions for Form 1040-NR (2025) > Treaty-based return position disclosure > FY 2025-26
+  heading: Treaty-based return position disclosure on Form 1040-NR
+  text: |-
+    Treaty-based return position disclosure. If you take the position that a treaty of the United States overrides or modifies any provision of the Internal Revenue Code and that position reduces (or potentially reduces) your tax, you must generally report certain information on Form 8833 and attach it to Form 1040-NR.
+    If you fail to report the required information, you will be charged a penalty of $1,000 for each failure, unless you show that such failure is due to reasonable cause and not willful neglect. For more details, see Form 8833 and its instructions.
+    Exceptions. You don’t have to file Form 8833 for any of the following. See Pub. 519 for more items.
+    1. You claim a treaty that reduces the withholding tax on interest, dividends, rents, royalties, or other fixed or determinable annual or periodic income ordinarily subject to the 30% rate.
+    2. You claim a treaty that reduces or modifies the taxation of income from dependent personal services, pensions, annuities, social security
+    and other public pensions, or income of artists, athletes, students, trainees, or teachers. This includes taxable scholarship and fellowship grants.
+    3. You claim an international social security agreement (often called a totalization agreement), or a diplomatic or consular agreement, reduces or modifies the taxation of income.
+    4. You’re a partner in a partnership or a beneficiary of an estate or trust that reports the required information on its return.
+    5. The payments or items of income that are otherwise required to be disclosed total no more than $10,000.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 46
+  extraction: auto
+  reviewed: false

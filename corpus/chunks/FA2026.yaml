@@ -1,0 +1,141 @@
+# Corpus chunks for FA2026: Finance Act, 2026 (No. 1 of 2026)
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: FA2026:s2(6)
+  source_id: FA2026
+  breadcrumb: Finance Act 2026 > s.2(6) > FY 2025-26
+  heading: Health and Education Cess (1961 Act year)
+  text: |-
+    (6) The amount of income-tax as specified in sub-sections (1) to (5) and
+    as increased by the applicable surcharge, for the purposes of the Union,
+    calculated in the manner provided therein, shall be further increased by an
+    additional surcharge, for the purposes of the Union, to be called the “Health
+    and Education Cess on income-tax”, calculated at the rate of four per cent. of
+    12 THE GAZETTE OF INDI1A2 EXTRAORDINARY [Part II—
+    such income-tax and surcharge so as to fulfil the commitment of the
+    Government to provide and finance quality health services and universalised
+    quality basic education and secondary and higher education.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 11
+  - 12
+  extraction: auto
+  reviewed: false
+- id: FA2026:s3(15)
+  source_id: FA2026
+  breadcrumb: Finance Act 2026 > s.3(15) > Tax Year 2026-27
+  heading: Health and Education Cess (2025 Act year)
+  text: |-
+    (15) The amount of income-tax as specified in sub-sections (1) to (5) and
+    as increased by the applicable surcharge, for the purposes of the Union,
+    calculated in the manner provided therein, shall be further increased by an
+    additional surcharge, for the purposes of the Union, to be called the “Health
+    and Education Cess on income-tax”, calculated at the rate of 4% of such
+    income-tax and surcharge so as to fulfil the commitment of the Government
+    to provide and finance quality health services and universalised quality basic
+    education and secondary and higher education.
+  tax_year_first: 2026
+  tax_year_last: 2026
+  authority_rank: 1
+  pdf_pages:
+  - 39
+  extraction: auto
+  reviewed: false
+- id: FA2026:sch1-partIA-paraA(I)
+  source_id: FA2026
+  breadcrumb: Finance Act 2026 > First Schedule Part I-A Paragraph A(I) > FY 2025-26
+  heading: Old-regime income-tax rates for individuals below 60 (1961 Act, AY 2026-27)
+  text: |-
+    First Schedule, Part I, A. Income-tax under the Income-tax Act, 1961. Paragraph A, item (I): every individual other than those in items (II) and (III) [senior and very senior citizens], Hindu undivided family, association of persons, body of individuals or artificial juridical person, not being a case to which Paragraphs B to E apply.
+    Rates of income-tax:
+    (1) where the total income does not exceed Rs. 2,50,000: Nil;
+    (2) where the total income exceeds Rs. 2,50,000 but does not exceed Rs. 5,00,000: 5 per cent of the amount by which the total income exceeds Rs. 2,50,000;
+    (3) where the total income exceeds Rs. 5,00,000 but does not exceed Rs. 10,00,000: Rs. 12,500 plus 20 per cent of the amount by which the total income exceeds Rs. 5,00,000;
+    (4) where the total income exceeds Rs. 10,00,000: Rs. 1,12,500 plus 30 per cent of the amount by which the total income exceeds Rs. 10,00,000.
+    These are the rates when the person has opted out of the new regime (s.115BAC). New-regime slabs are in s.115BAC(1A) of the 1961 Act.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 106
+  cross_refs:
+  - IT1961:s115BAC(1A)
+  is_table: true
+  extraction: hand_typed
+- id: FA2026:sch1-partIB-paraA(I)
+  source_id: FA2026
+  breadcrumb: Finance Act 2026 > First Schedule Part I-B Paragraph A(I) > Tax Year 2026-27
+  heading: Old-regime income-tax rates for individuals below 60 (2025 Act, Tax Year 2026-27)
+  text: |-
+    First Schedule, Part I, B. Income-tax under the Income-tax Act, 2025. Paragraph A, item (I): every individual other than those in items (II) and (III) [senior and very senior citizens], Hindu undivided family, association of persons, body of individuals or artificial juridical person, not being a case to which Paragraphs B to E apply.
+    Rates of income-tax:
+    (1) where the total income does not exceed ₹250000: Nil;
+    (2) where the total income exceeds ₹250000 but does not exceed ₹500000: 5% of the amount by which the total income exceeds ₹250000;
+    (3) where the total income exceeds ₹500000 but does not exceed ₹1000000: ₹12500 plus 20% of the amount by which the total income exceeds ₹500000;
+    (4) where the total income exceeds ₹1000000: ₹112500 plus 30% of the amount by which the total income exceeds ₹1000000.
+    These are the rates when the person has opted out of the new regime (s.202(4)). New-regime slabs are in s.202(1) of the 2025 Act.
+  tax_year_first: 2026
+  tax_year_last: 2026
+  authority_rank: 1
+  pdf_pages:
+  - 111
+  - 112
+  cross_refs:
+  - IT2025:s202(1)
+  is_table: true
+  extraction: hand_typed
+- id: FA2026:sch1-partIA-paraF/T1
+  source_id: FA2026
+  covers:
+  - FA2026:sch1-partIA-paraF/T1(1)
+  breadcrumb: Finance Act 2026 > First Schedule Part I-A Paragraph F Table 1 Sl. 1 > FY 2025-26
+  heading: Surcharge on income-tax for individuals (1961 Act, AY 2026-27)
+  text: |-
+    First Schedule, Part I-A, Paragraph F (Surcharge on income-tax). The income-tax computed under Paragraphs A to E, or sections 111A, 112 or 112A of the Income-tax Act, 1961, for a person in column B of Table 1 is increased by a surcharge at the rates in column C.
+    Table 1, Sl. No. 1. Person: (i) every individual; (ii) Hindu undivided family; (iii) association of persons (other than one consisting only of companies); (iv) body of individuals; (v) every artificial juridical person.
+    Rate of surcharge:
+    (i) total income (including dividend income or capital gains under sections 111A, 112 and 112A) exceeds Rs. 50,00,000 but does not exceed Rs. 1,00,00,000: 10 per cent;
+    (ii) total income (including such income) exceeds Rs. 1,00,00,000 but does not exceed Rs. 2,00,00,000: 15 per cent;
+    (iii) total income (excluding such income) exceeds Rs. 2,00,00,000 but does not exceed Rs. 5,00,00,000: 25 per cent;
+    (iv) total income (excluding such income) exceeds Rs. 5,00,00,000: 37 per cent;
+    (v) total income (including such income) exceeds Rs. 2,00,00,000 but is not covered in (iii) and (iv): 15 per cent;
+    (vi) surcharge on the tax on dividend income or capital gains under sections 111A, 112 and 112A shall not exceed 15 per cent.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 108
+  - 109
+  - 110
+  is_table: true
+  extraction: hand_typed
+  note: The marginal-relief proviso that follows Table 1 in the PDF is not typed here; add it in review.
+- id: FA2026:sch1-partIB-paraF/T1
+  source_id: FA2026
+  covers:
+  - FA2026:sch1-partIB-paraF/T1(1)
+  breadcrumb: Finance Act 2026 > First Schedule Part I-B Paragraph F Table 1 Sl. 1 > Tax Year 2026-27
+  heading: Surcharge on income-tax for individuals (2025 Act, Tax Year 2026-27)
+  text: |-
+    First Schedule, Part I-B, Paragraph F (Surcharge on income-tax). The income-tax computed under Paragraphs A to E, or sections 196, 197 or 198 of the Income-tax Act, 2025, for a person in column B of Table 1 is increased by a surcharge at the rates in column C.
+    Table 1, Sl. No. 1. Person: (i) every individual; (ii) Hindu undivided family; (iii) association of persons (other than one consisting only of companies); (iv) body of individuals; (v) every artificial juridical person.
+    Rate of surcharge:
+    (i) total income (including dividend income or capital gains under sections 196, 197 and 198) exceeds ₹5000000 but does not exceed ₹10000000: 10%;
+    (ii) total income (including such income) exceeds ₹10000000 but does not exceed ₹20000000: 15%;
+    (iii) total income (excluding such income) exceeds ₹20000000 but does not exceed ₹50000000: 25%;
+    (iv) total income (excluding such income) exceeds ₹50000000: 37%;
+    (v) total income (including such income) exceeds ₹20000000 but is not covered in (iii) and (iv): 15%;
+    (vi) surcharge on the tax on dividend income or capital gains under sections 196, 197 and 198 shall not exceed 15%.
+  tax_year_first: 2026
+  tax_year_last: 2026
+  authority_rank: 1
+  pdf_pages:
+  - 114
+  - 115
+  is_table: true
+  extraction: hand_typed
+  note: The marginal-relief proviso that follows Table 1 in the PDF is not typed here; add it in review.

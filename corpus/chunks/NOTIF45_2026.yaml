@@ -1,0 +1,39 @@
+# Corpus chunks for NOTIF45_2026: CBDT Notification G.S.R. 226(E), 30 March 2026 (Second Amendment Rules): Rule 12, ITR-1 and ITR-4
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: NOTIF45_2026:p1
+  source_id: NOTIF45_2026
+  breadcrumb: CBDT Notification 45/2026 (Rule 12, ITR-1 and ITR-4) > p.1 > FY 2025-26
+  heading: 'Notification 45/2026: amendments to Rule 12 and ITR-1/ITR-4'
+  text: |-
+    MINISTRY OF FINANCE
+    (Department of Revenue)
+    (CENTRAL BOARD OF DIRECT TAXES)
+    NOTIFICATION
+    New Delhi, the 30th March, 2026
+    G.S.R. 226(E).— In exercise of the powers conferred by section 139 read with section 295 of the Income-tax
+    Act, 1961 (43 of 1961), the Central Board of Direct Taxes hereby makes the following rules further to amend Income-
+    tax Rules, 1962, namely:-
+    1. (1) These rules may be called the Income-tax (Second Amendment) Rules, 2026.
+    (2) They shall come into force with effect from the 31st day of march, 2026 and shall apply in respect of returns
+    filed for A.Y. 2026-27.
+    2. In the Income-tax Rules, 1962 (hereinafter referred to as the said rules),––
+    (a) in rule 12, ––
+    (i) in sub-rule (1),––
+    (A) in the opening portion, for the figure “2025”, the figure “2026” shall be substituted;
+    (B) in clause (a), in sub-clause (ii), for the words “one house property”, the words “two house properties”
+    shall be substituted;
+    (C) in clause (ca), in proviso, in item (IG), for the words “one house property”, the words “two house
+    properties” shall be substituted;
+    (ii) in sub-rule (5), for the figure “2024”, the figure “2025” shall be substituted.
+    3. In the said rules, in Appendix– II,
+    (a) for FORM ITR-1, the following FORM shall be substituted, namely: –––
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 2
+  pdf_pages:
+  - 1
+  extraction: auto
+  reviewed: false

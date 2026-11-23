@@ -1,0 +1,1938 @@
+# Corpus chunks for IT2025: Income-tax Act, 2025 (30 of 2025), as amended up to Finance Act 2026
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: IT2025:s6(1)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.6(1) > Tax Year 2026-27 onward
+  heading: Residence in India
+  text: |-
+    6. (1) For the purposes of this Act, residential status in India in a tax year of
+    a person shall be determined as per the provisions of this section.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 27
+  extraction: auto
+  reviewed: false
+- id: IT2025:s6(2)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.6(2) > Tax Year 2026-27 onward
+  heading: Residence in India
+  text: |-
+    (2) An individual shall be resident in India in a tax year, if he—
+    (a) is in India for a total period of one hundred and eighty-two days or more
+    in that tax year; or
+    (b) is in India cumulatively for sixty days or more during that year and has
+    been in India cumulatively for three hundred and sixty-five days or more
+    in the four years preceding such tax year.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 27
+  - 28
+  extraction: auto
+  reviewed: false
+- id: IT2025:s6(3)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.6(3) > Tax Year 2026-27 onward
+  heading: Residence in India
+  text: |-
+    (3) The provisions of sub-section (2)(b) shall not apply in the case of an individual
+    who is a citizen of India and leaves India in any tax year—
+    (a) as a member of the crew of an Indian ship, as defined in section 3(18)
+    of the Merchant Shipping Act, 1958 (44 of 1958); or
+    (b) for the purposes of employment outside India.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 28
+  extraction: auto
+  reviewed: false
+- id: IT2025:s6(4)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.6(4) > Tax Year 2026-27 onward
+  heading: Residence in India
+  text: |-
+    (4) The provisions of sub-section (2)(b) shall not apply, subject to the provisions of
+    sub-section (5), in the case of an individual—
+    (a) who is a citizen of India or a person of Indian origin; and
+    (b) who being outside India, comes on a visit to India in any tax year.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 28
+  extraction: auto
+  reviewed: false
+- id: IT2025:s6(5)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.6(5) > Tax Year 2026-27 onward
+  heading: Residence in India
+  text: |-
+    (5) Where the person referred to in sub-section (4) has a total income exceeding
+    fifteen lakh rupees during the tax year referred therein (other than the income from
+    foreign sources), sub-section (2)(b) shall apply as if the words “sixty days” had been
+    substituted with “one hundred and twenty days”.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 28
+  extraction: auto
+  reviewed: false
+- id: IT2025:s6(6)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.6(6) > Tax Year 2026-27 onward
+  heading: Residence in India
+  text: |-
+    (6) For the purposes of sub-section (2), if the individual is—
+    (a) a citizen of India; and
+    (b) a member of the crew of a foreign-bound ship leaving India,
+    the total number of days in India, in respect of that voyage, shall be determined in
+    such manner and subject to such conditions, as may be prescribed.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 28
+  extraction: auto
+  reviewed: false
+- id: IT2025:s6(7)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.6(7) > Tax Year 2026-27 onward
+  heading: Residence in India
+  text: |-
+    (7) Irrespective of the provisions of sub-sections (2) to (6), an individual shall be
+    deemed to be resident in India for a tax year, if he—
+    (a) is a citizen of India;
+    (b) is not liable to tax in any other country or territory due to his domicile,
+    residence, or similar criteria; and
+    (c) has total income exceeding fifteen lakh rupees during such tax year (other
+    than the income from foreign sources).
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 28
+  extraction: auto
+  reviewed: false
+- id: IT2025:s6(8)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.6(8) > Tax Year 2026-27 onward
+  heading: Residence in India
+  text: |-
+    (8) Sub-section (7) shall not apply to an individual, who is resident in India for a
+    tax year under sub-sections (2) to (6).
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 28
+  extraction: auto
+  reviewed: false
+- id: IT2025:s6(9)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.6(9) > Tax Year 2026-27 onward
+  heading: Residence in India
+  text: |-
+    (9) A Hindu undivided family, firm or other association of persons shall be resident
+    in India in any tax year unless the control and management of its affairs is situated
+    wholly outside India during such tax year.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 28
+  extraction: auto
+  reviewed: false
+- id: IT2025:s6(10)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.6(10) > Tax Year 2026-27 onward
+  heading: Residence in India
+  text: |-
+    (10)(a) A company is said to be a resident in India in any tax year, if—
+    (i) it is an Indian company; or
+    (ii) its place of effective management is in India in that tax year;
+    (b) for the purposes of this sub-section, “place of effective management” means a
+    place where key management and commercial decisions necessary for the conduct
+    of business of the company as a whole are, in substance, made.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 28
+  extraction: auto
+  reviewed: false
+- id: IT2025:s6(11)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.6(11) > Tax Year 2026-27 onward
+  heading: Residence in India
+  text: |-
+    (11) Every other person is resident in India in any tax year unless during that tax
+    year the control and management of the affairs of such person is situated wholly
+    outside India.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 29
+  extraction: auto
+  reviewed: false
+- id: IT2025:s6(12)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.6(12) > Tax Year 2026-27 onward
+  heading: Residence in India
+  text: |-
+    (12) If a person is resident in India in a tax year for any source of income, he shall
+    be deemed to be resident in India in that tax year for each of his other sources of
+    income.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 29
+  extraction: auto
+  reviewed: false
+- id: IT2025:s6(13)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.6(13) > Tax Year 2026-27 onward
+  heading: Residence in India
+  text: |-
+    (13) A person is not ordinarily resident in India in any tax year, if that person is—
+    (a) an individual who has been, or a Hindu undivided family, whose manager
+    has been—
+    (i) a non-resident in India in nine out of the ten tax years preceding
+    that year; or
+    (ii) in India cumulatively for seven hundred and twenty-nine days or
+    less in seven tax years preceding that year; or
+    (b) a citizen of India or a person of Indian origin,—
+    (i) whose total income excluding income from foreign sources exceeds
+    fifteen lakh rupees during the tax year, as mentioned in sub-section
+    (5); and
+    (ii) who has been in India cumulatively for one hundred and twenty
+    days or more but less than one hundred and eighty-two days during
+    the tax year; or
+    (c) a citizen of India who is deemed to be resident in India under sub-section
+    (7).
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 29
+  extraction: auto
+  reviewed: false
+- id: IT2025:s6(14)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.6(14) > Tax Year 2026-27 onward
+  heading: Residence in India
+  text: |-
+    (14) For the purposes of this section, “income from foreign sources” means the
+    income, which accrues or arises outside India (except income derived from a
+    business controlled in or a profession set up in India) and which is not deemed to
+    accrue or arise in India.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 29
+  extraction: auto
+  reviewed: false
+- id: IT2025:s58(1)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.58(1) > Tax Year 2026-27 onward
+  heading: Special provision for computing profits and gains of business or profession on presumptive basis in case of certain residents
+  text: |-
+    58. (1) The provisions of sections 26 to 54, to the extent contrary to this section,
+    shall not apply to the manner of computation of profits and gains of the spec-
+    ified business or profession in sub-section (2).
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 103
+  extraction: auto
+  reviewed: false
+- id: IT2025:s58(2)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.58(2) > Tax Year 2026-27 onward
+  heading: Special provision for computing profits and gains of business or profession on presumptive basis in case of certain residents
+  text: |-
+    (2) The profits and gains of any specified business or profession as mentioned in column B of the Table below, carried on by an assessee specified in column C of the said Table, having total turnover or gross receipts of business or profession during the tax year specified in column D and computed in the manner specified in column E thereof, shall be deemed to be the profits and gains of such business or profession chargeable to tax under the head "Profits and gains of business or profession".
+    [The Table has three rows, held as separate chunks: IT2025:s58(2)/T1 (business), IT2025:s58(2)/T2 (goods carriages), IT2025:s58(2)/T3 (specified profession).]
+  tax_year_first: 2026
+  authority_rank: 1
+  pdf_pages:
+  - 103
+  cross_refs:
+  - IT2025:s58(2)/T1
+  - IT2025:s58(2)/T2
+  - IT2025:s58(2)/T3
+  extraction: hand_corrected
+  note: Table text removed from this chunk (it extracts scrambled) and typed into the three row chunks.
+- id: IT2025:s58(3)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.58(3) > Tax Year 2026-27 onward
+  heading: Special provision for computing profits and gains of business or profession on presumptive basis in case of certain residents
+  text: |-
+    (3) Any assessee mentioned in column C of the Table in sub-section (2), who claims
+    that—
+    (a) the profits or gains actually earned from the specified business or
+    profession are lower than the profits or gains computed in the manner
+    mentioned in column E of the said Table; and
+    (b) whose total income exceeds the maximum amount which is not charge-
+    able to tax,
+    shall be required to—
+    (i) keep and maintain such books of account and other documents as
+    required under section 62; and
+    (ii) get the accounts audited and furnish a report of such audit as required
+    under section 63.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 105
+  - 106
+  extraction: auto
+  reviewed: false
+- id: IT2025:s58(4)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.58(4) > Tax Year 2026-27 onward
+  heading: Special provision for computing profits and gains of business or profession on presumptive basis in case of certain residents
+  text: |-
+    (4) Any loss, allowance or deduction allowable under the provisions of this Act,
+    shall not be allowed against the income computed in the manner specified in
+    sub-section (2).
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 106
+  extraction: auto
+  reviewed: false
+- id: IT2025:s58(5)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.58(5) > Tax Year 2026-27 onward
+  heading: Special provision for computing profits and gains of business or profession on presumptive basis in case of certain residents
+  text: |-
+    (5) For the purposes of sub-section (2) (Table: Sl. No. 2), where the assessee is a
+    firm, the salary and interest paid to its partners shall be deducted from the income
+    computed under sub-section (1) subject to the conditions and limits specified in
+    section 35(e).
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 106
+  extraction: auto
+  reviewed: false
+- id: IT2025:s58(6)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.58(6) > Tax Year 2026-27 onward
+  heading: Special provision for computing profits and gains of business or profession on presumptive basis in case of certain residents
+  text: |-
+    (6) The written down value of any asset used for the purposes of specified business
+    or profession shall be computed as if the assessee mentioned in column C of the
+    Table in sub-section (2) had claimed and was actually allowed deduction in respect
+    of depreciation thereon for each of the relevant tax years.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 106
+  extraction: auto
+  reviewed: false
+- id: IT2025:s58(7)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.58(7) > Tax Year 2026-27 onward
+  heading: Special provision for computing profits and gains of business or profession on presumptive basis in case of certain residents
+  text: |-
+    (7) Where an eligible assessee declares profit for any tax year as per the provisions
+    of sub-section (2) (Table: Sl. No. 1) and he declares profit for any of the five tax
+    years succeeding such tax year in contravention of the provisions of sub-section (1),
+    then he shall not be eligible to claim the benefit of the provisions of this section for
+    five tax years subsequent to the tax year in which the profit has not been declared
+    as per the provisions of the said sub-section.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 106
+  extraction: auto
+  reviewed: false
+- id: IT2025:s58(8)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.58(8) > Tax Year 2026-27 onward
+  heading: Special provision for computing profits and gains of business or profession on presumptive basis in case of certain residents
+  text: |-
+    (8) Irrespective of anything contained in foregoing provision of this section, where
+    provisions of sub-section (7) are applicable to an eligible assessee and his total in-
+    come exceeds the maximum amount which is not chargeable to income-tax, he shall
+    be required to keep and maintain such books of account and other documents as
+    required under section 62 and get them audited and furnish a report of such audit
+    as required under section 63.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 106
+  extraction: auto
+  reviewed: false
+- id: IT2025:s58(9)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.58(9) > Tax Year 2026-27 onward
+  heading: Special provision for computing profits and gains of business or profession on presumptive basis in case of certain residents
+  text: |-
+    (9) For the purposes of sub-section (2) (Table: Sl. Nos. 1 and 3), the receipt of amount
+    or aggregate of amounts by a cheque drawn on a bank or by a bank draft, which is
+    not account payee, shall be deemed to be the receipt in cash.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 106
+  extraction: auto
+  reviewed: false
+- id: IT2025:s58(10)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.58(10) > Tax Year 2026-27 onward
+  heading: Special provision for computing profits and gains of business or profession on presumptive basis in case of certain residents
+  text: |-
+    (10) The provisions of sections 62 and 63 shall not apply in so far as they relate to
+    the business referred to in sub-section (2) (Table: Sl. No. 2) and in computing the
+    monetary limits under those sections, the gross receipts or, as the case may be, the
+    income from the said business shall be excluded.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 106
+  extraction: auto
+  reviewed: false
+- id: IT2025:s58(11)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.58(11) > Tax Year 2026-27 onward
+  heading: Special provision for computing profits and gains of business or profession on presumptive basis in case of certain residents
+  text: |-
+    (11) For the purposes of this section,—
+    (a) “eligible assessee” means an individual, a Hindu undivided family, or
+    a firm other than a limited liability partnership, who is resident in
+    India, and who—
+    (i) 8[***]
+    (ii) has not claimed any deduction under Chapter VIII-C for the
+    relevant tax year;
+    (iii) does not carry on specified profession as defined in section 62(4);
+    (iv) does not earn any income in the nature of commission or broke-
+    rage;
+    (v) does not carry on any agency business;
+    (b) “specified assessee” means an individual or a firm, other than a limited
+    liability partnership, who is a resident in India;
+    (c) “limited liability partnership” shall have the same meaning as assigned
+    to it in section 2(1)(n) of the Limited Liability Partnership Act, 2008
+    (6 of 2009);
+    (d) the expressions “goods carriage”, “gross vehicle weight” and “unladen
+    weight” shall have the same meaning as respectively assigned to them
+    in section 2 of the Motor Vehicles Act, 1988 (59 of 1988);
+    (e) “heavy goods vehicle” means any goods carriage, the gross vehicle weight
+    of which exceeds 12,000 kilograms; and
+    (f) an assessee, who is in possession of a goods carriage, whether taken on
+    hire purchase or on instalments and for which the whole or part of the
+    amount payable is still due, shall be deemed to be the owner of such
+    goods carriage.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 106
+  - 107
+  extraction: auto
+  reviewed: false
+- id: IT2025:s62(1)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.62(1) > Tax Year 2026-27 onward
+  heading: Maintenance of books of account
+  text: |-
+    62. (1)(a) Any person carrying on specified profession; or
+    (b) any person carrying on, business; or any profession [not being a profes-
+    sion referred to in clause (a)] and satisfying the conditions referred to
+    in sub-section (2),
+    shall keep and maintain such books of account and other documents to enable the
+    Assessing Officer to compute his total income under this Act.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 112
+  extraction: auto
+  reviewed: false
+- id: IT2025:s62(2)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.62(2) > Tax Year 2026-27 onward
+  heading: Maintenance of books of account
+  text: |-
+    (2) The conditions in respect of persons referred to in sub-section (1)(b) shall be
+    the following:—
+    (a) where the income from business or profession exceeds ₹ 120000 or its
+    total sales, turnover or gross receipts from such business or profession
+    exceeds ten lakh rupees in any one of the three years immediately preced-
+    ing the tax year; or
+    (b) where business or profession is newly set up in the tax year, the income
+    from business or profession is likely to exceed ₹ 120000 or its total sales,
+    turnover or gross receipts from such business or profession is likely to
+    exceed ten lakh rupees during such tax year; or
+    (c) where during the tax year, the assessee referred to in section 58(2) or
+    61(2) (Table: Sl. Nos. 4 and 5), has claimed income from business or
+    profession to be lower than the deemed profits as referred to in section
+    58(2) or section 61(2); or
+    (d) in case of an individual or Hindu undivided family, clauses (a) and (b)
+    shall be modified to the extent of income from such business or profession
+    exceeding ₹ 250000 and its total sales, turnover or gross receipts from
+    such business or profession exceeding twenty-five lakh rupees.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 112
+  - 113
+  extraction: auto
+  reviewed: false
+- id: IT2025:s62(3)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.62(3) > Tax Year 2026-27 onward
+  heading: Maintenance of books of account
+  text: |-
+    (3) For the purposes of this section, the Board may prescribe—
+    (a) the books of account and other documents (including inventories, wher-
+    ever necessary) to be kept and maintained;
+    (b) particulars to be contained therein;
+    (c) the form, manner and place at which they shall be kept and maintained;
+    and
+    (d) the period for which such books of account and other documents are to
+    be retained.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 113
+  extraction: auto
+  reviewed: false
+- id: IT2025:s62(4)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.62(4) > Tax Year 2026-27 onward
+  heading: Maintenance of books of account
+  text: |-
+    (4) For the purposes of this section, the expression “specified profession” means—
+    (a) legal, medical, engineering, architectural, accountancy, technical consul-
+    tancy, interior decoration, information technology or company secretary;
+    or
+    (b) any other profession, as may be notified by the Board in this behalf.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 113
+  extraction: auto
+  reviewed: false
+- id: IT2025:s63(1)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.63(1) > Tax Year 2026-27 onward
+  heading: Tax audit
+  text: |-
+    63. (1) Every person, carrying on the business or profession fulfilling any of the
+    conditions specified in column B of the Table below, shall get his accounts
+    of the tax year audited by an accountant, before the specified date.
+    TABLE
+    Sl. Conditions for getting books of account audited
+    No.
+    A B
+    1. Every person—
+    (a) carrying on business shall, if his total sales, turnover or gross
+    receipts, as the case may be, in business exceed or exceeds one
+    crore rupees in any tax year, subject to the provisions of clause
+    (b);
+    (b) in case of a person whose—
+    (i) aggregate of all amounts received including amount
+    received for sales, turnover or gross receipts during the tax
+    year, in cash, does not exceed 5% of the said amount; and
+    (ii) aggregate of all payments made including amount incurred
+    for expenditure, in cash, during the tax year does not exceed
+    5% of the said payment,
+    clause (a) shall have effect as if for the words “one crore rupees”,
+    the words “ten crore rupees” had been substituted;
+    (c) carrying on profession shall, if his gross receipts in profession
+    exceed fifty lakh rupees in any tax year.
+    Sl. Conditions for getting books of account audited
+    No.
+    A B
+    2. If the person is carrying on business or profession, referred to in section
+    58(2) or 61(2) (Table: Sl. Nos. 4 and 5) and the profits and gains from such
+    business or profession are claimed to be lower than the deemed profits as
+    referred to in the said sections.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 113
+  - 114
+  extraction: auto
+  reviewed: false
+- id: IT2025:s63(2)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.63(2) > Tax Year 2026-27 onward
+  heading: Tax audit
+  text: |-
+    (2) The provisions of this section shall not apply where profits and gains of business
+    or profession, declared by the assessee are as per section 58(2) or 61(2).
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 114
+  extraction: auto
+  reviewed: false
+- id: IT2025:s63(3)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.63(3) > Tax Year 2026-27 onward
+  heading: Tax audit
+  text: |-
+    (3) The assessee shall furnish by the specified date, the report of such audit in such
+    form, duly signed and verified by the accountant and setting forth such particulars,
+    as may be prescribed.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 114
+  extraction: auto
+  reviewed: false
+- id: IT2025:s63(4)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.63(4) > Tax Year 2026-27 onward
+  heading: Tax audit
+  text: |-
+    (4) Where a person is required, by or under any other law, to get his accounts audited,
+    then it shall be sufficient compliance of this section, if such person—
+    (a) gets the accounts of such business or profession audited under such law
+    before the specified date; and
+    (b) furnishes by that specified date the report of such audit along with the
+    report of the accountant in the form as may be prescribed.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 114
+  extraction: auto
+  reviewed: false
+- id: IT2025:s63(5)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.63(5) > Tax Year 2026-27 onward
+  heading: Tax audit
+  text: |-
+    (5) For the purposes of this section,—
+    (a) “specified date” in relation to the accounts of the assessee of the tax year,
+    means the date one month prior to the due date for furnishing the return
+    of income under section 263(1);
+    (b) the payment or receipt, as the case may be, by a cheque drawn on a bank
+    or by a bank draft, which is not account payee, shall be deemed to be
+    the payment or receipt, as the case may be, in cash.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 114
+  extraction: auto
+  reviewed: false
+- id: IT2025:s156(1)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.156(1) > Tax Year 2026-27 onward
+  heading: Rebate of income-tax in case of certain individuals
+  text: |-
+    156. (1) An assessee, being an individual resident in India, shall be entitled to a
+    deduction of 100% of income-tax payable or ₹ 12500, whichever is less,
+    from the income-tax (computed before allowing the deduction under this section)
+    chargeable on the total income for any tax year if such total income does not exceed
+    ₹ 500000.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 216
+  extraction: auto
+  reviewed: false
+- id: IT2025:s156(2)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.156(2) > Tax Year 2026-27 onward
+  heading: Rebate of income-tax in case of certain individuals
+  text: |-
+    (2) Where the total income of a resident individual assessee for any tax year is
+    chargeable to tax under section 202(1), then from income-tax (computed before
+    allowing the deduction under this section) following deductions shall be allowed, if—
+    (a) the income does not exceed twelve lakh rupees, 100% of the income-tax
+    payable or ₹ 60000, whichever is less;
+    (b) the total income exceeds twelve lakh rupees and the income-tax payable
+    on such total income exceeds the amount by which the total income is in
+    excess of twelve lakh rupees, an amount equal to the amount by which
+    the income-tax payable on such total income is in excess of the amount
+    by which the total income exceeds twelve lakh rupees.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 216
+  - 217
+  extraction: auto
+  reviewed: false
+- id: IT2025:s156(3)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.156(3) > Tax Year 2026-27 onward
+  heading: Rebate of income-tax in case of certain individuals
+  text: |-
+    (3) The deduction under sub-section (2), shall not exceed income-tax payable as per
+    the rates provided in section 202(1).
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 217
+  extraction: auto
+  reviewed: false
+- id: IT2025:s159(1)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.159(1) > Tax Year 2026-27 onward
+  heading: Central Government of agreement between specified associations for double taxation relief
+  text: |-
+    159. (1) The Central Government may enter into an agreement with the
+    G overnment of—
+    (a) any other country; or
+    (b) any specified territory,
+    for the purposes mentioned in sub-section (3), and may, by notification, make such
+    provisions as necessary for implementing the agreement.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 218
+  extraction: auto
+  reviewed: false
+- id: IT2025:s159(2)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.159(2) > Tax Year 2026-27 onward
+  heading: Central Government of agreement between specified associations for double taxation relief
+  text: |-
+    (2) Any specified association in India may enter into an agreement with any specified
+    association in the specified territory for the purposes mentioned in sub-section (3)
+    and the Central Government may, by notification, make such provisions as may be
+    necessary for adopting and implementing such agreement.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 218
+  extraction: auto
+  reviewed: false
+- id: IT2025:s159(3)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.159(3) > Tax Year 2026-27 onward
+  heading: Central Government of agreement between specified associations for double taxation relief
+  text: |-
+    (3) The agreement mentioned in sub-section (1) or (2) may be entered for—
+    (a) the granting of relief in respect of—
+    (i) income on which income-tax under this Act and income-tax in that
+    country or specified territory, as the case may be have been paid;
+    (ii) income-tax chargeable under this Act and under the corresponding
+    law in force in that country or specified territory, as the case may
+    be, to promote mutual economic relations, trade and investment;
+    or
+    (b) the avoidance of double taxation of income under this Act and under
+    the corresponding law in force in that country or specified territory,
+    as the case may be, without creating opportunities for non-taxation or
+    reduced taxation through tax evasion or avoidance (including through
+    treaty-shopping arrangements aimed at obtaining reliefs provided in the
+    said agreement for the indirect benefit to residents of any other country
+    or territory);
+    (c) exchange of information for—
+    (i) the prevention of evasion or avoidance of income-tax chargeable
+    under this Act or under the corresponding law in force in that
+    country or specified territory, as the case may be; or
+    (ii) investigation of cases of such evasion or avoidance; or
+    (d) recovery of income-tax under this Act and under the corresponding law
+    in force in that country or specified territory, as the case may be.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 218
+  extraction: auto
+  reviewed: false
+- id: IT2025:s159(4)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.159(4) > Tax Year 2026-27 onward
+  heading: Central Government of agreement between specified associations for double taxation relief
+  text: |-
+    (4) Where,—
+    (a) the Central Government has entered into an agreement with the
+    Government of any country or specified territory, as the case may be,
+    under sub-section (1); or
+    (b) a specified association in India has entered into an agreement with a
+    specified association of any specified territory under sub-section (2) and
+    such agreement has been notified under that sub-section,
+    for granting relief of tax, or avoidance of double taxation, then, in relation to the
+    assessee to whom such agreement applies, the provisions of this Act shall apply to
+    the extent they are more beneficial to that assessee.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 218
+  - 219
+  extraction: auto
+  reviewed: false
+- id: IT2025:s159(5)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.159(5) > Tax Year 2026-27 onward
+  heading: Central Government of agreement between specified associations for double taxation relief
+  text: |-
+    (5) The charge of tax,—
+    (a) in respect of a foreign company at a rate higher than the rate at which
+    a domestic company is chargeable; or
+    (b) in respect of a company incorporated in the specified territory at a rate
+    higher than the rate at which a domestic company is chargeable,
+    shall not be regarded as less favourable charge or levy of tax in respect of such
+    foreign company or such company incorporated in the specified territory, as the
+    case may be.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 219
+  extraction: auto
+  reviewed: false
+- id: IT2025:s159(6)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.159(6) > Tax Year 2026-27 onward
+  heading: Central Government of agreement between specified associations for double taxation relief
+  text: |-
+    (6) Irrespective of anything contained in sub-section (4), the provisions of Chapter
+    XI shall apply to the assessee, even if such provisions are not beneficial to him.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 219
+  extraction: auto
+  reviewed: false
+- id: IT2025:s159(7)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.159(7) > Tax Year 2026-27 onward
+  heading: Central Government of agreement between specified associations for double taxation relief
+  text: |-
+    (7) Where, any—
+    (a) term used in an agreement entered into under sub-section (1) or (2),
+    is defined under the said agreement, the said term shall have the same
+    meaning as assigned to it in that agreement and where the term is not
+    defined in that agreement, but defined in this Act, it shall have the same
+    meaning as assigned to it in this Act and the explanation, if any, given
+    to it by the Central Government; or
+    (b) term is used but not defined in this Act or in the agreement referred to
+    in sub-section (1) or (2), it shall, unless the context otherwise requires,
+    and is not inconsistent with the provisions of this Act or the said agree-
+    ment, have the same meaning as assigned to it in the notification issued
+    by the Central Government in this behalf, and the meaning assigned to
+    such term shall be deemed to have effect from the date on which that
+    agreement came into force; or
+    (c) term is used in any agreement entered into under sub-section (1) or (2),
+    and not defined under the said agreement or this Act, or in any notifica-
+    tion issued under clause (b), then, unless the context otherwise requires,
+    it shall have the same meaning as assigned to it—
+    (i) in any Act of the Central Government related to taxes; and
+    (ii) in any other case, in any other law of the Central Government,
+    and shall be deemed to have effect from the date on which the said agreement came
+    into force.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 219
+  extraction: auto
+  reviewed: false
+- id: IT2025:s159(8)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.159(8) > Tax Year 2026-27 onward
+  heading: Central Government of agreement between specified associations for double taxation relief
+  text: |-
+    (8) An assessee, not being a resident, shall be entitled to claim any relief under an
+    agreement mentioned in sub-section (1) or (2), only when—
+    (a) a certificate of his being a resident in any country or specified territory,
+    is obtained by him from the Government of that country or Government
+    of that specified territory, as the case may be; and
+    (b) he provides such other documents and information, as may be prescribed.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 219
+  extraction: auto
+  reviewed: false
+- id: IT2025:s159(9)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.159(9) > Tax Year 2026-27 onward
+  heading: Central Government of agreement between specified associations for double taxation relief
+  text: |-
+    (9) For the purposes of this section,—
+    (a) “specified associations” means any institution, association or body,
+    whether incorporated or not—
+    (A) functioning under any law for the time being in force in India or
+    the laws of the specified territory; and
+    (B) which may be notified as such by the Central Government for the
+    purposes of this section;
+    (b) “specified territory” means any area outside India which may be noti-
+    fied as such by the Central Government.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 219
+  - 220
+  extraction: auto
+  reviewed: false
+- id: IT2025:s160(1)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.160(1) > Tax Year 2026-27 onward
+  heading: Countries with which no agreement exists
+  text: |-
+    160. (1) If any person who is resident in India in any tax year proves that, in
+    respect of his income which accrued or arose during that tax year outside
+    India (and which is not deemed to accrue or arise in India), he has paid in any coun-
+    try with which there is no agreement under section 159 for the relief or avoidance
+    of double taxation, income-tax, by deduction or otherwise, under the law in force
+    in that country, he shall be entitled to the deduction from the Indian income-tax
+    payable by him of a sum calculated on such doubly taxed income,—
+    (a) at the Indian rate of tax or the rate of tax of the said country, whichever
+    is the lower; or
+    (b) at the Indian rate of tax if both the rates are equal.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 220
+  extraction: auto
+  reviewed: false
+- id: IT2025:s160(2)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.160(2) > Tax Year 2026-27 onward
+  heading: Countries with which no agreement exists
+  text: |-
+    (2) If any non-resident person is assessed on his share in the income of a registered
+    firm assessed as resident in India in any tax year and such share includes any income
+    accruing or arising outside India during that tax year (and which is not deemed
+    to accrue or arise in India) in a country with which there is no agreement under
+    section 159 for the relief or avoidance of double taxation and he proves that he has
+    paid income-tax by deduction or otherwise under the law in force in that country
+    in respect of the income so included he shall be entitled to a deduction from the
+    Indian income-tax payable by him of a sum calculated on such doubly taxed income
+    so included,—
+    (a) at the Indian rate of tax or the rate of tax of the said country, whichever
+    is the lower; or
+    (b) at the Indian rate of tax if both the rates are equal.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 220
+  extraction: auto
+  reviewed: false
+- id: IT2025:s160(3)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.160(3) > Tax Year 2026-27 onward
+  heading: Countries with which no agreement exists
+  text: |-
+    (3) For the purposes of this section,—
+    (a) “income-tax” in relation to any country includes any excess profits tax
+    or business profits tax charged on the profits by the Government of any
+    part of that country or a local authority in that country;
+    (b) “Indian income-tax” means income-tax charged as per this Act;
+    (c) “Indian rate of tax” means the rate determined by dividing Indian
+    income-tax after deduction of any relief due under the provisions of this
+    Act but before deduction of any relief due under this Part, by the total
+    income; and
+    (d) “rate of tax of the said country” means income-tax and super-tax actually
+    paid in the said country as per the corresponding laws in force in the
+    said country after deduction of all relief due, but before deduction of
+    any relief due in the said country in respect of double taxation, divided
+    by the whole amount of the income as assessed in the said country.
+    CHAPTER X
+    SPECIAL PROVISIONS RELATING TO AVOIDANCE OF TAX
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 220
+  - 221
+  extraction: auto
+  reviewed: false
+- id: IT2025:s202(1)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.202(1) > Tax Year 2026-27 onward
+  heading: New tax regime for individuals, Hindu undivided family and others
+  text: |-
+    202. (1) Irrespective of anything contained in this Act other than Chapter XVII-B
+    but subject to Parts A, B, E and this Part of this Chapter, the income-tax payable
+    by a person, being—
+    (a) an individual; or
+    (b) a Hindu undivided family; or
+    (c) an association of persons (other than a co-operative society); or
+    (d) a body of individuals, whether incorporated or not; or
+    (e) an artificial juridical person referred to in section 2(77)(g),
+    in respect of the total income for a tax year, shall, unless the person exercises the
+    option in the manner provided under sub-section (4), be computed at the rate of
+    tax given in the following Table:—
+    TABLE
+    Sl. No. Total income Rate of tax
+    A B C
+    1. Nil
+    2. Upto ₹ 400000 5%
+    3. From ₹ 400001 to ₹ 800000
+    4. From ₹ 800001 to ₹ 1200000 10%
+    5. From ₹ 1200001 to ₹ 1600000 15%
+    6. From ₹ 1600001 to ₹ 2000000 20%
+    7. From ₹ 2000001 to ₹ 2400000 25%
+    Above ₹ 2400000 30%
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 264
+  - 265
+  extraction: auto
+  reviewed: false
+- id: IT2025:s202(2)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.202(2) > Tax Year 2026-27 onward
+  heading: New tax regime for individuals, Hindu undivided family and others
+  text: |-
+    (2) For the purposes of sub-section (1), the total income of the assessee shall be
+    computed—
+    (a) without any exemption or deduction under—
+    (i) Schedule III (Table: Sl. No. 5 or 6 or 7 or 8 or 11 or 17);
+    (ii) Schedule III (Table: Sl. No. 12 or 13) (other than those as may be
+    prescribed for this purpose);
+    (iii) 25[***]
+    (iv) section 19(1) (Table: Sl. No. 1);
+    (v) section 22(1)(b), in respect of properties referred to in section 21(6)6;
+    (vi) section 33(8);
+    (vii) section 48;
+    (viii) section 49;
+    (ix) section 45(3)(a) or (b) or (c);
+    (x) section 46;
+    (xi) section 47(1)(a); and
+    (xii) Chapter VIII other than the provisions of section 124(1) and 124(2),
+    or 125(2) or 146; and
+    (b) without set off of—
+    (i) any loss carried forward or depreciation from any earlier tax year,
+    if such loss or depreciation is attributable to any of the deductions
+    referred to in clause (a); or
+    (ii) any loss under the head “Income from house property” with any
+    other head of income; and
+    as under :
+    “(iii) section 144;”
+    (c) without any exemption or deduction for allowances or perquisite, called
+    by any name, provided under any other law in force.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 265
+  - 266
+  extraction: auto
+  reviewed: false
+- id: IT2025:s202(3)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.202(3) > Tax Year 2026-27 onward
+  heading: New tax regime for individuals, Hindu undivided family and others
+  text: |-
+    (3) The loss and depreciation referred to in sub-section (2)(b) shall be deemed to
+    have been given full effect to and no further deduction for such loss or depreciation
+    shall be allowed for any subsequent year.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 266
+  extraction: auto
+  reviewed: false
+- id: IT2025:s202(4)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.202(4) > Tax Year 2026-27 onward
+  heading: New tax regime for individuals, Hindu undivided family and others
+  text: |-
+    (4) Nothing contained in sub-section (1) shall apply to a person, where an option is
+    exercised by such person under this section, in such manner as may be prescribed,
+    for any tax year, and such option is exercised,—
+    (a) in case of a person having income from business or profession,—
+    (i) on or before the due date specified under section 263(1) for fur-
+    nishing the returns of income for such tax year15;
+    (ii) such option, once exercised, shall apply to subsequent tax years;
+    (iii) such option, once exercised, may be withdrawn only once for a tax
+    year other than the tax year for which it was exercised; and
+    (iv) after such withdrawal, the person shall never be eligible to exercise
+    the option under this sub-section, except where such person ceases
+    to have any income from business or profession, and in such a case
+    the option under clause (b) shall be available;
+    (b) in case of a person not having income from business or profession, along
+    with the return of income to be furnished under section 263(1) for the
+    tax year.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 266
+  extraction: auto
+  reviewed: false
+- id: IT2025:s202(5)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.202(5) > Tax Year 2026-27 onward
+  heading: New tax regime for individuals, Hindu undivided family and others
+  text: |-
+    (5) In case of a person, having a Unit in the International Financial Services Centre,
+    the provisions of sub-section (2) shall be modified to the extent that deduction under
+    section 147 shall be available to such Unit subject to fulfilment of the conditions
+    contained in that section.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 266
+  extraction: auto
+  reviewed: false
+- id: IT2025:s263(1)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.263(1) > Tax Year 2026-27 onward
+  heading: Return of income
+  text: |-
+    263. (1)(a) Every person as mentioned below shall, for a tax year, on or before the
+    due date, furnish a return of his income or the income of any other person in
+    respect of which he is assessable during the said tax year:—
+    (i) a company;
+    (ii) a firm;
+    (iii) a person other than a company or a firm, if his total income or the total
+    income of any other person in respect of which he is assessable under this
+    Act during the tax year, without giving effect to the provisions of Chapter
+    XVII-B or provisions of Schedule VIII (Table: Sl. No. 1) or deductions
+    allowable under section 82 or 83 or 84 or 85 or 86 or 87 or 88 of Chapter
+    IV-E or Chapter VIII, as the case may be, exceeded the maximum amount
+    which is not chargeable to income-tax;
+    (iv) a specified entity, if its total income without giving effect to the provisions
+    of section 11 exceeds the maximum amount which is not chargeable to
+    income-tax;
+    (v) a University, college or other institution as referred to in section 45(3)
+    (a);
+    (vi) a business trust;
+    (vii) an investment fund as referred to in section 224;
+    (viii) a person who has sustained a loss in the tax year under the head “Profits
+    and gains of business or profession” or under the head “Capital gains”
+    and who intends to claim that such loss, or any part thereof, is to be
+    carried forward as per this Act;
+    (ix) a person, who is a resident, other than not ordinarily resident, and who
+    at any time during the tax year,––
+    (A) holds, as a beneficial owner or otherwise, any asset (including any
+    financial interest in an entity) located outside India, or has signing
+    authority in any account located outside India; or
+    (B) is a beneficiary of any asset (including any financial interest in an
+    entity) located outside India, except where any income arising from
+    such asset is includible in the income of person referred to in item
+    (A);
+    (x) a person, other than a company or firm, who during the tax year, fulfils
+    such conditions as may be prescribed;
+    (b) the persons referred in clauses (a)(i), (a)(ii), (a)(v), (a)(vi), (a)(vii) and (a)(ix)
+    shall furnish return on or before the due date regardless of income or loss;
+    44[(c) for the purposes of this section, “due date” in respect of the persons mentioned
+    in column B of the Table below, subject to conditions as mentioned in column C of
+    the said Table, shall be the due date of the financial year succeeding the relevant tax
+    year as mentioned in column D thereof:
+    as under :
+    ‘(c) for the purposes of this section, “due date” means the date of the financial year succeed-
+    ing the relevant tax year as mentioned in the corresponding entry of column C of the Table
+    below in respect of the persons mentioned in column B of the said Table:
+    (Contd. on page 370)
+    TABLE
+    Sl. No. Person Conditions Due date
+    A B C D
+    1. Assessee, including the partners Where the provi- 30th November.
+    of the firm or the spouse of such sions of section 172
+    partner (if section 10 applies to apply.
+    such spouse).
+    2. (i) Company; Where the provi- 31st October.
+    (ii) Assessee (other than a sions of section 172
+    company) whose ac- do not apply.
+    counts are required to be
+    audited under this Act or
+    under any other law in
+    force;
+    (iii) partner of a firm whose
+    accounts are required to
+    be audited under this Act
+    or under any other law
+    in force; or the spouse
+    of such partner (if sec-
+    tion 10 applies to such
+    spouse).
+    3. (i) Assessee having income Where the provi- 31st August.
+    from profits and gains sions of section 172
+    of business or profession do not apply.
+    whose accounts are not
+    (Contd. from page 369) TABLE
+    Sl. Person Due date
+    No.
+    A B C
+    1. Assessee, including the partners of the firm or the spouse of 30th November.
+    such partner (if section 10 applies to such spouse), who is
+    required to be furnished a report referred to in section 172.
+    2. Company (in cases other than those mentioned in Sl. No. 1). 31st October.
+    3. Person (other than a company) whose accounts are required to 31st October.
+    be audited under this Act or under any other law in force (in
+    cases other than those mentioned in Sl. No. 1).
+    4. Partner of a firm whose accounts are required to be audited 31st October.
+    under this Act or under any other law in force; or the spouse
+    of such partner (if section 10 applies to such spouse) (in cases
+    other than those mentioned in Sl. No. 1).
+    5. Any other assessee. 31st July.’
+    Sl. No. Person Conditions Due date
+    A B C D
+    required to be audited
+    under this Act or under
+    any other law in force;
+    (ii) partner of a firm whose
+    accounts are not required
+    to be audited under this
+    Act or under any other
+    law in force or the spouse
+    of such partner (if sec-
+    tion 1042 applies to such
+    spouse).
+    4. Any other assessee. 31st July.]
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 340
+  - 341
+  - 342
+  - 343
+  extraction: auto
+  reviewed: false
+- id: IT2025:s404
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.404 > Tax Year 2026-27 onward
+  heading: Conditions of liability to pay advance tax
+  text: |-
+    404. Advance tax shall be payable by the assessee during a financial year, where
+    the amount of such tax payable during that year, as computed under this Part,
+    is ₹ 10000 or more.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 509
+  extraction: auto
+  reviewed: false
+- id: IT2025:s405(1)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.405(1) > Tax Year 2026-27 onward
+  heading: Computation of advance tax
+  text: |-
+    405. (1) The amount of advance tax payable by an assessee under section 404,
+    on his own accord under section 406, or in pursuance of an order of an
+    Assessing Officer under section 407, in the financial year shall, subject to the
+    provisions of sub-section (2), be computed as under—
+    A=B–C
+    where,—
+    A = the amount of advance tax payable in a financial year;
+    B = income-tax on the specified sum calculated at the rates in force in the
+    financial year, where “specified sum” shall have the meaning assigned
+    to it in section 406 or 407;
+    C = amount of income-tax which would be deductible or collectible at source
+    during the said financial year under any provision of this Act from any
+    income subject to the following:—
+    (a) such income is computed before allowing any deduction admissible
+    under this Act and has been taken into account in computing the
+    specified sum; and
+    (b) (i) the person responsible for deducting tax has paid or credited
+    such income after deduction of tax; or
+    (ii) the person responsible for collecting tax has received or debited
+    such income after collection of tax.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 509
+  - 510
+  extraction: auto
+  reviewed: false
+- id: IT2025:s405(2)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.405(2) > Tax Year 2026-27 onward
+  heading: Computation of advance tax
+  text: |-
+    (2) In the case of any class of assessees, where the Finance Act of the relevant year
+    provides that, net agricultural income shall be taken into account for the purposes
+    of computing advance tax, then,—
+    (a) for the purposes of order as mentioned in section 407(1) and (4), the
+    net agricultural income shall be the amount that has been taken into
+    account for the purposes of charging income-tax on the specified sum
+    as mentioned in sub-sections (3) and (6) of the said section; or
+    (b) in any other situation, the net agricultural income as estimated by the
+    assessee for the tax year.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 510
+  extraction: auto
+  reviewed: false
+- id: IT2025:s406(1)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.406(1) > Tax Year 2026-27 onward
+  heading: Payment of advance tax by assessee on his own accord
+  text: |-
+    406. (1) Every person, who is liable to pay advance tax under section 404
+    (whether or not he has been previously assessed by way of regular assessment)
+    shall, on his own accord, pay advance tax on the specified sum, calculated in the
+    manner laid down in section 405, at the appropriate percentage, on or before the
+    due date of each instalment, as specified in section 408.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 510
+  extraction: auto
+  reviewed: false
+- id: IT2025:s406(2)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.406(2) > Tax Year 2026-27 onward
+  heading: Payment of advance tax by assessee on his own accord
+  text: |-
+    (2) A person who pays any instalment or instalments of advance tax under sub-sec-
+    tion (1), may increase or reduce the amount of advance tax payable in the remain-
+    ing instalment or instalments to accord with specified sum and the advance tax
+    payable thereon, and make payment of the said tax in the remaining instalment or
+    instalments accordingly.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 510
+  extraction: auto
+  reviewed: false
+- id: IT2025:s406(3)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.406(3) > Tax Year 2026-27 onward
+  heading: Payment of advance tax by assessee on his own accord
+  text: |-
+    (3) For the purposes of this section, the expression “specified sum” means current
+    income as estimated by the assessee.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 510
+  extraction: auto
+  reviewed: false
+- id: IT2025:s408(1)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.408(1) > Tax Year 2026-27 onward
+  heading: Instalments of advance tax and due dates
+  text: |-
+    408. (1) All the assessees who are liable to pay advance tax, other than the assessee
+    referred to in sub-section (2), shall pay the same on the current income
+    calculated in the manner laid down in section 405 in four instalments during each
+    financial year and the due date of each instalment and the amount of such instal-
+    ment shall be as specified in the Table below:
+    TABLE
+    Sl. Due date of Amount payable
+    No. instalment
+    A B C
+    1. On or before the Not less than 15% of such advance tax.
+    15th June.
+    2. On or before the Not less than 45% of such advance tax, as reduced by the
+    15th September. amount, if any, paid in the earlier instalment.
+    3. On or before the Not less than 75% of such advance tax, as reduced by the
+    15th December. amount or amounts, if any, paid in the earlier instalment
+    or instalments.
+    4. On or before the The whole amount of such advance tax, as reduced by the
+    15th March. amount or amounts, if any, paid in the earlier instalment
+    or instalments.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 511
+  - 512
+  extraction: auto
+  reviewed: false
+- id: IT2025:s408(2)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.408(2) > Tax Year 2026-27 onward
+  heading: Instalments of advance tax and due dates
+  text: |-
+    (2) An assessee, who declares profits and gains as per the provisions of section 58(2)
+    (Table: Sl. No. 1 or 3), shall pay the whole amount of advance tax on the current
+    income, calculated in the manner laid down in section 405 during each financial
+    year, on or before the 15th March.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 512
+  extraction: auto
+  reviewed: false
+- id: IT2025:s408(3)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.408(3) > Tax Year 2026-27 onward
+  heading: Instalments of advance tax and due dates
+  text: |-
+    (3) Any amount paid by way of advance tax on or before the 31st March, shall be
+    treated as advance tax paid during the financial year ending on that day for all the
+    purposes of this Act.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 512
+  extraction: auto
+  reviewed: false
+- id: IT2025:s425(1)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.425(1) > Tax Year 2026-27 onward
+  heading: Interest for deferment of advance tax
+  text: |-
+    425. (1) Where in any tax year, an assessee, liable to pay advance tax under
+    section 404, other than the assessee mentioned in sub-section (3), has failed
+    to pay such tax, or the advance tax paid by the assessee on its current income on or
+    before the date specified in column B of the Table below, is less than advance tax
+    due on returned income, as specified in column C, then the assessee shall be liable
+    to pay interest on the amount of shortfall of advance tax as specified in column D,
+    at the rate of interest specified in column E:—
+    TABLE
+    Sl. Due date of Advance tax due on Amount of Shortfall Interest
+    No. Instalment returned income of advance tax being payable on
+    advance tax due as per shortfall as
+    column C, as reduced specified in
+    by advance tax already column D
+    paid on or before the date
+    specified in column B
+    A B C D E
+    1. 15th day of 15% of the tax due on Shortfall till 15th 3%
+    June returned income. day of June
+    2. 15th day of 45% of the tax due on Shortfall till 15th 3%
+    September. returned income. day of September
+    3. 15th day of 75% of the tax due on Shortfall till 15th 3%
+    December. returned income. day of December
+    4. 15th day of 100% of the tax due Shortfall till 15th 1%.
+    March. on returned income. day of March
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 527
+  - 528
+  extraction: auto
+  reviewed: false
+- id: IT2025:s425(2)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.425(2) > Tax Year 2026-27 onward
+  heading: Interest for deferment of advance tax
+  text: |-
+    (2) The assessee shall not be liable to pay any interest under sub-section (1), if the
+    advance tax paid by the assessee on the current income,—
+    (a) on or before the 15th day of June is 12% or more of the tax due on the
+    returned income;
+    (b) on or before the 15th day of September is 36% or more of the tax due
+    on the returned income.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 528
+  extraction: auto
+  reviewed: false
+- id: IT2025:s425(3)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.425(3) > Tax Year 2026-27 onward
+  heading: Interest for deferment of advance tax
+  text: |-
+    (3) An assessee who declares profits and gains as per section 58(2) (Table: Sl. No. 1
+    or 3) or, who is liable to pay advance tax under section 404, has failed to pay such
+    tax, or the advance tax paid by the assessee on its current income on or before the
+    15th day of March is less than the tax due on returned income, shall be liable to
+    pay simple interest at the rate of 1% on the amount of shortfall from the tax due
+    on returned income.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 528
+  extraction: auto
+  reviewed: false
+- id: IT2025:s425(4)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.425(4) > Tax Year 2026-27 onward
+  heading: Interest for deferment of advance tax
+  text: |-
+    (4) No interest shall be payable under sub-section (1) or (3) in respect of shortfall
+    in the payment of tax due on returned income, where,—
+    (a) the shortfall is on account of under estimation of, or failure to estimate
+    the following income:—
+    (i) capital gains;
+    (ii) income as per section 2(49)(n);
+    (iii) income under the head profits and gains of business or profession
+    accruing or arising for the first time;
+    (iv) dividend income; and
+    (b) the assessee has paid in full, the tax payable on the said income had such
+    income been part of total income, in any of the remaining instalments
+    of advance tax, if any, or by the 31st day of March of the tax year.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 528
+  - 529
+  extraction: auto
+  reviewed: false
+- id: IT2025:s425(5)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.425(5) > Tax Year 2026-27 onward
+  heading: Interest for deferment of advance tax
+  text: |-
+    (5) For the purposes of this section “tax due on the returned income” means the tax
+    chargeable on the total income declared in the return of income furnished by the
+    assessee for the tax year in which the advance tax is paid or payable, as reduced
+    by the amount of—
+    (a) any tax deducted or collected at source as per the provisions of Chapter
+    XIX-B on any income which is subject to such deduction or collection
+    and which is taken into account in computing such total income;
+    (b) any relief of tax allowed under section 157;
+    (c) any relief of tax allowed under section 159(1) on account of tax paid in
+    a country outside India;
+    (d) any relief of tax allowed under section 159(2) on account of tax paid in
+    a specified territory outside India referred to in that section;
+    (e) any deduction, from the Indian income-tax payable, allowed under section
+    160, on account of tax paid in a country outside India; and
+    2[(f) any tax credit allowed to be set off as per section 206(2)(e) to (h) and 206(3)
+    and (4).]
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 529
+  extraction: auto
+  reviewed: false
+- id: IT2025:s425(6)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.425(6) > Tax Year 2026-27 onward
+  heading: Interest for deferment of advance tax
+  text: |-
+    (6) For the purposes of this sub-section, the expression “dividend” shall have the
+    meaning assigned to it in section 2(40), but shall not include sub-clause (e) thereof.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 529
+  extraction: auto
+  reviewed: false
+- id: IT2025:s516
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.516 > Tax Year 2026-27 onward
+  heading: Rounding off of amount of total income, or amount payable or refundable
+  text: |-
+    516. The amount of total income computed or any amount payable or refundable
+    under this Act, shall be rounded off to the nearest multiple of ₹ 10 ignoring
+    any part of a rupee consisting of paise and thereafter if such amount is not a multiple
+    of ten, then—
+    (a) such amount shall be increased to the next higher amount which is a
+    multiple of ten, if the last figure in that amount is five or more; or
+    (b) such amount shall be reduced to the next lower amount which is a mul-
+    tiple of ten, if the last figure is less than five,
+    and the amount so rounded off shall be deemed to be the total income of the assessee
+    or the amount payable or refundable, as the case may be, under this Act.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 576
+  extraction: auto
+  reviewed: false
+- id: IT2025:s536(1)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.536(1) > Tax Year 2026-27 onward
+  heading: Repeal and savings
+  text: 536. (1) The Income-tax Act, 1961 (43 of 1961) is hereby repealed.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 584
+  extraction: auto
+  reviewed: false
+- id: IT2025:s536(2)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.536(2) > Tax Year 2026-27 onward
+  heading: Repeal and savings
+  text: |-
+    (2) Irrespective of the repeal of the Income-tax Act, 1961 (43 of 1961) (herein referred
+    to as the repealed Income-tax Act), and subject to 33[sub-section (4)]—
+    (a) nothing shall affect the previous operation of the repealed Income-tax
+    Act and orders or anything duly done or suffered thereunder; or
+    (b) nothing shall affect any right, privilege, obligation or liability acquired,
+    accrued or incurred under the repealed Income-tax Act or orders under
+    such repealed Act;
+    (c) the provisions of the repealed Income-tax Act shall continue to apply to
+    any proceeding pending on the date of commencement of this Act and
+    to any proceedings initiated on or after the 1st April, 2026 (including
+    notices, assessment, reassessment, recomputation, rectification, penal-
+    ty, reference, revision and appeals) in respect of any tax year beginning
+    before the 1st April, 2026 and such proceedings shall be carried out as
+    per the procedure specified in the repealed Income-tax Act;
+    (d) any proceeding for the imposition of a penalty in respect of any tax
+    year beginning before the 1st April, 2026, may be initiated and any such
+    penalty may be imposed under the repealed Income-tax Act, as if this
+    Act had not been enacted;
+    (e) any proceeding pending on the commencement of this Act before any
+    income-tax authority or any other authority constituted under the repealed
+    Income-tax Act, Appellate Tribunal, or any court, by way of application,
+    appeal, reference or revision or by any other means, shall be continued
+    and disposed of as if this Act had not been enacted;
+    (f) any election or declaration made, or option exercised, by an assessee
+    under any provision of the repealed Income-tax Act and in force imme-
+    diately before the commencement of this Act shall be deemed to have
+    been an election or declaration made, or option exercised, under the
+    corresponding provision of this Act;
+    34[(g) where in respect of any proceeding relating to any tax year beginning before
+    the 1st April, 2026,—
+    (i) a refund falls due on or after such date; or
+    (ii) default is made on or after such date, in the payment of any sum due
+    under such proceeding,
+    the provisions of the repealed Income-tax Act, relating to the interest pay-
+    able by the Central Government on refunds or the interest payable by the
+    assessee for default, shall apply for the period on or after such date, subject
+    to the effect that—
+    as under :
+    “(g) where in respect of any proceeding relating to any tax year beginning before the 1st
+    April, 2026,—
+    (i) a refund falls due after commencement of this Act; or
+    (ii) default is made after such commencement in the payment of any sum due
+    under such proceeding,
+    the provisions of this Act, relating to interest payable by the Central Government on
+    refunds and interest payable by the assessee for default, shall apply for the period
+    after the commencement of this Act;”
+    (A) the rate of interest on refund or on the default, as the case may be, as
+    provided in the repealed Income-tax Act has been substituted with
+    the rate as provided in the corresponding provisions of this Act; and
+    (B) such substitution shall apply from the date on which such rate has
+    been modified under this Act;]
+    35[(h) where any sum has been allowed as a deduction or has not been included
+    in the total income of any person, either on account of fulfilment of certain
+    conditions or for any other reason, for any tax year beginning before the 1st
+    April, 2026, and such sum was required to be included in the total income
+    of any subsequent tax year including beginning on or after the 1st April,
+    2026 under the repealed Income-tax Act, if it had not been so repealed, on
+    account of violation of such conditions or for any other reason, then such
+    sum shall be––
+    (i) deemed to be the income of such subsequent tax year; and
+    (ii) included in the total income of the said person under the same head of
+    income as it would have been included under the repealed Income-tax
+    Act;]
+    (i) any sum payable under the repealed Income-tax Act may be recovered
+    under this Act without prejudice to any action already taken for the
+    recovery of such sum under repealed Income-tax Act;
+    (j) any agreement entered into, appointment made, approval given, rec-
+    ognition granted, circular, direction, instruction, notification, order or
+    rule or any scheme framed therein issued under any provision of the
+    repealed Income-tax Act shall, so far as it is not inconsistent with the
+    corresponding provisions of this Act, be deemed to have been entered
+    into, made, granted, given or issued under the corresponding provision
+    of this Act and shall continue in force accordingly;
+    (k) where the period provided for any application, appeal, reference or
+    revision under the repealed Income-tax Act had expired on or before
+    the commencement of this Act, nothing in this Act shall be construed as
+    enabling any such application, appeal, reference or revision to be made
+    under this Act by reason only of the fact that a longer period therefor is
+    read as under :
+    “(h) where any deduction has been allowed or any amount has not been included in the
+    total income of any person, subject to fulfilment of certain conditions for any tax
+    year beginning before the 1st April, 2026, and in case of violation of such condi-
+    tions in any tax year beginning on or after 1st April, 2026, any sum (on account of
+    deduction earlier allowed or amount not included) was required to be included in
+    the total income of such subsequent tax year under the repealed Income-tax Act if
+    it had not been so repealed, then such sum shall be—
+    (i) deemed to be the income of the tax year in which the violation takes place;
+    and
+    (ii) included in the total income of the said person under the same head of income
+    as it would have been included under the repealed Income-tax Act;”
+    prescribed or provision is made for extension of time in suitable cases
+    by the appropriate authority;
+    (l) any amount of credit, in respect of tax paid, allowable to be carried for-
+    ward in the case of an assessee, under the provisions of section 115JAA
+    or 115JD of the repealed Income-tax Act for the tax year beginning
+    before the 1st April, 2026, had the Income-tax Act, 1961 (43 of 1961) not
+    been repealed,—
+    36[(i) shall be deemed to be the amount eligible for credit under corresponding
+    provisions or section 206(3) or (4) of this Act, as the case may be in
+    the case of said assessee; and
+    (ii) credit for the tax paid under the repealed Income-tax Act shall be
+    allowed under this Act for the period for which it would have been
+    allowed under the repealed Income-tax Act if the assessee otherwise
+    continues to satisfy the conditions as specified in the corresponding
+    provisions or section 206(3) or (4) of this Act, as the case may be in
+    such tax years;]
+    (m) any amount of loss under the source or head of income specified in
+    column B of the Table given below and referred to in the section of the
+    repealed Income-tax Act specified in column C of the said Table, brought
+    forward for the tax year beginning before the 1st April, 2026 had the
+    Income-tax Act, 1961 (43 of 1961) not been repealed, shall be set off
+    and carried forward against the income computed under this Act, in the
+    manner provided in the respective section of the repealed Income-tax
+    Act specified in column C of the said table, for the tax years beginning
+    on or after the 1st April, 2026:
+    TABLE
+    Sl. Source or head of income under the Section of the repealed
+    No. repealed Income-tax Act Income-tax Act
+    A B C
+    1. Income from house property. 71B.
+    2. Profits and gains of business or 72.
+    profession.
+    3. Speculation business. 73.
+    (i) and (ii) read as under :
+    “(i) shall be deemed to be the amount eligible for credit under corresponding provision
+    of this Act in the case of said assessee; and
+    (ii) credit for the tax paid under the repealed Income-tax Act shall be allowed under this
+    Act for the period for which it would have been allowed under the repealed Income-tax
+    Act if the assessee otherwise continues to satisfy the conditions as specified in the
+    corresponding provisions of this Act in such tax years;”
+    Sl. Source or head of income under the Section of the repealed
+    No. repealed Income-tax Act Income-tax Act
+    A B C
+    4. Specified Business. 73A.
+    5. Activity of owning and maintaining 74A.
+    race horses.
+    (n) any amount of loss under the head capital gains, whether related to a
+    long-term capital asset or a short term capital asset, referred to in sec-
+    tion 74 of the repealed Income-tax Act, brought forward from the tax
+    year beginning before the 1st April, 2026 had the Income-tax Act, 1961
+    (43 of 1961) not been repealed, shall be carried forward and set off, in
+    accordance with the manner provided in the repealed Income-tax Act,
+    against the income under the head “Capital gains” computed under this
+    Act for any tax year beginning on or after the 1st April, 2026 upto eight
+    financial years immediately succeeding the financial year in which such
+    loss was first computed under the repealed Income-tax Act;
+    (o) any set off of loss or allowance for depreciation made in any tax year
+    beginning before the 1st April, 2026 in the hands of the amalgamated
+    company, successor company or the successor limited liability partner-
+    ship, in accordance with the provisions of section 72A of the repealed
+    Income-tax Act, shall be deemed to be the income of the amalgamated
+    company, successor company or the successor limited liability partner-
+    ship, as the case may be, chargeable to tax under this Act for the year in
+    which any of the conditions specified in that section are not complied
+    with;
+    (p) any set off of accumulated loss or unabsorbed depreciation allowed
+    in any tax year beginning before the 1st April, 2026 to the successor
+    co-operative bank, in accordance with the provisions of section 72AB
+    of the repealed Income-tax Act, shall be deemed to be the income of the
+    successor co-operative bank chargeable to tax under this Act for the year
+    in which any of the conditions specified in that section are not complied
+    with;
+    (q) any amount of profits or gains arising out of transfer of capital asset
+    not charged under the head “capital gains” by virtue of the provisions
+    contained in section 47(iv), (v), (xiii), (xiiib) or (xiv) of the repealed
+    Income-tax Act in any tax year beginning before the 1st April, 2026 shall
+    be deemed to be the income chargeable under the head “Capital gains”
+    under this Act, for the tax year––
+    (A) in which the transfer took place if any of the conditions laid down
+    in section 47A(1)(i) or (ii) of the repealed Income-tax Act are sat-
+    isfied; or
+    (B) in which any of the conditions laid down in section 47(xiii), (xiiib)
+    or (xiv) of the repealed Income-tax Act are not complied with,
+    as the case may be;
+    (r) where any allowance or part thereof, under section 32(2) or 35(4) of the
+    repealed Income-tax Act, is to be carried forward to tax year beginning
+    on the 1st April, 2026, had the Income-tax Act, 1961 (43 of 1961) not
+    been repealed, then, the allowance or part thereof shall be added to the
+    amount of capital allowances referred to corresponding provisions of
+    this Act for the tax year beginning on the 1st April, 2026 and deemed to
+    be part of that allowance, or if there is no such allowance for that tax
+    year, be deemed to be allowance for that tax year;
+    (s) the deduction referred to in sections 35ABA, 35ABB, 35D, 35DD, 35DDA,
+    35E or the first proviso to section 36(1)(ix) of the repealed Income-tax
+    Act, shall, on fulfilment of the conditions mentioned in the said provi-
+    sions, continue to be allowed under this Act for tax year beginning on or
+    after the 1st April, 2026 had the Income-tax Act, 1961 not been repealed
+    and such deduction shall be added to the amount of deferred revenue
+    expenditure allowance referred to corresponding provisions of this Act
+    for the tax year beginning on or after the 1st April, 2026 and deemed to
+    be part of that allowance, or if there is no such allowance for a tax year,
+    be deemed to be that allowance for that tax year;
+    (t) credit balance in the provision for bad and doubtful debts account made
+    under section 36(1)(viia) of the repealed Income-tax Act standing on the
+    last day of the tax year beginning on 1st April, 2025 shall be added to the
+    amount credited to the provision for bad and doubtful debts accounts
+    referred to in the corresponding provisions of this Act for the tax year
+    beginning on the 1st April, 2026 and deemed to be part of amount credited
+    to the provision for bad and doubtful debts accounts, or if there is no
+    such amount credited for that tax year, be deemed to be amount credited
+    for that tax year;
+    (u) any scheme which has been notified under the provisions of the repealed
+    Income-tax Act with a view to eliminating the interface with the asses-
+    see or any other person, the said scheme shall be deemed to have been
+    made—
+    (i) under the corresponding provisions of this Act; or
+    (ii) under section 532 where there is no such corresponding provision,
+    and shall continue in force accordingly; and
+    (v) where a search has been initiated under section 132 or requisition is
+    made under section 132A prior to the commencement of this Act, the
+    provisions of repealed Income-tax Act, shall continue to apply to any
+    proceedings connected in respect of such search or requisition, as the
+    case may be, as if this Act has not been enacted.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 584
+  - 585
+  - 586
+  - 587
+  - 588
+  - 589
+  extraction: auto
+  reviewed: false
+- id: IT2025:s536(3)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.536(3) > Tax Year 2026-27 onward
+  heading: Repeal and savings
+  text: |-
+    (3) Where any reference is made in this Act to any tax year commencing on
+    the 1st April, 2025 or to any earlier tax year, the same shall be construed as a refer-
+    ence to the corresponding previous year under the repealed Income-tax Act.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 589
+  extraction: auto
+  reviewed: false
+- id: IT2025:s536(4)
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.536(4) > Tax Year 2026-27 onward
+  heading: Repeal and savings
+  text: (4) Without prejudice to the provisions of sub-section (2), the provisions of section
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 589
+  extraction: auto
+  reviewed: false
+- id: IT2025:s58(2)/T1
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.58(2) Table Sl. 1 > Tax Year 2026-27 onward
+  heading: 'Presumptive taxation, Table Sl. 1: any business (6% / 8%)'
+  text: |-
+    Section 58(2), Table, Sl. No. 1.
+    Column B (specified business or profession): Any business other than the business specified against serial number 2.
+    Column C (assessee): Eligible assessee.
+    Column D (total turnover or gross receipts during the tax year): (a) does not exceed two crore rupees; or (b) does not exceed three crore rupees, where the amount or aggregate of amounts received, in cash, does not exceed 5% of the total turnover or gross receipts.
+    Column E (manner of computation): (A) the aggregate of (i) 6% of total turnover or gross receipts which is received by specified banking or online mode during the tax year or before the due date specified in section 263(1) in respect of that tax year; and (ii) 8% of total turnover or gross receipts as reduced by the turnover or gross receipts covered in (i); or (B) profit claimed to have been actually earned, whichever is higher.
+  tax_year_first: 2026
+  authority_rank: 1
+  pdf_pages:
+  - 103
+  - 104
+  cross_refs:
+  - IT2025:s263(1)
+  is_table: true
+  extraction: hand_typed
+- id: IT2025:s58(2)/T2
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.58(2) Table Sl. 2 > Tax Year 2026-27 onward
+  heading: 'Presumptive taxation, Table Sl. 2: plying, hiring or leasing goods carriages'
+  text: |-
+    Section 58(2), Table, Sl. No. 2.
+    Column B (specified business or profession): Business of plying, hiring or leasing goods carriages.
+    Column C (assessee): An assessee who owns not more than ten goods carriages at any time during the tax year.
+    Column D: no turnover limit is stated for this row.
+    Column E (manner of computation): (A) the aggregate of income from goods carriages: (i) for a heavy goods vehicle, ₹1,000 per ton of gross vehicle weight or unladen weight, as the case may be, for each vehicle, for every month or part of a month during which the vehicle is owned by the assessee in the tax year; (ii) for a vehicle other than a heavy goods vehicle, ₹7,500 for each goods carriage for every month or part of a month during which the vehicle is owned by the assessee in the tax year; or (B) profit claimed to have been actually earned, whichever is higher.
+  tax_year_first: 2026
+  authority_rank: 1
+  pdf_pages:
+  - 104
+  - 105
+  is_table: true
+  extraction: hand_typed
+  note: Check column D against the PDF; the extract shows no entry for this row.
+- id: IT2025:s58(2)/T3
+  source_id: IT2025
+  covers:
+  - IT2025:s58(2)/T3(a)
+  - IT2025:s58(2)/T3(b)
+  breadcrumb: Income-tax Act 2025 > s.58(2) Table Sl. 3 > Tax Year 2026-27 onward
+  heading: 'Presumptive taxation, Table Sl. 3: specified profession (50%) (replaces s.44ADA of the 1961 Act)'
+  text: |-
+    Section 58(2), Table, Sl. No. 3.
+    Column B (specified business or profession): Specified profession as referred to in section 62(4).
+    Column C (assessee): Specified assessee.
+    Column D (gross receipts during the tax year): (a) does not exceed fifty lakh rupees; or (b) does not exceed seventy-five lakh rupees, where the amount or aggregate of amounts received in cash does not exceed 5% of the gross receipts.
+    Column E (manner of computation): 50% of the gross receipts or profit claimed to have been actually earned, whichever is higher.
+  tax_year_first: 2026
+  authority_rank: 1
+  pdf_pages:
+  - 105
+  cross_refs:
+  - IT2025:s62(4)
+  - IT2025:s58(3)
+  - IT2025:s58(11)
+  is_table: true
+  extraction: hand_typed
+- id: IT2025:s263(1)/T3
+  source_id: IT2025
+  breadcrumb: Income-tax Act 2025 > s.263(1) Table Sl. 3 (due date) > Tax Year 2026-27 onward
+  heading: 'Return due date, Table Sl. 3: business or profession without audit (31 August)'
+  text: |-
+    Section 263(1), clause (c), Table of due dates (as substituted by the Finance Act 2026), Sl. No. 3.
+    Column B (person): (i) an assessee having income from profits and gains of business or profession whose accounts are not required to be audited under this Act or under any other law in force; (ii) a partner of a firm whose accounts are not required to be audited under this Act or under any other law in force, or the spouse of such partner (if section 10 applies to such spouse).
+    Column C (conditions): where the provisions of section 172 do not apply.
+    Column D (due date): 31st August.
+    Other rows of the same Table: Sl. 1, where section 172 applies: 30th November; Sl. 2, a company, or a person or partner whose accounts must be audited, where section 172 does not apply: 31st October; Sl. 4, any other assessee: 31st July.
+  tax_year_first: 2026
+  authority_rank: 1
+  pdf_pages:
+  - 342
+  - 343
+  is_table: true
+  extraction: hand_typed
+  note: 'The consolidated PDF prints two Tables here: the substituted four-row Table in square brackets (Sl. 3 = 31 August, used here) and a quoted five-row Table with no 31 August row. The research report (Primary source verification) and the ITR-3 due-date list both support 31 August. Confirm in review.'
+- id: IT2025:s63(1)/T1
+  source_id: IT2025
+  covers:
+  - IT2025:s63(1)/T1(a)
+  - IT2025:s63(1)/T1(b)
+  - IT2025:s63(1)/T1(c)
+  breadcrumb: Income-tax Act 2025 > s.63(1) Table Sl. 1 > Tax Year 2026-27 onward
+  heading: 'Tax audit, Table Sl. 1: turnover and gross receipts limits'
+  text: |-
+    Section 63(1): every person carrying on business or profession fulfilling any of the conditions in column B of the Table shall get the accounts of the tax year audited by an accountant before the specified date.
+    Table, Sl. No. 1. Every person—
+    (a) carrying on business, if total sales, turnover or gross receipts in business exceed one crore rupees in any tax year, subject to clause (b);
+    (b) where (i) the aggregate of all amounts received in cash during the tax year does not exceed 5% of that amount, and (ii) the aggregate of all payments made in cash during the tax year does not exceed 5% of those payments, clause (a) applies as if for "one crore rupees" the words "ten crore rupees" were substituted;
+    (c) carrying on profession, if gross receipts in profession exceed fifty lakh rupees in any tax year.
+    Table, Sl. No. 2: a person carrying on business or profession referred to in section 58(2) or 61(2) whose profits are claimed to be lower than the deemed profits (see the auto chunk IT2025:s63(1)).
+  tax_year_first: 2026
+  authority_rank: 1
+  pdf_pages:
+  - 113
+  cross_refs:
+  - IT2025:s58(3)
+  is_table: true
+  extraction: hand_typed

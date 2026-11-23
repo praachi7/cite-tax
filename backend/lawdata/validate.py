@@ -11,9 +11,11 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import re
 import sys
 from pathlib import Path
 
+from .chunks import CHUNKS_DIR, Resolver, load_all_chunks, load_chunk_file
 from .loader import (PARAMS_DIR, SOURCES_DIR, load_all_param_files, load_assumptions,
                      load_concordance, load_manifest, load_registry)
 from .models import DocType, ParamFile, ParamScope
@@ -146,14 +148,84 @@ def check_assumptions(files: dict[str, ParamFile] | None = None) -> list[str]:
     return problems
 
 
+ENGINE_DIR = Path(__file__).resolve().parents[1] / "engine"
+
+
+def cited_ids() -> set[str]:
+    """Every citation ID the law data and the engine rely on."""
+    ids: set[str] = set()
+    for pf in load_all_param_files(PARAMS_DIR).values():
+        for p in pf.params.values():
+            ids.update(p.sources)
+    for a in load_assumptions():
+        for r in a.readings:
+            ids.update(r.citations)
+    for row in load_concordance():
+        ids.update((row.old_ref, row.new_ref))
+    prefixes = "|".join(sorted({s.cite_prefix for s in load_registry()}, key=len, reverse=True))
+    pattern = re.compile(rf"[\"']((?:{prefixes}):[A-Za-z0-9_().\-/]+)[\"']")
+    for path in ENGINE_DIR.rglob("*.py"):
+        ids.update(pattern.findall(path.read_text(encoding="utf8")))
+    return ids
+
+
+def check_chunks() -> list[str]:
+    """Chunk files: known sources, unique ids, the source's own prefix, year tags within the source's range."""
+    problems: list[str] = []
+    registry = {s.id: s for s in load_registry()}
+    seen: set[str] = set()
+    for path in sorted(CHUNKS_DIR.glob("*.yaml")):
+        if path.stem not in registry:
+            problems.append(f"chunks: {path.name} is not named after a registry source")
+            continue
+        src = registry[path.stem]
+        for c in load_chunk_file(path):
+            where = f"chunks/{path.name}: {c.id}"
+            if c.source_id != src.id:
+                problems.append(f"{where}: source_id {c.source_id} does not match the file")
+            if not c.id.startswith(src.cite_prefix + ":"):
+                problems.append(f"{where}: id must start with {src.cite_prefix}:")
+            if c.id in seen:
+                problems.append(f"{where}: duplicate id")
+            seen.add(c.id)
+            if c.authority_rank != src.authority_rank:
+                problems.append(f"{where}: authority_rank differs from the registry")
+            lo, hi = src.tax_year_first, src.tax_year_last
+            if lo is not None and (c.tax_year_first is None or c.tax_year_first < lo):
+                problems.append(f"{where}: tax_year_first is before the source's first year {lo}")
+            if hi is not None and (c.tax_year_last is None or c.tax_year_last > hi):
+                problems.append(f"{where}: tax_year_last is after the source's last year {hi}")
+            if c.is_table and c.extraction.value == "auto":
+                problems.append(f"{where}: table chunks must be hand_typed or hand_corrected")
+            if not c.text.strip():
+                problems.append(f"{where}: empty text")
+    return problems
+
+
+def chunk_coverage() -> list[str]:
+    """Citation IDs that do not resolve to any chunk."""
+    resolver = Resolver(load_all_chunks())
+    return sorted(cid for cid in cited_ids() if resolver.resolve(cid) is None)
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--files", action="store_true", help="also verify source files and checksums on disk")
+    ap.add_argument("--chunks", action="store_true", help="also check corpus chunks and citation coverage")
+    ap.add_argument("--strict", action="store_true", help="with --chunks: every chunk must be reviewed")
     args = ap.parse_args(argv)
     problems = check_registry_and_manifest(SOURCES_DIR if args.files else None)
     problems += check_concordance()
     problems += check_param_files()
     problems += check_assumptions()
+    if args.chunks:
+        problems += check_chunks()
+        problems += [f"coverage: {cid} does not resolve to a chunk" for cid in chunk_coverage()]
+        chunks = load_all_chunks()
+        pending = [c.id for c in chunks if not c.reviewed]
+        print(f"chunks: {len(chunks)}, reviewed: {len(chunks) - len(pending)}, awaiting review: {len(pending)}")
+        if args.strict:
+            problems += [f"review: {cid} is not reviewed" for cid in pending]
     for p in problems:
         print("PROBLEM:", p)
     print("OK" if not problems else f"{len(problems)} problem(s)")

@@ -1,0 +1,550 @@
+# Corpus chunks for RULES2026: Income-tax Rules, 2026 (G.S.R. 198(E), 20 March 2026)
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: RULES2026:r46(1)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.46(1) > Tax Year 2026-27 onward
+  heading: Maintenance of books of account under section 62
+  text: |-
+    46. (1) Every person required to keep and maintain books of account and other documents under section 62(1)(b) shall maintain such books of account and
+    other documents that enable the Assessing Officer to compute his total income under the Act.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 54
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r46(2)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.46(2) > Tax Year 2026-27 onward
+  heading: Maintenance of books of account under section 62
+  text: |-
+    (2) Every person carrying on legal, medical, engineering or architectural profession or the profession of accountancy or technical consultancy or interior
+    decoration or profession of authorised representative or film artist, shall keep and maintain the books of account and other documents specified in sub-rule (4).
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 54
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r46(3)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.46(3) > Tax Year 2026-27 onward
+  heading: Maintenance of books of account under section 62
+  text: |-
+    (3) The provisions of sub-rule (2) shall not apply—
+    (i) in relation to any tax year in the case of any person, if his total gross receipts in the profession do not exceed Rs. 150000 in any one of the three years
+    immediately preceding the tax year; or
+    (ii) where the profession has been newly set up in the tax year, his total gross receipts in the profession for that year are not likely to exceed the said
+    amount.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 54
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r46(4)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.46(4) > Tax Year 2026-27 onward
+  heading: Maintenance of books of account under section 62
+  text: |-
+    (4) The books of account and other documents referred to in sub-rule (2) shall be the following:—
+    (a) a cash book; or
+    (b) a journal, if the accounts are maintained according to the mercantile system of accounting; or
+    (c) a ledger; or
+    (d) for sums equal to or exceeding two hundred and fifty rupees, copies of bills or receipts issued by him; or
+    (e) original bills and receipts in respect of expenditure equal to or exceeding two hundred and fifty rupees incurred by the person and issued to him; or
+    (f) payment vouchers prepared and signed by the person, where the expenditure incurred does not exceed two hundred and fifty rupees, and the cash book
+    maintained by the person does not contain adequate particulars in respect of such expenditure.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 54
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r46(5)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.46(5) > Tax Year 2026-27 onward
+  heading: Maintenance of books of account under section 62
+  text: |-
+    (5) In this rule,—
+    (a) "authorised representative" means a person who represents any other person, on payment of any fee or remuneration before—
+    (i) any Tribunal; or
+    (ii) any authority constituted or appointed by or under any law for the time being in force;
+    but does not include an employee of the person so represented or a person carrying on legal profession or a person carrying on the profession of
+    accountancy;
+    (b) "cash book" means a record of all cash receipts and payments, kept and maintained day-to-day and giving the cash balance in hand at the end of each
+    day or at the end of a specified period not exceeding a month;
+    (c) "film artist" means any person engaged in his professional capacity in the production of a cinematograph film whether produced by him or by any
+    other person, as—
+    (i) an actor; or
+    (ii) a cameraman; or
+    (iii) a director, including an assistant director; or
+    (iv) a music director, including an assistant music director; or
+    (v) an art director, including an assistant art director; or
+    (vi) a dance director, including an assistant dance director; or
+    (vii) an editor; or
+    (viii) a singer; or
+    (ix) a lyricist; or
+    (x) a story writer; or
+    (xi) a screen-play writer; or
+    (xii) a dialogue writer; or
+    (xiii) a dress designer.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 54
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r46(6)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.46(6) > Tax Year 2026-27 onward
+  heading: Maintenance of books of account under section 62
+  text: |-
+    (6) A person carrying on medical profession shall, in addition to the books of account and other documents specified in sub-rule (4), keep and maintain the
+    following:—
+    (i) a daily case register in Form No. 25;
+    (ii) an inventory under broad heads, as on the first and the last day of the tax year, of the stock of drugs, medicines and other consumable accessories used
+    for the purpose of his profession.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 54
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r46(7)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.46(7) > Tax Year 2026-27 onward
+  heading: Maintenance of books of account under section 62
+  text: |-
+    (7) The books of account and other documents specified in sub-rules (1), (4) and (6) other than those relating to a tax year which has come to an end shall be
+    kept and maintained by the person at—
+    (a) the place where he is carrying on the profession; or
+    (b) where the profession is carried on in more places than one, at the principal place of his profession; or
+    (c) if the person keeps and maintains separate books of account in respect of each place where the profession is carried on, such books of account and
+    other documents may be kept and maintained at the respective places at which the profession is carried on.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 54
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r46(8)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.46(8) > Tax Year 2026-27 onward
+  heading: Maintenance of books of account under section 62
+  text: |-
+    (8) The books of account and other documents specified in sub-rules (1), (4) and (6) maintained in electronic mode shall remain accessible in India at all times,
+    and the back-up of such books of account and other documents maintained in electronic mode, shall be kept on a daily basis in servers physically located in
+    India.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 54
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r46(9)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.46(9) > Tax Year 2026-27 onward
+  heading: Maintenance of books of account under section 62
+  text: |-
+    (9) The books of account and other documents specified in sub-rules (1), (4) and (6) shall be kept and maintained for a period of seven tax years from the end
+    of the relevant tax year.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 54
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r46(10)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.46(10) > Tax Year 2026-27 onward
+  heading: Maintenance of books of account under section 62
+  text: |-
+    (10) Where the assessment in relation to any tax year has been reopened under section 279 or under section 147 of the Income-tax Act, 1961 (43 of 1961), as it
+    existed prior to its repeal, all the books of account and other documents which were kept and maintained at the time of reopening of the assessment shall
+    continue to be so kept and maintained till the assessment, so reopened has been completed.
+    Downloaded/Printed on 19/09/2026, 03:49 pm from www.incometaxindia.gov.in Page 1 of 1
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 54
+  - 55
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r76(1)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.76(1) > Tax Year 2026-27 onward
+  heading: Foreign tax credit
+  text: |-
+    76. (1) An assessee, being a resident shall be allowed a credit for the amount of any foreign tax paid by him in a country or specified territory outside India, by
+    way of deduction or otherwise, in the tax year in which the income corresponding to such tax has been offered to tax or assessed to tax in India, in the manner
+    and to the extent as specified in this rule.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 87
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r76(2)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.76(2) > Tax Year 2026-27 onward
+  heading: Foreign tax credit
+  text: |-
+    (2) In a case, where income on which foreign tax has been paid or deducted, is offered to tax in more than one tax year, credit of foreign tax shall be allowed
+    across those tax years in the same proportion in which the income is offered to tax or assessed to tax in India.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 87
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r76(3)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.76(3) > Tax Year 2026-27 onward
+  heading: Foreign tax credit
+  text: |-
+    (3) The foreign tax referred to in sub-rule (1) shall mean, —
+    (a) in respect of a country or specified territory outside India with which India has entered into an agreement for the relief or avoidance of double taxation
+    of income in terms of section 159, the tax covered under the said agreement;
+    (b) in respect of any other country or specified territory outside India, the tax payable under the law in force in that country or specified territory in the
+    nature of income-tax referred to in section 160(3)(a).
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 87
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r76(4)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.76(4) > Tax Year 2026-27 onward
+  heading: Foreign tax credit
+  text: |-
+    (4) The credit under sub-rule (1) shall be available against the amount of tax, surcharge and cess payable under the Act, but not in respect of any sum payable
+    by way of interest, fee or penalty.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 87
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r76(5)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.76(5) > Tax Year 2026-27 onward
+  heading: Foreign tax credit
+  text: |-
+    (5) No credit under sub-rule (1) shall be available in respect of any amount of foreign tax or part thereof, which is disputed in any manner by the assessee,
+    subject to the provisions of sub-rule (6).
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 87
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r76(6)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.76(6) > Tax Year 2026-27 onward
+  heading: Foreign tax credit
+  text: |-
+    (6) If the assessee, within six months from the end of the month in which the dispute is finally settled, furnishes evidence of settlement of dispute and an
+    evidence to the effect that the liability for payment of such foreign tax has been discharged by him and furnishes an undertaking that no refund in respect of
+    such amount has directly or indirectly been claimed or shall be claimed, the credit of such disputed tax shall be allowed for the year in which such income is
+    offered to tax or assessed to tax in India.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 87
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r76(7)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.76(7) > Tax Year 2026-27 onward
+  heading: Foreign tax credit
+  text: |-
+    (7) The credit of foreign tax shall be the aggregate of the amounts of credit computed separately for each source of income arising from a particular country or
+    specified territory outside India and shall be given effect to in the following manner: —
+    (a) the credit shall be the lower of the tax payable under the Act on such income and the foreign tax paid on such income, so, however, that where the
+    foreign tax paid exceeds the amount of tax payable in accordance with the provisions of the agreement for relief or avoidance of double taxation, such
+    excess shall be ignored;
+    (b) the credit shall be determined by conversion of the currency of payment of foreign tax at the telegraphic transfer buying rate on the last day of the
+    month immediately preceding the month in which such tax has been paid or deducted.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 87
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r76(8)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.76(8) > Tax Year 2026-27 onward
+  heading: Foreign tax credit
+  text: |-
+    (8) In a case where any tax is payable under the provisions of section 206, the credit of foreign tax shall be allowed against such tax in the same manner as is
+    allowable against any tax payable under the provisions of the Act other than the provisions of the said sections (herein referred to as the normal provisions).
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 87
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r76(9)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.76(9) > Tax Year 2026-27 onward
+  heading: Foreign tax credit
+  text: |-
+    (9) Where the amount of foreign tax credit available against the tax payable under the provisions of section 206 exceeds the amount of tax credit available
+    against the normal provisions, then, while computing the amount of credit under section 206(1)(m) to (p) and section 206(2)(e) to (h), in respect of the taxes
+    paid under section 206(1) and (2), as the case may be, such excess shall be ignored.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 87
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r76(10)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.76(10) > Tax Year 2026-27 onward
+  heading: Foreign tax credit
+  text: |-
+    (10) Credit of any foreign tax shall be allowed on furnishing the following documents by the assessee:—
+    (a) a statement of income from the country or specified territory outside India offered for tax for the tax year and of foreign tax deducted or paid on such
+    income in Form No. 44 and verified in the manner specified therein; and
+    (b) certificate or statement specifying the nature of income and the amount of tax deducted therefrom or paid by the assessee, —
+    (i) from the tax authority of the country or specified territory outside India; or
+    (ii) from the person responsible for deduction of such tax; or
+    (iii) signed by the assessee.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 87
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r76(11)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.76(11) > Tax Year 2026-27 onward
+  heading: Foreign tax credit
+  text: |-
+    (11) The certificate or statement furnished by the assessee in sub-rule (10)(b) shall be valid, if it is accompanied by—
+    (a) an acknowledgement of online payment or bank counter foil or challan for payment of tax where the payment has been made by the assessee; or
+    (b) proof of deduction, where the tax has been deducted.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 87
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r76(12)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.76(12) > Tax Year 2026-27 onward
+  heading: Foreign tax credit
+  text: |-
+    (12) The statement in Form No. 44 referred to in sub-rule (10)(a) and the certificate or the statement referred to in sub-rule (10)(b) shall be furnished within
+    twelve months from the end of the relevant tax year in which the income referred to in sub-rule (1) has been offered to tax or assessed to tax in India and the
+    return for such tax year has been furnished within the time specified under section 263(1) or (4), subject to the provisions of sub-rule (13).
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 87
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r76(13)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.76(13) > Tax Year 2026-27 onward
+  heading: Foreign tax credit
+  text: |-
+    (13) Where the return has been furnished under section 263(6)(a), the statement in Form No. 44 referred to in sub-rule (10)(a) and the certificate or the
+    statement referred to in sub-rule (10)(b), to the extent it relates to the income included in the updated return, shall be furnished on or before the date on which
+    such return is furnished.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 87
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r76(14)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.76(14) > Tax Year 2026-27 onward
+  heading: Foreign tax credit
+  text: |-
+    (14) Form No. 44 shall also be furnished in a case, where the carry backward of loss of the current year or revision of return or similar statement, the case may
+    be, of any year or any other reason results in refund of foreign tax for which credit has been claimed in any tax year or tax years.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 87
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r76(15)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.76(15) > Tax Year 2026-27 onward
+  heading: Foreign tax credit
+  text: |-
+    (15) For the purposes of sub-rule (6), the assessee shall furnish an intimation in Form No. 45 and evidence of settlement of dispute including evidence of
+    payment of tax.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 87
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r76(16)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.76(16) > Tax Year 2026-27 onward
+  heading: Foreign tax credit
+  text: |-
+    (16) Form No. 44 shall be verified by an accountant defined in section 515(3)(b), —
+    (a) where the assessee is a company; or
+    (b) in all other cases, where the amount of foreign tax paid outside India for a tax year equals or exceeds ₹ 1,00,000.
+    Downloaded/Printed on 19/09/2026, 03:50 pm from www.incometaxindia.gov.in Page 1 of 2
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 87
+  - 88
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r76(17)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.76(17) > Tax Year 2026-27 onward
+  heading: Foreign tax credit
+  text: |-
+    (17) Form No. 45 shall be verified by an accountant defined in section 515(3)(b) in a case, where Form No. 44 filed for the relevant tax year was required to
+    be verified by an accountant under sub-rule (16).
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 88
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r76(18)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.76(18) > Tax Year 2026-27 onward
+  heading: Foreign tax credit
+  text: |-
+    (18) For the purposes of this rule the expression, "telegraphic transfer buying rate" shall have the meaning assigned to it in rule 207.
+    Downloaded/Printed on 19/09/2026, 03:50 pm from www.incometaxindia.gov.in Page 2 of 2
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 88
+  - 89
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r136
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.136 > Tax Year 2026-27 onward
+  heading: Exercise or withdrawal of option for new tax regime
+  text: |-
+    136. The option to be exercised or withdrawn under the provisions specified in column B of the following Table, by a person specified in column C thereof,
+    for any tax year shall be in the return of income to be furnished under section 263(1) for such tax year.
+    TABLE
+    Sl. Section Person
+    No.
+    A B C
+    1. 199(3) Manufacturing domestic company.
+    2. 200(5) Domestic company.
+    3. 201(2) New manufacturing domestic company.
+    4. 202(4) Individual or Hindu undivided family, or an association of persons (other than a co-operative society) or a body of individuals, whether
+    incorporated or not, or an artificial juridical person.
+    5. 203(5) Resident co-operative society.
+    6. 204(2) New manufacturing co-operative society.
+    Downloaded/Printed on 19/09/2026, 03:53 pm from www.incometaxindia.gov.in Page 1 of 1
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 157
+  - 158
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r164(5)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.164(5) > Tax Year 2026-27 onward
+  heading: Forms, eligibility, verification etc. in respect of return of income
+  text: |-
+    (5) Subject to the provisions of sub-rule (6), return of income shall be in Form SUGAM (ITR-4) and be verified in the manner indicated therein, in the case of
+    a person being an individual or a Hindu undivided family, who is a resident other than not ordinarily resident, or a firm, other than limited liability partnership
+    firm, which is a resident, ––
+    (a) deriving income under the head "Profits or gains of business or profession" and such income is computed in accordance with special provisions
+    referred to in section 58 for computation of such income; and
+    (b) has, "Capital gains", if any, where assessee has only long-term capital gains under section 198 not exceeding Rs. 125000.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 192
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r164(6)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.164(6) > Tax Year 2026-27 onward
+  heading: Forms, eligibility, verification etc. in respect of return of income
+  text: |-
+    (6) A person shall not be eligible to file ITR-4, if he —
+    (a) has assets (including financial interest in any entity) located outside India; or
+    (b) has signing authority in any account located outside India; or
+    (c) has income from any source outside India; or
+    (d) has income to be apportioned in accordance with provisions of section 10; or
+    (e) has claimed deduction under section 93, other than deduction claimed under section 93(1)(d) thereof; or
+    (f) is a director in any company; or
+    (g) has held any unlisted equity share at any time during the tax year; or
+    (h) has total income, exceeding fifty lakh rupees; or
+    (i) owns more than two house properties, the income of which is chargeable under the head "Income from house property"; or
+    (j) has any brought forward loss or loss to be carried forward under any head of income; or
+    (k) is assessable for the whole or any part of the income on which tax has been deducted at source in the hands of a person other than the assessee; or
+    (l) has claimed any relief of tax under section 159 or deduction of tax under clause (d) of sub-section (1) of the said; or
+    (m) has agricultural income, exceeding Rs. 5000; or
+    (n) has income of the nature specified in section 17(1)(d) on which tax is payable or deductible under section 391(2) or section 392(3); or
+    (o) has any income of the nature on which the tax is determinable as per provisions of Part A of Chapter XIII of the Act.
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 192
+  extraction: auto
+  reviewed: false
+- id: RULES2026:r164(7)
+  source_id: RULES2026
+  breadcrumb: Income-tax Rules 2026 > r.164(7) > Tax Year 2026-27 onward
+  heading: Forms, eligibility, verification etc. in respect of return of income
+  text: |-
+    (7) Return of income shall be in Form No. ITR-3 and be verified in the manner indicated therein in the case of a person being an individual or a Hindu
+    undivided family other than the individual or a Hindu undivided family referred to in sub-rule (2) or sub-rule (4) or sub-rule (5) and having income under the
+    head "Profits or gains of business or profession".
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 192
+  extraction: auto
+  reviewed: false

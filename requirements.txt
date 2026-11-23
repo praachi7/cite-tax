@@ -1,4 +1,14 @@
-# CiteTax Phase A tooling (Python 3.12). Install: pip install -r requirements.txt
+# CiteTax tooling (Python 3.12). Install: pip install -r requirements.txt
+# Phase A/B (law data, engine, tests)
 PyYAML==6.0.3
 pydantic==2.14.2
 pytest==9.2.0
+
+# Phase C (corpus and retrieval). CPU-only PyTorch keeps the install small:
+#   pip install --index-url https://download.pytorch.org/whl/cpu torch==2.9.1
+torch==2.9.1
+sentence-transformers==5.1.2
+transformers==4.57.6
+numpy==2.5.5
+psycopg[binary]==3.2.12
+pgvector==0.4.1

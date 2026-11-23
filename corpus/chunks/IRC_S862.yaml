@@ -1,0 +1,17 @@
+# Corpus chunks for IRC_S862: 26 U.S.C. section 862: income from sources without the United States (2024 edition)
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: IRC:s862(a)(3)
+  source_id: IRC_S862
+  breadcrumb: Internal Revenue Code > s.862(a)(3)
+  heading: 'Income from sources without the United States: personal services'
+  text: (3) compensation for labor or personal services performed without the United States;
+  tax_year_first: null
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 1
+  extraction: auto
+  reviewed: false

@@ -1,0 +1,155 @@
+# Corpus chunks for IRS_PUB519: IRS Publication 519: U.S. Tax Guide for Aliens (for 2025 returns)
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: IRS_PUB519:spt
+  source_id: IRS_PUB519
+  breadcrumb: IRS Publication 519 (2025) > Substantial presence test > FY 2025-26
+  heading: Substantial presence test
+  text: |-
+    Substantial Presence Test
+    You are a resident for tax purposes if you meet the substantial presence test for calendar year 2025. To meet this test, you must be physically present in the United States on at least:
+    1. 31 days during 2025; and
+    2. 183 days during the 3-year period that includes 2025, 2024, and 2023, counting:
+    a. All the days you were present in 2025,
+    b. 1/3 of the days you were present in 2024, and
+    c. 1/6 of the days you were present in 2023.
+    Example. You were physically present in the United States on 120 days in each of the years 2025, 2024, and 2023. To determine if you meet the substantial presence test for 2025, count the full 120 days of presence in 2025, 40 days in 2024 (1/3 of 120), and 20 days in 2023 (1/6 of 120). Because the total for the 3-year period is 180 days, you are not considered a resident under the substantial presence test for 2025.
+    The term “United States” includes the following areas.
+    • All 50 states and the District of Columbia.
+    • The territorial waters of the United States.
+    • The seabed and subsoil of those submarine areas that
+    are adjacent to U.S. territorial waters and over which the United States has exclusive rights under international law to explore and exploit natural resources.
+    The term does not include U.S. territories or U.S. airspace.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 5
+  extraction: auto
+  reviewed: false
+- id: IRS_PUB519:spt_days
+  source_id: IRS_PUB519
+  breadcrumb: IRS Publication 519 (2025) > Days of presence > FY 2025-26
+  heading: 'Substantial presence test: which days count as days of presence'
+  text: |-
+    Days of Presence in the United States
+    You are treated as present in the United States on any day you are physically present in the country at any time during the day. However, there are exceptions to this rule. Do not count the following as days of presence in the United States for the substantial presence test.
+    • Days you commute to work in the United States from a
+    residence in Canada or Mexico if you regularly commute from Canada or Mexico.
+    • Days you are in the United States for less than 24
+    hours when you are in transit between two places outside the United States.
+    • Days you are in the United States as a crew member
+    of a foreign vessel.
+    • Days you are unable to leave the United States be-
+    cause of a medical condition that arose while you are in the United States.
+    • Days you are in the United States under a NATO visa
+    as a member of a force or civilian component to NATO. However, this exception does not apply to an immediate family member who is present in the United States under a NATO visa. A dependent family member must count every day of presence for purposes of the substantial presence test.
+    • Days you are an exempt individual.
+    The specific rules that apply to each of these categories are discussed next.
+    Regular commuters from Canada or Mexico. Do not count the days on which you commute to work in the United States from your residence in Canada or Mexico if you regularly commute from Canada or Mexico. You are considered to commute regularly if you commute to work in the United States on more than 75% (0.75) of the workdays during your working period.
+    For this purpose, “commute” means to travel to work and return to your residence within a 24-hour period. “Workdays” are the days on which you work in the United States or Canada or Mexico. “Working period” means the period beginning with the first day in the current year on which you are physically present in the United States to work and ending on the last day in the current year on which you are physically present in the United States to work. If your work requires you to be present in the United States only on a seasonal or cyclical basis, your working period begins on the first day of the season or cycle on which you are present in the United States to work and ends on the last day of the season or cycle on which you are present in the United States to work. You can have more than one working period in a calendar year, and your working period can begin in one calendar year and end in the following calendar year.
+    Example. Maria Perez lives in Mexico and works for Compañía ABC in its office in Mexico but was temporarily assigned to the firm's office in the United States from February 1 through June 1. On June 2, Maria resumed employment in Mexico. For 69 workdays, Maria commuted
+    each morning from home in Mexico to work in Compañía ABC’s U.S. office and returned home in Mexico on each of those evenings. For 7 workdays, Maria worked in her firm’s Mexico office. For purposes of the substantial presence test, Maria does not count the days commuting to work in the United States because those days equal more than 75% (0.75) of the workdays during the working period (69 workdays in the United States divided by 76 workdays in the working period equals 90.8%).
+    Days in transit. Do not count the days you are in the United States for less than 24 hours and you are in transit between two places outside the United States. You are considered to be in transit if you engage in activities that are substantially related to completing travel to your foreign destination. For example, if you travel between airports in the United States to change planes en route to your foreign destination, you are considered to be in transit. However, you are not considered to be in transit if you attend a business meeting while in the United States. This is true even if the meeting is held at the airport.
+    Crew members. Do not count the days you are temporarily present in the United States as a regular crew member of a foreign vessel (boat or ship) engaged in transportation between the United States and a foreign country or a U.S. territory. However, this exception does not apply if you otherwise engage in any trade or business in the United States on those days.
+    Medical condition. Do not count the days you intended to leave, but could not leave, the United States because of a medical condition or problem that arose while you were in the United States. Whether you intended to leave the United States on a particular day is determined based on all the facts and circumstances. For example, you may be able to establish that you intended to leave if your purpose for visiting the United States could be accomplished during a period that is not long enough to qualify you for the substantial presence test. However, if you need an extended period of time to accomplish the purpose of your visit and that period would qualify you for the substantial presence test, you would not be able to establish an intent to leave the United States before the end of that extended period.
+    In the case of an individual who is judged mentally incompetent, proof of intent to leave the United States can be determined by analyzing the individual’s pattern of behavior before they were judged mentally incompetent.
+    If you qualify to exclude days of presence because of a medical condition, you must file a fully completed Form 8843 with the IRS. See Form 8843, later.
+    You cannot exclude any days of presence in the United States under the following circumstances.
+    • You were initially prevented from leaving, were then
+    able to leave, but remained in the United States beyond a reasonable period for making arrangements to leave.
+    • You returned to the United States for treatment of a
+    medical condition that arose during a prior stay.
+    • The condition existed before your arrival in the United
+    States and you were aware of the condition. It does not matter whether you needed treatment for the condition when you entered the United States.
+    Exempt individual. Do not count days for which you are an exempt individual. The term “exempt individual” does not refer to someone exempt from U.S. tax, but instead refers to anyone in the following categories.
+    • An individual temporarily present in the United States
+    as a foreign government-related individual under an “A” or “G” visa other than individuals holding “A-3” or “G-5” class visas.
+    • A teacher or trainee temporarily present in the United
+    States under a “J” or “Q” visa who substantially complies with the requirements of the visa.
+    • A student temporarily present in the United States un-
+    der an “F,” “J,” “M,” or “Q” visa who substantially complies with the requirements of the visa.
+    • A professional athlete temporarily present in the Uni-
+    ted States to compete in a charitable sports event.
+    The specific rules for each of these four categories (including any rules on the length of time you will be an exempt individual) are discussed next.
+    Foreign government-related individuals. A foreign government-related individual is an individual (or a member of the individual’s immediate family) who is temporarily present in the United States:
+    • As a full-time employee of an international organiza-
+    tion,
+    • By reason of diplomatic status, or
+    • By reason of a visa (other than a visa that grants lawful
+    permanent residence) that the Secretary of the Treasury determines represents full-time diplomatic or consular status.
+    Note: You are considered temporarily present in the United States regardless of the actual amount of time you are present in the United States.
+    An international organization is any public international organization that the President of the United States has designated by Executive order as being entitled to the privileges, exemptions, and immunities provided for in the International Organizations Immunities Act. An individual is a full-time employee if their work schedule meets the organization’s standard full-time work schedule.
+    An individual is considered to have full-time diplomatic or consular status if they:
+    • Have been accredited by a foreign government that is
+    recognized by the United States;
+    • Intend to engage primarily in official activities for that
+    foreign government while in the United States; and
+    • Have been recognized by the President, the Secretary
+    of State, or a consular officer as being entitled to that status.
+    Members of the immediate family include the individual’s spouse and unmarried children (whether by blood or adoption) but only if the spouse’s or unmarried children’s visa statuses are derived from, and dependent on, the exempt individual’s visa classification. Unmarried children are included only if they:
+    • Are under 21 years of age,
+    • Reside regularly in the exempt individual’s household,
+    and
+    • Are not members of another household.
+    Note: Generally, if you are present in the United States under an “A” or “G” class visa, you are considered a foreign government-related individual (with full-time diplomatic or consular status). None of your days count for purposes of the substantial presence test.
+    Household staff exception. If you are present in the United States under an “A-3” or “G-5” class visa as a personal employee, attendant, or domestic worker for either a foreign government or international organization official, you are not considered a foreign government-related individual and must count all your days of presence in the United States for purposes of the substantial presence test.
+    Teachers and trainees. A teacher or trainee is an individual, other than a student, who is temporarily in the United States under a “J” or “Q” visa and substantially complies with the requirements of that visa. You are considered to have substantially complied with the visa requirements if you have not engaged in activities that are prohibited by U.S. immigration laws and could result in the loss of your visa status.
+    Also included are immediate family members of exempt teachers and trainees. See the definition of “immediate family,” earlier, under Foreign government-related individuals.
+    You will not be an exempt individual as a teacher or trainee in 2025 if you were exempt as a teacher, trainee, or student for any part of 2 of the 6 preceding calendar years. However, you will be an exempt individual if all of the following conditions are met.
+    • You were exempt as a teacher, trainee, or student for
+    any part of 3 (or fewer) of the 6 preceding calendar years.
+    • A foreign employer paid all of your compensation dur-
+    ing 2025.
+    • You were present in the United States as a teacher or
+    trainee in any of the 6 prior years.
+    • A foreign employer paid all of your compensation dur-
+    ing each of the preceding 6 years you were present in the United States as a teacher or trainee.
+    A foreign employer includes an office or place of business of an American entity in a foreign country or a U.S. territory.
+    If you qualify to exclude days of presence as a teacher or trainee, you must file a fully completed Form 8843 with the IRS. See Form 8843, later.
+    Example. Carla was temporarily in the United States during the year as a teacher on a “J” visa. Carla’s compensation for the year was paid by a foreign employer. Carla was treated as an exempt teacher for the previous 2 years, but compensation was not paid by a foreign employer. Carla will not be considered an exempt individual for the current year because of being exempt as a teacher for at least 2 of the past 6 years.
+    If Carla’s compensation for the past 2 years had been paid by a foreign employer, Carla would be an exempt individual for the current year.
+    Students. A student is any individual who is temporarily in the United States on an “F,” “J,” “M,” or “Q” visa and who substantially complies with the requirements of that visa. You are considered to have substantially complied with the visa requirements if you have not engaged in activities that are prohibited by U.S. immigration laws and could result in the loss of your visa status.
+    Also included are immediate family members of exempt students. See the definition of “immediate family,” earlier, under Foreign government-related individuals.
+    You will not be an exempt individual as a student in 2025 if you have been exempt as a teacher, trainee, or student for any part of more than 5 calendar years unless you meet both of the following requirements.
+    • You establish that you do not intend to reside perma-
+    nently in the United States.
+    • You have substantially complied with the requirements
+    of your visa.
+    The facts and circumstances to be considered in determining if you have demonstrated an intent to reside permanently in the United States include, but are not limited to, the following.
+    • Whether you have maintained a closer connection to a
+    foreign country (discussed later).
+    • Whether you have taken affirmative steps to change
+    your status from nonimmigrant to lawful permanent resident, as discussed later under Closer Connection to a Foreign Country.
+    If you qualify to exclude days of presence as a student, you must file a fully completed Form 8843 with the IRS. See Form 8843, later.
+    Professional athletes. A professional athlete who is temporarily in the United States to compete in a charitable sports event is an exempt individual. A charitable sports event is one that meets the following conditions.
+    • The main purpose is to benefit a qualified charitable
+    organization.
+    • The entire net proceeds go to charity.
+    • Volunteers perform substantially all the work.
+    In figuring the days of presence in the United States, you can exclude only the days on which you actually competed in a sports event. You cannot exclude the days on which you were in the United States to practice for the event, to perform promotional or other activities related to the event, or to travel between events.
+    If you qualify to exclude days of presence as a professional athlete, you must file a fully completed Form 8843 with the IRS. See Form 8843 next.
+    Form 8843. If you exclude days of presence in the United States because you fall into any of the following categories, you must file a fully completed Form 8843.
+    • You were unable to leave the United States as plan-
+    ned because of a medical condition or problem.
+    • You were temporarily in the United States as a teacher
+    or trainee on a “J” or “Q” visa.
+    • You were temporarily in the United States as a student
+    on an “F,” “J,” “M,” or “Q” visa.
+    • You were a professional athlete competing in a chari-
+    table sports event.
+    Attach Form 8843 to your 2025 income tax return. If you do not have to file a return, send Form 8843 to the following address.
+    Department of the Treasury Internal Revenue Service Center Austin, TX 73301-0215
+    You must file Form 8843 by the due date for filing Form 1040-NR. The due date for filing is discussed in chapter 7. If you are required to file Form 8843 and you do not timely file Form 8843, you cannot exclude the days you were present in the United States as a professional athlete or because of a medical condition that arose while you were in the United States. This does not apply if you can show by clear and convincing evidence that you took reasonable actions to become aware of the filing requirements and significant steps to comply with those requirements.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 5
+  - 6
+  - 7
+  - 8
+  extraction: auto
+  reviewed: false

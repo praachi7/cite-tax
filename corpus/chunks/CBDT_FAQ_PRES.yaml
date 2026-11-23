@@ -1,0 +1,718 @@
+# Corpus chunks for CBDT_FAQ_PRES: CBDT FAQs on presumptive taxation (2025-Act version, cites s.58 and s.62)
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: CBDT_FAQ_PRES:Q1
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q1 > Tax Year 2026-27 onward
+  heading: Q1. What is the meaning of presumptive taxation scheme?
+  text: |-
+    Q1. What is the meaning of presumptive taxation scheme?
+    Ans: As per section 62 of the Income-tax Act, 2025, a person engaged in business or
+    profession is required to maintain regular books of account under certain
+    circumstances. To give relief to small taxpayers from this tedious work, the Income -
+    tax Act has framed the presumptive taxation scheme under sections 58 and 61.
+    A person adopting the presumptive taxation scheme can declare income at a
+    prescribed rate and, in turn, is relieved from the tedious job of maintaining books of
+    account.
+    Presumptive Scheme for Resident
+    a) Presumptive Taxation Scheme for Businesses under Section58(2) [Table S. No. 1]
+    b) Presumptive Taxation Scheme for Professions under Section 58(2) [Table S. No. 3]
+    c) Presumptive Taxation Scheme for Goods Transport Agency under Section 58(2)
+    [Table S. No. 2]
+    Presumptive Scheme for Non-Residents
+    a) Presumptive Taxation Scheme for Goods Transport Agency under Section 58(2)
+    [Table S. No. 2]
+    b) Presumptive Taxation Scheme for Shipping Businesses under Section 61(2) [Table
+    S. No. 1]
+    c) Presumptive Taxation Scheme for Exploration Business under Section 61(2) [Table
+    S. No. 5]
+    d) Presumptive Taxation Scheme for Airline Cos. under Section 61(2) [Table S. No. 3]
+    e) Presumptive Taxation Scheme for Civil Construction Cos. under Section 61(2)
+    [Table S. No. 4]
+    f) Presumptive Taxation Scheme for Cruise Shipping Businesses under Section 61(2)
+    [Table S. No. 2]
+    g) Presumptive Taxation Scheme for providing services or technology for setting up
+    electronics manufacturing facilities in India under Section 61(2) [Table S. No. 6]
+    Relevant Content
+    Section - 58
+    Section - 62
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 1
+  - 2
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q2
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q2 > Tax Year 2026-27 onward
+  heading: Q2. Who is eligible to take advantage of the presumptive taxation scheme of section
+  text: |-
+    Q2. Who is eligible to take advantage of the presumptive taxation scheme of section
+    58(2) [Table S. No. 1]?
+    Ans: The presumptive taxation scheme under Section 58(2) [Table S. No. 1] may be
+    opted for by the following eligible assessees:
+    a) A resident Individual;
+    b) A resident Hindu Undivided Family (HUF); and
+    c) A resident Partnership Firm, other than a Limited Liability Partnership (LLP).
+    Accordingly, the benefit of this scheme is not available to non-residents, LLPs,
+    companies, trusts, co-operative societies, associations of persons (AOPs), bodies of
+    individuals (BOIs), artificial juridical persons, or any other person not specifically
+    covered within the definition of an eligible assessee.
+    Further, the scheme is not available to an assessee who has claimed a deduction under
+    Chapter VIII-C of the Income-tax Act, 2025, during the relevant tax year. It is also not
+    available to a person carrying on a specified profession referred to in Section 62(4),
+    carrying on any agency business, or earning income in the nature of commission or
+    brokerage.
+    Relevant Content
+    Section - 58
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 2
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q3
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q3 > Tax Year 2026-27 onward
+  heading: Q3. Which businesses are not eligible for the presumptive taxation scheme of
+  text: |-
+    Q3. Which businesses are not eligible for the presumptive taxation scheme of
+    section 58(2) [Table S. No. 1]?
+    Ans: The presumptive taxation scheme under Section 58(2) [Table S. No. 1] is
+    intended to provide relief to small taxpayers engaged in eligible businesses by
+    simplifying the computation of taxable income and reducing compliance
+    requirements.
+    The scheme is available in respect of any business carried on by an eligible assessee,
+    except the following:
+    • A business of plying, hiring, or leasing goods carriages, which is covered under
+    Section 58(2) [Table S. No. 2];
+    • Any agency business;
+    • Any business earning income in the nature of commission or brokerage; and
+    • A specified profession referred to in Section 62(4).
+    Further, the benefit of the scheme is available only where the total turnover or gross
+    receipts of the eligible business do not exceed Rs. 2 crore during the tax year.
+    However, the threshold limit shall be increased to Rs. 3 crore where the amount or
+    aggregate amount of cash receipts during the tax year does not exceed 5% of the total
+    turnover or gross receipts. For this purpose, receipts through a cheque or bank draft
+    which is not an account payee shall be deemed to be cash receipts.
+    Accordingly, a person carrying on a specified profession, an agency business, or a
+    business earning income in the nature of commission or brokerage is not eligible to
+    opt for the presumptive taxation scheme under Section 58(2) [Table S. No. 1].
+    Relevant Content
+    Section - 58
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 2
+  - 3
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q4
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q4 > Tax Year 2026-27 onward
+  heading: Q4. Can an insurance agent adopt the presumptive taxation scheme of section 58(2)
+  text: |-
+    Q4. Can an insurance agent adopt the presumptive taxation scheme of section 58(2)
+    [Table S. No. 1]?
+    Ans: A person earning income in the nature of commission or brokerage is not eligible
+    to opt for the presumptive taxation scheme under Section 58(2) [Table S. No. 1].
+    Accordingly, insurance agents, whose income is generally earned by way of
+    commission, cannot compute their income under the presumptive taxation scheme
+    provided under this section.
+    Relevant Content
+    Section - 58
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 3
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q5
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q5 > Tax Year 2026-27 onward
+  heading: Q5. Can a person engage in a profession as prescribed under section 62(4) adopt the
+  text: |-
+    Q5. Can a person engage in a profession as prescribed under section 62(4) adopt the
+    presumptive taxation scheme of section 58(2) [Table S. No. 1]?
+    Ans: A person carrying on a specified profession referred to in Section 62(4) is not
+    eligible to opt for the presumptive taxation scheme under Section 58(2) [Table S. No.
+    1].
+    However, such a person may be eligible to opt for the presumptive taxation scheme
+    under Section 58(2) [Table S. No. 3], subject to the prescribed conditions. Under this
+    scheme, income from the specified profession may be computed on a presumptive
+    basis at the prescribed percentage of the gross receipts of the profession.
+    The benefit of Section 58(2) [Table S. No. 3] is available only to a resident assessee
+    engaged in a specified profession where the gross receipts of the profession do not
+    exceed Rs. 50 lakh during the tax year. However, the threshold limit shall be increased
+    to Rs. 75 lakh where the amount or aggregate amount of cash receipts during the tax
+    year does not exceed 5% of the total gross receipts. For this purpose, receipts through
+    a cheque or bank draft, which is not an account payee, shall be deemed to be cash
+    receipts.
+    Accordingly, a person carrying on a specified profession cannot avail the presumptive
+    taxation scheme under Section 58(2) [Table S. No. 1] but may opt for the presumptive
+    taxation scheme under Section 58(2) [Table S. No. 3], provided the gross receipts of
+    the profession do not exceed Rs. 50 lakh or Rs. 75 lakh, as the case may be, and the
+    other prescribed conditions are satisfied.
+    Relevant Content
+    Section - 58
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 3
+  - 4
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q6
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q6 > Tax Year 2026-27 onward
+  heading: Q6. Can a person whose total turnover or gross receipts for the year exceed
+  text: |-
+    Q6. Can a person whose total turnover or gross receipts for the year exceed
+    threshold limit adopt the presumptive taxation scheme of section 58(2) [Table S. No.
+    1]?
+    Ans: The presumptive taxation scheme under Section 58(2) [Table S. No. 1] may be
+    opted for by an eligible assessee carrying on an eligible business, provided the total
+    turnover or gross receipts of such business do not exceed the prescribed threshold
+    limit during the tax year.
+    The threshold limit is Rs. 2 crore. However, the limit shall be increased to Rs. 3 crore
+    where the amount or aggregate amount of cash receipts during the tax year does not
+    exceed 5% of the total turnover or gross receipts. For this purpose, receipts through a
+    cheque or bank draft which is not an account payee shall be deemed to be cash
+    receipts.
+    Accordingly, where the total turnover or gross receipts of the eligible business exceed
+    Rs. 2 crore or Rs. 3 crore, as the case may be, the assessee shall not be eligible to opt
+    for the presumptive taxation scheme under Section 58(2) [Table S. No. 1], and the
+    income shall be computed in accordance with the normal provisions of the Act.
+    Relevant Content
+    Section - 58
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 4
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q7
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q7 > Tax Year 2026-27 onward
+  heading: Q7. What is the manner of computation of taxable business income under the
+  text: |-
+    Q7. What is the manner of computation of taxable business income under the
+    normal provisions of the Income-tax Law, i.e., in case of a person not adopting the
+    presumptive taxation scheme of section 58(2) [Table S. No. 1]?
+    Ans: Generally, as per the Income-tax Law, the taxable business income of every
+    person is computed as follows :
+    Particulars Amount
+    Turnover or gross receipts from the business XXXXX
+    Less : Expenses incurred in relation to earning of the income (XXXXX)
+    Taxable Business Income XXXXX
+    For the purpose of computing taxable business income in the above manner, the
+    taxpayers have to maintain books of account of the business and income will be
+    computed on the basis of the information revealed in the books of account.
+    Relevant Content
+    Section - 58
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 5
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q8
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q8 > Tax Year 2026-27 onward
+  heading: Q8. What is the manner of computation of taxable business income in case of a
+  text: |-
+    Q8. What is the manner of computation of taxable business income in case of a
+    person adopting the presumptive taxation scheme of section 58(2) [Table S. No. 1]?
+    Ans: Under Section 58(2) [Table S. No. 1], the income of an eligible business is
+    computed on a presumptive basis rather than in accordance with the normal
+    provisions relating to computation of business income.
+    The presumptive income shall be deemed to be:
+    • 8% of the turnover or gross receipts received in cash or through modes other
+    than the prescribed modes; and
+    • 6% of the turnover or gross receipts which is received by specified banking or
+    online mode.
+    The concessional rate of 6% shall apply in respect of receipts received during the tax
+    year or on or before the due date for furnishing the return of income.
+    Accordingly, an assessee opting for the presumptive taxation scheme is not required
+    to compute taxable profits in the normal manner by deducting business expenditure
+    from business receipts. Instead, the income is deemed to be 6% or 8% of the turnover
+    or gross receipts, as applicable.
+    The assessee may, however, voluntarily declare income at a rate higher than the
+    prescribed presumptive rate if the actual profits of the business exceed such rate.
+    Relevant Content
+    Section - 58
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 5
+  - 6
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q9
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q9 > Tax Year 2026-27 onward
+  heading: Q9. As per the presumptive taxation scheme of section 58(2) [Table S. No. 1], income
+  text: |-
+    Q9. As per the presumptive taxation scheme of section 58(2) [Table S. No. 1], income
+    of a taxpayer will be computed @ 8%/6% of the turnover or gross receipt and from
+    such income can the taxpayer claim any further deductions?
+    Ans: No. Under the presumptive taxation scheme provided in Section 58(2) [Table S.
+    No. 1], the income computed at the prescribed rate of 6% or 8% of the turnover or
+    gross receipts is deemed to be the profits and gains of the eligible business.
+    Any loss, allowance, or deduction allowable under the provisions of this Act shall not
+    be allowed against the income computed in the manner specified in Section 58(2)
+    [Table S. No. 1].
+    Thus, the presumptive income computed under Section 58(2) [Table S. No. 1] is treated
+    as the final taxable income from the eligible business.
+    Further, for the purpose of determining the written down value (WDV) of any
+    depreciable asset, depreciation shall be deemed to have been allowed and the WDV
+    shall be computed accordingly, irrespective of whether such depreciation has actually
+    been claimed.
+    Relevant Content
+    Section - 58
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 6
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q10
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q10 > Tax Year 2026-27 onward
+  heading: Q10. If a person adopts the presumptive taxation scheme of section 58(2) [Table S.
+  text: |-
+    Q10. If a person adopts the presumptive taxation scheme of section 58(2) [Table S.
+    No. 1], then is he required to maintain books of account as per section 62?
+    Ans: Section 62 of the Income-tax Act, 2025 prescribes the circumstances in which a
+    person carrying on a business or profession is required to maintain books of account
+    and other prescribed records.
+    However, where an eligible assessee opts for the presumptive taxation scheme under
+    Section 58(2) [Table S. No. 1] and computes income at the prescribed presumptive rate
+    of 6% or 8% of the turnover or gross receipts, the provisions relating to maintenance
+    of books of account under Section 62 shall not apply in respect of the eligible business
+    covered by the scheme.
+    Accordingly, an assessee who validly opts for the presumptive taxation scheme under
+    Section 58(2) [Table S. No. 1] is not required to maintain books of account for such
+    business, provided the conditions prescribed under the scheme are satisfied.
+    Relevant Content
+    Section - 62
+    Section - 58
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 6
+  - 7
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q11
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q11 > Tax Year 2026-27 onward
+  heading: Q11. If a person adopts the presumptive taxation scheme of section 58(2) [Table S.
+  text: |-
+    Q11. If a person adopts the presumptive taxation scheme of section 58(2) [Table S.
+    No. 1], then is he liable to pay advance tax in respect of income from business
+    covered under section 58(2) [Table S. No. 1]?
+    Ans: An assessee opting for the presumptive taxation scheme under Section 58(2)
+    [Table S. No. 1] is liable to pay advance tax in accordance with the provisions of the
+    Income-tax Act, 2025.
+    However, unlike other taxpayers who are required to pay advance tax in multiple
+    instalments during the tax year, an assessee covered by this presumptive taxation
+    scheme may discharge the entire advance tax liability in a single instalment on or
+    before 15th March of the relevant tax year.
+    If the assessee fails to pay the whole of the advance tax by 15th March, interest may
+    be leviable in accordance with the applicable provisions relating to default or
+    deferment of advance tax.
+    Further, any amount paid towards advance tax on or before 31st March of the tax year
+    shall be treated as advance tax paid during that tax year.
+    Relevant Content
+    Section - 58
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 7
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q12
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q12 > Tax Year 2026-27 onward
+  heading: Q12. If a person adopts the presumptive taxation scheme but he opts out from the
+  text: |-
+    Q12. If a person adopts the presumptive taxation scheme but he opts out from the
+    scheme in any of the subsequent five years, then what are the consequences?
+    Ans: If an eligible assessee opts for the presumptive taxation scheme under Section
+    58(2) [Table S. No. 1] and subsequently declares income lower than the prescribed
+    presumptive rate in any of the next five consecutive tax years, the assessee shall
+    become ineligible to avail the benefit of the presumptive taxation scheme for the next
+    five tax years following the year in which such lower income is declared.
+    For example, a partnership firm opts for the presumptive taxation scheme in Tax Year
+    2026-27 and computes its income in accordance with Section 58(2) [Table S. No. 1]. The
+    firm continues to offer income on a presumptive basis for Tax Years 2027-28 and 2028-
+    29. However, in Tax Year 2029-30, it declares income at a rate lower than the
+    prescribed presumptive rate.
+    Since the firm has failed to compute and offer income in accordance with the
+    provisions of Section 58(2) [Table S. No. 1] during the prescribed five -year period, it
+    shall not be eligible to opt for the presumptive taxation scheme for the subsequent five
+    tax years, i.e., from Tax Year 2030-31 to Tax Year 2034-35.
+    Further, for the year in which lower income is declared and for the period during
+    which the assessee is barred from availing the scheme, the assessee may be required
+    to maintain books of account under Section 62 and get them audited under Section 63,
+    subject to the conditions prescribed under the Act.
+    Relevant Content
+    Section - 58
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 7
+  - 8
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q13
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q13 > Tax Year 2026-27 onward
+  heading: Q13. Who is eligible to take advantage of the presumptive taxation scheme of
+  text: |-
+    Q13. Who is eligible to take advantage of the presumptive taxation scheme of
+    section 58(2) [Table S. No. 3]?
+    Ans: The presumptive taxation scheme under Section 58(2) [Table S. No. 3] can be
+    opted for by a resident Individual or Partnership Firm (other than a Limited Liability
+    Partnership) engaged in a specified profession. This scheme is available where the
+    gross receipts from the profession do not exceed Rs. 50 lakh during the tax year.
+    However, the threshold limit shall be enhanced to Rs. 75 lakh if the aggregate amount
+    received in cash during the year does not exceed 5% of the total gross receipts.
+    The following professions are eligible for the presumptive taxation scheme:
+    1. Legal profession
+    2. Medical profession
+    3. Engineering profession
+    4. Architectural profession
+    5. Accountancy profession
+    6. Technical consultancy
+    7. Interior decoration
+    8. Film artist
+    9. Authorised representative
+    10. Company secretary
+    11. Information technology profession
+    12. Any other profession as notified by CBDT
+    The presumptive taxation scheme is not available to persons engaged in any
+    profession other than those specified above.
+    Relevant Content
+    Section – 58
+    Section – 62(4)
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 8
+  - 9
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q14
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q14 > Tax Year 2026-27 onward
+  heading: Q14. What is the manner of computation of taxable income in case of a person
+  text: |-
+    Q14. What is the manner of computation of taxable income in case of a person
+    adopting the presumptive taxation scheme of section 58(2) [Table S. No. 3]?
+    Ans: Where an eligible assessee opts for the presumptive taxation scheme under
+    Section 58(2) [Table S. No. 3], the income from the specified profession shall be
+    deemed to be 50% of the total gross receipts of the tax year. This scheme is available
+    where the gross receipts from the profession do not exceed Rs. 50 lakh during the tax
+    year. However, the threshold limit shall be increased to Rs. 75 lakh if the aggregate
+    amount received in cash during the year does not exceed 5% of the total gross receipts.
+    Receipts through a cheque or bank draft that is not account payee shall be treated as
+    cash receipts for this purpose.
+    Under this scheme, the income of the assessee is not required to be computed in the
+    normal manner after claiming individual expenses. Instead, 50% of the gross receipts
+    from the specified profession is deemed to be the taxable income of the year. However,
+    the assessee is free to declare a higher income than the prescribed presumptive
+    income.
+    Relevant Content
+    Section - 58
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 9
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q15
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q15 > Tax Year 2026-27 onward
+  heading: Q15. Can a person who adopts the presumptive taxation scheme of section 58(2)
+  text: |-
+    Q15. Can a person who adopts the presumptive taxation scheme of section 58(2)
+    [Table S. No. 3] claim any further deduction of expenses after declaring profit @
+    50% of gross receipts?
+    Ans: No, any loss, allowance, or deduction allowable under the provisions of this Act
+    shall not be allowed against the income computed in the manner specified in Section
+    58(2) [Table S. No. 3].
+    Accordingly, where an assessee engaged in a specified profession opts for the
+    presumptive taxation scheme under Section 58(2) [Table S. No. 3] and declares income
+    at 50% of the gross receipts, no further deduction in respect of expenses otherwise
+    allowable under Sections 30 to 38 can be claimed.
+    Further, for the purposes of computing the written down value (WDV) of any asset
+    used in the profession, depreciation shall be deemed to have been allowed and the
+    WDV shall be calculated accordingly, irrespective of whether such depreciation has
+    actually been claimed.
+    Relevant Content
+    Section - 58
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 9
+  - 10
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q16
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q16 > Tax Year 2026-27 onward
+  heading: Q16. If a person adopts the presumptive taxation scheme of section 58(2) [Table S.
+  text: |-
+    Q16. If a person adopts the presumptive taxation scheme of section 58(2) [Table S.
+    No. 3], then is he liable to pay advance tax in respect of income from profession
+    covered under section 58(2) [Table S. No. 3]?
+    Ans: An assessee opting for the presumptive taxation scheme under Section 58(2)
+    [Table S. No. 3] is required to pay the entire amount of advance tax payable for the tax
+    year on or before March 15 of that year. Unlike other taxpayers, who are generally
+    required to pay advance tax in multiple instalments, an assessee covered under this
+    scheme may discharge the whole of the advance tax liability in a single instalment by
+    the prescribed due date.
+    Relevant Content
+    Section - 58
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 10
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q17
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q17 > Tax Year 2026-27 onward
+  heading: Q17. If a person adopts the presumptive taxation scheme of section 58(2) [Table S.
+  text: |-
+    Q17. If a person adopts the presumptive taxation scheme of section 58(2) [Table S.
+    No. 3], then he is required to maintain books of account as per section 62?
+    Ans: An assessee opting for the presumptive taxation scheme under Section 58(2)
+    [Table S. No. 3] is not required to maintain books of account in respect of the specified
+    profession as prescribed under Section 62. Accordingly, where an eligible assessee
+    computes income on a presumptive basis and declares income at 50% or more of the
+    gross receipts from the specified profession, the provisions relating to maintenance of
+    books of account shall not apply.
+    However, if the assessee claims that the profits and gains from the profession are
+    lower than 50% of the gross receipts and his total income exceeds the maximum
+    amount not chargeable to tax, he shall be required to maintain books of account in
+    accordance with Section 62 and comply with the applicable audit requirements under
+    Section 63.
+    Relevant Content
+    Section - 58
+    Section - 62
+    Section - 63
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 10
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q18
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q18 > Tax Year 2026-27 onward
+  heading: Q18. What provision will apply if a person opts for the presumptive taxation
+  text: |-
+    Q18. What provision will apply if a person opts for the presumptive taxation
+    scheme of section 58(2) [Table S. No. 3] and declares his income from profession at
+    lower rate (i.e. less than 50%)?
+    Ans: An assessee opting for the presumptive taxation scheme under Section 58(2)
+    [Table S. No. 3] is not required to maintain books of account in respect of the specified
+    profession as prescribed under Section 62. Accordingly, where an eligible assessee
+    computes income on a presumptive basis and declares income at 50% or more of the
+    gross receipts from the specified profession, the provisions relating to maintenance of
+    books of account shall not apply.
+    However, if the assessee claims that the profits and gains from the profession are
+    lower than 50% of the gross receipts and his total income exceeds the maximum
+    amount not chargeable to tax, he shall be required to maintain books of account in
+    accordance with Section 62 and comply with the applicable audit requirements under
+    Section 63.
+    Relevant Content
+    Section - 58
+    Section - 62
+    Section - 63
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 11
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q19
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q19 > Tax Year 2026-27 onward
+  heading: Q19. For whom the presumptive taxation scheme of section 58(2) [Table S. No. 2] is
+  text: |-
+    Q19. For whom the presumptive taxation scheme of section 58(2) [Table S. No. 2] is
+    designed?
+    Ans: The presumptive taxation scheme under Section 58(2) [Table S. No. 2] is available
+    to any person engaged in the business of plying, hiring or leasing goods carriages,
+    provided that such person does not own more than ten goods carriage vehicles at any
+    time during the tax year.
+    Relevant Content
+    Section - 58
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 11
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q20
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q20 > Tax Year 2026-27 onward
+  heading: Q20. Who is eligible to take advantage of the presumptive taxation scheme of
+  text: |-
+    Q20. Who is eligible to take advantage of the presumptive taxation scheme of
+    section 58(2) [Table S. No. 2] and which business is eligible for the presumptive
+    taxation scheme of section 58(2) [Table S. No. 2]?
+    Ans: The presumptive taxation scheme under Section 58(2) [Table S. No. 2] is available
+    to any person engaged in the business of plying, hiring or leasing goods carriages,
+    irrespective of the nature of the person, such as an individual, Hindu Undivided
+    Family (HUF), firm, company or any other person. However, the scheme can be opted
+    for only if the person does not own more than ten goods carriage vehicles at any time
+    during the tax year.
+    Relevant Content
+    Section - 58
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 11
+  - 12
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q21
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q21 > Tax Year 2026-27 onward
+  heading: Q21. Can a person who owns more than 10 goods vehicles adopt the presumptive
+  text: |-
+    Q21. Can a person who owns more than 10 goods vehicles adopt the presumptive
+    taxation scheme of section 58(2) [Table S. No. 2]?
+    Ans: The presumptive taxation scheme under Section 58(2) [Table S. No. 2] may be
+    opted for by a person engaged in the business of plying, hiring or leasing goods
+    carriages, provided that such person does not own more than ten goods carriage
+    vehicles at any time during the tax year.
+    The ownership condition is a key eligibility requirement of the scheme. Accordingly ,
+    if a person owns more than ten goods carriage vehicles at any time during the tax year,
+    he shall not be eligible to compute income under the presumptive taxation scheme
+    prescribed under Section 58(2) [Table S. No. 2].
+    Relevant Content
+    Section - 58
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 12
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q22
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q22 > Tax Year 2026-27 onward
+  heading: Q22. Can an assessee claim any further deduction from the presumptive income
+  text: |-
+    Q22. Can an assessee claim any further deduction from the presumptive income
+    computed under Section 58(2) [Table S. No. 2]?
+    Ans: No. Under the presumptive taxation scheme prescribed under Section 58(2)
+    [Table S. No. 2], the income computed at the prescribed presumptive rates is deemed
+    to have been arrived at after allowing all deductions admissible under the Income Tax
+    Act, 2025. Accordingly, no further deduction shall be allowed in respect of any
+    expenditure relating to such business.
+    Further, depreciation on assets used in the business is also deemed to have been
+    allowed. Therefore, while computing the written down value (WDV) of such assets, it
+    shall be assumed that depreciation has been claimed and allowed for the relevant tax
+    years.
+    Since all eligible expenditures are deemed to have been allowed while determining
+    the presumptive income, no separate disallowance of expenditure shall be made
+    under the relevant provisions of the Act.
+    Relevant Content
+    Section - 58
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 12
+  - 13
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q23
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q23 > Tax Year 2026-27 onward
+  heading: Q23. If a person adopts the presumptive taxation scheme of section 58(2) [Table S.
+  text: |-
+    Q23. If a person adopts the presumptive taxation scheme of section 58(2) [Table S.
+    No. 2] , then is he required to maintain books of account as per section 62?
+    Ans: No, An assessee opting for the presumptive taxation scheme under Section 58(2)
+    [Table S. No. 2] is not required to maintain books of account in respect of the business
+    covered by the scheme.
+    Section 62 of the Income Tax Act, 2025 contains provisions relating to the maintenance
+    of books of account. However, an assessee who computes income in accordance with
+    the presumptive taxation scheme under Section 58(2) [Table S. No. 2] is exempt from
+    the requirement of maintaining books of account for such business.
+    Accordingly, where an eligible assessee engaged in the business of plying, hiring or
+    leasing goods carriages declares income at the prescribed presumptive rates under
+    Section 58(2) [Table S. No. 2], the provisions relating to maintenance of books of
+    account under Section 62 shall not apply in respect of that business.
+    Relevant Content
+    Section – 58
+    Section - 62
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 13
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_PRES:Q24
+  source_id: CBDT_FAQ_PRES
+  breadcrumb: CBDT FAQs on presumptive taxation (2025 Act) > Q24 > Tax Year 2026-27 onward
+  heading: Q24. If a person adopts the presumptive taxation scheme of section 58(2) [Table S.
+  text: |-
+    Q24. If a person adopts the presumptive taxation scheme of section 58(2) [Table S.
+    No. 2], then is he liable to pay advance tax in respect of income from business
+    covered under section 58(2) [Table S. No. 2]?
+    Ans: Yes. An assessee opting for the presumptive taxation scheme under Section 58(2)
+    [Table S. No. 2] is liable to pay advance tax in respect of the income covered under the
+    scheme.
+    No special concession has been provided regarding the payment of advance tax for
+    assessees opting for this presumptive taxation scheme. Accordingly, such assessees
+    are required to comply with the advance tax provisions applicable under the Income
+    Tax Act, 2025.
+    Further, unlike assessees opting for the presumptive taxation schemes under Section
+    58(2) [Table S. No. 1 and Table S. No. 3], assessees covered under Section 58(2) [Table
+    S. No. 2] are required to pay advance tax in the prescribed instalments and are not
+    permitted to discharge the entire advance tax liability in a single instalment on or
+    before 15th March.
+    Relevant Content
+    Section - 58
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 13
+  - 14
+  - 15
+  extraction: auto
+  reviewed: false

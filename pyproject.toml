@@ -1,3 +1,4 @@
 [tool.pytest.ini_options]
 pythonpath = ["backend"]
 testpaths = ["backend/tests"]
+markers = ["db: needs the Postgres retrieval index (docker compose up -d db); skipped when it is not running"]

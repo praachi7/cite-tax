@@ -1,0 +1,25 @@
+# Corpus chunks for IRC_S861: 26 U.S.C. section 861: income from sources within the United States (2024 edition)
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: IRC:s861(a)(3)
+  source_id: IRC_S861
+  breadcrumb: Internal Revenue Code > s.861(a)(3)
+  heading: 'Income from sources within the United States: personal services'
+  text: |-
+    (3) Personal services
+    Compensation for labor or personal services performed in the United States; except that compensation for labor or services performed in the United States shall not be deemed to be income from sources within the United States if—
+    (A) the labor or services are performed by a nonresident alien individual temporarily present in the United States for a period or periods not exceeding a total of 90 days during the taxable year,
+    (B) such compensation does not exceed $3,000 in the aggregate, and
+    (C) the compensation is for labor or services performed as an employee of or under a contract with—
+    (i) a nonresident alien, foreign partnership, or foreign corporation, not engaged in trade or business within the United States, or
+    (ii) an individual who is a citizen or resident of the United States, a domestic partnership, or a domestic corporation, if such labor or services are performed for an office or place of business maintained in a foreign country or in a possession of the United States by such individual, partnership, or corporation.
+    In addition, compensation for labor or services performed in the United States shall not be deemed to be income from sources within the United States if the labor or services are performed by a nonresident alien individual in connection with the individual’s temporary presence in the United States as a regular member of the crew of a foreign vessel engaged in transportation between the United States and a foreign country or a possession of the United States.
+  tax_year_first: null
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 2
+  extraction: auto
+  reviewed: false

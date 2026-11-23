@@ -1,0 +1,63 @@
+# Corpus chunks for IRS_PUB515: IRS Publication 515: Withholding of Tax on Nonresident Aliens and Foreign Entities (for use in 2026)
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: IRS_PUB515:personal_services
+  source_id: IRS_PUB515
+  breadcrumb: IRS Publication 515 (2026) > Pay for personal services > FY 2026-27
+  heading: Withholding on pay for personal services performed by nonresident aliens
+  text: |-
+    Pay for Personal Services Performed
+    This section explains the rules for withholding tax from pay for personal services. You must generally withhold tax at the 30% rate on compensation you pay to a nonresident alien individual for labor or personal services performed in the United States, unless that pay is specifically exempted from withholding or subject to graduated withholding. This rule applies regardless of your place of residence, the place where the contract for service was made, or the place of payment.
+    Payments for personal services are not withholdable payments under chapter 4 when they are nonfinancial payments. See Regulations section 1.1473-1(a)(4)(iii) for a description of these payments and their exclusion as withholdable payments.
+    Illegal aliens. Foreign workers who are illegal aliens are subject to U.S. taxes in spite of their illegal status. U.S. employers or payers who hire illegal aliens may be subject to various fines, penalties, and sanctions imposed by U.S. Immigration and Customs Enforcement. If such employers or payers choose to hire illegal aliens, the payments made to those aliens are subject to the same tax withholding and reporting obligations that apply to other classes of aliens. Illegal aliens who are nonresident aliens and who receive income from performing independent personal services are subject to 30% withholding unless exempt under some provision of law or a tax treaty. Illegal aliens who are resident aliens and who receive income from performing dependent personal services are subject to the same reporting and withholding obligations that apply to U.S. citizens who receive the same kind of income.
+    Form 8233. This form is used by a nonresident alien individual to claim a tax treaty exemption from withholding on some or all compensation paid for:
+    • Independent personal services (self-employment),
+    • Dependent personal services, or
+    • Personal services income and noncompensatory
+    scholarship or fellowship income from the same withholding agent.
+    A withholding agent that receives Form 8233 from a nonresident alien individual claiming a tax treaty exemption must review the form, sign to indicate its acceptance, and forward the form to the IRS within 5 days of its acceptance.
+    Form W-4. This form is used by a person providing dependent personal services to claim withholding allowances, but not a tax treaty exemption. Nonresident alien individuals are subject to special instructions for completing the Form W-4. See the discussion under Wages Paid to Employees, later.
+    Compensation for independent personal services (income code 17). “Independent personal services” (a term commonly used in tax treaties) are personal services performed by an independent nonresident alien contractor as contrasted with those performed by an employee. This category of pay includes payments for professional services, such as fees of an attorney, physician, or accountant made directly to the person performing the services. It also includes honoraria paid by colleges and universities to visiting teachers, lecturers, and researchers.
+    Pay for independent personal services is subject to chapter 3 withholding and reporting as follows.
+    30% rate. You must withhold at the statutory rate of 30% on all payments unless the alien enters into a withholding agreement or receives a final payment exemption (discussed later).
+    Withholding agreements. Pay for personal services of a nonresident alien who is engaged during the tax year in the conduct of a U.S. trade or business may be wholly or partially exempted from withholding at the statutory rate if an agreement has been reached between the Commissioner or his delegate and the alien as to the amount of withholding required. This agreement will be effective for payments covered by the agreement that are made after the agreement is executed by all parties. The alien must agree to timely file an income tax return for the current tax year.
+    Final payment exemption. The final payment of compensation for independent personal services may be wholly or partially exempt from withholding at the statutory rate. This exemption applies to the last payment of compensation, other than wages, for personal services rendered in the United States that the alien expects to receive from any withholding agent during the tax year.
+    To obtain the final payment exemption, the alien, or the alien’s agent, must file the forms and provide the information required by the Commissioner or his delegate. This information includes, but is not limited to, the following items.
+    • A statement by each withholding agent from whom
+    amounts of gross income effectively connected with the conduct of a U.S. trade or business have been
+    received by the alien during the tax year. It must show the amount of income paid and the amount of tax withheld. The withholding agent must sign the statement and include a declaration that it is made under penalties of perjury.
+    • A statement by the withholding agent from whom the
+    final payment of compensation for personal services will be received showing the amount of final payment and the amount that would be withheld if a final payment exemption is not granted. The withholding agent must sign the statement and include a declaration that it is made under penalties of perjury.
+    • A statement by the alien that they do not intend to re-
+    ceive any other amounts of gross income effectively connected with the conduct of a U.S. trade or business during the current tax year.
+    • The amount of tax that has been withheld (or paid) un-
+    der any other provision of the Internal Revenue Code or regulations for any income effectively connected with the conduct of a U.S. trade or business during the current tax year.
+    • The amount of any outstanding tax liabilities, including
+    any interest and penalties, from the current tax year or prior tax periods.
+    • The provision of any income tax treaty under which a
+    partial or complete exemption from withholding may be claimed, the country of the alien’s residence, and a statement of sufficient facts to justify an exemption under that treaty.
+    The alien must give a statement, signed and verified by a declaration that it is made under penalties of perjury, that all the information provided is true, and that to their knowledge no relevant information has been omitted.
+    If satisfied with the information provided, the Commissioner or his delegate will determine the amount of the alien’s tentative income tax for the tax year on gross income effectively connected with the conduct of a U.S. trade or business. Ordinary and necessary business expenses may be taken into account if proved to the satisfaction of the Commissioner or his delegate.
+    The Commissioner or his delegate will provide the alien with a letter to you, the withholding agent, stating the amount of the final payment of compensation for personal services that is exempt from withholding, and the amount that would otherwise be withheld that may be paid to the alien due to the exemption. The amount of pay exempt from withholding cannot be more than $5,000. The alien must give two copies of the letter to you and must also attach a copy of the letter to their income tax return for the tax year for which the exemption is effective.
+    Travel expenses. If you pay or reimburse the travel expenses of a nonresident alien, the payments are not reportable to the IRS and are not subject to chapter 3 withholding if the payments are made under an accountable plan, as described in Regulations section 1.62-2. This treatment applies only to that part of a payment that represents the payment of travel and lodging expenses and not
+    to that part that represents compensation for independent personal services.
+    Tax treaties. Under some tax treaties, pay for independent personal services performed in the United States is treated as business income and taxed according to the treaty provisions for business profits.
+    Under other tax treaties, pay for independent personal services performed in the United States is exempt from U.S. income tax only if the independent nonresident alien contractor performs the services during a period of temporary presence in the United States (usually not more than 183 days) and is a resident of the treaty country.
+    Independent nonresident alien contractors use Form 8233 to claim an exemption from withholding under a tax treaty. For more information, see Form 8233, earlier.
+    Often, you must withhold under the statutory rules on payments made to a treaty country resident contractor for services performed in the United States. This is because the factors on which the treaty exemption is based may not be determinable until after the close of the tax year. The contractor must then file a U.S. income tax return (Form 1040-NR, U.S. Nonresident Alien Income Tax Return) to recover any overwithheld tax by providing the IRS with proof that they are entitled to a treaty exemption.
+    Tip: Form 8233 should be used to claim a treaty benefit based on a business profits provision or an independent personal services provision.
+    Wages Paid to Employees—Graduated Withholding
+    Salaries, wages, bonuses, or any other pay for personal services (referred to collectively as wages) paid to nonresident alien employees are subject to graduated withholding in the same way as for U.S. citizens and residents if the wages are effectively connected with the conduct of a U.S. trade or business.
+    Note: Any wages paid to a nonresident alien for personal services performed as an employee for an employer are generally not subject to the 30% withholding if the wages are subject to graduated withholding.
+    Also, the 30% withholding does not apply to pay for personal services performed as an employee for an employer if it is effectively connected with the conduct of a U.S. trade or business and is specifically exempted from the definition of wages. Chapter 4 withholding does not apply to these payments. See Pay that is not wages, later.
+    Special rule for certain agricultural workers. The 30% withholding does not apply to pay for personal services performed by a foreign agricultural worker in the United States on an H-2A visa. However, if the total wages are $600 or more and the worker does not give you a TIN, you may need to backup withhold. You may withhold at graduated rates if the employee asks you to by giving you a completed Form W-4.
+  tax_year_first: 2026
+  tax_year_last: 2026
+  authority_rank: 4
+  pdf_pages:
+  - 50
+  - 51
+  extraction: auto
+  reviewed: false

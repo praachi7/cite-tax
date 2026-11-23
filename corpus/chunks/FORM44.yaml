@@ -1,0 +1,65 @@
+# Corpus chunks for FORM44: Form No. 44 (Rule 76(10)): Statement of income from outside India and Foreign Tax Credit
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: FORM44:p1
+  source_id: FORM44
+  breadcrumb: Form No. 44 (Rule 76(10), Rules 2026) > p.1 > Tax Year 2026-27 onward
+  heading: 'Form 44: statement of income from outside India and foreign tax credit'
+  text: |-
+    FORM NO. 44
+    [See rule 76(10)]
+    Statement of income from a country or region outside India and Foreign Tax Credit
+    Part A: Particulars of the Person
+    1. Name: (refer Note 1)
+    2. Address: (refer Note 2)
+    3. Permanent Account Number (PAN):
+    4. E-mail Id:
+    5. Contact Number: Country Number
+    Code
+    6. Tax Year:
+    Part B: Other Information
+    Details of income from a country or region outside India which is offered to tax or assessed to tax in India and
+    on which Foreign Tax Credit is claimed:
+    S Na Taxpa Sourc Inc Income- Tax Details of foreign tax Am Whet If Tota Tot
+    l. me yer e of om tax paid pay credit under section oun her ‗Yes l al
+    N of Identif incom e outside able 159 t of amou ‘ in forei fore
+    o. the ication e fro India on for- nt in colu gn ign
+    cou Numb m suc eig colu mn tax tax
+    ntry er out Am R h Articl Rate Am n mn (13) cred cre
+    / (TIN) side oun at in- e of tax oun tax (11) , it dit
+    cre or clai
+    regi Indi t e com Numb as per t dit amo
+    on (see
+    a e er of Doubl un- (12) unt me
+    Note
+    un- Doubl e der or of [(15 d
+    der
+    (see 4) the e Taxati sec- any suc ) =
+    In-
+    Not Taxati on tion part h (11+
+    e 3) com on Avoid 160 there disp 12)] [(16
+    e- Avoid ance of is uted )=
+    tax ance Agree
+    under fore (15)
+    Act, Agree ments
+    dispu ign -
+    202 ments
+    (refer te? tax (14)
+    (re- (refer Note cred ]
+    fer Note 8) it
+    Not 7)
+    e 6)
+    (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13) (14) (15) (16)
+    Salary
+    House
+    prope
+    rty
+  tax_year_first: 2026
+  tax_year_last: null
+  authority_rank: 2
+  pdf_pages:
+  - 1
+  extraction: auto
+  reviewed: false

@@ -1,0 +1,383 @@
+# Corpus chunks for RULES1962: Income-tax Rules, 1962, consolidated as of 1 April 2026
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: RULES1962:r6F(1)
+  source_id: RULES1962
+  breadcrumb: Income-tax Rules 1962 > r.6F(1) > FY 2025-26 and earlier
+  heading: Books of account and other documents to be kept and maintained under section 44AA(3) by persons carrying on certain professions
+  text: |-
+    6F. (1) Every person carrying on legal, medical, engineering or architectural profession or the profession of accountancy or technical consultancy or interior
+    decoration or authorised representative or film artist shall keep and maintain the books of account and other documents specified in sub-rule (2) :
+    Provided that nothing in this sub-rule shall apply in relation to any previous year in the case of any person if his total gross receipts in the profession do not
+    exceed one lakh fifty thousand rupees in any one of the three years immediately preceding the previous year, or, where the profession has been newly set up in
+    the previous year, his total gross receipts in the profession for that year are not likely to exceed the said amount.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 88
+  extraction: auto
+  reviewed: false
+- id: RULES1962:r6F(2)
+  source_id: RULES1962
+  breadcrumb: Income-tax Rules 1962 > r.6F(2) > FY 2025-26 and earlier
+  heading: Books of account and other documents to be kept and maintained under section 44AA(3) by persons carrying on certain professions
+  text: |-
+    (2) The books of account and other documents referred to in sub-rule (1) shall be the following, namely:—
+    (i) a cash book;
+    (ii) a journal, if the accounts are maintained according to the mercantile system of accounting;
+    (iii) a ledger;
+    (iv) carbon copies of bills, whether machine numbered or otherwise serially numbered, wherever such bills are issued by the person, and carbon copies or
+    counterfoils of machine numbered or otherwise serially numbered receipts issued by him:
+    Provided that nothing in this clause shall apply in relation to sums not exceeding twenty-five rupees;
+    (v) original bills wherever issued to the person and receipts in respect of expenditure incurred by the person or, where such bills and receipts are not issued
+    and the expenditure incurred does not exceed fifty rupees, payment vouchers prepared and signed by the person:
+    Provided that the requirements as to the preparation and signing of payment vouchers shall not apply in a case where the cash book maintained by the
+    person contains adequate particulars in respect of the expenditure incurred by him.
+    Explanation.—In this rule,—
+    (a) "authorised representative" means a person who represents any other person, on payment of any fee or remuneration before any Tribunal or authority
+    constituted or appointed by or under any law for the time being in force, but does not include an employee of the person so represented or a person
+    carrying on legal profession or a person carrying on the profession of accountancy;
+    (b) "cash book" means a record of all cash receipts and payments, kept and maintained from day-to-day and giving the cash balance in hand at the end of
+    each day or at the end of a specified period not exceeding a month;
+    (c) "film artist" means any person engaged in his professional capacity in the production of a cinematograph film whether produced by him or by any
+    other person, as—
+    (i) an actor;
+    (ii) a cameraman;
+    (iii) a director, including an assistant director;
+    (iv) a music director, including an assistant music director;
+    (v) an art director, including an assistant art director;
+    (vi) a dance director, including an assistant dance director;
+    (vii) an editor;
+    (viii) a singer;
+    (ix) a lyricist;
+    (x) a story writer;
+    (xi) a screen-play writer;
+    (xii) a dialogue writer; and
+    (xiii) a dress designer.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 88
+  extraction: auto
+  reviewed: false
+- id: RULES1962:r6F(3)
+  source_id: RULES1962
+  breadcrumb: Income-tax Rules 1962 > r.6F(3) > FY 2025-26 and earlier
+  heading: Books of account and other documents to be kept and maintained under section 44AA(3) by persons carrying on certain professions
+  text: |-
+    (3) A person carrying on medical profession shall, in addition to the books of account and other documents specified in sub-rule (2), keep and maintain the
+    following, namely :—
+    (i) a daily case register in Form No. 3C;
+    (ii) an inventory under broad heads, as on the first and the last day of the previous year, of the stock of drugs, medicines and other consumable accessories
+    used for the purpose of his profession.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 88
+  extraction: auto
+  reviewed: false
+- id: RULES1962:r6F(4)
+  source_id: RULES1962
+  breadcrumb: Income-tax Rules 1962 > r.6F(4) > FY 2025-26 and earlier
+  heading: Books of account and other documents to be kept and maintained under section 44AA(3) by persons carrying on certain professions
+  text: |-
+    (4) The books of account and other documents specified in sub-rule (2) and sub-rule (3) other than those relating to a previous year which has come to an end
+    shall be kept and maintained by the person at the place where he is carrying on the profession or, where the profession is carried on in more places than one, at
+    the principal place of his profession:
+    Provided that where the person keeps and maintains separate books of account in respect of each place where the profession is carried on, such books of
+    account and other documents may be kept and maintained at the respective places at which the profession is carried on.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 88
+  extraction: auto
+  reviewed: false
+- id: RULES1962:r6F(5)
+  source_id: RULES1962
+  breadcrumb: Income-tax Rules 1962 > r.6F(5) > FY 2025-26 and earlier
+  heading: Books of account and other documents to be kept and maintained under section 44AA(3) by persons carrying on certain professions
+  text: |-
+    (5) The books of account and other documents specified in sub-rule (2) and sub-rule (3) shall be kept and maintained for a period of six years from the end of
+    the relevant assessment year:
+    Provided that where the assessment in relation to any assessment year has been reopened under section 147 of the Act within the period specified in section
+    149 of the Act, all the books of account and other documents which were kept and maintained at the time of reopening of the assessment shall continue to be
+    so kept and maintained till the assessment so reopened has been completed.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 88
+  extraction: auto
+  reviewed: false
+- id: RULES1962:r6F(6)
+  source_id: RULES1962
+  breadcrumb: Income-tax Rules 1962 > r.6F(6) > FY 2025-26 and earlier
+  heading: Books of account and other documents to be kept and maintained under section 44AA(3) by persons carrying on certain professions
+  text: |-
+    (6) Notwithstanding anything contained in sub-rules (1) to (3), it shall not be necessary for any person carrying on any of the professions specified in sub-rule
+    (1) to keep and maintain the books of account and other documents specified in sub-rule (2) or sub-rule (3) in relation to any previous year commencing
+    before the first day of March, 1983.
+    CCC.—Reports of audit of accounts of persons carrying on business or profession
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 88
+  - 89
+  extraction: auto
+  reviewed: false
+- id: RULES1962:r12(1)
+  source_id: RULES1962
+  breadcrumb: Income-tax Rules 1962 > r.12(1) > FY 2025-26 and earlier
+  heading: Return of income and return of fringe benefits
+  text: |-
+    12. (1) The return of income required to be furnished under sub-section (1) or sub-section (3) or sub-section (4A) or sub-section (4B) or sub-section (4C) or
+    sub-section (4D) 91[or sub-section (4E)] 92[or sub-section (4F)] of section 139 or clause (i) of sub-section (1) of section 142 93[or section 148] or section 153A
+    relating to the assessment year commencing [on the 1st day of April, 94[2026] shall,—
+    (a) in the case of a person being 95[an individual who is a resident other than not ordinarily resident and] where the total income includes income
+    chargeable to income-tax, under the head,—
+    (i) "Salaries" or income in the nature of family pension as defined in the Explanation to clause (iia) of section 57; or
+    (ii) "Income from house property", where assessee does not own more than 95a[two house properties] and does not have any brought forward loss
+    96[or loss to be carried forward] under the head; or
+    (iii) "Income from other sources", except winnings from lottery or income from race horses [and does not have any loss under the head],
+    be in Form SAHAJ (ITR-1) and be verified in the manner indicated therein:
+    Provided that the provisions of this clause shall not apply to a person who,—
+    97[(I) has assets (including financial interest in any entity) located outside India;
+    (IA) has signing authority in any account located outside India;
+    (IB) has income from any source outside India;
+    (IC) has income to be apportioned in accordance with provisions of section 5A;]
+    98[(ID) has claimed deduction under section 57, other than deduction claimed under clause (iia) thereof;
+    (IE) is a director in any company;
+    (IF) has held any unlisted equity share at any time during the previous year;
+    (IG) is assessable for the whole or any part of the income on which tax has been deducted at source in the hands of a person other than the
+    assessee;]
+    (II) has claimed any relief of tax under section 90 or 90A or deduction of tax under section 91; 99[***]
+    1[(III) has agricultural income, exceeding five thousand rupees;]
+    2[(IV) has total income, exceeding fifty lakh rupees;
+    (V) has income taxable under section 115BBDA; 3[***]
+    (VI) has income of the nature referred to in section 115BBE;]
+    4[(VII) is a person in whose case tax has been deducted under section 194N; or
+    (VIII) is a person in whose case payment or deduction of tax has been deferred under sub-section (2) of section 191 or sub-section (1C) of section
+    192;]
+    (b) 5[***]
+    (ba) 6[***]
+    7[(c) in the case of a person being an individual [not being an individual to whom clause (a) applies] or a Hindu undivided family where the total income
+    does not include income 8[under the head] business or profession, be in Form No. ITR-2 and be verified in the manner indicated therein;]
+    [(ca) in the case of a person being an individual or 9[a Hindu undivided family, who is a resident other than not ordinarily resident, or a firm, other than
+    limited liability partnership firm, which is a resident] deriving 10[income under the head "Profits or gains of business or profession" and such income is
+    computed in accordance with special provisions referred to in section 44AD, section 44ADA and section 44AE of the Act for computation of such
+    income, be in Form SUGAM (ITR-4)] and be verified in the manner indicated therein:]
+    Provided that the provisions of this clause shall not apply to a person who,—
+    11[(I) has assets (including financial interest in any entity) located outside India;
+    (IA) has signing authority in any account located outside India;
+    (IB) has income from any source outside India;
+    (IC) has income to be apportioned in accordance with provisions of section 5A;
+    (ID) is a director in any company;
+    (IE) has held any unlisted equity share at any time during the previous year;
+    (IF) has total income, exceeding fifty lakh rupees;
+    (IG) owns more than 95a[two house properties], the income of which is chargeable under the head "Income from house property";
+    (IH) has any brought forward loss or loss to be carried forward under any head of income;
+    (IJ) is assessable for the whole or any part of the income on which tax has been deducted at source in the hands of a person other than the
+    assessee;]
+    (II) has claimed any relief of tax under section 90 or 90A or deduction of tax under section 91; 12[***]
+    13[(III) has agricultural income, exceeding five thousand rupees;]
+    14[(IV) has income taxable under section 115BBDA; or
+    (V) has income of the nature referred to in section 115BBE;]
+    15[(VI) has income of the nature specified in† clause (vi) of sub-section (2) of section 17 on which tax is payable or deductible, as the case may be,
+    under sub-section (2) of section 191 or sub-section (1C) of section 192;]
+    (d) in the case of a person being an individual or a Hindu undivided family other than the individual or Hindu undivided family referred to in clause (a)
+    16[***] or clause (c) [or clause (ca)] and 17[having income under the head] business or profession, be in 18[Form No. ITR-3] and be verified in the
+    manner indicated therein;
+    (e) in the case of a person not being an individual or a Hindu undivided family or a company or a person to which clause (g) applies, be in Form No. ITR-
+    5 and be verified in the manner indicated therein;
+    (f) in the case of a company not being a company to which clause (g) applies, be in Form No. ITR-6 and be verified in the manner indicated therein;
+    (g) in the case of a person including a company whether or not registered under section 25 of the Companies Act, 1956 (1 of 1956), required to file a
+    return under sub-section (4A) or sub-section (4B) or sub-section (4C) or sub-section (4D) 19[***] of section 139, be in Form No. ITR-7 and be verified
+    in the manner indicated therein;
+    (h) [***]
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 224
+  - 225
+  extraction: auto
+  reviewed: false
+- id: RULES1962:r128(1)
+  source_id: RULES1962
+  breadcrumb: Income-tax Rules 1962 > r.128(1) > FY 2025-26 and earlier
+  heading: Foreign Tax Credit
+  text: |-
+    128. (1) An assessee, being a resident shall be allowed a credit for the amount of any foreign tax paid by him in a country or specified territory outside India,
+    by way of deduction or otherwise, in the year in which the income corresponding to such tax has been offered to tax or assessed to tax in India, in the manner
+    and to the extent as specified in this rule:
+    Provided that in a case where income on which foreign tax has been paid or deducted, is offered to tax in more than one year, credit of foreign tax shall be
+    allowed across those years in the same proportion in which the income is offered to tax or assessed to tax in India.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 588
+  extraction: auto
+  reviewed: false
+- id: RULES1962:r128(2)
+  source_id: RULES1962
+  breadcrumb: Income-tax Rules 1962 > r.128(2) > FY 2025-26 and earlier
+  heading: Foreign Tax Credit
+  text: |-
+    (2) The foreign tax referred to in sub-rule (1) shall mean,—
+    (a) in respect of a country or specified territory outside India with which India has entered into an agreement for the relief or avoidance of double taxation
+    of income in terms of section 90 or section 90A, the tax covered under the said agreement;
+    (b) in respect of any other country or specified territory outside India, the tax payable under the law in force in that country or specified territory in the
+    nature of income-tax referred to in clause (iv) of the Explanation to section 91.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 588
+  extraction: auto
+  reviewed: false
+- id: RULES1962:r128(3)
+  source_id: RULES1962
+  breadcrumb: Income-tax Rules 1962 > r.128(3) > FY 2025-26 and earlier
+  heading: Foreign Tax Credit
+  text: |-
+    (3) The credit under sub-rule (1) shall be available against the amount of tax, surcharge and cess payable under the Act but not in respect of any sum payable
+    by way of interest, fee or penalty.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 588
+  extraction: auto
+  reviewed: false
+- id: RULES1962:r128(4)
+  source_id: RULES1962
+  breadcrumb: Income-tax Rules 1962 > r.128(4) > FY 2025-26 and earlier
+  heading: Foreign Tax Credit
+  text: |-
+    (4) No credit under sub-rule (1) shall be available in respect of any amount of foreign tax or part thereof which is disputed in any manner by the assessee:
+    Provided that the credit of such disputed tax shall be allowed for the year in which such income is offered to tax or assessed to tax in India if the assessee
+    within six months from the end of the month in which the dispute is finally settled, furnishes evidence of settlement of dispute and an evidence to the effect
+    that the liability for payment of such foreign tax has been discharged by him and furnishes an undertaking that no refund in respect of such amount has directly
+    or indirectly been claimed or shall be claimed.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 588
+  extraction: auto
+  reviewed: false
+- id: RULES1962:r128(5)
+  source_id: RULES1962
+  breadcrumb: Income-tax Rules 1962 > r.128(5) > FY 2025-26 and earlier
+  heading: Foreign Tax Credit
+  text: |-
+    (5) The credit of foreign tax shall be the aggregate of the amounts of credit computed separately for each source of income arising from a particular country or
+    specified territory outside India and shall be given effect to in the following manner:—
+    (i) the credit shall be the lower of the tax payable under the Act on such income and the foreign tax paid on such income:
+    Provided that where the foreign tax paid exceeds the amount of tax payable in accordance with the provisions of the agreement for relief or avoidance
+    of double taxation, such excess shall be ignored for the purposes of this clause;
+    (ii) the credit shall be determined by conversion of the currency of payment of foreign tax at the telegraphic transfer buying rate on the last day of the
+    month immediately preceding the month in which such tax has been paid or deducted.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 588
+  extraction: auto
+  reviewed: false
+- id: RULES1962:r128(6)
+  source_id: RULES1962
+  breadcrumb: Income-tax Rules 1962 > r.128(6) > FY 2025-26 and earlier
+  heading: Foreign Tax Credit
+  text: |-
+    (6) In a case where any tax is payable under the provisions of section 115JB or section 115JC, the credit of foreign tax shall be allowed against such tax in the
+    same manner as is allowable against any tax payable under the provisions of the Act other than the provisions of the said sections (hereafter referred to as the
+    "normal provisions").
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 588
+  extraction: auto
+  reviewed: false
+- id: RULES1962:r128(7)
+  source_id: RULES1962
+  breadcrumb: Income-tax Rules 1962 > r.128(7) > FY 2025-26 and earlier
+  heading: Foreign Tax Credit
+  text: |-
+    (7) Where the amount of foreign tax credit available against the tax payable under the provisions of section 115JB or section 115JC exceeds the amount of tax
+    credit available against the normal provisions, then while computing the amount of credit under section 115JAA or section 115JD in respect of the taxes paid
+    under section 115JB or section 115JC, as the case may be, such excess shall be ignored.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 588
+  extraction: auto
+  reviewed: false
+- id: RULES1962:r128(8)
+  source_id: RULES1962
+  breadcrumb: Income-tax Rules 1962 > r.128(8) > FY 2025-26 and earlier
+  heading: Foreign Tax Credit
+  text: |-
+    (8) Credit of any foreign tax shall be allowed on furnishing the following documents by the assessee, namely:—
+    (i) a statement of income from the country or specified territory outside India offered for tax for the previous year and of foreign tax deducted or paid on
+    such income in Form No. 67 and verified in the manner specified therein;
+    (ii) certificate or statement specifying the nature of income and the amount of tax deducted therefrom or paid by the assessee,—
+    (a) from the tax authority of the country or specified territory outside India; or
+    (b) from the person responsible for deduction of such tax; or
+    (c) signed by the assessee:
+    Provided that the statement furnished by the assessee in clause (c) shall be valid if it is accompanied by,—
+    (A) an acknowledgement of online payment or bank counter foil or challan for payment of tax where the payment has been made by the assessee;
+    (B) proof of deduction where the tax has been deducted.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 588
+  extraction: auto
+  reviewed: false
+- id: RULES1962:r128(9)
+  source_id: RULES1962
+  breadcrumb: Income-tax Rules 1962 > r.128(9) > FY 2025-26 and earlier
+  heading: Foreign Tax Credit
+  text: |-
+    58[(9) The statement in Form No. 67 referred to in clause (i) of sub-rule (8) and the certificate or the statement referred to in clause (ii) of sub-rule (8) shall be
+    furnished on or before the end of the assessment year relevant to the previous year in which the income referred to in sub-rule (1) has been offered to tax or
+    assessed to tax in India and the return for such assessment year has been furnished within the time specified under sub-section (1) or sub-section (4) of section
+    139:
+    Provided that where the return has been furnished under sub-section (8A) of section 139, the statement in Form No. 67 referred to in clause (i) of sub-rule (8)
+    and the certificate or the statement referred to in clause (ii) of sub-rule (8) to the extent it relates to the income included in the updated return, shall be
+    furnished on or before the date on which such return is furnished.]
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 588
+  extraction: auto
+  reviewed: false
+- id: RULES1962:r128(10)
+  source_id: RULES1962
+  breadcrumb: Income-tax Rules 1962 > r.128(10) > FY 2025-26 and earlier
+  heading: Foreign Tax Credit
+  text: |-
+    (10) Form No. 67 shall also be furnished in a case where the carry backward of loss of the current year results in refund of foreign tax for which credit has
+    been claimed in any earlier previous year or years.
+    Explanation.—For the purposes of this rule "telegraphic transfer buying rate" shall have the same meaning as assigned to it in Explanation to rule 26.]
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 588
+  - 589
+  - 590
+  extraction: auto
+  reviewed: false

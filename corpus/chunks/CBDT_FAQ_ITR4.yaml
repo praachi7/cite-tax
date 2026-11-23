@@ -1,0 +1,641 @@
+# Corpus chunks for CBDT_FAQ_ITR4: e-Filing portal FAQs on ITR-4 (Sugam), AY 2026-27
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: CBDT_FAQ_ITR4:Q1
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q1 > FY 2025-26
+  heading: 1. Who is eligible to file ITR-4 for AY 2026-27?
+  text: |-
+    1. Who is eligible to file ITR-4 for AY 2026-27?
+    ITR-4 can be filed by a Resident Individual / HUF / Firm (other than LLP) who has:
+    ●​ Income not exceeding ₹50 Lakh during the FY
+    ●​ Income from Business and Profession which is computed on a presumptive basis u/s
+    44AD, 44ADA or 44AE
+    ●​ Long-term capital gain u/s 112A not exceeding Rs.1.25 lakhs
+    ●​ Income from Salary/Pension, Two House Property, Agricultural Income (up to ₹ 5000/-)
+    ●​ Other Sources which include (excluding winning from Lottery and Income from
+    Racehorses):
+    ○​ Interest from Savings Account
+    ○​ Interest from Deposit (Bank / Post Office / Cooperative Society)
+    ○​ Interest from Income Tax Refund
+    ○​ Family Pension
+    ○​ Any other Interest Income (e.g., Interest Income from Unsecured Loan)
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 1
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q2
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q2 > FY 2025-26
+  heading: 2. Who is not eligible to file ITR-4 for AY 2026-27?
+  text: |-
+    2. Who is not eligible to file ITR-4 for AY 2026-27?
+    ITR-4 cannot be filed by an individual / HUF / Firm (Other than LLP) who:
+    ●​ is a Resident but Not Ordinarily Resident (RNOR), or Non-Resident Indian
+    ●​ has total income exceeding ₹ 50 Lakh
+    ●​ Short-term capital gains;
+    ●​ Long-term capital gain u/s 112A exceeding Rs.1.25 lakhs
+    ●​ has agricultural income in excess of ₹5,000/-
+    ●​ is a Director in a Company
+    ●​ has income from more than Two House Property;
+    ●​ has income of the following nature:
+    ○​ winnings from lottery;
+    ○​ activity of owning and maintaining racehorses;
+    ○​ income taxable at special rates u/s115BBDA or Section 115BBE;
+    ●​ has held any unlisted equity shares at any time during the previous year
+    ●​ has deferred income tax on ESOP received from employer being an eligible start-up
+    ●​ is not covered under the eligibility conditions for ITR-4
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 1
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q3
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q3 > FY 2025-26
+  heading: 3. What are the key changes in ITR-4 form for AY 2026-27?
+  text: |-
+    3. What are the key changes in ITR-4 form for AY 2026-27?
+    Below are the key Changes in ITR-4 for AY 2026-27:
+    ●​ Two House Properties: Taxpayers can now report income from up to two house
+    properties in ITR-4, rather than just one house property.
+    ●​ Unrealised Rent Field: A new, specific field for "rent which cannot be realised" has been
+    added, aiding taxpayers with rented properties.
+    ●​ Foreign Asset Reporting: Requirements for reporting foreign retirement benefits have
+    been removed.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 1
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q4
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q4 > FY 2025-26
+  heading: 4. I am an individual with a business income can I opt for old tax regime while filing ITR-4?
+  text: |-
+    4. I am an individual with a business income can I opt for old tax regime while filing ITR-4?
+    Yes, you can opt for old tax regime if you have business income but to opt for the old Tax regime
+    you must file Form 10 IEA before the due date of filing the ITR u/s 139(1) of the Income Tax Act,
+    1961.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 1
+  - 2
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q5
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q5 > FY 2025-26
+  heading: 5. I am an individual with a business income can I switch between new tax regime and old tax
+  text: |-
+    5. I am an individual with a business income can I switch between new tax regime and old tax
+    regime every year?
+    Individuals having business income are not eligible to choose between the new and old tax
+    regimes every year. Once they have opted for the old tax regime, they only have a one-time option
+    of switching back to the new tax regime in their lifetime. Once they switch back, they cannot opt
+    for the old tax regime again.
+    Essentially, people with business income must file Form 10-IEA twice, once to use the old tax
+    regime and the second to switch back to the new regime.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 2
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q6
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q6 > FY 2025-26
+  heading: 6. What is the due date of filing Form 10-IEA for opting/withdrawing old tax regime?
+  text: |-
+    6. What is the due date of filing Form 10-IEA for opting/withdrawing old tax regime?
+    As per the income tax laws, an individual having business income shall submit Form 10-IEA
+    before the due date of filing ITR u/s 139 (1) of Income Tax Act,1961.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 2
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q7
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q7 > FY 2025-26
+  heading: 7. Whether all deductions will be available to claim while filing ITR-4 return?
+  text: |-
+    7. Whether all deductions will be available to claim while filing ITR-4 return?
+    Yes, all deductions will be available to claim in return once taxpayer changes the option of
+    ‘default new tax regime’ to ‘old tax regime’ by selecting the below question as ‘Yes with the due
+    date’ after filing Form 10-IEA within the due date and furnish Date of filing of Form 10IEA and
+    Acknowledgement number in the return under Filing section of Part A General-Personal
+    Information:
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 2
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q8
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q8 > FY 2025-26
+  heading: 8. What documents do I need to file ITR-4? Is it necessary to link Aadhaar with PAN to file ITR?
+  text: |-
+    8. What documents do I need to file ITR-4? Is it necessary to link Aadhaar with PAN to file ITR?
+    You will need to keep the below documents ready (as applicable) to file ITR-4:
+    ●​ Form 16
+    ●​ Form 16A
+    ●​ Form 26AS
+    ●​ AIS
+    ●​ Pay Slip
+    ●​ Bank Statements
+    ●​ Housing Loan Interest Certificates
+    ●​ House rent receipt (if applicable),
+    ●​ Rental Agreement
+    ●​ Receipts for Donation Made
+    ●​ Investment, premium payment receipts - LIC, ULIP etc. and other relevant Documents to
+    furnish information in ITR form.
+    Linking of Aadhaar and PAN is important. However, you would still be able to file your ITR if your
+    PAN is not linked with Aadhaar, but you will have limited access on the portal. It is therefore
+    advisable to link PAN with Aadhaar.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 2
+  - 3
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q9
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q9 > FY 2025-26
+  heading: 9. What is the presumptive taxation scheme for users filing ITR-4?
+  text: |-
+    9. What is the presumptive taxation scheme for users filing ITR-4?
+    According to Sections 44AA of the Income Tax Act ,1961, a person engaged in business or
+    profession needs to maintain regular books of accounts under certain circumstances as per
+    specific conditions. To relieve small taxpayers from such compliance burden, the Income Tax Act
+    has framed the presumptive taxation scheme u/s 44AD, 44ADA and 44AE. A person adopting the
+    presumptive taxation scheme can declare income at a prescribed rate. ​The Act has laid out
+    presumptive taxation schemes (for ITR-4 users) as given below:
+    ●​ Section 44AD: Computation of income on estimated basis in the case of taxpayers
+    (being a Resident Individual, Resident HUF, or Resident Partnership Firm (other than
+    LLP) engaged in certain business subject to certain conditions.
+    ●​ Section 44ADA: Computation of professional income on estimated basis for Assessee
+    being a resident in India and engaged in a profession referred to in section 44AA (1)
+    subject to certain conditions.
+    ●​ Section 44AE: Computation of income on estimated basis in the case of taxpayers
+    (being an Individual, HUF, Firm (other than LLP) or any other person being a resident or
+    non-resident) engaged in the business of plying, leasing or hiring goods carriages, who
+    owns not more than ten goods carriages at any time during the previous year.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 3
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q10
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q10 > FY 2025-26
+  heading: 10. What is the Threshold limit to opt for the presumptive taxation scheme under section 44AD &
+  text: |-
+    10. What is the Threshold limit to opt for the presumptive taxation scheme under section 44AD &
+    Section 44ADA?
+    The threshold limit of turnover under Section 44AD is Rs.3 crore (if the sum of amount or
+    aggregate of the amounts received during the previous year, in cash and in any other mode, does
+    not exceed 5% of the total gross receipts of such previous year) and Rs.2 crores otherwise.
+    The threshold limit under Section 44ADA limit is Rs.75lakh (if sum of the amount or aggregate of
+    the amounts received during the previous year, in cash and in any other mode, does not exceed
+    5% of the total gross receipts of such previous year) and Rs.50 lakhs otherwise.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 3
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q11
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q11 > FY 2025-26
+  heading: 11. Who is not eligible for the presumptive taxation scheme of Section 44AD?
+  text: |-
+    11. Who is not eligible for the presumptive taxation scheme of Section 44AD?
+    The scheme of Section 44AD is designed to give relief to small taxpayers engaged in any
+    business, except the following businesses:
+    ●​ Business of plying, hiring, or leasing goods carriages referred to in sections 44AE
+    ●​ A person carrying on any agency business
+    ●​ A person earning income in the form of commission or brokerage (e.g., insurance agents)
+    ●​ Any business whose total turnover or gross receipts exceeds ₹ 2 Crore
+    ●​ Any business whose total turnover or gross receipts exceeds ₹ 3 Crore (₹ 3 Crore
+    applicable for case where amount or aggregate of the amounts received during the
+    previous year, in cash and any other mode, does not exceed 5% of the total gross
+    receipts of such previous year)
+    Apart from the above, a person who is required to maintain books of accounts as referred to in
+    Section 44AA (1) i​s not eligible for presumptive taxation scheme u/s 44AD.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 3
+  - 4
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q12
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q12 > FY 2025-26
+  heading: 12. The gross receipts for my business in the year are more than ₹ 3 Crore. Can I opt for
+  text: |-
+    12. The gross receipts for my business in the year are more than ₹ 3 Crore. Can I opt for
+    presumptive taxation scheme of 44AD?
+    N​ o. You can opt for the presumptive taxation scheme of section 44AD only if the total turnover or
+    gross receipts from your business do not exceed the limit prescribed (i.e., ₹ 3 Crore).
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 4
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q13
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q13 > FY 2025-26
+  heading: 13. Who can opt for presumptive taxation scheme of Section 44ADA?
+  text: |-
+    13. Who can opt for presumptive taxation scheme of Section 44ADA?
+    The presumptive taxation scheme of Section 44ADA​can be adopted by an assessee being
+    individual or partnership firm (other than LLP) and resident in India carrying on specified
+    profession whose gross receipts do not exceed ₹ 50 Lakh in a FY.
+    Provided that in case the amount or aggregate of the amounts received during the previous year,
+    in cash, does not exceed five per cent of the total gross receipts of such previous year, then the
+    limit is up to 75 Lakh in a FY.
+    Following professions are specified professions:
+    ●​ Legal​
+    ●​ Medical
+    ●​ Engineering or Architectural
+    ●​ Accountancy
+    ●​ Technical Consultancy
+    ●​ Interior Decoration
+    ●​ Any other Profession as notified by CBDT
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 4
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q14
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q14 > FY 2025-26
+  heading: 14. I opted for presumptive income scheme of Section 44AD or 44ADA. Can I claim further
+  text: |-
+    14. I opted for presumptive income scheme of Section 44AD or 44ADA. Can I claim further
+    deduction of expenses after declaring profit at applicable rate under respective sections of gross
+    receipts?
+    No, a person who opted for the presumptive taxation scheme is deemed to have claimed all
+    deduction of expenses. Any further claim of deduction is not allowed after declaring profit at
+    specified rate. However, you can claim deductions under Chapter VI-A​.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 4
+  - 5
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q15
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q15 > FY 2025-26
+  heading: 15. I opted for the presumptive income scheme of Section 44ADA. Do I have to pay Advance Tax
+  text: |-
+    15. I opted for the presumptive income scheme of Section 44ADA. Do I have to pay Advance Tax
+    in respect of income from profession covered in Section 44ADA?
+    Yes. Anyone opting for the presumptive taxation scheme u/s 44ADA is liable to pay 100% of
+    Advance Tax on or before 15th March of the previous year. If you fail to pay the Advance Tax by
+    15th March of previous year, you will be liable to pay interest as per Section 234B and Section
+    234C​. Any amount paid by way of Advance Tax on or before 31st March will also be treated as
+    Advance Tax paid during the FY ending on that day.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 5
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q16
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q16 > FY 2025-26
+  heading: 16. I opted for presumptive taxation scheme of Section 44ADA. Do I need to maintain books of
+  text: |-
+    16. I opted for presumptive taxation scheme of Section 44ADA. Do I need to maintain books of
+    accounts as per Section 44AA?
+    If you are engaged in a specified profession as referred in Sections 44AA (1)​ and opt for
+    presumptive taxation scheme of Section 44ADA (declare income @50% of the gross receipts),
+    you are not required to maintain the books of accounts in respect of specified profession (i.e.,
+    the provision of Sections 44AA will not apply).
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 5
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q17
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q17 > FY 2025-26
+  heading: 17. I opted for the presumptive taxation scheme of Section 44AE. Do I have to pay Advance Tax
+  text: |-
+    17. I opted for the presumptive taxation scheme of Section 44AE. Do I have to pay Advance Tax
+    in respect of income from business covered in Section 44AE?
+    Yes, you will be liable to pay Advance Tax. ​There is no concession regarding the payment of
+    advance tax if you opted for the presumptive taxation scheme of ​section 44AE.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 5
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q18
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q18 > FY 2025-26
+  heading: 18. How do I compute income from a house property which is partly self-occupied and partly
+  text: |-
+    18. How do I compute income from a house property which is partly self-occupied and partly
+    let-out?
+    House Property may consist of two or more independent units, one of which is self-occupied,
+    and the remaining is used for any other purpose (i.e., let-out or used for own business). Income
+    from such property will be computed in the following manner:
+    1.​ Part / unit which is occupied by you for your residence throughout the year will be treated
+    as an independent property and income from such a part / unit will be computed in the
+    manner as described in the ITR-4 user manual in case of a self-occupied property.
+    2.​ Part / unit which is let out will be treated as an independent property and income from
+    such a part/unit will be computed in the manner as described in the ITR-4 user manual in
+    case of let out property. ​
+    Please Note: From AY 2026-27, you can disclose income from up to two house properties, in
+    ITR-4.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 5
+  - 6
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q19
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q19 > FY 2025-26
+  heading: 19. Do I need to file any form if I am claiming deduction u/s 80DD and 80U?
+  text: |-
+    19. Do I need to file any form if I am claiming deduction u/s 80DD and 80U?
+    If you want to claim deduction u/s 80DD and 80U then you must mandatorily file from 10 IA
+    before filing the return of Income and enter the details (Date of filing form and acknowledgement
+    no.) of Form 10 IA in Schedule 80DD and 80U while filing the return of Income.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 6
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q20
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q20 > FY 2025-26
+  heading: 20. What is the tax treatment of unrealized rent that is subsequently realized?
+  text: |-
+    20. What is the tax treatment of unrealized rent that is subsequently realized?
+    Any subsequent recovery of unrealized rent will be deemed to be your income under the head
+    Income from House Property in the year in which such rent is realized (whether or not you are the
+    owner of that property in that year).​It will be charged to tax after deducting a sum equal to 30%
+    of unrealized rent.​
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 6
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q21
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q21 > FY 2025-26
+  heading: 21. Can my employer PAN be quoted in place of TAN?
+  text: |-
+    21. Can my employer PAN be quoted in place of TAN?
+    No. PAN should never be quoted in the textbox where TAN is to be quoted, as the purposes for
+    which PAN and TAN are allotted are different. TAN is a unique identification number which is
+    allotted to parties who deduct or collect tax at source. PAN is a unique identification number
+    issued to keep a linking of the transactions carried by a person like payment of tax, TDS / TCS
+    credit, Return of Income, Return of Wealth, correspondence with the Income Tax Department or
+    correspondence by the ITD, investments made by a person, loan taken by a person, etc.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 6
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q22
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q22 > FY 2025-26
+  heading: 22. What is the due date of Filing ITR-4 for AY 2026-27 (FY 2025-26)?
+  text: |-
+    22. What is the due date of Filing ITR-4 for AY 2026-27 (FY 2025-26)?
+    For AY 2026-27 (FY 2025-26) the due date of filing of ITR-4 is 31st August 2026.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 6
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q23
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q23 > FY 2025-26
+  heading: 23. What is Rebate u/s 87A as per new Tax Regime and Old tax regime?
+  text: |-
+    23. What is Rebate u/s 87A as per new Tax Regime and Old tax regime?
+    Currently, section 87A allows individuals to claim a rebate of Rs 12,500 under the old tax regime
+    and Rs 60,000 under the new tax regime.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 6
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q24
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q24 > FY 2025-26
+  heading: 24. Can I file ITR for last 4 assessment years now?
+  text: |-
+    24. Can I file ITR for last 4 assessment years now?
+    Yes, you can file ITR-U, if you have missed filing your previous four years ITRs. For current year
+    (AY 2026-27) you can file your regular ITR.
+    24. Can I file ITR for last 4 assessment years now?
+    Yes, you can file ITR-U, if you have missed filing your previous four years ITRs. For current year
+    (AY 2026-27) you can file your regular ITR.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 6
+  - 7
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q25
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q25 > FY 2025-26
+  heading: 25. What happens if I file Income Tax Return after the due date u/s 139(1)?
+  text: |-
+    25. What happens if I file Income Tax Return after the due date u/s 139(1)?
+    In case you miss filing the ITR within the due date u/s 139(1), you can still file your Income Tax
+    Return, but you may be required to pay a late filing fee of up to ₹5000/-. Additionally, you will also
+    be required to pay interest on the tax liability (if any).
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 7
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q26
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q26 > FY 2025-26
+  heading: 26. Do I need to give additional information if I am claiming deductions u/s 80C?
+  text: |-
+    26. Do I need to give additional information if I am claiming deductions u/s 80C?
+    You must give additional information regarding deduction u/s 80C. If you want to claim a
+    deduction u/s 80C, then you must enter the details below:
+    ●​ Amount eligible for deduction
+    ●​ Policy no. or Document identification No.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 7
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q27
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q27 > FY 2025-26
+  heading: 27. Do I need to give additional information if I am claiming deductions u/s 80CCD(1) or
+  text: |-
+    27. Do I need to give additional information if I am claiming deductions u/s 80CCD(1) or
+    80CCD(1B)?
+    You must give additional information regarding deduction u/s 80CCD(1) or 80CCD(1B). If you
+    want to claim these deductions, then you must enter the PRAN by clicking on PRAN tab.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 7
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q28
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q28 > FY 2025-26
+  heading: 28. What additional information I must furnish in ITR-4 form if I am claiming deductions u/s 80DD
+  text: |-
+    28. What additional information I must furnish in ITR-4 form if I am claiming deductions u/s 80DD
+    Or 80U?
+    You must give additional information regarding deduction u/s 80DD or Section 80U. If you want
+    to claim deduction u/s 80DD or 80U, then you must enter the details below:
+    ●​ Nature Of Disability
+    ●​ Type of Disability
+    ●​ Type of Dependent
+    ●​ Amount of Deduction
+    ●​ PAN of Dependent
+    ●​ Aadhaar of Dependent
+    ●​ Acknowledgement no. of form 10 IA filed
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 7
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q29
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q29 > FY 2025-26
+  heading: 29. Do I need to give additional information if I am claiming deductions u/s 80D?
+  text: |-
+    29. Do I need to give additional information if I am claiming deductions u/s 80D?
+    You must give additional information regarding deduction u/s 80D. If you want to claim
+    deduction u/s 80D, then you must enter the details below:
+    ●​ Name of the Insurer (Insurance Company)
+    ●​ Policy Number
+    ●​ Health Insurance amount
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 7
+  - 8
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q30
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q30 > FY 2025-26
+  heading: 30. Do I need to give additional information if I am claiming deductions u/s 80E, 80EE, 80EEA &
+  text: |-
+    30. Do I need to give additional information if I am claiming deductions u/s 80E, 80EE, 80EEA &
+    80EEB?
+    You must give additional information regarding deduction u/s 80E, 80EE ,80EEA and 80EEB. If
+    you want to claim a deduction under these sections, then you must enter the details below:
+    ●​ Loan taken from
+    ●​ Name of the institution or bank
+    ●​ Loan Account No.
+    ●​ Date of sanction of loan
+    ●​ Total Amount of loans
+    ●​ Loan outstanding as on date
+    ●​ Interest amount
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 8
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q31
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q31 > FY 2025-26
+  heading: 31. Do I need to file any form if I am claiming deduction u/s 80GG?
+  text: |-
+    31. Do I need to file any form if I am claiming deduction u/s 80GG?
+    If you want to claim deduction u/s 80GG then you must mandatorily file Form 10 BA before filing
+    the return of Income and enter the details (acknowledgement no.) of Form 10 BA in Schedule
+    80GG while filing the return of Income.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 8
+  extraction: auto
+  reviewed: false
+- id: CBDT_FAQ_ITR4:Q32
+  source_id: CBDT_FAQ_ITR4
+  breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27 > Q32 > FY 2025-26
+  heading: 32. Is there any change in TDS schedule of ITR-4 for AY 2026-27?
+  text: |-
+    32. Is there any change in TDS schedule of ITR-4 for AY 2026-27?
+    If you want to claim TDS, you have to mandatorily select the section under which TDS is
+    deducted.
+  tax_year_first: 2025
+  tax_year_last: 2025
+  authority_rank: 4
+  pdf_pages:
+  - 8
+  - 9
+  extraction: auto
+  reviewed: false

@@ -1,0 +1,23 @@
+# CiteTax local services. Phase C: PostgreSQL 17 with pgvector for the retrieval index.
+# Start: docker compose up -d db    Stop: docker compose down
+# The index is rebuilt from corpus/chunks/*.yaml, so the volume holds nothing that cannot be regenerated.
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    container_name: citetax-db
+    environment:
+      POSTGRES_USER: citetax
+      POSTGRES_PASSWORD: citetax
+      POSTGRES_DB: citetax
+    ports:
+      - "5433:5432"
+    volumes:
+      - citetax-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U citetax -d citetax"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  citetax-pgdata:

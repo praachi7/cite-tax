@@ -1,0 +1,235 @@
+# Corpus scope (Phase C, option B): which parts of each registry source become chunks.
+# Read by scripts/draft_chunks.py. Rule for adding anything: a parameter, flag, assumption
+# or labelled retrieval query must need it.
+#
+# Modes
+#   statute   numbered sections or rules, split into sub-sections.
+#             units: list of section numbers; optional `only` {section: [sub-sections]} keeps a subset.
+#             label: "s" for sections, "r" for rules (gives ids like IT2025:s58(2), RULES2026:r76(7)).
+#   article   treaty articles ("ARTICLE 15"), split into numbered paragraphs (DTAA_US:art15(1)).
+#   faq       numbered question-and-answer pairs (CBDT_FAQ_PRES:Q17); `q_regex` finds a question start.
+#   anchor    explicit passages: id, heading, start regex, end regex (end is exclusive; omitted = end of file).
+#   whole     the whole document as one chunk, with the given id.
+# Table chunks (s.58(2) T1-T3, slabs, Finance Act schedule rows) are typed by hand straight into
+# corpus/chunks/<SOURCE>.yaml with extraction: hand_typed; the drafter never overwrites them.
+
+sources:
+  IT2025:
+    mode: statute
+    label: s
+    breadcrumb: Income-tax Act 2025
+    units: ["6", "58", "62", "63", "156", "159", "160", "202", "263", "404", "405", "406", "408", "425", "516", "536"]
+    only:
+      "263": ["1"]
+
+  IT1961:
+    mode: statute
+    label: s
+    breadcrumb: Income-tax Act 1961
+    units: ["6", "44AA", "44AB", "44AD", "44ADA", "44AE", "87A", "90", "91", "115BAC", "139", "208", "209", "210", "211", "234B", "234C", "288A", "288B"]
+    only:
+      "139": ["1"]
+      "44AD": ["1"]
+      "44AE": ["1"]
+
+  RULES1962:
+    mode: statute
+    label: r
+    breadcrumb: Income-tax Rules 1962
+    units: ["6F", "12", "128"]
+    only:
+      "12": ["1"]
+
+  RULES2026:
+    mode: statute
+    label: r
+    breadcrumb: Income-tax Rules 2026
+    units: ["46", "76", "136", "164"]
+    only:
+      "164": ["5", "6", "7"]
+
+  # Finance Act 2026: margin notes share lines with the text, so passages are anchored.
+  # s.2 sets rates for the 1961 Act year (AY 2026-27 = FY 2025-26); s.3 for Tax Year 2026-27.
+  FA2026:
+    mode: anchor
+    breadcrumb: Finance Act 2026
+    units:
+      - id: s2(6)
+        label: s.2(6)
+        heading: Health and Education Cess (1961 Act year)
+        start: '^\s*\(6\) The amount of income-tax as specified in sub-sections \(1\) to \(5\)'
+        end: '^\s*\(7\)|^\s*CHAPTER|^\s*3\. '
+        tax_year_first: 2025
+        tax_year_last: 2025
+        years: FY 2025-26
+      - id: s3(15)
+        label: s.3(15)
+        heading: Health and Education Cess (2025 Act year)
+        start: '^\s*\(15\) The amount of income-tax as specified in sub-sections \(1\) to \(5\)'
+        end: '^\s*\(16\)'
+        tax_year_first: 2026
+        tax_year_last: 2026
+        years: Tax Year 2026-27
+
+  CGST:
+    mode: anchor
+    breadcrumb: Central Goods and Services Tax Act 2017
+    units:
+      - id: s2(6)
+        label: s.2(6)
+        heading: Definition of aggregate turnover
+        start: '^\s*\(6\) ―aggregate turnover'
+        end: '^\s*\(7\) ―'
+      - id: s22(1)
+        label: s.22(1)
+        heading: Persons liable for registration
+        start: '^\s*22\. Persons liable for registration'
+        end: '^\s*\(2\) '
+
+  DTAA_US:
+    mode: article
+    breadcrumb: India-US Convention 1989
+    units: ["4", "5", "7", "12", "14", "15", "23", "25", "30"]
+
+  CBDT_FAQ_PRES:
+    mode: faq
+    breadcrumb: CBDT FAQs on presumptive taxation (2025 Act)
+    q_regex: '^Q(\d+)\.'
+
+  CBDT_FAQ_ITR4:
+    mode: faq
+    breadcrumb: e-Filing FAQs on ITR-4, AY 2026-27
+    q_regex: '^(\d+)\.\s'
+
+  # ---- Forms and notifications: the opening pages (title, rule reference, purpose).
+  # The form tables extract badly; review may replace them with a short hand-typed outline.
+  FORM44:
+    mode: pages
+    breadcrumb: Form No. 44 (Rule 76(10), Rules 2026)
+    units:
+      - {id: p1, heading: "Form 44: statement of income from outside India and foreign tax credit", pages: [1, 1]}
+  FORM67:
+    mode: pages
+    breadcrumb: Form No. 67 (Rule 128, Rules 1962)
+    units:
+      - {id: p1, heading: "Form 67: statement of foreign income and tax deducted or paid", pages: [1, 1]}
+      - {id: p2, heading: "Form 67 Part B: refunds, disputes and verification", pages: [2, 2]}
+  NOTIF45_2026:
+    mode: pages
+    breadcrumb: CBDT Notification 45/2026 (Rule 12, ITR-1 and ITR-4)
+    units:
+      - {id: p1, heading: "Notification 45/2026: amendments to Rule 12 and ITR-1/ITR-4", pages: [1, 1]}
+  NOTIF47_2026:
+    mode: pages
+    breadcrumb: CBDT Notification 47/2026 (Form ITR-3)
+    units:
+      - {id: p1, heading: "Notification 47/2026: Form ITR-3 for AY 2026-27", pages: [1, 1]}
+  NOTIF64_2026:
+    mode: pages
+    breadcrumb: CBDT Notification 64/2026 (corrections to the Income-tax Rules 2026)
+    units:
+      - {id: p1-2, heading: "Notification 64/2026: corrections to the Rules 2026 (items 1 onward)", pages: [1, 2]}
+      - {id: p3-4, heading: "Notification 64/2026: corrections to the Rules 2026 (later items)", pages: [3, 4]}
+
+  # ---- Treaty extras
+  DTAA_US_TE:
+    mode: anchor
+    breadcrumb: US Treasury Technical Explanation of the India-US Convention (guidance)
+    units:
+      - id: art15
+        label: Art. 15
+        heading: "Technical Explanation: Article 15 (Independent Personal Services)"
+        start: '^\s*ARTICLE 15\s*$'
+        end: '^\s*ARTICLE 16\s*$'
+
+  # ---- US statute and IRS guidance (extracted in reading order)
+  IRC_S861:
+    mode: anchor
+    breadcrumb: Internal Revenue Code
+    units:
+      - id: "IRC:s861(a)(3)"
+        label: "s.861(a)(3)"
+        heading: "Income from sources within the United States: personal services"
+        start: '^\(3\) Personal services$'
+        end: '^\(4\) Rentals and royalties'
+  IRC_S862:
+    mode: anchor
+    breadcrumb: Internal Revenue Code
+    units:
+      - id: "IRC:s862(a)(3)"
+        label: "s.862(a)(3)"
+        heading: "Income from sources without the United States: personal services"
+        start: '^\(3\) compensation for labor or personal services'
+        end: '^\(4\) rentals'
+  IRS_PUB519:
+    mode: anchor
+    breadcrumb: IRS Publication 519 (2025)
+    units:
+      - id: spt
+        label: Substantial presence test
+        heading: Substantial presence test
+        start: '^Substantial Presence Test$'
+        end: '^Days of Presence in the United States$'
+      - id: spt_days
+        label: Days of presence
+        heading: "Substantial presence test: which days count as days of presence"
+        start: '^Days of Presence in the United States$'
+        end: '^Closer Connection to a Foreign Country$'
+  IRS_PUB901:
+    mode: anchor
+    breadcrumb: IRS Publication 901
+    units:
+      - id: form8833
+        label: Treaty-based position disclosure
+        heading: Disclosing a treaty-based position on Form 8833
+        start: '^Disclosure of a treaty-based position'
+        occurrence: 2
+        end: '^Tax Exemptions Provided by'
+      - id: india
+        label: India (personal services)
+        heading: "India: treaty exemption for personal services income"
+        start: '^India$'
+        end: '^Indonesia$'
+  IRS_PUB515:
+    mode: anchor
+    breadcrumb: IRS Publication 515 (2026)
+    units:
+      - id: personal_services
+        label: Pay for personal services
+        heading: Withholding on pay for personal services performed by nonresident aliens
+        start: '^Pay for Personal Services Performed$'
+        end: '^Pay for personal services that is not subject to withholding'
+  IRS_W8BEN:
+    mode: anchor
+    breadcrumb: Instructions for Form W-8BEN
+    units:
+      - id: withholding
+        label: Purpose of form
+        heading: Purpose of Form W-8BEN and withholding on foreign persons
+        start: '^Purpose of Form$'
+        end: '^Who Must Provide Form W-8BEN'
+      - id: validity
+        label: Expiration and change in circumstances
+        heading: How long a Form W-8BEN stays valid
+        start: '^Expiration of Form W-8BEN'
+        end: '^Change in circumstances'
+  IRS_1040NR:
+    mode: anchor
+    breadcrumb: Instructions for Form 1040-NR (2025)
+    units:
+      - id: treaty_disclosure
+        label: Treaty-based return position disclosure
+        heading: Treaty-based return position disclosure on Form 1040-NR
+        start: '^Treaty-based return position disclosure\.'
+        end: '^[A-Z][A-Za-z -]{3,60}$'
+  IRS_F8233:
+    mode: pages
+    breadcrumb: IRS Form 8233
+    units:
+      - {id: p1, heading: "Form 8233: exemption from withholding on compensation for independent personal services", pages: [1, 1]}
+
+  NOTIF385E_2001:
+    mode: whole
+    id: NOTIF385E_2001:all
+    breadcrumb: CBDT Notification S.O. 385(E), 4 May 2001
+    heading: Information technology notified as a profession under s.44AA(1)

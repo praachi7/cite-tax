@@ -1,0 +1,58 @@
+# Corpus chunks for CGST: Central Goods and Services Tax Act, 2017 (consolidated as on 30 Sep 2020)
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: CGST:s2(6)
+  source_id: CGST
+  breadcrumb: Central Goods and Services Tax Act 2017 > s.2(6)
+  heading: Definition of aggregate turnover
+  text: |-
+    (6) ―aggregate turnover‖ means the aggregate value of all taxable supplies
+    (excluding the value of inward supplies on which tax is payable by a person on reverse
+    charge basis), exempt supplies, exports of goods or services or both and inter-State supplies
+    of persons having the same Permanent Account Number, to be computed on all India basis
+    but excludes central tax, State tax, Union territory tax, integrated tax and cess;
+  tax_year_first: null
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 4
+  extraction: auto
+  reviewed: false
+- id: CGST:s22(1)
+  source_id: CGST
+  breadcrumb: Central Goods and Services Tax Act 2017 > s.22(1)
+  heading: Persons liable for registration
+  text: |-
+    22. Persons liable for registration.— (1) Every supplier shall be liable to be
+    registered under this Act in the State or Union territory, other than special category States,
+    from where he makes a taxable supply of goods or services or both, if his aggregate
+    turnover in a financial year exceeds twenty lakh rupees:
+    Provided that where such person makes taxable supplies of goods or services or
+    both from any of the special category States, he shall be liable to be registered if his
+    40 Substituted for ―under entry 84‖ by The Central Goods and Services Tax (Amendment) Act, 2018 (No.
+    31 of 2018) – Brought into force w.e.f. 01st February, 2019.
+    CHAPTER VI REGISTRATION
+    aggregate turnover in a financial year exceeds ten lakh rupees:
+    [Provided further that the Government may, at the request of a special category
+    State and on the recommendations of the Council, enhance the aggregate turnover
+    referred to in the first proviso from ten lakh rupees to such amount, not exceeding twenty
+    lakh rupees and subject to such conditions and limitations, as may be so notified:]41
+    [Provided also that the Government may, at the request of a State and on the
+    recommendations of the Council, enhance the aggregate turnover from twenty lakh
+    rupees to such amount not exceeding forty lakh rupees in case of supplier who is engaged
+    exclusively in the supply of goods, subject to such conditions and limitations, as may be
+    notified:
+    Explanation.––For the purposes of this sub-section, a person shall be considered to
+    be engaged exclusively in the supply of goods even if he is engaged in exempt supply of
+    services provided by way of extending deposits, loans or advances in so far as the
+    consideration is represented by way of interest or discount.]42
+  tax_year_first: null
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 49
+  - 50
+  extraction: auto
+  reviewed: false

@@ -1,0 +1,48 @@
+# Corpus chunks for IRS_PUB901: IRS Publication 901: U.S. Tax Treaties (Rev. September 2024)
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: IRS_PUB901:form8833
+  source_id: IRS_PUB901
+  breadcrumb: IRS Publication 901 > Treaty-based position disclosure
+  heading: Disclosing a treaty-based position on Form 8833
+  text: |-
+    Disclosure of a treaty-based position that reduces your tax. If you take the position that any U.S. tax is overruled or otherwise reduced by a U.S. treaty (a treaty-based position), you must generally disclose that position on Form 8833 and attach it to your return. If you are not required to file a return because of your treaty-based position, you must file a return anyway to report your position. The filing of Form 8833 does not apply to a reduced rate of withholding tax on noneffectively connected income, such as dividends, interest, rents, or royalties, or to a reduced rate of tax on pay received for services performed as an employee, including pensions, annuities, and social security. For more information, see Pub. 519 and the Form 8833 instructions.
+    If you fail to file Form 8833, you may have to pay a $1,000 penalty. Corporations are subject to a $10,000 penalty for each failure.
+  tax_year_first: null
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 3
+  extraction: auto
+  reviewed: false
+- id: IRS_PUB901:india
+  source_id: IRS_PUB901
+  breadcrumb: IRS Publication 901 > India (personal services)
+  heading: 'India: treaty exemption for personal services income'
+  text: |-
+    India
+    Income that residents of India receive for performing personal services in the United States during the tax year as independent contractors or self-employed individuals (independent personal services) is exempt from U.S. income tax if the residents:
+    • Are present in the United States for no more than 89
+    days during the tax year, and
+    • Do not have a fixed base regularly available to them in
+    the United States for performing the services.
+    If they have a fixed base available, they are taxed only on income attributable to the fixed base.
+    Income that residents of India receive for personal services performed in the United States as employees (dependent personal services) is exempt from U.S. income tax if the residents meet the following requirements.
+    • They are present in the United States for no more than
+    183 days during the tax year.
+    • The income is paid by, or on behalf of, an employer
+    who is not a resident of the United States.
+    • The income is not borne by a permanent establish-
+    ment, fixed base, or trade or business the employer has in the United States.
+    This exemption does not apply to pay received by a resident of India for services performed as an employee aboard a ship or an aircraft operated in international traffic by a U.S. enterprise.
+    These exemptions do not apply to directors' fees and similar payments received by an Indian resident as a member of the board of directors of a company that is a U.S. resident.
+    These exemptions do not apply to income residents of India receive as entertainers (such as theater, motion picture, radio, or television artists; or musicians) or athletes if their net income is more than $1,500 during the tax year for their entertainment or athletic activities in the United States. Regardless of this limit, the income of Indian entertainers or athletes is exempt from U.S. tax if their visit to the United States is wholly or substantially supported from the public funds of the Indian Government or its political subdivisions or local authorities.
+  tax_year_first: null
+  tax_year_last: null
+  authority_rank: 4
+  pdf_pages:
+  - 10
+  extraction: auto
+  reviewed: false

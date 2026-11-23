@@ -1,0 +1,103 @@
+# Corpus chunks for FORM67: Form No. 67 (Rule 128): Statement of foreign income and tax deducted or paid
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: FORM67:p1
+  source_id: FORM67
+  breadcrumb: Form No. 67 (Rule 128, Rules 1962) > p.1 > FY 2025-26 and earlier
+  heading: 'Form 67: statement of foreign income and tax deducted or paid'
+  text: |-
+    FORM NO. 67
+    [See rule 128]
+    Statement of income from a country or specified territory outside India and Foreign Tax Credit
+    PAQRT A
+    1. Name of the assessee ....................................................................................
+    2. Permanent Account Number or Aadhaar Number
+    3. Address ....................................................................................
+    ...................................................................................
+    4. Assessment year ....................................................................................
+    5. Details of income from a country or specified territory outside India and Foreign Tax Credit claimed
+    Sl. Name of Source of Income Tax paid Tax Tax Credit claimed under section Credit Total
+    No. the income from outside India payable on payable 90/90A claimed foreign
+    on such under tax
+    country/ outside such income section credit
+    specified India income under
+    territory under section 91 claimed
+    normal 115JB/JC Amount
+    provisions
+    in India
+    Amount Rate Article No. Rate of tax as Amount
+    of Double per Double
+    Taxation Taxation
+    Avoidance Avoidance
+    Agreements Agreements
+    (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (12) (13)
+    Salary
+    House
+    property
+    Business/
+    professional
+    income
+    Long term
+    capital gain
+    Short term
+    capital gain
+    Interest
+    income
+    Dividend
+    Royalty not
+    being part of
+    business
+    income
+    Fees for
+    technical
+    services not
+    being part of
+    business
+    income
+    Others
+    (specify)
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 2
+  pdf_pages:
+  - 1
+  extraction: auto
+  reviewed: false
+- id: FORM67:p2
+  source_id: FORM67
+  breadcrumb: Form No. 67 (Rule 128, Rules 1962) > p.2 > FY 2025-26 and earlier
+  heading: 'Form 67 Part B: refunds, disputes and verification'
+  text: |-
+    PART B
+    1.(a) Whether any refund of foreign tax has been claimed in any prior accounting year as a Yes/No
+    result of carry backward of losses
+    (b) If reply to (a) above is Yes, furnish the following details:—
+    (i) the accounting year to which such loss pertains ............
+    (ii) the accounting year(s) in which set off of carry backward of loss has been ............
+    undertaken
+    (iii) refund claimed for the accounting year(s) ............
+    (iv) previous year to which refund referred to in (iii) relates ............
+    2.(a) Whether credit for any foreign tax has been claimed which is under dispute Yes/No
+    (b) If reply to (a) above is Yes, furnish the following details:—
+    (i) the nature and amount of income in respect of which tax is disputed ............
+    (ii) the amount of such disputed tax ............
+    Verification
+    I, ............................................................ son/daughter of .................................................................., holding
+    [Permanent Account Number or Aadhaar Number] .............................. solemnly declare that to the best of my
+    knowledge and belief, the information given in Part A and Part B of the statement above is correct and complete
+    and is truly stated.
+    I further declare that I am making this statement in my capacity as ......................... and I am also competent to
+    make this statement and verify it.
+    Verified today the .................. day of .................. 20 ..........
+    Place: ………………. (Signature)
+    Note: Attach certificate or statement and proof of payment/deduction of foreign tax as referred to in clause (ii) of
+    sub-rule (8) of rule 128.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 2
+  pdf_pages:
+  - 2
+  extraction: auto
+  reviewed: false

@@ -1,0 +1,24 @@
+# Corpus chunks for NOTIF385E_2001: CBDT Notification S.O. 385(E), 4 May 2001: information technology notified under s.44AA(1)
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: NOTIF385E_2001:all
+  source_id: NOTIF385E_2001
+  breadcrumb: CBDT Notification S.O. 385(E), 4 May 2001 > whole document
+  heading: Information technology notified as a profession under s.44AA(1)
+  text: |-
+    Notification: 385(E)
+    Section(s) Referred: s. 44AA(1)
+    Statute: INCOME TAX
+    Date of Issue: 4/5/2001
+    In exercise of the powers conferred by sub-section (1) section 44AA of the Income-tax Act, 1961 (43 of 1961), the Central Board of Direct Taxes hereby notifies the profession of information technology for the purposes of the said sub-section.
+    (Notification No. 116/F. No. 23/FB/2001-TPL]
+    Source: text of the notification as published on incometaxindia.gov.in, supplied by the project team on 31 Oct 2026 (the site blocks automated download, so no PDF was available).
+  tax_year_first: null
+  tax_year_last: null
+  authority_rank: 2
+  pdf_pages:
+  - 1
+  extraction: auto
+  reviewed: false

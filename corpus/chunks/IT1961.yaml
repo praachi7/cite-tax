@@ -1,0 +1,1743 @@
+# Corpus chunks for IT1961: Income-tax Act, 1961, as amended up to Finance Act 2026
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: IT1961:s6
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.6 > FY 2025-26 and earlier
+  heading: Residence in India
+  text: |-
+    6. For the purposes of this Act,—
+    (1) An individual is said to be resident in India in any previous year, if he—
+    (a) is in India in that year for a period or periods amounting in all to
+    one hundred and eighty-two days or more ; or
+    (b) [***]
+    (c) having within the four years preceding that year been in India for
+    a period or periods amounting in all to three hundred and sixty-
+    five days or more, is in India for a period or periods amounting
+    in all to sixty days or more in that year.
+    Explanation 1.—In the case of an individual,—
+    (a) being a citizen of India, who leaves India in any previous year as
+    a member of the crew of an Indian ship as defined in clause (18)
+    of section 3 of the Merchant Shipping Act, 1958 (44 of 1958), or
+    for the purposes of employment outside India, the provisions of
+    sub-clause (c) shall apply in relation to that year as if for the
+    words “sixty days”, occurring therein, the words “one hundred
+    and eighty-two days” had been substituted ;
+    (b) being a citizen of India, or a person of Indian origin within the
+    meaning of Explanation to clause (e) of section 115C, who, being
+    outside India, comes on a visit to India in any previous year, the
+    provisions of sub-clause (c) shall apply in relation to that year as
+    if for the words “sixty days”, occurring therein, the words “one
+    hundred and eighty-two days” had been substituted and in case
+    of such person having total income, other than the income from
+    foreign sources, exceeding fifteen lakh rupees during the previ-
+    ous year, for the words “sixty days” occurring therein, the words
+    “one hundred and twenty days” had been substituted.
+    Explanation 2.—For the purposes of this clause, in the case of an
+    individual, being a citizen of India and a member of the crew of a
+    foreign bound ship leaving India, the period or periods of stay in India
+    shall, in respect of such voyage, be determined in the manner and
+    subject to such conditions as may be prescribed.
+    (1A) Notwithstanding anything contained in clause (1), an individual,
+    being a citizen of India, having total income, other than the income
+    from foreign sources, exceeding fifteen lakh rupees during the
+    previous year shall be deemed to be resident in India in that previous
+    year, if he is not liable to tax in any other country or territory by reason
+    of his domicile or residence or any other criteria of similar nature.
+    Explanation.—For the removal of doubts, it is hereby declared that
+    this clause shall not apply in case of an individual who is said to be
+    resident in India in the previous year under clause (1).
+    (2) A Hindu undivided family, firm or other association of persons is said
+    to be resident in India in any previous year in every case except where
+    during that year the control and management of its affairs is situated
+    wholly outside India.
+    (3) A company is said to be a resident in India in any previous year, if—
+    (i) it is an Indian company; or
+    (ii) its place of effective management, in that year, is in India.
+    Explanation.—For the purposes of this clause “place of effective
+    management” means a place where key management and commer-
+    cial decisions that are necessary for the conduct of business of an
+    entity as a whole are, in substance made.
+    (4) Every other person is said to be resident in India in any previous year
+    in every case, except where during that year the control and manage-
+    ment of his affairs is situated wholly outside India.
+    (5) If a person is resident in India in a previous year relevant to
+    an assessment year in respect of any source of income, he
+    shall be deemed to be resident in India in the previous year relevant
+    to the assessment year in respect of each of his other sources of
+    income.
+    (6) A person is said to be “not ordinarily resident” in India in any previous
+    year if such person is—
+    (a) an individual who has been a non-resident in India in nine out of
+    the ten previous years preceding that year, or has during the
+    seven previous years preceding that year been in India for a
+    period of, or periods amounting in all to, seven hundred and
+    twenty-nine days or less; or
+    (b) a Hindu undivided family whose manager has been a non-
+    resident in India in nine out of the ten previous years preceding
+    that year, or has during the seven previous years preceding that
+    year been in India for a period of, or periods amounting in all to,
+    seven hundred and twenty-nine days or less ; or
+    (c) a citizen of India, or a person of Indian origin, having total income,
+    other than the income from foreign sources, exceeding fifteen
+    lakh rupees during the previous year, as referred to in clause (b)
+    of Explanation 1 to clause (1), who has been in India for a period
+    or periods amounting in all to one hundred and twenty days or
+    more but less than one hundred and eighty-two days; or
+    (d) a citizen of India who is deemed to be resident in India under
+    clause (1A).
+    Explanation.—For the purposes of this section, the expression
+    “income from foreign sources” means income which accrues or arises
+    outside India (except income derived from a business controlled in or
+    a profession set up in India) and which is not deemed to accrue or arise
+    in India.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 30
+  - 31
+  - 32
+  extraction: auto
+  reviewed: false
+- id: IT1961:s44AA(1)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.44AA(1) > FY 2025-26 and earlier
+  heading: Maintenance of accounts by certain persons carrying on profession or business
+  text: |-
+    44AA. (1) Every person carrying on legal, medical, engineering or architec-
+    tural profession or the profession of accountancy or technical consultancy
+    or interior decoration or any other profession as is notified by the Board in the
+    Official Gazette shall keep and maintain such books of account and other
+    documents as may enable the Assessing Officer to compute his total income in
+    accordance with the provisions of this Act.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 288
+  extraction: auto
+  reviewed: false
+- id: IT1961:s44AA(2)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.44AA(2) > FY 2025-26 and earlier
+  heading: Maintenance of accounts by certain persons carrying on profession or business
+  text: |-
+    (2) Every person carrying on business or profession [not being a profession
+    referred to in sub-section (1)] shall,—
+    (i) if his income from business or profession exceeds one lakh twenty
+    thousand rupees or his total sales, turnover or gross receipts, as the
+    case may be, in business or profession exceed or exceeds ten lakh
+    rupees in any one of the three years immediately preceding the
+    previous year; or
+    (ii) where the business or profession is newly set up in any previous year,
+    if his income from business or profession is likely to exceed one lakh
+    twenty thousand rupees or his total sales, turnover or gross receipts,
+    as the case may be, in business or profession are or is likely to exceed
+    ten lakh rupees, during such previous year; or
+    (iii) where the profits and gains from the business are deemed to be the
+    profits and gains of the assessee under section 44AE or section 44BB
+    or section 44BBB, as the case may be, and the assessee has claimed
+    his income to be lower than the profits or gains so deemed to be the
+    profits and gains of his business, as the case may be, during such
+    previous year; or
+    (iv) where the provisions of sub-section (4) of section 44AD are applicable
+    in his case and his income exceeds the maximum amount which is not
+    chargeable to income-tax in any previous year,
+    keep and maintain such books of account and other documents as may enable
+    the Assessing Officer to compute his total income in accordance with the
+    provisions of this Act:
+    Provided that in the case of a person being an individual or a Hindu undivided
+    family, the provisions of clause (i) and clause (ii) shall have effect, as if for the
+    words “one lakh twenty thousand rupees”, the words “two lakh fifty thousand
+    rupees” had been substituted :
+    Provided further that in the case of a person being an individual or a Hindu
+    undivided family, the provisions of clause (i) and clause (ii) shall have effect, as
+    if for the words “ten lakh rupees”, the words “twenty-five lakh rupees” had been
+    substituted.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 288
+  extraction: auto
+  reviewed: false
+- id: IT1961:s44AA(3)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.44AA(3) > FY 2025-26 and earlier
+  heading: Maintenance of accounts by certain persons carrying on profession or business
+  text: |-
+    (3) The Board may, having regard to the nature of the business or profession
+    carried on by any class of persons, prescribe, by rules, the books of account
+    and other documents (including inventories, wherever necessary) to be kept and
+    maintained under sub-section (1) or sub-section (2), the particulars to be
+    contained therein and the form and the manner in which and the place at which
+    they shall be kept and maintained.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 288
+  - 289
+  extraction: auto
+  reviewed: false
+- id: IT1961:s44AA(4)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.44AA(4) > FY 2025-26 and earlier
+  heading: Maintenance of accounts by certain persons carrying on profession or business
+  text: |-
+    (4) Without prejudice to the provisions of sub-section (3), the Board may
+    prescribe, by rules, the period for which the books of account and other
+    documents to be kept and maintained under sub-section (1) or sub-section (2)
+    shall be retained.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 289
+  extraction: auto
+  reviewed: false
+- id: IT1961:s44AB
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.44AB > FY 2025-26 and earlier
+  heading: Audit of accounts of certain persons carrying on business or profession
+  text: |-
+    44AB. Every person,—
+    (a) carrying on business shall, if his total sales, turnover or gross receipts,
+    as the case may be, in business exceed or exceeds one crore rupees
+    in any previous year:
+    Provided that in the case of a person whose—
+    (a) aggregate of all amounts received including amount received for
+    sales, turnover or gross receipts during the previous year, in cash,
+    does not exceed five per cent of the said amount; and
+    (b) aggregate of all payments made including amount incurred for
+    expenditure, in cash, during the previous year does not exceed
+    five per cent of the said payment,
+    this clause shall have effect as if for the words “one crore rupees”, the
+    words “ten crore rupees” had been substituted:
+    Provided further that for the purposes of this clause, the payment or
+    receipt, as the case may be, by a cheque drawn on a bank or by a bank
+    draft, which is not account payee, shall be deemed to be the payment
+    or receipt, as the case may be, in cash; or
+    (b) carrying on profession shall, if his gross receipts in profession exceed
+    fifty lakh rupees in any previous year; or
+    (c) carrying on the business shall, if the profits and gains from the
+    business are deemed to be the profits and gains of such person under
+    section 44AE or section 44BB or section 44BBB , as the case may be,
+    and he has claimed his income to be lower than the profits or gains so
+    deemed to be the profits and gains of his business, as the case may be,
+    in any previous year; or
+    (d) carrying on the profession shall, if the profits and gains from the
+    profession are deemed to be the profits and gains of such person
+    under section 44ADA and he has claimed such income to be lower
+    than the profits and gains so deemed to be the profits and gains of his
+    profession and his income exceeds the maximum amount which is
+    not chargeable to income-tax in any previous year; or
+    (e) carrying on the business shall, if the provisions of sub-section (4) of
+    section 44AD are applicable in his case and his income exceeds the
+    maximum amount which is not chargeable to income-tax in any
+    previous year,
+    get his accounts of such previous year audited by an accountant before the
+    specified date and furnish by that date the report of such audit in the prescribed
+    form duly signed and verified by such accountant and setting forth such
+    particulars as may be prescribed :
+    Provided that this section shall not apply to a person, who declares profits and
+    gains for the previous year in accordance with the provisions of sub-section (1)
+    of section 44AD or sub-section (1) of section 44ADA:
+    Provided further that this section shall not apply to the person, who derives
+    income of the nature referred to in section 44B or section 44BBA, on and from
+    the 1st day of April, 1985 or, as the case may be, the date on which the relevant
+    section came into force, whichever is later :
+    Provided also that in a case where such person is required by or under any other
+    law to get his accounts audited, it shall be sufficient compliance
+    with the provisions of this section if such person gets the accounts of such
+    business or profession audited under such law before the specified date and
+    furnishes by that date the report of the audit as required under such other law
+    and a further report by an accountant in the form prescribed under this section.
+    Explanation.—For the purposes of this section,—
+    (i) “accountant” shall have the same meaning as in the Explanation
+    below sub-section (2) of section 288;
+    (ii) “specified date”, in relation to the accounts of the assessee of the
+    previous year relevant to an assessment year, means date one month
+    prior to the due date for furnishing the return of income under sub-
+    section (1) of section 139.
+    Special provision for computing profits and gains from the business of trading
+    in certain goods.
+    44AC. [Omitted by the Finance Act, 1992, w.e.f. 1-4-1993.]
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 289
+  - 290
+  extraction: auto
+  reviewed: false
+- id: IT1961:s44AD(1)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.44AD(1) > FY 2025-26 and earlier
+  heading: Special provision for computing profits and gains of business on presumptive basis
+  text: |-
+    44AD. (1) Notwithstanding anything to the contrary contained in sections 28
+    to 43C, in the case of an eligible assessee engaged in an eligible business,
+    a sum equal to eight per cent of the total turnover or gross receipts of the assessee
+    in the previous year on account of such business or, as the case may be, a sum
+    higher than the aforesaid sum claimed to have been earned by the eligible
+    assessee, shall be deemed to be the profits and gains of such business chargeable
+    to tax under the head “Profits and gains of business or profession” :
+    Provided that this sub-section shall have effect as if for the words “eight per cent”,
+    the words “six per cent” had been substituted, in respect of the amount of total
+    turnover or gross receipts which is received by an account payee cheque or an
+    account payee bank draft or use of electronic clearing system through a bank
+    account or through such other electronic mode as may be prescribed during the
+    previous year or before the due date specified in sub-section (1) of section 139
+    in respect of that previous year.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 290
+  extraction: auto
+  reviewed: false
+- id: IT1961:s44ADA(1)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.44ADA(1) > FY 2025-26 and earlier
+  heading: Special provision for computing profits and gains of profession on presumptive basis
+  text: |-
+    44ADA. (1) Notwithstanding anything contained in sections 28 to 43C, in
+    case of an assessee, being an individual or a partnership firm other
+    than a limited liability partnership as defined under clause (n) of sub-section (1)
+    of section 2 of the Limited Liability Partnership Act, 2008 (6 of 2009), who is a
+    resident in India, and is engaged in a profession referred to in sub-section (1) of
+    section 44AA and whose total gross receipts do not exceed fifty lakh rupees in a
+    previous year, a sum equal to fifty per cent of the total gross receipts of the
+    assessee in the previous year on account of such profession or, as the case may
+    be, a sum higher than the aforesaid sum claimed to have been earned by the
+    assessee, shall be deemed to be the profits and gains of such profession charge-
+    able to tax under the head “Profits and gains of business or profession”:
+    Provided that in case of an assessee where the amount or aggregate of the
+    amounts received during the previous year, in cash, does not exceed five per cent
+    of the total gross receipts of such previous year, this sub-section shall have effect
+    as if for the words “fifty lakh rupees”, the words “seventy-five lakh rupees” had
+    been substituted:
+    Provided further that for the purposes of the first proviso, the receipt of amount
+    or aggregate of amounts by a cheque drawn on a bank or by a bank draft, which
+    is not account payee, shall be deemed to be the receipt in cash.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 292
+  extraction: auto
+  reviewed: false
+- id: IT1961:s44ADA(2)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.44ADA(2) > FY 2025-26 and earlier
+  heading: Special provision for computing profits and gains of profession on presumptive basis
+  text: |-
+    (2) Any deduction allowable under the provisions of sections 30 to 38 shall, for
+    the purposes of sub-section (1), be deemed to have been already given full
+    effect to and no further deduction under those sections shall be allowed.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 292
+  extraction: auto
+  reviewed: false
+- id: IT1961:s44ADA(3)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.44ADA(3) > FY 2025-26 and earlier
+  heading: Special provision for computing profits and gains of profession on presumptive basis
+  text: |-
+    (3) The written down value of any asset used for the purposes of profession
+    shall be deemed to have been calculated as if the assessee had claimed and had
+    been actually allowed the deduction in respect of the depreciation for each of
+    the relevant assessment years.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 292
+  extraction: auto
+  reviewed: false
+- id: IT1961:s44ADA(4)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.44ADA(4) > FY 2025-26 and earlier
+  heading: Special provision for computing profits and gains of profession on presumptive basis
+  text: |-
+    (4) Notwithstanding anything contained in the foregoing provisions of this sec-
+    tion, an assessee who claims that his profits and gains from the profession are
+    lower than the profits and gains specified in sub-section (1) and whose total
+    income exceeds the maximum amount which is not chargeable to income-tax,
+    shall be required to keep and maintain such books of account and other docu-
+    ments as required under sub-section (1) of section 44AA and get them audited
+    and furnish a report of such audit as required under section 44AB.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 292
+  extraction: auto
+  reviewed: false
+- id: IT1961:s44AE(1)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.44AE(1) > FY 2025-26 and earlier
+  heading: Special provision for computing profits and gains of business of plying, hiring or leasing goods carriages
+  text: |-
+    44AE. (1) Notwithstanding anything to the contrary contained in sections 28
+    to 43C, in the case of an assessee, who owns not more than ten goods
+    carriages at any time during the previous year and who is engaged in the business
+    of plying, hiring or leasing such goods carriages, the income of such business
+    chargeable to tax under the head “Profits and gains of business or profession”
+    shall be deemed to be the aggregate of the profits and gains, from all the goods
+    carriages owned by him in the previous year, computed in accordance with the
+    provisions of sub-section (2).
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 293
+  extraction: auto
+  reviewed: false
+- id: IT1961:s87A
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.87A > FY 2025-26 and earlier
+  heading: Rebate of income-tax in case of certain individuals
+  text: |-
+    87A. An assessee, being an individual resident in India, whose total income does
+    not exceed five hundred thousand rupees, shall be entitled to a deduction,
+    from the amount of income-tax (as computed before allowing the deductions
+    under this Chapter) on his total income with which he is chargeable for any
+    assessment year, of an amount equal to hundred per cent of such income-tax or
+    an amount of twelve thousand and five hundred rupees, whichever is less:
+    Provided that where the total income of the assessee is chargeable to tax under
+    sub-section (1A) of section 115BAC, and the total income—
+    twelve (a) does not exceed 2[ ] hundred thousand rupees, the assessee shall
+    be entitled to a deduction from the amount of income-tax (as com-
+    puted before allowing for the deductions under this Chapter) on his
+    total income with which he is chargeable for any assessment year, of
+    an amount equal to one hundred per cent of such income-tax or an
+    sixty amount of 3[
+    ] thousand rupees, whichever is less;
+    twelve (b) exceeds 2[ ] hundred thousand rupees and the income-tax
+    payable on such total income exceeds the amount by which the total
+    twelve income is in excess of 2[
+    ] hundred thousand rupees, the asses-
+    see shall be entitled to a deduction from the amount of income-tax (as
+    computed before allowing the deductions under this Chapter) on his
+    total income, of an amount equal to the amount by which the income-
+    tax payable on such total income is in excess of the amount by which
+    twelve the total income exceeds 4[
+    ] hundred thousand rupees:
+    5[Provided further that the deduction under the first proviso, shall not exceed
+    the amount of income-tax payable as per the rates provided in sub-section (1A)
+    of section 115BAC.]
+    Rebate on life insurance premia, contribution to provident fund, etc.
+    88. [Omitted by the Finance Act, 2023, w.e.f. 1-4-2023.]
+    Rebate in respect of investment in certain new shares or units.
+    88A. [Omitted by the Finance (No. 2) Act, 1996, w.r.e.f. 1-4-1994.]
+    Rebate of income-tax in case of individuals of sixty-five years or above.
+    88B. [Omitted by the Finance Act, 2005, w.e.f. 1-4-2006.]
+    Rebate of income-tax in case of women below sixty-five years.
+    88C. [Omitted by the Finance Act, 2005, w.e.f. 1-4-2006.]
+    Rebate of income-tax in case of certain individuals.
+    88D. [Omitted by the Finance Act, 2005, w.e.f. 1-4-2006.]
+    2 1-4-2026. . Sub. for “seven” by the Act No. 7 of 2025, w.e.f.
+    3 ibid. . Substituted for “twenty-five”,
+    4. 1-4-2026 Sub. for “seven” by the Act No. 7 of 2025, w.e.f. [As amended by the Act No. 04
+    1-4-2025 of 2026, w.r.e.f. ].
+    5. 1-4-2026. Ins. by the Act No. 7 of 2025, w.e.f.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 508
+  extraction: auto
+  reviewed: false
+- id: IT1961:s90(1)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.90(1) > FY 2025-26 and earlier
+  heading: Agreement with foreign countries or specified territories
+  text: |-
+    90. (1) The Central Government may enter into an agreement with the Govern-
+    ment of any country outside India or specified territory outside India,—
+    (a) for the granting of relief in respect of—
+    (i) income on which have been paid both income-tax under this Act
+    and income-tax in that country or specified territory, as the case
+    may be, or
+    (ii) income-tax chargeable under this Act and under the correspond-
+    ing law in force in that country or specified territory, as the case
+    may be, to promote mutual economic relations, trade and invest-
+    ment, or
+    (b) for the avoidance of double taxation of income under this Act and
+    under the corresponding law in force in that country or specified
+    territory, as the case may be, without creating opportunities for non-
+    taxation or reduced taxation through tax evasion or avoidance
+    (including through treaty-shopping arrangements aimed at obtaining
+    reliefs provided in the said agreement for the indirect benefit to
+    residents of any other country or territory), or
+    (c) for exchange of information for the prevention of evasion or avoid-
+    ance of income-tax chargeable under this Act or under the corres-
+    ponding law in force in that country or specified territory, as the case
+    may be, or investigation of cases of such evasion or avoidance, or
+    (d) for recovery of income-tax under this Act and under the correspond-
+    ing law in force in that country or specified territory, as the case may
+    be,
+    and may, by notification in the Official Gazette, make such provisions as may be
+    necessary for implementing the agreement.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 510
+  - 511
+  extraction: auto
+  reviewed: false
+- id: IT1961:s90(2)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.90(2) > FY 2025-26 and earlier
+  heading: Agreement with foreign countries or specified territories
+  text: |-
+    (2) Where the Central Government has entered into an agreement with the
+    Government of any country outside India or specified territory outside India, as
+    the case may be, under sub-section (1) for granting relief of tax, or as the case may
+    be, avoidance of double taxation, then, in relation to the assessee to whom such
+    agreement applies, the provisions of this Act shall apply to the extent they are
+    more beneficial to that assessee.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 511
+  extraction: auto
+  reviewed: false
+- id: IT1961:s90(2A)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.90(2A) > FY 2025-26 and earlier
+  heading: Agreement with foreign countries or specified territories
+  text: |-
+    (2A) Notwithstanding anything contained in sub-section (2), the provisions of
+    Chapter X-A of the Act shall apply to the assessee even if such provisions are not
+    beneficial to him.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 511
+  extraction: auto
+  reviewed: false
+- id: IT1961:s90(3)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.90(3) > FY 2025-26 and earlier
+  heading: Agreement with foreign countries or specified territories
+  text: |-
+    (3) Any term used but not defined in this Act or in the agreement referred to in
+    sub-section (1) shall, unless the context otherwise requires, and is not inconsis-
+    tent with the provisions of this Act or the agreement, have the same meaning as
+    assigned to it in the notification issued by the Central Government in the Official
+    Gazette in this behalf.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 511
+  extraction: auto
+  reviewed: false
+- id: IT1961:s90(4)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.90(4) > FY 2025-26 and earlier
+  heading: Agreement with foreign countries or specified territories
+  text: |-
+    (4) An assessee, not being a resident, to whom an agreement referred to in sub-
+    section (1) applies, shall not be entitled to claim any relief under such agreement
+    unless a certificate of his being a resident in any country outside India or
+    specified territory outside India, as the case may be, is obtained by him from the
+    Government of that country or specified territory.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 511
+  extraction: auto
+  reviewed: false
+- id: IT1961:s90(5)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.90(5) > FY 2025-26 and earlier
+  heading: Agreement with foreign countries or specified territories
+  text: |-
+    (5) The assessee referred to in sub-section (4) shall also provide such other
+    documents and information, as may be prescribed.
+    Explanation 1.—For the removal of doubts, it is hereby declared that the charge
+    of tax in respect of a foreign company at a rate higher than the rate at which a
+    domestic company is chargeable, shall not be regarded as less favourable charge
+    or levy of tax in respect of such foreign company.
+    Explanation 2.—For the purposes of this section, “specified territory” means any
+    area outside India which may be notified as such by the Central Government.
+    Explanation 3.—For the removal of doubts, it is hereby declared that where any
+    term is used in any agreement entered into under sub-section (1) and not defined
+    under the said agreement or the Act, but is assigned a meaning to it in the
+    notification issued under sub-section (3) and the notification issued thereunder
+    being in force, then, the meaning assigned to such term shall be deemed to have
+    effect from the date on which the said agreement came into force.
+    Explanation 4.—For the removal of doubts, it is hereby declared that where any
+    term used in an agreement entered into under sub-section (1) is defined under
+    the said agreement, the said term shall have the same meaning as assigned to it
+    in the agreement; and where the term is not defined in the said agreement, but
+    defined in the Act, it shall have the same meaning as assigned to it in the Act and
+    explanation, if any, given to it by the Central Government.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 511
+  extraction: auto
+  reviewed: false
+- id: IT1961:s91(1)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.91(1) > FY 2025-26 and earlier
+  heading: Countries with which no agreement exists
+  text: |-
+    91. (1) If any person who is resident in India in any previous year proves that, in
+    respect of his income which accrued or arose during that previous year
+    outside India (and which is not deemed to accrue or arise in India), he has paid
+    in any country with which there is no agreement under section 90 for the relief
+    or avoidance of double taxation, income-tax, by deduction or otherwise, under
+    the law in force in that country, he shall be entitled to the deduction from the
+    Indian income-tax payable by him of a sum calculated on such doubly taxed
+    income at the Indian rate of tax or the rate of tax of the said country, whichever
+    is the lower, or at the Indian rate of tax if both the rates are equal.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 513
+  extraction: auto
+  reviewed: false
+- id: IT1961:s91(2)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.91(2) > FY 2025-26 and earlier
+  heading: Countries with which no agreement exists
+  text: |-
+    (2) If any person who is resident in India in any previous year proves that in
+    respect of his income which accrued or arose to him during that previous year
+    in Pakistan he has paid in that country, by deduction or otherwise, tax payable
+    to the Government under any law for the time being in force in that country
+    relating to taxation of agricultural income, he shall be entitled to a deduction
+    from the Indian income-tax payable by him—
+    (a) of the amount of the tax paid in Pakistan under any law aforesaid on
+    such income which is liable to tax under this Act also; or
+    (b) of a sum calculated on that income at the Indian rate of tax;
+    whichever is less.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 513
+  - 514
+  extraction: auto
+  reviewed: false
+- id: IT1961:s91(3)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.91(3) > FY 2025-26 and earlier
+  heading: Countries with which no agreement exists
+  text: |-
+    (3) If any non-resident person is assessed on his share in the income of a
+    registered firm assessed as resident in India in any previous year and such share
+    includes any income accruing or arising outside India during that previous year
+    (and which is not deemed to accrue or arise in India) in a country with which
+    there is no agreement under section 90 for the relief or avoidance of double
+    taxation and he proves that he has paid income-tax by deduction or otherwise
+    under the law in force in that country in respect of the income so included he shall
+    be entitled to a deduction from the Indian income-tax payable by him of a sum
+    calculated on such doubly taxed income so included at the Indian rate of tax or
+    the rate of tax of the said country, whichever is the lower, or at the Indian rate
+    of tax if both the rates are equal.
+    Explanation.—In this section,—
+    (i) the expression “Indian income-tax” means income-tax charged in
+    accordance with the provisions of this Act;
+    (ii) the expression “Indian rate of tax” means the rate determined by
+    dividing the amount of Indian income-tax after deduction of any
+    relief due under the provisions of this Act but before deduction of any
+    relief due under this Chapter, by the total income;
+    (iii) the expression “rate of tax of the said country” means income-tax and
+    super-tax actually paid in the said country in accordance with the
+    corresponding laws in force in the said country after deduction of all
+    relief due, but before deduction of any relief due in the said country
+    in respect of double taxation, divided by the whole amount of the
+    income as assessed in the said country;
+    (iv) the expression “income-tax” in relation to any country includes any
+    excess profits tax or business profits tax charged on the profits by the
+    Government of any part of that country or a local authority in that
+    country.
+    CHAPTER X
+    SPECIAL PROVISIONS RELATING TO
+    AVOIDANCE OF TAX
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 514
+  extraction: auto
+  reviewed: false
+- id: IT1961:s115BAC(1)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.115BAC(1) > FY 2025-26 and earlier
+  heading: Tax on income of individuals, Hindu undivided family and others
+  text: |-
+    115BAC. (1) Notwithstanding anything contained in this Act but subject to the
+    provisions of this Chapter, the income-tax payable in respect of the
+    total income of a person, being an individual or a Hindu undivided family, for any
+    previous year relevant to the assessment year beginning on or after the 1st day
+    of April, 2021 but before the 1st day of April, 2024, shall, at the option of such
+    person, be computed at the rate of tax given in the following Table, if the
+    conditions contained in sub-section (2) are satisfied, namely:—
+    TABLE
+    Sl. No. Total income Rate of tax
+    (1) (2) (3)
+    1. Upto Rs. 2,50,000 Nil
+    2. From Rs. 2,50,001 to Rs. 5,00,000
+    3. From Rs. 5,00,001 to Rs. 7,50,000 5 per cent
+    4. From Rs. 7,50,001 to Rs. 10,00,000 10 per cent
+    5. From Rs. 10,00,001 to Rs. 12,50,000 15 per cent
+    6. From Rs. 12,50,001 to Rs. 15,00,000 20 per cent
+    7. Above Rs. 15,00,000 25 per cent
+    30 per cent:
+    Provided that where the person fails to satisfy the conditions contained in sub-
+    section (2) in any previous year, the option shall become invalid in respect of the
+    assessment year relevant to that previous year and other provisions of this Act
+    shall apply, as if the option had not been exercised for the assessment year
+    relevant to that previous year:
+    Provided further that where the option is exercised under clause (i) of sub-
+    section (5), in the event of failure to satisfy the conditions contained in sub-
+    section (2), it shall become invalid for subsequent assessment years also and
+    other provisions of this Act shall apply for those years accordingly.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 567
+  extraction: auto
+  reviewed: false
+- id: IT1961:s115BAC(1A)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.115BAC(1A) > FY 2025-26 and earlier
+  heading: Tax on income of individuals, Hindu undivided family and others
+  text: |-
+    32[(1A) Notwithstanding anything contained in this Act but subject to the provi-
+    sions of this Chapter, the income-tax payable in respect of the total income of a
+    person, being an individual or Hindu undivided family or association of persons
+    (other than a co-operative society), or body of individuals, whether incorpo-
+    rated or not, or an artificial juridical person referred to in sub-clause (vii) of
+    clause (31) of section 2, other than a person who has exercised an option under
+    sub-section (6),—
+    (i) for any previous year relevant to the assessment year beginning on
+    the 1st day of April, 2024, shall be computed at the rate of tax given
+    in the following Table, namely:—
+    32. Sub. by the Act No. 15 of 2024 , w.e.f. 1-4-2025.
+    TABLE
+    Sl. No. Total income Rate of tax
+    (1) (2) (3)
+    1. Upto Rs. 3,00,000 Nil
+    2. From Rs. 3,00,001 to Rs. 6,00,000 5 per cent
+    3. From Rs. 6,00,001 to Rs. 9,00,000 10 per cent
+    4. From Rs. 9,00,001 to Rs. 12,00,000 15 per cent
+    5. From Rs. 12,00,001 to Rs. 15,00,000 20 per cent
+    6. Above Rs. 15,00,000 30 per cent;
+    (ii) for any previous year relevant to the assessment year beginning on
+    33[***] the 1st day of April, 2025, shall be computed at the rate of tax
+    given in the following Table, namely:—
+    TABLE
+    Sl. No. Total income Rate of tax
+    (1) (2) (3)
+    Nil
+    1. Upto Rs. 3,00,000
+    5 per cent
+    2. From Rs. 3,00,001 to Rs. 7,00,000
+    3. From Rs. 7,00,001 to Rs. 10,00,000 10 per cent
+    15 per cent
+    4. From Rs. 10,00,001 to Rs. 12,00,000
+    5. From Rs. 12,00,001 to Rs. 15,00,000 20 per cent
+    6. Above Rs. 15,00,000 30 per cent. ]
+    ( ) 34[ iii for any previous year relevant to the assessment year beginning on or
+    after the 1st April, 2026, shall be computed at the rate of tax given in
+    the following Table, namely:—
+    TABLE
+    S. No. Total income Rate of tax
+    (1) (2) (3)
+    1. Upto Rs. 4,00,000 Nil
+    2. From Rs. 4,00,001 to Rs. 8,00,000
+    3. From Rs. 8,00,001 to Rs. 12,00,000 5 per cent
+    4. From Rs. 12,00,001 to Rs. 16,00,000 10 per cent
+    5. From Rs. 16,00,001 to Rs. 20,00,000 15 per cent
+    20 per cent
+    S. No. Total income Rate of tax
+    (1) (2) (3)
+    6. From Rs. 20,00,001 to Rs. 24,00,000 25 per cent
+    7. Above Rs. 24,00,000 30 per cent. ]
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 567
+  - 568
+  - 569
+  extraction: auto
+  reviewed: false
+- id: IT1961:s115BAC(2)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.115BAC(2) > FY 2025-26 and earlier
+  heading: Tax on income of individuals, Hindu undivided family and others
+  text: |-
+    (2) For the purposes of sub-section (1A), the total income of the person referred
+    to therein, shall be computed—
+    (i) without any exemption or deduction under the provisions of clause
+    13A 14 (5) or clause (
+    ) or prescribed under clause ( ) (other than those
+    as may be prescribed for this purpose) or clause (17) or clause (32), of
+    section 10 or section 10AA or clause (ii) or clause (iii) of section 16 or
+    clause (b) of section 24 in respect of the property referred to in sub-
+    section (2) of section 23 or clause (iia) of sub-section (1) of section 32
+    or section 32AD or section 33AB or section 33ABA or sub-clause (ii)
+    or sub-clause (iia) or sub-clause (iii) of sub-section (1) or sub-section
+    (2AA) of section 35 or section 35AD or section 35CCC or under any of
+    the provisions of Chapter VI-A other than the provisions of sub-
+    section (2) of section 80CCD or sub-section (2) of section 80CCH or
+    section 80JJAA;
+    (ii) without set off of any loss,—
+    (a) carried forward or depreciation from any earlier assessment
+    year, if such loss or depreciation is attributable to any of the
+    deductions referred to in clause (i);
+    (b) under the head “Income from house property” with any other
+    (iii) head of income;
+    by claiming the depreciation, if any, under any provision of section 32,
+    except clause (iia) of sub-section (1) of the said section, determined in
+    such manner as may be prescribed; and
+    (iv) without any exemption or deduction for allowances or perquisite, by
+    whatever name called, provided under any other law for the time
+    being in force.
+    (3) The loss and depreciation referred to in clause (ii) of sub-section (2) shall be
+    deemed to have been given full effect to and no further deduction for such loss
+    or depreciation shall be allowed for any subsequent year:
+    Provided that where there is a depreciation allowance in respect of a block of
+    assets which has not been given full effect to prior to the assessment year
+    beginning on the 1st day of April, 2021, corresponding adjustment shall be made
+    to the written down value of such block of assets as on the 1st day of April, 2020
+    in the prescribed manner, if the option under sub-section (5) is exercised for a
+    previous year relevant to the assessment year beginning on the 1st day of April,
+    2021:
+    Provided further that in a case where,—
+    (i) the assessee has not exercised the option under sub-section (5) for any
+    previous year relevant to the assessment year beginning on or before
+    the 1st day of April, 2023;
+    (ii) the income-tax on the total income of the assessee is computed under
+    sub-section (1A); and
+    (iii) there is a depreciation allowance in respect of a block of assets which
+    has not been given full effect prior to the assessment year beginning
+    on the 1st day of April, 2024,
+    corresponding adjustment shall be made to the written down value of such block
+    of assets as on the 1st day of April, 2023 in the manner as may be prescribed.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 569
+  - 570
+  extraction: auto
+  reviewed: false
+- id: IT1961:s115BAC(4)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.115BAC(4) > FY 2025-26 and earlier
+  heading: Tax on income of individuals, Hindu undivided family and others
+  text: |-
+    (4) In case of a person, having a Unit in the International Financial Services
+    Centre, as referred to in sub-section (1A) of section 80LA,––
+    (i) who has exercised option under sub-section (5) for any previous year
+    relevant to the assessment year beginning on or after the 1st day of
+    April, 2021 but before the 1st day of April, 2024;
+    (ii) whose total income is computed under sub-section (1A),
+    the conditions contained in sub-section (2) shall be modified to the extent that
+    the deduction under section 80LA shall be available to such Unit subject to
+    fulfilment of the conditions contained in the said section.
+    Explanation.—For the purposes of this sub-section, the term “Unit” shall have the
+    meaning assigned to it in clause (zc) of section 2 of the Special Economic
+    Zones Act, 2005 (28 of 2005).
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 570
+  extraction: auto
+  reviewed: false
+- id: IT1961:s115BAC(5)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.115BAC(5) > FY 2025-26 and earlier
+  heading: Tax on income of individuals, Hindu undivided family and others
+  text: |-
+    (5) Nothing contained in this section shall apply unless option is exercised in the
+    prescribed manner by the person,—
+    (i) having income from business or profession, on or before the due date
+    specified under sub-section (1) of section 139 for furnishing the
+    returns of income for any previous year relevant to the assessment
+    year commencing on or after the 1st day of April, 2021, and such
+    option once exercised shall apply to subsequent assessment years;
+    (ii) having income other than the income referred to in clause (i),
+    alongwith the return of income to be furnished under sub-section (1)
+    of section 139 for a previous year relevant to the assessment year:
+    Provided that the option under clause (i), once exercised for any previous year
+    can be withdrawn only once for a previous year other than the year in which it
+    was exercised and thereafter, the person shall never be eligible to exercise option
+    under this section, except where such person ceases to have any income from
+    business or profession in which case, option under clause (ii) shall be available:
+    Provided further that the provisions of this sub-section shall not apply for any
+    previous year relevant to the assessment year beginning on or after the 1st day
+    of April, 2024.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 570
+  extraction: auto
+  reviewed: false
+- id: IT1961:s115BAC(6)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.115BAC(6) > FY 2025-26 and earlier
+  heading: Tax on income of individuals, Hindu undivided family and others
+  text: |-
+    (6) Nothing contained in sub-section (1A) shall apply to a person where an option
+    is exercised by such person, in the manner as may be prescribed, for any
+    assessment year, and such option is exercised,—
+    (i) on or before the due date specified under sub-section (1) of section
+    139 for furnishing the return of income for such assessment year, in
+    case of a person having income from business or profession, and such
+    option once exercised shall apply to subsequent assessment years; or
+    (ii) along with the return of income to be furnished under sub-section (1)
+    of section 139 for such assessment year, in case of a person not having
+    income referred to in clause (i):
+    Provided that the option under clause (i), once exercised for any previous year
+    can be withdrawn only once for a previous year other than the year in which it
+    was exercised and thereafter, the person shall never be eligible to exercise the
+    option under this sub-section, except where such person ceases to have any
+    income from business or profession in which case, option under clause (ii) shall
+    be available.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 570
+  - 571
+  extraction: auto
+  reviewed: false
+- id: IT1961:s139(1)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.139(1) > FY 2025-26 and earlier
+  heading: Return of income
+  text: |-
+    139. (1) Every person,—
+    (a) being a company or a firm; or
+    (b) being a person other than a company or a firm, if his total income or
+    the total income of any other person in respect of which he is
+    assessable under this Act during the previous year exceeded the
+    maximum amount which is not chargeable to income-tax,
+    shall, on or before the due date, furnish a return of his income or the income
+    of such other person during the previous year, in the prescribed form and
+    verified in the prescribed manner and setting forth such other particulars as may
+    be prescribed :
+    Provided that a person referred to in clause (b), who is not required to furnish a
+    return under this sub-section and residing in such area as may be specified by
+    the Board in this behalf by notification in the Official Gazette, and who during
+    the previous year incurs an expenditure of fifty thousand rupees or more
+    towards consumption of electricity or at any time during the previous year fulfils
+    any one of the following conditions, namely :—
+    (i) is in occupation of an immovable property exceeding a specified floor
+    area, whether by way of ownership, tenancy or otherwise, as may be
+    specified by the Board in this behalf; or
+    (ii) is the owner or the lessee of a motor vehicle other than a two-
+    wheeled motor vehicle, whether having any detachable side car
+    having extra wheel attached to such two-wheeled motor vehicle or
+    not; or
+    (iii) [***]
+    (iv) has incurred expenditure for himself or any other person on travel to
+    any foreign country; or
+    (v) is the holder of a credit card, not being an “add-on” card, issued by any
+    bank or institution; or
+    (vi) is a member of a club where entrance fee charged is twenty-five
+    thousand rupees or more,
+    shall furnish a return, of his income during any previous year ending before the
+    1st day of April, 2005, on or before the due date in the prescribed form and
+    verified in the prescribed manner and setting forth such other particulars as may
+    be prescribed :
+    Provided further that the Central Government may, by notification in the Official
+    Gazette, specify the class or classes of persons to whom the provisions of the first
+    proviso shall not apply :
+    Provided also that every company or a firm shall furnish on or before the
+    due date the return in respect of its income or loss in every previous year :
+    Provided also that a person, being a resident other than not ordinarily resident
+    in India within the meaning of clause (6) of section 6, who is not required to
+    furnish a return under this sub-section and who at any time during the previous
+    year,—
+    (a) holds, as a beneficial owner or otherwise, any asset (including any
+    financial interest in any entity) located outside India or has signing
+    authority in any account located outside India; or
+    (b) is a beneficiary of any asset (including any financial interest in any
+    entity) located outside India,
+    shall furnish, on or before the due date, a return in respect of his income or loss
+    for the previous year in such form and verified in such manner and setting forth
+    such other particulars as may be prescribed:
+    Provided also that nothing contained in the fourth proviso shall apply to an
+    individual, being a beneficiary of any asset (including any financial interest in
+    any entity) located outside India where, income, if any, arising from such asset
+    is includible in the income of the person referred to in clause (a) of that proviso
+    in accordance with the provisions of this Act:
+    Provided also that every person, being an individual or a Hindu undivided family
+    or an association of persons or a body of individuals, whether incorporated or
+    not, or an artificial juridical person, if his total income or the total income of any
+    other person in respect of which he is assessable under this Act during the
+    previous year, without giving effect to the provisions of clause (38) of section 10
+    or section 10A or section 10B or section 10BA or section 54 or section 54B or
+    section 54D or section 54EC or section 54F or section 54G or section 54GA or
+    section 54GB or Chapter VI-A exceeded the maximum amount which is not
+    chargeable to income-tax, shall, on or before the due date, furnish a return of his
+    income or the income of such other person during the previous year, in the
+    prescribed form and verified in the prescribed manner and setting forth such
+    other particulars as may be prescribed:
+    Provided also that a person referred to in clause (b), who is not required to furnish
+    a return under this sub-section, and who during the previous year—
+    (i) has deposited an amount or aggregate of the amounts exceeding one
+    crore rupees in one or more current accounts maintained with a
+    banking company or a co-operative bank; or
+    (ii) has incurred expenditure of an amount or aggregate of the amounts
+    exceeding two lakh rupees for himself or any other person for travel
+    to a foreign country; or
+    (iii) has incurred expenditure of an amount or aggregate of the amounts
+    exceeding one lakh rupees towards consumption of electricity; or
+    (iv) fulfils such other conditions as may be prescribed,
+    shall furnish a return of his income on or before the due date in such form and
+    verified in such manner and setting forth such other particulars, as may be
+    prescribed.
+    Explanation 1.—For the purposes of this sub-section, the expression “motor
+    vehicle” shall have the meaning assigned to it in clause (28) of section 2 of the
+    Motor Vehicles Act, 1988 (59 of 1988).
+    [54 Explanation 2.—For the purposes of this sub-section, “due date” in respect of the
+    persons mentioned in column B of the Table below, subject to the conditions as
+    mentioned in column C of the said Table, shall be the due date of assessment year
+    as mentioned in column D thereof:
+    TABLE
+    Sl. No. Person Conditions Due date
+    A
+    B C D
+    1.
+    Assessee, including the partners of the firm or Where the 30th
+    2. the spouse of such partner (if section 5A applies provisions of November.
+    to such spouse).
+    section 92E
+    apply.
+    (i) Company; Where the 31st October.
+    (ii) Assessee (other than a company) whose provisions of
+    accounts are required to be audited under section 92E do
+    this Act or under any other law for the not apply.
+    time being in force;
+    54. Sub. by the Act No. 4 of 2026, w.e.f. 1-3-2026. Prior to its substitution, Explanation 2, as
+    amended by the Act No. 18 of 2008, w.e.f. 1-4-2008, Act No. 8 of 2011, w.e.f. 1-4-2011, Act
+    No. 23 of 2012, w.e.f. 1-4-2012, Act No. 12 of 2020, w.e.f. 1-4-2020 and Act No. 13 of 2021,
+    w.e.f. 1-4-2021, read as under:
+    ‘Explanation 2.—In this sub-section, “due date” means,—
+    (a) where the assessee other than an assessee referred to in clause (aa) is—
+    (i) a company; or
+    (ii) a person (other than a company) whose accounts are required to be audited
+    under this Act or under any other law for the time being in force; or
+    (iii) a partner of a firm whose accounts are required to be audited under this Act
+    or under any other law for the time being in force or the spouse of such
+    partner if the provisions of section 5A applies to such spouse,
+    the 31st day of October of the assessment year;
+    (aa) in the case of an assessee, including the partners of the firm or the spouse of such
+    partner (if the provisions of section 5A applies to such spouse), being such assessee,
+    who is required to furnish a report referred to in section 92E, the 30th day of
+    November of the assessment year;
+    (b) in the case of a person other than a company, referred to in the first proviso to this
+    sub-section, the 31st day of October of the assessment year;
+    (c) in the case of any other assessee, the 31st day of July of the assessment year.’
+    Sl. No. Person Conditions Due date
+    A
+    B C D
+    3.
+    (iii) partner of a firm whose accounts are
+    4.
+    required to be audited under this Act or
+    under any other law for the time being in
+    force or the spouse of such partner (if
+    section 5A applies to such spouse).
+    (i) Assessee having income from profits and Where the 31st August.
+    gains of business or profession whose provisions of
+    accounts are not required to be audited section 92E do
+    under this Act or under any other law for not apply.
+    the time being in force;
+    (ii) partner of a firm whose accounts are not
+    required to be audited under this Act or
+    under any other law for the time being in
+    force or the spouse of such partner (if
+    section 5A applies to such spouse).
+    Any other assessee. 31st July.]
+    Explanation 3.—For the purposes of this sub-section, the expression “travel to
+    any foreign country” does not include travel to the neighbouring countries or to
+    such places of pilgrimage as the Board may specify in this behalf by notification
+    in the Official Gazette.
+    Explanation 4.—For the purposes of this section “beneficial owner” in respect of
+    an asset means an individual who has provided, directly or indirectly, consider-
+    ation for the asset for the immediate or future benefit, direct or indirect, of
+    himself or any other person.
+    Explanation 5.—For the purposes of this section “beneficiary” in respect of an
+    asset means an individual who derives benefit from the asset during the previous
+    year and the consideration for such asset has been provided by any person other
+    than such beneficiary.
+    Explanation 6.—For the purposes of this sub-section,—
+    (a) “banking company” shall have the meaning assigned to it in clause (i)
+    of the Explanation to section 269SS;
+    (b) “co-operative bank” shall have the meaning assigned to it in clause (ii)
+    of the Explanation to section 269SS.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 677
+  - 678
+  - 679
+  - 680
+  extraction: auto
+  reviewed: false
+- id: IT1961:s208
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.208 > FY 2025-26 and earlier
+  heading: Conditions of liability to pay advance tax
+  text: |-
+    208. Advance tax shall be payable during a financial year in every case
+    where the amount of such tax payable by the assessee during that
+    year, as computed in accordance with the provisions of this Chapter, is ten
+    thousand rupees or more.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 858
+  extraction: auto
+  reviewed: false
+- id: IT1961:s209(1)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.209(1) > FY 2025-26 and earlier
+  heading: Computation of advance tax
+  text: |-
+    209. (1) The amount of advance tax payable by an assessee in the financial
+    year shall, subject to the provisions of sub-sections (2) and (3), be computed
+    as follows, namely :—
+    (a) where the calculation is made by the assessee for the purposes of
+    payment of advance tax under sub-section (1) or sub-section (2) or
+    sub-section (5) or sub-section (6) of section 210, he shall first estimate
+    his current income and income-tax thereon shall be calculated at the
+    rates in force in the financial year;
+    (b) where the calculation is made by the Assessing Officer for the purpose
+    of making an order under sub-section (3) of section 210, the total
+    income of the latest previous year in respect of which the assessee has
+    been assessed by way of regular assessment or the total income
+    returned by the assessee in any return of income furnished by him for
+    any subsequent previous year, whichever is higher, shall be taken and
+    income-tax thereon shall be calculated at the rates in force in the
+    financial year;
+    (c) where the calculation is made by the Assessing Officer for the purpose
+    of making an amended order under sub-section (4) of section 210, the
+    total income declared in the return furnished by the assessee for the
+    later previous year, or, as the case may be, the total income in respect
+    of which the regular assessment, referred to in that sub-section has
+    been made, shall be taken and income-tax thereon shall be calculated
+    at the rates in force in the financial year;
+    (d) the income-tax calculated under clause (a) or clause (b) or clause (c)
+    shall, in each case, be reduced by the amount of income-tax which
+    would be deductible or collectible at source during the said financial
+    year under any provision of this Act from any income (as computed
+    before allowing any deductions admissible under this Act) which has
+    been taken into account in computing the current income or, as the
+    case may be, the total income aforesaid; and the amount of income-
+    tax as so reduced shall be the advance tax payable:
+    Provided that for computing liability for advance tax, income-tax calculated
+    under clause (a) or clause (b) or clause (c) shall not, in each case, be reduced by
+    the aforesaid amount of income-tax which would be deductible or collectible at
+    source during the said financial year under any provision of this Act from any
+    income, if the person responsible for deducting tax has paid or credited such
+    income without deduction of tax or it has been received or debited by the person
+    responsible for collecting tax without collection of such tax.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 858
+  - 859
+  extraction: auto
+  reviewed: false
+- id: IT1961:s209(2)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.209(2) > FY 2025-26 and earlier
+  heading: Computation of advance tax
+  text: |-
+    (2) Where the Finance Act of the relevant year provides that, in the case of any
+    class of assessees, net agricultural income (as defined in that Act) shall be taken
+    into account for the purposes of computing advance tax, then, the net agricul-
+    tural income to be taken into account in the case of any assessee falling in that
+    class, shall be—
+    (a) in cases where the Assessing Officer makes an order under sub-
+    section (3) or sub-section (4) of section 210,—
+    (i) if the total income of the latest previous year in respect of which
+    the assessee has been assessed by way of regular assessment
+    forms the basis of computation of advance tax payable by him,
+    the net agricultural income which has been taken into account
+    for the purposes of charging income-tax for the assessment year
+    relevant to that previous year; or
+    (ii) if the total income declared by the assessee for the later previous
+    year referred to in sub-section (4) of section 210 forms the basis
+    of computation of advance tax, the net agricultural income as
+    returned by the assessee in the return of income for the assess-
+    ment year relevant to such later previous year;
+    (b) in cases where the advance tax is paid by the assessee on the basis of
+    his estimate of his current income under sub-section (1) or sub-
+    section (2) or sub-section (5) or sub-section (6) of section 210, the net
+    agricultural income, as estimated by him, of the period which would
+    be the previous year for the immediately following assessment year.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 859
+  - 860
+  extraction: auto
+  reviewed: false
+- id: IT1961:s209(3)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.209(3) > FY 2025-26 and earlier
+  heading: Computation of advance tax
+  text: |-
+    (3) Where the Finance Act of the relevant year specifies any separate rate or rates
+    for the purposes of computing advance tax in the case of every Hindu undivided
+    family which has at least one member whose total income of the previous year
+    exceeds the maximum amount not chargeable to income-tax in his case, then, the
+    Assessing Officer shall, for making an order under sub-section (3) or sub-section
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 860
+  extraction: auto
+  reviewed: false
+- id: IT1961:s209(4)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.209(4) > FY 2025-26 and earlier
+  heading: Computation of advance tax
+  text: |-
+    (4) of section 210 in the case of any such Hindu undivided family, compute
+    (subject to the provisions of section 164) the advance tax at such rate or rates—
+    (a) in a case where the total income of the latest previous year in respect
+    of which the Hindu undivided family has been assessed by way of
+    regular assessment forms the basis of computation of advance tax, if
+    the total income of any member of the family for the assessment year
+    relevant to such latest previous year exceeds the maximum amount
+    not chargeable to income-tax in his case;
+    (b) in a case where the total income of the previous year in respect of
+    which a return of income is furnished by the Hindu undivided family
+    under section 139 or in response to a notice under sub-section (1) of
+    section 142 forms the basis of computation of advance tax, if the total
+    income of any member of the family for the assessment year relevant
+    to such previous year exceeds the maximum amount not chargeable
+    to income-tax in his case.
+    Computation and payment of advance tax by assessee.
+    209A. [Omitted by the Direct Tax Laws (Amendment) Act, 1987, w.e.f. 1-4-1988.
+    Original section was inserted by the Finance Act, 1978, w.e.f. 1-6-1978.]
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 860
+  extraction: auto
+  reviewed: false
+- id: IT1961:s210(1)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.210(1) > FY 2025-26 and earlier
+  heading: Payment of advance tax by the assessee of his own accord or in pursuance of order of Assessing Officer
+  text: |-
+    210. (1) Every person who is liable to pay advance tax under section 208
+    (whether or not he has been previously assessed by way of regular
+    assessment) shall, of his own accord, pay, on or before each of the due dates
+    specified in section 211, the appropriate percentage, specified in that section, of
+    the advance tax on his current income, calculated in the manner laid down in
+    section 209.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 860
+  extraction: auto
+  reviewed: false
+- id: IT1961:s210(2)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.210(2) > FY 2025-26 and earlier
+  heading: Payment of advance tax by the assessee of his own accord or in pursuance of order of Assessing Officer
+  text: |-
+    (2) A person who pays any instalment or instalments of advance tax under sub-
+    section (1), may increase or reduce the amount of advance tax payable in the
+    remaining instalment or instalments to accord with his estimate of his current
+    income and the advance tax payable thereon, and make payment of the said
+    amount in the remaining instalment or instalments accordingly.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 860
+  extraction: auto
+  reviewed: false
+- id: IT1961:s210(3)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.210(3) > FY 2025-26 and earlier
+  heading: Payment of advance tax by the assessee of his own accord or in pursuance of order of Assessing Officer
+  text: |-
+    (3) In the case of a person who has been already assessed by way of regular
+    assessment in respect of the total income of any previous year, the Assessing
+    Officer, if he is of opinion that such person is liable to pay advance tax, may, at
+    any time during the financial year but not later than the last day of February, by
+    order in writing, require such person to pay advance tax calculated in the manner
+    laid down in section 209, and issue to such person a notice of demand under
+    section 156 specifying the instalment or instalments in which such tax is to be
+    paid.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 860
+  - 861
+  extraction: auto
+  reviewed: false
+- id: IT1961:s210(4)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.210(4) > FY 2025-26 and earlier
+  heading: Payment of advance tax by the assessee of his own accord or in pursuance of order of Assessing Officer
+  text: |-
+    (4) If, after the making of an order by the Assessing Officer under sub-section (3)
+    and at any time before the 1st day of March, a return of income is furnished by
+    the assessee under section 139 or in response to a notice under sub-section (1) of
+    section 142, or a regular assessment of the assessee is made in respect of a
+    previous year later than that referred to in sub-section (3), the Assessing Officer
+    may make an amended order and issue to such assessee a notice of demand
+    under section 156 requiring the assessee to pay, on or before the due date or each
+    of the due dates specified in section 211 falling after the date of the amended
+    order, the appropriate percentage, specified in section 211, of the advance tax
+    computed on the basis of the total income declared in such return or in respect
+    of which the regular assessment aforesaid has been made.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 861
+  extraction: auto
+  reviewed: false
+- id: IT1961:s210(5)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.210(5) > FY 2025-26 and earlier
+  heading: Payment of advance tax by the assessee of his own accord or in pursuance of order of Assessing Officer
+  text: |-
+    (5) A person who is served with an order of the Assessing Officer under sub-
+    section (3) or an amended order under sub-section (4) may, if in his estimation
+    the advance tax payable on his current income would be less than the amount
+    of the advance tax specified in such order or amended order, send an intimation
+    in the prescribed form to the Assessing Officer to that effect and pay such
+    advance tax as accords with his estimate, calculated in the manner laid down in
+    section 209, at the appropriate percentage thereof specified in section 211, on or
+    before the due date or each of the due dates specified in section 211 falling after
+    the date of such intimation.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 861
+  extraction: auto
+  reviewed: false
+- id: IT1961:s210(6)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.210(6) > FY 2025-26 and earlier
+  heading: Payment of advance tax by the assessee of his own accord or in pursuance of order of Assessing Officer
+  text: |-
+    (6) A person who is served with an order of the Assessing Officer under sub-
+    section (3) or amended order under sub-section (4) shall, if in his estimation the
+    advance tax payable on his current income would exceed the amount of advance
+    tax specified in such order or amended order or intimated by him under sub-
+    section (5), pay on or before the due date of the last instalment specified in section
+    211, the appropriate part or, as the case may be, the whole of such higher amount
+    of advance tax as accords with his estimate, calculated in the manner laid down
+    in section 209.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 861
+  extraction: auto
+  reviewed: false
+- id: IT1961:s211(1)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.211(1) > FY 2025-26 and earlier
+  heading: Instalments of advance tax and due dates
+  text: |-
+    211. (1) Advance tax on the current income calculated in the manner laid
+    down in section 209 shall be payable by—
+    (a) all the assessees, other than the assessee referred to in clause (b), who
+    are liable to pay the same, in four instalments during each financial
+    year and the due date of each instalment and the amount of such
+    instalment shall be as specified in the Table below:
+    TABLE
+    Due date of instalment Amount payable
+    On or before the 15th Not less than fifteen per cent of such advance
+    June tax.
+    Due date of instalment Amount payable
+    On or before the 15th Not less than forty-five per cent of such
+    September advance tax, as reduced by the amount, if any,
+    paid in the earlier instalment.
+    On or before the 15th Not less than seventy-five per cent of such
+    December advance tax, as reduced by the amount or
+    amounts, if any, paid in the earlier instalment or
+    instalments.
+    On or before the 15th The whole amount of such advance tax, as
+    March reduced by the amount or amounts, if any, paid
+    in the earlier instalment or instalments;
+    (b) an assessee who declares profits and gains in accordance with the
+    provisions of sub-section (1) of section 44AD or sub-section (1) of
+    section 44ADA, as the case may be, to the extent of the whole amount
+    of such advance tax during each financial year on or before the 15th
+    March:
+    Provided that any amount paid by way of advance tax on or before the 31st day
+    of March shall also be treated as advance tax paid during the financial year
+    ending on that day for all the purposes of this Act.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 861
+  - 862
+  extraction: auto
+  reviewed: false
+- id: IT1961:s211(2)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.211(2) > FY 2025-26 and earlier
+  heading: Instalments of advance tax and due dates
+  text: |-
+    (2) If the notice of demand issued under section 156 in pursuance of an order of
+    the Assessing Officer under sub-section (3) or sub-section (4) of section 210 is
+    served after any of the due dates specified in sub-section (1), the appropriate part
+    or, as the case may be, the whole of the amount of the advance tax specified in
+    such notice shall be payable on or before each of such of those dates as fall after
+    the date of service of the notice of demand.
+    Estimate by assessee.
+    212. [Omitted by the Direct Tax Laws (Amendment) Act, 1987, w.e.f. 1-4-1988.]
+    Commission receipts.
+    213. [Omitted by the Direct Tax Laws (Amendment) Act, 1987, w.e.f. 1-4-1988.]
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 862
+  extraction: auto
+  reviewed: false
+- id: IT1961:s234B(1)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.234B(1) > FY 2025-26 and earlier
+  heading: Interest for defaults in payment of advance tax
+  text: |-
+    234B. (1) Subject to the other provisions of this section, where, in any financial
+    year, an assessee who is liable to pay advance tax under section 208 has
+    failed to pay such tax or, where the advance tax paid by such assessee under the
+    provisions of section 210 is less than ninety per cent of the assessed tax, the
+    assessee shall be liable to pay simple interest at the rate of one per cent for every
+    month or part of a month comprised in the period from the 1st day of April next
+    following such financial year to the date of determination of total income under
+    sub-section (1) of section 143 and where a regular assessment is made, to the date
+    of such regular assessment, on an amount equal to the assessed tax or, as the case
+    may be, on the amount by which the advance tax paid as aforesaid falls short of
+    the assessed tax.
+    Explanation 1.—In this section, “assessed tax”1 means the tax on the total income
+    determined under sub-section (1) of section 143 and where a regular assessment
+    is made, the tax on the total income determined under such regular assessment
+    as reduced by the amount of,—
+    (i) any tax deducted or collected at source in accordance with the
+    provisions of Chapter XVII on any income which is subject to such
+    deduction or collection and which is taken into account in computing
+    such total income;
+    (ia) any relief of tax allowed under section 89;
+    (ii) any relief of tax allowed under section 90 on account of tax paid in a
+    country outside India;
+    (iii) any relief of tax allowed under section 90A on account of tax paid in
+    a specified territory outside India referred to in that section;
+    (iv) any deduction, from the Indian income-tax payable, allowed under
+    section 91, on account of tax paid in a country outside India; and
+    (v) any tax credit allowed to be set off in accordance with the provisions
+    of section 115JAA or section 115JD.
+    Explanation 2.—Where, in relation to an assessment year, an assessment is made
+    for the first time under section 147 or section 153A, the assessment so made shall
+    be regarded as a regular assessment for the purposes of this section.
+    Explanation 3.—In Explanation 1 and in sub-section (3),—
+    (i) “tax on total income as determined under sub-section (1) of section
+    143” shall not include the additional income-tax, if any, payable under
+    section 140B or section 143; and
+    (ii) tax on the total income determined under such regular assessment
+    shall not include the additional income-tax payable under section
+    140B.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 878
+  - 879
+  extraction: auto
+  reviewed: false
+- id: IT1961:s234B(2)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.234B(2) > FY 2025-26 and earlier
+  heading: Interest for defaults in payment of advance tax
+  text: |-
+    (2) Where, before the date of determination of total income under sub-section (1)
+    of section 143 or completion of a regular assessment, tax is paid by the assessee
+    under section 140A or otherwise,—
+    (i) interest shall be calculated in accordance with the foregoing provi-
+    sions of this section up to the date on which the tax is so paid, and
+    reduced by the interest, if any, paid under section 140A towards the
+    interest chargeable under this section;
+    (ii) thereafter, interest shall be calculated at the rate aforesaid on the
+    amount by which the tax so paid together with the advance tax paid
+    falls short of the assessed tax.
+    (2A) (a) Where an application under sub-section (1) of section 245C for any
+    assessment year has been made, the assessee shall be liable to pay simple interest
+    at the rate of one per cent for every month or part of a month comprised in the
+    period commencing on the 1st day of April of such assessment year and ending
+    on the date of making such application, on the additional amount of income-tax
+    referred to in that sub-section;
+    (b) where as a result of an order of the Settlement Commission under sub-section
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 879
+  extraction: auto
+  reviewed: false
+- id: IT1961:s234B(4)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.234B(4) > FY 2025-26 and earlier
+  heading: Interest for defaults in payment of advance tax
+  text: |-
+    (4) of section 245D for any assessment year, the amount of total income disclosed
+    in the application under sub-section (1) of section 245C is increased, the assessee
+    shall be liable to pay simple interest at the rate of one per cent for every month
+    or part of a month comprised in the period commencing on the 1st day of April
+    of such assessment year and ending on the date of such order, on the amount by
+    which the tax on the total income determined on the basis of such order exceeds
+    the tax on the total income disclosed in the application filed under sub-section
+    (1) of section 245C;
+    (c) where, as a result of an order under sub-section (6B) of section 245D, the
+    amount on which interest was payable under clause (b) has been increased or
+    reduced, as the case may be, the interest shall be increased or reduced accord-
+    ingly.
+    (3) Where, as a result of an order of reassessment or recomputation under
+    section 147 or section 153A, the amount on which interest was payable in respect
+    of shortfall in payment of advance tax for any financial year under sub-section
+    (1) is increased, the assessee shall be liable to pay simple interest at the rate of one
+    per cent for every month or part of a month comprised in the period commencing
+    on the 1st day of April next following such financial year and ending on the date
+    of the reassessment or recomputation under section 147 or section 153A, on the
+    amount by which the tax on the total income determined on the basis of the
+    reassessment or recomputation exceeds the tax on the total income determined
+    under sub-section (1) of section 143 or on the basis of the regular assessment as
+    referred to in sub-section (1), as the case may be.
+    (4) Where, as a result of an order under section 154 or section 155 or section 250
+    or section 254 or section 260 or section 262 or section 263 or section 264, the
+    amount on which interest was payable under sub-section (1) or sub-section (3)
+    has been increased or reduced, as the case may be, the interest shall be increased
+    or reduced accordingly, and—
+    (i) in a case where the interest is increased, the Assessing Officer shall
+    serve on the assessee a notice of demand in the prescribed form
+    specifying the sum payable and such notice of demand shall be
+    deemed to be a notice under section 156 and the provisions of this Act
+    shall apply accordingly;
+    (ii) in a case where the interest is reduced, the excess interest paid, if any,
+    shall be refunded.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 879
+  - 880
+  extraction: auto
+  reviewed: false
+- id: IT1961:s234B(5)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.234B(5) > FY 2025-26 and earlier
+  heading: Interest for defaults in payment of advance tax
+  text: |-
+    (5) The provisions of this section shall apply in respect of assessments for the
+    assessment year commencing on the 1st day of April, 1989 and subsequent
+    assessment years.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 880
+  extraction: auto
+  reviewed: false
+- id: IT1961:s234C(1)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.234C(1) > FY 2025-26 and earlier
+  heading: Interest for deferment of advance tax
+  text: |-
+    234C. (1) Where in any financial year,—
+    (a) an assessee, other than the assessee referred to in clause (b), who is
+    liable to pay advance tax under section 208 has failed to pay such tax
+    or—
+    (i) the advance tax paid by such assessee on its current income on
+    or before the 15th day of June is less than fifteen per cent of the
+    tax due on the returned income or the amount of such advance
+    tax paid on or before the 15th day of September is less than forty-
+    five per cent of the tax due on the returned income or the amount
+    of such advance tax paid on or before the 15th day of December
+    is less than seventy-five per cent of the tax due on the returned
+    income, then, the assessee shall be liable to pay simple interest at
+    the rate of one per cent per month for a period of three months
+    on the amount of the shortfall from fifteen per cent or forty-five
+    per cent or seventy-five per cent, as the case may be, of the tax due
+    on the returned income;
+    (ii) the advance tax paid by the assessee on the current income on or
+    before the 15th day of March is less than the tax due on the
+    returned income, then, the assessee shall be liable to pay simple
+    interest at the rate of one per cent on the amount of the shortfall
+    from the tax due on the returned income:
+    Provided that if the advance tax paid by the assessee on the current
+    income, on or before the 15th day of June or the 15th day of
+    September, is not less than twelve per cent or, as the case may be,
+    thirty-six per cent of the tax due on the returned income, then, the
+    assessee shall not be liable to pay any interest on the amount of the
+    shortfall on those dates;
+    (b) an assessee who declares profits and gains in accordance with the
+    provisions of sub-section (1) of section 44AD or sub-section (1) of
+    section 44ADA, as the case may be, who is liable to pay advance tax
+    under section 208 has failed to pay such tax or the advance tax paid
+    by the assessee on its current income on or before the 15th day of
+    March is less than the tax due on the returned income, then, the
+    assessee shall be liable to pay simple interest at the rate of one per cent
+    on the amount of the shortfall from the tax due on the returned
+    income:
+    Provided that nothing contained in this sub-section shall apply to any shortfall in
+    the payment of the tax due on the returned income where such shortfall is on
+    account of under-estimate or failure to estimate—
+    (a) the amount of capital gains; or
+    (b) income of the nature referred to in sub-clause (ix) of clause (24) of
+    section 2; or
+    (c) income under the head “Profits and gains of business or profession”
+    in cases where the income accrues or arises under the said head for
+    the first time; or
+    (d) the amount of dividend income,
+    and the assessee has paid the whole of the amount of tax payable in respect of
+    income referred to in clause (a) or clause (b) or clause (c) or clause (d), as the case
+    may be, had such income been a part of the total income, as part of the remaining
+    instalments of advance tax which are due or where no such instalments are due,
+    by the 31st day of March of the financial year:
+    Provided further that nothing contained in this sub-section shall apply to any
+    shortfall in the payment of the tax due on the returned income where such
+    shortfall is on account of increase in the rate of surcharge under section 2 of the
+    Finance Act, 2000 (10 of 2000), as amended by the Taxation Laws (Amendment)
+    Act, 2000 (1 of 2001), and the assessee has paid the amount of shortfall, on or
+    before the 15th day of March, 2001 in respect of the instalment of advance tax
+    due on the 15th day of June, 2000, the 15th day of September, 2000 and the 15th
+    day of December, 2000 :
+    Provided also that nothing contained in this sub-section shall apply to any
+    shortfall in the payment of the tax due on the returned income where such
+    shortfall is on account of increase in the rate of surcharge under section 2 of the
+    Finance Act, 2000 (10 of 2000) as amended by the Taxation Laws (Amendment)
+    Act, 2001 (4 of 2001) and the assessee has paid the amount of shortfall on or
+    before the 15th day of March, 2001 in respect of the instalment of advance tax
+    due on the 15th day of June, 2000, the 15th day of September, 2000 and 15th day
+    of December, 2000.
+    Explanation 1.—In this section, “tax due on the returned income” means the tax
+    chargeable on the total income declared in the return of income furnished by the
+    assessee for the assessment year commencing on the 1st day of April immedi-
+    ately following the financial year in which the advance tax is paid or payable, as
+    reduced by the amount of,—
+    (i) any tax deductible or collectible at source in accordance with the
+    provisions of Chapter XVII on any income which is subject to such
+    deduction or collection and which is taken into account in computing
+    such total income;
+    ia) ( any relief of tax allowed under section 89;
+    (ii) any relief of tax allowed under section 90 on account of tax paid in a
+    country outside India;
+    (iii) any relief of tax allowed under section 90A on account of tax paid in
+    a specified territory outside India referred to in that section;
+    (iv) any deduction, from the Indian income-tax payable, allowed under
+    section 91, on account of tax paid in a country outside India; and
+    (v) any tax credit allowed to be set off in accordance with the provisions
+    of section 115JAA or section 115JD.
+    Explanation 2.—For the purposes of this sub-section, the term “dividend” shall
+    have the meaning assigned to it in clause (22) of section 2, but shall not include
+    sub-clause (e) thereof.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 880
+  - 881
+  - 882
+  extraction: auto
+  reviewed: false
+- id: IT1961:s234C(2)
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.234C(2) > FY 2025-26 and earlier
+  heading: Interest for deferment of advance tax
+  text: |-
+    (2) The provisions of this section shall apply in respect of assessments for the
+    assessment year commencing on the 1st day of April, 1989 and subsequent
+    assessment years.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 882
+  extraction: auto
+  reviewed: false
+- id: IT1961:s288A
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.288A > FY 2025-26 and earlier
+  heading: Rounding off of income
+  text: |-
+    288A. The amount of total income computed in accordance with the
+    foregoing provisions of this Act shall be rounded off to the nearest
+    multiple of ten rupees and for this purpose any part of a rupee consisting of paise
+    shall be ignored and thereafter if such amount is not a multiple of ten, then, if the
+    last figure in that amount is five or more, the amount shall be increased to the
+    next higher amount which is a multiple of ten and if the last figure is less than five,
+    the amount shall be reduced to the next lower amount which is a multiple of ten;
+    and the amount so rounded off shall be deemed to be the total income of the
+    assessee for the purposes of this Act.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 1036
+  extraction: auto
+  reviewed: false
+- id: IT1961:s288B
+  source_id: IT1961
+  breadcrumb: Income-tax Act 1961 > s.288B > FY 2025-26 and earlier
+  heading: Rounding off amount payable and refund due
+  text: |-
+    288B. Any amount payable, and the amount of refund due, under the provisions
+    of this Act shall be rounded off to the nearest multiple of ten rupees and
+    for this purpose any part of a rupee consisting of paise shall be ignored and
+    thereafter if such amount is not a multiple of ten, then, if the last figure in that
+    amount is five or more, the amount shall be increased to the next higher amount
+    which is a multiple of ten and if the last figure is less than five, the amount shall
+    be reduced to the next lower amount which is a multiple of ten.
+  tax_year_first: null
+  tax_year_last: 2025
+  authority_rank: 1
+  pdf_pages:
+  - 1036
+  - 1037
+  extraction: auto
+  reviewed: false
