@@ -1,0 +1,23 @@
+# Corpus chunks for IGST_S2: Integrated Goods and Services Tax Act, 2017, section 2 (definitions), as amended
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: IGST:s2(6)
+  source_id: IGST_S2
+  breadcrumb: Integrated Goods and Services Tax Act 2017 > s.2(6)
+  heading: Definition of export of services
+  text: |-
+    (6) "export of services" means the supply of any service when,-
+    (i) the supplier of service is located in India;
+    (ii) the recipient of service is located outside India;
+    (iii) the place of supply of service is outside India;
+    (iv) the payment for such service has been received by the supplier of service in convertible foreign exchange 1[or in Indian rupees wherever permitted by the Reserve Bank of India]; and
+    (v) the supplier of service and the recipient of service are not merely establishments of a distinct person in accordance with Explanation 1 in section 8;
+  tax_year_first: null
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 1
+  extraction: auto
+  reviewed: false

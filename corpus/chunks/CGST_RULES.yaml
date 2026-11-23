@@ -1,0 +1,29 @@
+# Corpus chunks for CGST_RULES: Central Goods and Services Tax Rules, 2017, Rule 96A (export under bond or Letter of Undertaking), as amended
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: CGST_RULES:r96A
+  source_id: CGST_RULES
+  breadcrumb: Central Goods and Services Tax Rules 2017 > r.96A
+  heading: Export of goods or services under bond or Letter of Undertaking (Form GST RFD-11)
+  text: |-
+    1[Rule 96A. 2[Export] of goods or services under bond or Letter of Undertaking.-
+    (1) Any registered person availing the option to supply goods or services for export without payment of integrated tax shall furnish, prior to export, a bond or a Letter of Undertaking in FORM GST RFD-11 to the jurisdictional Commissioner, binding himself to pay the tax due along with the interest specified under sub-section (1) of section 50 within a period of -
+    (a) fifteen days after the expiry of three months 3[or such further period as may be allowed by the Commissioner,] from the date of issue of the invoice for export, if the goods are not exported out of India; or
+    6[(b) fifteen days after the expiry of one year, or the period as allowed under the Foreign Exchange Management Act, 1999 (42 of 1999) including any extension of such period as permitted by the
+    Reserve Bank of India, whichever is later, from the date of issue of the invoice for export, or such further period as may be allowed by the Commissioner, if the payment of such services is not received by the exporter in convertible foreign exchange or in Indian rupees, wherever permitted by the Reserve Bank of India.]].
+    (2) The details of the export invoices contained in FORM GSTR-1 7[, as amended in FORM GSTR-1A if any,] furnished on the common portal shall be electronically transmitted to the system designated by Customs and a confirmation that the goods covered by the said invoices have been exported out of India shall be electronically transmitted to the common portal from the said system.
+    5[Provided that where the date for furnishing the details of outward supplies in FORM GSTR-1 for a tax period has been extended in exercise of the powers conferred under section 37 of the Act, the supplier shall furnish the information relating to exports as specified in Table 6A of FORM GSTR-1 after there turn in FORM GSTR-3B has been furnished and the same shall be transmitted electronically by the common portal to the system designated by the Customs:
+    Provided further that the information in Table 6A furnished under the first proviso shall be auto-drafted in FORM GSTR-1 for the said tax period.]
+    (3) Where the goods are not exported within the time specified in sub-rule (1) and the registered person fails to pay the amount mentioned in the said sub-rule, the export as allowed under bond or Letter of Undertaking shall be withdrawn forthwith and the said amount shall be recovered from the registered person in accordance with the provisions of section 79.
+    (4) The export as allowed under bond or Letter of Undertaking withdrawn in terms of sub rule (3) shall be restored immediately when the registered person pays the amount due.
+    (5) The Board, by way of notification, may specify the conditions and safeguards under which a Letter of Undertaking may be furnished in place of a bond.
+    (6) The provisions of sub rule (1)shall apply, mutatis mutandis , in respect of zero-rated supply of goods or services or both to a Special Economic Zone developer or a Special Economic Zone unit without payment of integrated tax.
+  tax_year_first: null
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 1
+  extraction: auto
+  reviewed: false

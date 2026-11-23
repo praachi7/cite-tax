@@ -113,11 +113,19 @@ def test_flag_shows_severity_reason_and_citation(code, persona_results):
 
 
 def test_flags_without_a_registered_source_say_so():
-    for code in ("FIRA_MISSING", "LOW_CLASSIFICATION_CONFIDENCE"):
-        rule = next(r for r in RULES if r.code == code)
-        assert not rule.cite_keys and rule.source_note
-    gst = next(r for r in RULES if r.code == "GST_LUT_MISSING")
-    assert "registry" in gst.source_note
+    internal = next(r for r in RULES if r.code == "LOW_CLASSIFICATION_CONFIDENCE")
+    assert not internal.cite_keys and internal.source_note
+    # FIRA rests on IGST s.2(6)(iv); only its purpose-code part is RBI guidance, so it keeps a note.
+    fira = next(r for r in RULES if r.code == "FIRA_MISSING")
+    assert fira.cite_keys and "RBI" in fira.source_note
+
+
+def test_gst_flags_cite_the_igst_act_and_rule_96a(persona_results):
+    fira = flag(persona_results["P7"], "FIRA_MISSING")
+    assert {"IGST:s2(6)", "RBI_PC:P0802"} <= set(fira.citations)
+    lut = flag(persona_results["P8"], "GST_LUT_MISSING")
+    assert {"IGST:s16(3)", "CGST_RULES:r96A"} <= set(lut.citations)
+    assert lut.source_note is None
 
 
 def test_foreign_account_flag_names_the_contested_assumption(persona_results):

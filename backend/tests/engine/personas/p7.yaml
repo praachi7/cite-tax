@@ -10,8 +10,9 @@ title: A Payoneer balance held abroad, Tax Year 2026-27; tests the Schedule FA f
 #   A-16 default (reading b): fees from a foreign client bar ITR-4 as well                            [r.164(6)(c)]
 #   so ITR-3, resting on both A-12 and A-16; advance tax 1,09,200 once by 15 Mar 2027
 # Phase F: two inward remittances are recorded. The bank transfer has an e-FIRA and purpose code P0802;
-#   the Payoneer withdrawal (Rs 12 lakh) has neither -> FIRA_MISSING (medium). The source (RBI purpose
-#   codes) is secondary and not yet in corpus/registry.yaml, so the flag carries a source note, not a citation.
+#   the Payoneer withdrawal (Rs 12 lakh) has neither -> FIRA_MISSING (medium), citing IGST s.2(6)(iv)
+#   (export of services needs payment in convertible foreign exchange) and RBI purpose code P0802. The
+#   code is RBI reporting guidance, not tax law, so the flag also carries a note saying so.
 input:
   persona_id: P7
   tax_year: 2026

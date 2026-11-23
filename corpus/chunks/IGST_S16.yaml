@@ -1,0 +1,34 @@
+# Corpus chunks for IGST_S16: Integrated Goods and Services Tax Act, 2017, section 16 (zero rated supply), as amended
+# Drafted by scripts/draft_chunks.py from corpus/scope.yaml. Review each chunk against the PDF,
+# fix the text, then set reviewed: true (and extraction: hand_corrected if you changed it).
+# Reviewed or hand-made chunks are never overwritten by the drafter.
+chunks:
+- id: IGST:s16(1)
+  source_id: IGST_S16
+  breadcrumb: Integrated Goods and Services Tax Act 2017 > s.16(1)
+  heading: Zero rated supply (definition)
+  text: |-
+    (1) "zero rated supply" means any of the following supplies of goods or services or both, namely: -
+    (a) export of goods or services or both; or
+    (b) supply of goods or services or both 1[for authorised operations] to a Special Economic Zone developer or a Special Economic Zone unit.
+  tax_year_first: null
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 1
+  extraction: auto
+  reviewed: false
+- id: IGST:s16(3)
+  source_id: IGST_S16
+  breadcrumb: Integrated Goods and Services Tax Act 2017 > s.16(3)
+  heading: Zero rated supply without payment of integrated tax under bond or Letter of Undertaking
+  text: |-
+    2[(3) A registered person making zero rated supply shall be eligible to claim refund of unutilised input tax credit on supply of goods or services or both, without payment of integrated tax, under bond or Letter of Undertaking, in accordance with the provisions of section 54 of the Central Goods and Services Tax Act or the rules made thereunder, subject to such conditions, safeguards and procedure as may be prescribed:
+    Provided that the registered person making zero rated supply of goods shall, in case of non- realisation of sale proceeds, be liable to deposit the refund so received under this sub-section along with the applicable interest under section 50 of the Central Goods and Services Tax Act within thirty days after the expiry of the time limit prescribed under the Foreign Exchange Management Act, 1999 (42 of 1999.) for receipt of foreign exchange remittances, in such manner as may be prescribed.
+  tax_year_first: null
+  tax_year_last: null
+  authority_rank: 1
+  pdf_pages:
+  - 1
+  extraction: auto
+  reviewed: false

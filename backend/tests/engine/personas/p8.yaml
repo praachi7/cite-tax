@@ -9,7 +9,8 @@ title: A past old-regime opt-out, Tax Year 2026-27; tests the election rules acr
 #   cess 8,000; payable 2,08,000. Old regime: 12,500 + 1,00,000 + 3,00,000 = 4,12,500; cess 16,500; 4,29,000
 # Phase F: no GST Letter of Undertaking is in force for the year. Aggregate turnover includes exports
 #   [CGST s.2(6)], so it is 40L, at or above the Rs 20L threshold [CGST s.22(1)] -> GST_LUT_MISSING (medium).
-#   The LUT provisions themselves (IGST s.16(3), CGST r.96A) are secondary and not yet in the registry.
+#   The flag also cites the LUT provisions: IGST s.16(3) (export without IGST under bond or LUT) and
+#   CGST r.96A (LUT in Form GST RFD-11 before export).
 input:
   persona_id: P8
   tax_year: 2026

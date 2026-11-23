@@ -362,3 +362,55 @@ sources:
   valid_to: null
   publisher: CBIC
   note: 'A 2020 consolidation: check later amendments before relying on thresholds.'
+- id: CGST_RULES
+  cite_prefix: CGST_RULES
+  file: CGST_Rules_2017_r96A.txt
+  title: Central Goods and Services Tax Rules, 2017, Rule 96A (export under bond or Letter of Undertaking), as amended
+  act_id: CGST
+  doc_type: rule
+  authority_rank: 1
+  tax_year_first: null
+  tax_year_last: null
+  valid_from: null
+  valid_to: null
+  publisher: CBIC
+  note: Rule 96A only, copied as text from the CBIC tax information portal (no PDF offered there). Backs GST_LUT_MISSING.
+- id: IGST_S2
+  cite_prefix: IGST
+  file: IGST_Act_2017_s2.txt
+  title: Integrated Goods and Services Tax Act, 2017, section 2 (definitions), as amended
+  act_id: IGST
+  doc_type: statute
+  authority_rank: 1
+  tax_year_first: null
+  tax_year_last: null
+  valid_from: null
+  valid_to: null
+  publisher: CBIC
+  note: Copied as text from the CBIC tax information portal (no PDF offered there). s.2(6) "export of services" backs FIRA_MISSING.
+- id: IGST_S16
+  cite_prefix: IGST
+  file: IGST_Act_2017_s16.txt
+  title: Integrated Goods and Services Tax Act, 2017, section 16 (zero rated supply), as amended
+  act_id: IGST
+  doc_type: statute
+  authority_rank: 1
+  tax_year_first: null
+  tax_year_last: null
+  valid_from: null
+  valid_to: null
+  publisher: CBIC
+  note: Copied as text from the CBIC tax information portal. s.16(3) was substituted w.e.f. 1 Oct 2023; backs GST_LUT_MISSING.
+- id: RBI_PURPOSE_CODES
+  cite_prefix: RBI_PC
+  file: RBI_Purpose_Codes_FETERS_v6.2.pdf
+  title: RBI, New purpose codes for reporting forex transactions (FETERS version 6.2)
+  act_id: RBI
+  doc_type: regulator_guidance
+  authority_rank: 4
+  tax_year_first: null
+  tax_year_last: null
+  valid_from: null
+  valid_to: null
+  publisher: Reserve Bank of India
+  note: Bank reporting codes, not a tax provision. Receipt code P0802 (software consultancy/implementation) or P0807 (off-site software exports) is what an IT freelancer's export receipt usually carries; backs the purpose-code part of FIRA_MISSING. The list is the FETERS-era version; banks may use a later revision.

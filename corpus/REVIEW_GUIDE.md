@@ -108,7 +108,7 @@ Tell your teammate when you have pushed. They will check your branch and merge i
 
 ## Part 5. The order to work in
 
-### Step A. The 9 hand-typed tables (most important)
+### Step A. The 10 hand-typed tables (most important)
 
 These are tables typed in by hand, because the program scrambled them. Check every number against the PDF. They are marked `is_table: true`.
 
@@ -123,6 +123,7 @@ These are tables typed in by hand, because the program scrambled them. Check eve
 | FA2026.yaml | `FA2026:sch1-partIB-paraA(I)` | 111-112 | |
 | FA2026.yaml | `FA2026:sch1-partIA-paraF/T1` | 108-110 | After the table, the PDF has a "Provided that…" paragraph about marginal relief. Type it in at the end of the text. |
 | FA2026.yaml | `FA2026:sch1-partIB-paraF/T1` | 114-115 | Same as above: add the marginal-relief paragraph. |
+| RBI_PURPOSE_CODES.yaml | `RBI_PC:receipts-08` | 7 | Receipt codes P0801 to P0807; check P0802 and P0807 word for word. |
 
 ### Step B. The 92 chunks the tax engine relies on
 
@@ -135,6 +136,7 @@ Search for each id with `Ctrl+F` in the file shown. Work through one file at a t
 - **RULES2026.yaml** (13): r46(1), r76(1), r76(5), r76(6), r76(7), r76(10), r76(12), r76(15), r76(16), r136, r164(5), r164(6), r164(7)
 - **RULES1962.yaml** (7): r6F(1), r12(1), r128(1), r128(4), r128(5), r128(8), r128(9)
 - **CBDT_FAQ_ITR4.yaml** (4): Q1, Q5, Q6, Q16
+- **GST export rules (added 23 Nov 2026):** IGST_S2.yaml (s2(6)), IGST_S16.yaml (s16(1), s16(3)), CGST_RULES.yaml (r96A). These came from web pages, so compare them with the pages in their file's `Source:` line rather than a PDF.
 - **Two each:** CGST.yaml (s2(6), s22(1)), DTAA_US.yaml (art15(1), art25(2)), FA2026.yaml (s2(6), s3(15)), IRS_PUB901.yaml (form8833, india), IRS_W8BEN.yaml (withholding, validity)
 - **One each:** CBDT_FAQ_PRES.yaml (Q17), FORM44.yaml (p1), FORM67.yaml (p1), IRC_S861.yaml, IRC_S862.yaml, IRS_1040NR.yaml, IRS_F8233.yaml, IRS_PUB515.yaml, IRS_PUB519.yaml (spt), NOTIF385E_2001.yaml, NOTIF45_2026.yaml, NOTIF47_2026.yaml
 
@@ -180,6 +182,10 @@ Do the remaining chunks with `reviewed: false` in any order. To find them, press
 | IRS_W8BEN.yaml | IRS_W-8BEN_instructions.pdf |
 | IRS_F8233.yaml | IRS_Form_8233.pdf |
 | IRS_1040NR.yaml | IRS_Form_1040-NR_instructions.pdf |
+| IGST_S2.yaml | IGST_Act_2017_s2.txt (web page text; the URL is on its first line) |
+| IGST_S16.yaml | IGST_Act_2017_s16.txt (web page text; the URL is on its first line) |
+| CGST_RULES.yaml | CGST_Rules_2017_r96A.txt (web page text; the URL is on its first line) |
+| RBI_PURPOSE_CODES.yaml | RBI_Purpose_Codes_FETERS_v6.2.pdf |
 
 ---
 
