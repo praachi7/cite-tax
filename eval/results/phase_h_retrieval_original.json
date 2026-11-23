@@ -1,0 +1,858 @@
+{
+  "date": "2026-11-23",
+  "embedding_model": "BAAI/bge-m3",
+  "queries_file": "queries.yaml",
+  "n_queries": 42,
+  "configs": {
+    "default (exact+dense)": {
+      "overall": {
+        "n": 40,
+        "hit@1": 0.65,
+        "hit@3": 0.8,
+        "hit@5": 0.85,
+        "hit@10": 0.925,
+        "recall@5": 0.804,
+        "mrr": 0.734
+      },
+      "by_category": {
+        "plain": {
+          "n": 14,
+          "hit@1": 0.5,
+          "hit@3": 0.643,
+          "hit@5": 0.714,
+          "hit@10": 0.929,
+          "recall@5": 0.69,
+          "mrr": 0.592
+        },
+        "temporal": {
+          "n": 16,
+          "hit@1": 0.875,
+          "hit@3": 1.0,
+          "hit@5": 1.0,
+          "hit@10": 1.0,
+          "recall@5": 0.969,
+          "mrr": 0.938
+        },
+        "us": {
+          "n": 10,
+          "hit@1": 0.5,
+          "hit@3": 0.7,
+          "hit@5": 0.8,
+          "hit@10": 0.8,
+          "recall@5": 0.7,
+          "mrr": 0.608
+        }
+      },
+      "wrong_act_returned": [],
+      "queries": [
+        {
+          "id": "T01",
+          "category": "temporal",
+          "year": 2026,
+          "q": "What is the 44ADA gross receipts limit?",
+          "expect": [
+            "IT2025:s58(2)/T3"
+          ],
+          "top5": [
+            "IT2025:s58(2)/T3",
+            "CBDT_FAQ_PRES:Q6",
+            "IT2025:s58(2)",
+            "IT2025:s63(1)/T1",
+            "CBDT_FAQ_PRES:Q14"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.032266458495966696
+        },
+        {
+          "id": "T02",
+          "category": "temporal",
+          "year": 2026,
+          "q": "Is presumptive income under section 44ADA 50% of receipts?",
+          "expect": [
+            "IT2025:s58(2)/T3"
+          ],
+          "top5": [
+            "IT2025:s58(2)/T3",
+            "CBDT_FAQ_PRES:Q14",
+            "IT2025:s58(2)",
+            "CBDT_FAQ_PRES:Q15",
+            "CBDT_FAQ_PRES:Q9"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.03252247488101534
+        },
+        {
+          "id": "T03",
+          "category": "temporal",
+          "year": 2025,
+          "q": "What does section 58(2) Table serial 3 say about professionals?",
+          "expect": [
+            "IT1961:s44ADA(1)"
+          ],
+          "top5": [
+            "IT1961:s44ADA(1)",
+            "IT1961:s44ADA(3)",
+            "IT1961:s44ADA(2)",
+            "IT1961:s44ADA(4)",
+            "IT1961:s44AD(1)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.03131881575727918
+        },
+        {
+          "id": "T04",
+          "category": "temporal",
+          "year": 2026,
+          "q": "Do I need to file Form 67 to claim foreign tax credit?",
+          "expect": [
+            "FORM44:p1",
+            "RULES2026:r76(10)"
+          ],
+          "top5": [
+            "FORM44:p1",
+            "RULES2026:r76(10)",
+            "RULES2026:r76(1)",
+            "RULES2026:r76(16)",
+            "RULES2026:r76(7)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.03252247488101534
+        },
+        {
+          "id": "T05",
+          "category": "temporal",
+          "year": 2025,
+          "q": "When is Form 44 due for claiming foreign tax credit?",
+          "expect": [
+            "FORM67:p1",
+            "RULES1962:r128(9)"
+          ],
+          "top5": [
+            "FORM67:p1",
+            "FORM67:p2",
+            "RULES1962:r128(8)",
+            "RULES1962:r128(5)",
+            "RULES1962:r128(10)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 0.5,
+          "top_score": 0.03131881575727918
+        },
+        {
+          "id": "T06",
+          "category": "temporal",
+          "year": 2026,
+          "q": "Rule 128 foreign tax credit conditions",
+          "expect": [
+            "RULES2026:r76(1)"
+          ],
+          "top5": [
+            "RULES2026:r76(3)",
+            "RULES2026:r76(1)",
+            "RULES2026:r76(5)",
+            "RULES2026:r76(4)",
+            "RULES2026:r76(2)"
+          ],
+          "first_relevant_rank": 2,
+          "recall@5": 1.0,
+          "top_score": 0.032266458495966696
+        },
+        {
+          "id": "T07",
+          "category": "temporal",
+          "year": 2026,
+          "q": "section 139(1) due date for filing the return",
+          "expect": [
+            "IT2025:s263(1)/T3",
+            "IT2025:s263(1)"
+          ],
+          "top5": [
+            "IT2025:s263(1)",
+            "IT2025:s263(1)/T3",
+            "IT2025:s63(5)",
+            "RULES2026:r76(13)",
+            "IT2025:s425(3)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.03278688524590164
+        },
+        {
+          "id": "T08",
+          "category": "temporal",
+          "year": 2025,
+          "q": "section 263 return filing due date",
+          "expect": [
+            "IT1961:s139(1)"
+          ],
+          "top5": [
+            "IT1961:s139(1)",
+            "NOTIF47_2026:p1",
+            "CBDT_FAQ_ITR4:Q25",
+            "CBDT_FAQ_ITR4:Q22",
+            "CBDT_FAQ_ITR4:Q6"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.03047794966520434
+        },
+        {
+          "id": "T09",
+          "category": "temporal",
+          "year": 2026,
+          "q": "Section 87A rebate limit",
+          "expect": [
+            "IT2025:s156(2)",
+            "IT2025:s156(1)"
+          ],
+          "top5": [
+            "IT2025:s156(1)",
+            "IT2025:s156(3)",
+            "IT2025:s156(2)",
+            "IT2025:s516",
+            "RULES2026:r76(4)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.032266458495966696
+        },
+        {
+          "id": "T10",
+          "category": "temporal",
+          "year": 2025,
+          "q": "rebate under section 156",
+          "expect": [
+            "IT1961:s87A"
+          ],
+          "top5": [
+            "IT1961:s87A",
+            "CBDT_FAQ_ITR4:Q23",
+            "IT1961:s288B",
+            "IT1961:s234B(2)",
+            "FA2026:sch1-partIA-paraF/T1"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.03278688524590164
+        },
+        {
+          "id": "T11",
+          "category": "temporal",
+          "year": 2026,
+          "q": "115BAC new regime slab rates",
+          "expect": [
+            "IT2025:s202(1)"
+          ],
+          "top5": [
+            "IT2025:s202(1)",
+            "IT2025:s202(3)",
+            "IT2025:s202(5)",
+            "FA2026:sch1-partIB-paraA(I)",
+            "IT2025:s202(2)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.030679156908665108
+        },
+        {
+          "id": "T12",
+          "category": "temporal",
+          "year": 2026,
+          "q": "section 211 advance tax instalment for presumptive income",
+          "expect": [
+            "IT2025:s408(2)"
+          ],
+          "top5": [
+            "IT2025:s408(1)",
+            "IT2025:s408(2)",
+            "IT2025:s408(3)",
+            "CBDT_FAQ_PRES:Q24",
+            "CBDT_FAQ_PRES:Q11"
+          ],
+          "first_relevant_rank": 2,
+          "recall@5": 1.0,
+          "top_score": 0.032018442622950824
+        },
+        {
+          "id": "T13",
+          "category": "temporal",
+          "year": 2026,
+          "q": "section 44AB tax audit limit for professionals",
+          "expect": [
+            "IT2025:s63(1)/T1",
+            "IT2025:s63(1)"
+          ],
+          "top5": [
+            "IT2025:s63(1)",
+            "IT2025:s63(1)/T1",
+            "IT2025:s63(2)",
+            "IT2025:s63(4)",
+            "IT2025:s58(2)/T3"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.03252247488101534
+        },
+        {
+          "id": "T14",
+          "category": "temporal",
+          "year": 2026,
+          "q": "Rule 12 ITR-4 eligibility",
+          "expect": [
+            "RULES2026:r164(5)",
+            "RULES2026:r164(6)"
+          ],
+          "top5": [
+            "RULES2026:r164(6)",
+            "RULES2026:r164(5)",
+            "RULES2026:r164(7)",
+            "RULES2026:r76(12)",
+            "RULES2026:r76(17)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.03252247488101534
+        },
+        {
+          "id": "T15",
+          "category": "temporal",
+          "year": 2025,
+          "q": "health and education cess rate",
+          "expect": [
+            "FA2026:s2(6)"
+          ],
+          "top5": [
+            "FA2026:s2(6)",
+            "IT1961:s115BAC(1)",
+            "IT1961:s234B(4)",
+            "IT1961:s234B(1)",
+            "DTAA_US:art14(2)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "T16",
+          "category": "temporal",
+          "year": 2026,
+          "q": "health and education cess rate",
+          "expect": [
+            "FA2026:s3(15)"
+          ],
+          "top5": [
+            "FA2026:s3(15)",
+            "IT2025:s58(2)/T3",
+            "CBDT_FAQ_PRES:Q6",
+            "IT2025:s58(2)/T1",
+            "DTAA_US:art14(2)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "P01",
+          "category": "plain",
+          "year": 2026,
+          "q": "Do I have to keep books of account if I declare 50% of my receipts as profit?",
+          "expect": [
+            "CBDT_FAQ_PRES:Q17",
+            "IT2025:s62(1)",
+            "IT2025:s58(3)"
+          ],
+          "top5": [
+            "CBDT_FAQ_PRES:Q17",
+            "CBDT_FAQ_PRES:Q18",
+            "CBDT_FAQ_PRES:Q10",
+            "IT2025:s62(1)",
+            "RULES2026:r46(4)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 0.6666666666666666,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "P02",
+          "category": "plain",
+          "year": 2026,
+          "q": "Is information technology a specified profession for presumptive taxation?",
+          "expect": [
+            "IT2025:s62(4)"
+          ],
+          "top5": [
+            "NOTIF385E_2001:all",
+            "CBDT_FAQ_PRES:Q13",
+            "CBDT_FAQ_PRES:Q5",
+            "CBDT_FAQ_PRES:Q14",
+            "IT2025:s62(4)"
+          ],
+          "first_relevant_rank": 5,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "P03",
+          "category": "plain",
+          "year": 2025,
+          "q": "Is information technology a notified profession under the old Act?",
+          "expect": [
+            "NOTIF385E_2001:all",
+            "IT1961:s44AA(1)"
+          ],
+          "top5": [
+            "NOTIF385E_2001:all",
+            "IT1961:s44AA(1)",
+            "RULES1962:r6F(1)",
+            "IT1961:s44AA(2)",
+            "IT1961:s44ADA(1)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "P04",
+          "category": "plain",
+          "year": 2026,
+          "q": "What happens if I declare profit lower than 50 percent of gross receipts?",
+          "expect": [
+            "IT2025:s58(3)"
+          ],
+          "top5": [
+            "CBDT_FAQ_PRES:Q15",
+            "CBDT_FAQ_PRES:Q18",
+            "IT2025:s58(3)",
+            "IT2025:s58(2)/T3",
+            "IT2025:s58(2)/T1"
+          ],
+          "first_relevant_rank": 3,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "P05",
+          "category": "plain",
+          "year": 2025,
+          "q": "What happens if I declare profit lower than 50 percent of gross receipts?",
+          "expect": [
+            "IT1961:s44ADA(4)"
+          ],
+          "top5": [
+            "IT1961:s44ADA(1)",
+            "IT1961:s44AD(1)",
+            "IT1961:s44ADA(4)",
+            "IT1961:s44AB",
+            "IT1961:s44AA(2)"
+          ],
+          "first_relevant_rank": 3,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "P06",
+          "category": "plain",
+          "year": 2026,
+          "q": "Can a freelancer with income from outside India file ITR-4?",
+          "expect": [
+            "RULES2026:r164(6)"
+          ],
+          "top5": [
+            "RULES2026:r164(6)",
+            "FORM44:p1",
+            "IRS_PUB901:india",
+            "RULES2026:r76(16)",
+            "IT2025:s6(14)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "P07",
+          "category": "plain",
+          "year": 2026,
+          "q": "How much can I receive in cash and still use the 75 lakh limit?",
+          "expect": [
+            "IT2025:s58(2)/T3"
+          ],
+          "top5": [
+            "CBDT_FAQ_PRES:Q6",
+            "IT2025:s63(1)/T1",
+            "IT2025:s6(5)",
+            "FA2026:sch1-partIB-paraA(I)",
+            "IT2025:s58(2)/T1"
+          ],
+          "first_relevant_rank": 6,
+          "recall@5": 0.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "P08",
+          "category": "plain",
+          "year": 2025,
+          "q": "When must advance tax be paid by someone using presumptive taxation?",
+          "expect": [
+            "IT1961:s211(1)"
+          ],
+          "top5": [
+            "CBDT_FAQ_ITR4:Q15",
+            "CBDT_FAQ_ITR4:Q17",
+            "IT1961:s210(1)",
+            "IT1961:s208",
+            "IT1961:s210(3)"
+          ],
+          "first_relevant_rank": 7,
+          "recall@5": 0.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "P09",
+          "category": "plain",
+          "year": 2026,
+          "q": "Which exchange rate converts foreign tax into rupees for the credit?",
+          "expect": [
+            "RULES2026:r76(7)"
+          ],
+          "top5": [
+            "RULES2026:r76(7)",
+            "RULES2026:r76(18)",
+            "RULES2026:r76(3)",
+            "RULES2026:r76(1)",
+            "FORM44:p1"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "P10",
+          "category": "plain",
+          "year": 2026,
+          "q": "Can a Hindu undivided family use the presumptive scheme for professions?",
+          "expect": [
+            "IT2025:s58(11)"
+          ],
+          "top5": [
+            "CBDT_FAQ_PRES:Q5",
+            "CBDT_FAQ_PRES:Q13",
+            "CBDT_FAQ_PRES:Q2",
+            "CBDT_FAQ_PRES:Q1",
+            "CBDT_FAQ_PRES:Q20"
+          ],
+          "first_relevant_rank": null,
+          "recall@5": 0.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "P11",
+          "category": "plain",
+          "year": 2026,
+          "q": "How is total income rounded off?",
+          "expect": [
+            "IT2025:s516"
+          ],
+          "top5": [
+            "IT2025:s516",
+            "IT2025:s202(2)",
+            "CBDT_FAQ_PRES:Q14",
+            "CBDT_FAQ_PRES:Q9",
+            "CBDT_FAQ_PRES:Q7"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "P12",
+          "category": "plain",
+          "year": 2025,
+          "q": "What is the surcharge when income is above 50 lakh?",
+          "expect": [
+            "FA2026:sch1-partIA-paraF/T1"
+          ],
+          "top5": [
+            "FA2026:sch1-partIA-paraF/T1",
+            "IT1961:s115BAC(1)",
+            "FA2026:sch1-partIA-paraA(I)",
+            "IT1961:s115BAC(1A)",
+            "IT1961:s44AA(2)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "P13",
+          "category": "plain",
+          "year": 2026,
+          "q": "What are the old regime tax slabs if I opt out?",
+          "expect": [
+            "FA2026:sch1-partIB-paraA(I)"
+          ],
+          "top5": [
+            "CBDT_FAQ_PRES:Q12",
+            "RULES2026:r136",
+            "IRS_PUB901:form8833",
+            "CBDT_FAQ_PRES:Q11",
+            "CBDT_FAQ_PRES:Q18"
+          ],
+          "first_relevant_rank": 9,
+          "recall@5": 0.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "P14",
+          "category": "plain",
+          "year": 2026,
+          "q": "How do I opt out of the new tax regime?",
+          "expect": [
+            "RULES2026:r136",
+            "IT2025:s202(4)"
+          ],
+          "top5": [
+            "RULES2026:r136",
+            "IT2025:s202(4)",
+            "IRS_PUB901:form8833",
+            "CBDT_FAQ_PRES:Q12",
+            "IT2025:s160(1)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "U01",
+          "category": "us",
+          "year": 2026,
+          "q": "Can the US tax me if I stay there for 90 days?",
+          "expect": [
+            "DTAA_US:art15(1)"
+          ],
+          "top5": [
+            "IRS_PUB901:india",
+            "IT2025:s6(2)",
+            "DTAA_US:art15(1)",
+            "DTAA_US:art14(1)",
+            "IRC:s861(a)(3)"
+          ],
+          "first_relevant_rank": 3,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "U02",
+          "category": "us",
+          "year": 2026,
+          "q": "fixed base regularly available in the United States",
+          "expect": [
+            "DTAA_US:art15(1)"
+          ],
+          "top5": [
+            "DTAA_US_TE:art15",
+            "DTAA_US:art5(4)",
+            "DTAA_US:art14(1)",
+            "DTAA_US:art5(1)",
+            "DTAA_US:art5(3)"
+          ],
+          "first_relevant_rank": null,
+          "recall@5": 0.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "U03",
+          "category": "us",
+          "year": 2026,
+          "q": "How does India give credit for US tax under the treaty?",
+          "expect": [
+            "DTAA_US:art25(2)"
+          ],
+          "top5": [
+            "DTAA_US:art25(1)",
+            "DTAA_US:art25(2)",
+            "DTAA_US:art25(3)",
+            "DTAA_US:art14(1)",
+            "RULES2026:r76(7)"
+          ],
+          "first_relevant_rank": 2,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "U04",
+          "category": "us",
+          "year": 2026,
+          "q": "Is my income from US clients US-source if I do the work in India?",
+          "expect": [
+            "IRC:s862(a)(3)",
+            "IRC:s861(a)(3)"
+          ],
+          "top5": [
+            "IRS_PUB901:india",
+            "DTAA_US:art25(1)",
+            "DTAA_US:art25(2)",
+            "IRC:s861(a)(3)",
+            "DTAA_US:art15(1)"
+          ],
+          "first_relevant_rank": 4,
+          "recall@5": 0.5,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "U05",
+          "category": "us",
+          "year": 2026,
+          "q": "substantial presence test 183 days",
+          "expect": [
+            "IRS_PUB519:spt"
+          ],
+          "top5": [
+            "DTAA_US:art5(2)",
+            "IT2025:s6(2)",
+            "IT2025:s6(6)",
+            "IRC:s861(a)(3)",
+            "IRS_W8BEN:validity"
+          ],
+          "first_relevant_rank": null,
+          "recall@5": 0.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "U06",
+          "category": "us",
+          "year": 2026,
+          "q": "How long is a W-8BEN valid?",
+          "expect": [
+            "IRS_W8BEN:validity"
+          ],
+          "top5": [
+            "IRS_W8BEN:validity",
+            "IRS_W8BEN:withholding",
+            "IRS_F8233:p1",
+            "DTAA_US:art5(2)",
+            "RULES2026:r46(9)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "U07",
+          "category": "us",
+          "year": 2026,
+          "q": "penalty for not filing Form 8833",
+          "expect": [
+            "IRS_PUB901:form8833"
+          ],
+          "top5": [
+            "IRS_PUB901:form8833",
+            "IRS_F8233:p1",
+            "IRS_PUB515:personal_services",
+            "IRS_W8BEN:withholding",
+            "CGST_RULES:r96A"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "U08",
+          "category": "us",
+          "year": 2026,
+          "q": "Form 8233 exemption from withholding for independent personal services",
+          "expect": [
+            "IRS_F8233:p1"
+          ],
+          "top5": [
+            "IRS_F8233:p1",
+            "IRS_PUB515:personal_services",
+            "DTAA_US_TE:art15",
+            "IRS_PUB901:india",
+            "IRC:s862(a)(3)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.03278688524590164
+        },
+        {
+          "id": "U09",
+          "category": "us",
+          "year": 2026,
+          "q": "treaty exemption for Indian residents performing personal services in the US",
+          "expect": [
+            "IRS_PUB901:india",
+            "DTAA_US:art15(1)"
+          ],
+          "top5": [
+            "IRS_PUB901:india",
+            "DTAA_US_TE:art15",
+            "DTAA_US:art25(2)",
+            "DTAA_US:art15(1)",
+            "DTAA_US:art25(1)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "U10",
+          "category": "us",
+          "year": 2026,
+          "q": "Do I need GST registration if my export turnover is over 20 lakh?",
+          "expect": [
+            "CGST:s22(1)",
+            "CGST:s2(6)"
+          ],
+          "top5": [
+            "CGST:s22(1)",
+            "CGST_RULES:r96A",
+            "IT2025:s63(1)/T1",
+            "IT2025:s62(2)",
+            "CBDT_FAQ_PRES:Q6"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 0.5,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "O01",
+          "category": "out_of_scope",
+          "year": 2026,
+          "q": "What is the GST rate on restaurant food?",
+          "expect": [],
+          "top5": [
+            "CGST_RULES:r96A",
+            "IT2025:s58(2)/T1",
+            "CBDT_FAQ_PRES:Q9",
+            "IT2025:s202(1)",
+            "CGST:s22(1)"
+          ],
+          "first_relevant_rank": null,
+          "recall@5": null,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "O02",
+          "category": "out_of_scope",
+          "year": 2026,
+          "q": "How is HRA exemption calculated for salaried employees?",
+          "expect": [],
+          "top5": [
+            "IRS_PUB515:personal_services",
+            "IRS_PUB901:india",
+            "IT2025:s202(1)",
+            "IT2025:s58(2)/T2",
+            "IT2025:s58(2)/T3"
+          ],
+          "first_relevant_rank": null,
+          "recall@5": null,
+          "top_score": 0.01639344262295082
+        }
+      ]
+    }
+  }
+}

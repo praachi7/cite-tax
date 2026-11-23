@@ -1,0 +1,43 @@
+# Held-out retrieval queries (Phase H). Written on 23 Nov 2026 BEFORE any Phase H run and never used
+# to choose settings: nothing in retrieval, the corpus or params may be changed because of these results.
+# Same format as queries.yaml. Caveat: the developer wrote them after seeing the corpus and the Phase C
+# queries, so they are unseen by the tuning, not blind. Their SHA-256 is recorded in phase_h_summary.json.
+# Tax years use the start year: 2025 = FY 2025-26 (1961 Act), 2026 = Tax Year 2026-27 (2025 Act).
+queries:
+  # ---- temporal traps: the number belongs to the other Act
+  - {id: H-T01, category: temporal, year: 2026, q: "section 44AB audit for a professional with gross receipts above 50 lakh", expect: ["IT2025:s63(1)/T1", "IT2025:s63(1)"]}
+  - {id: H-T02, category: temporal, year: 2026, q: "section 234B interest for not paying advance tax", expect: ["IT2025:s425(1)"]}
+  - {id: H-T03, category: temporal, year: 2026, q: "section 91 relief for tax paid in a country with no treaty", expect: ["IT2025:s160(1)"]}
+  - {id: H-T04, category: temporal, year: 2026, q: "section 90(2) treaty provisions apply where more beneficial", expect: ["IT2025:s159(4)"]}
+  - {id: H-T05, category: temporal, year: 2026, q: "section 208 when advance tax is payable", expect: ["IT2025:s404"]}
+  - {id: H-T06, category: temporal, year: 2025, q: "section 404 advance tax threshold", expect: ["IT1961:s208"]}
+  - {id: H-T07, category: temporal, year: 2025, q: "section 425 interest on shortfall in advance tax", expect: ["IT1961:s234B(1)", "IT1961:s234C(1)"]}
+  - {id: H-T08, category: temporal, year: 2025, q: "section 202 new regime tax rates", expect: ["IT1961:s115BAC(1A)"]}
+  - {id: H-T09, category: temporal, year: 2026, q: "section 288A rounding off total income", expect: ["IT2025:s516"]}
+  - {id: H-T10, category: temporal, year: 2025, q: "Form 44 statement of foreign income and tax", expect: ["FORM67:p1", "RULES1962:r128(8)"]}
+  - {id: H-T11, category: temporal, year: 2026, q: "section 6(1)(a) resident if in India 182 days", expect: ["IT2025:s6(2)"]}
+  - {id: H-T12, category: temporal, year: 2025, q: "Rule 76 documents needed for foreign tax credit", expect: ["RULES1962:r128(8)"]}
+
+  # ---- plain language, no section numbers
+  - {id: H-P01, category: plain, year: 2026, q: "How many days must I be in India in a year to count as a resident?", expect: ["IT2025:s6(2)"]}
+  - {id: H-P02, category: plain, year: 2025, q: "How many days must I be in India in a year to count as a resident?", expect: ["IT1961:s6"]}
+  - {id: H-P03, category: plain, year: 2026, q: "Can I claim depreciation or other deductions on top of the 50% presumptive income?", expect: ["IT2025:s58(4)"]}
+  - {id: H-P04, category: plain, year: 2025, q: "Are business expenses deducted separately when a professional uses the presumptive scheme?", expect: ["IT1961:s44ADA(2)"]}
+  - {id: H-P05, category: plain, year: 2026, q: "What is the due date for my return if my accounts do not need an audit?", expect: ["IT2025:s263(1)/T3"]}
+  - {id: H-P06, category: plain, year: 2026, q: "Is interest charged if I pay my advance tax late?", expect: ["IT2025:s425(1)"]}
+  - {id: H-P07, category: plain, year: 2026, q: "Below what amount of tax do I not need to pay advance tax at all?", expect: ["IT2025:s404"]}
+  - {id: H-P08, category: plain, year: 2026, q: "What documents do I need to claim credit for tax deducted abroad?", expect: ["RULES2026:r76(10)", "FORM44:p1"]}
+  - {id: H-P09, category: plain, year: 2026, q: "Which purpose code applies to software consultancy money received from abroad?", expect: ["RBI_PC:receipts-08"]}
+  - {id: H-P10, category: plain, year: 2026, q: "Do I need a letter of undertaking to export services without paying IGST?", expect: ["CGST_RULES:r96A", "IGST:s16(3)"]}
+  - {id: H-P11, category: plain, year: 2025, q: "When does a professional have to get the accounts audited?", expect: ["IT1961:s44AB"]}
+  - {id: H-P12, category: plain, year: 2026, q: "Is export of services a zero-rated supply under GST?", expect: ["IGST:s16(1)"]}
+
+  # ---- treaty and US law
+  - {id: H-U01, category: us, year: 2026, q: "What withholding rate applies to US payments to foreign persons for services?", expect: ["IRS_W8BEN:withholding", "IRS_PUB515:personal_services"]}
+  - {id: H-U02, category: us, year: 2026, q: "Who is a resident of a country for the India-US treaty?", expect: ["DTAA_US:art4(1)"]}
+  - {id: H-U03, category: us, year: 2026, q: "Does furnishing services in the US for more than 90 days create a permanent establishment?", expect: ["DTAA_US:art5(2)"]}
+  - {id: H-U04, category: us, year: 2026, q: "What rate does the treaty allow on fees for included services?", expect: ["DTAA_US:art12(2)"]}
+  - {id: H-U05, category: us, year: 2026, q: "What is the penalty for not disclosing a treaty position with Form 1040-NR?", expect: ["IRS_1040NR:treaty_disclosure", "IRS_PUB901:form8833"]}
+  - {id: H-U06, category: us, year: 2026, q: "Are business profits taxable in the US without a permanent establishment there?", expect: ["DTAA_US:art7(1)"]}
+  - {id: H-U07, category: us, year: 2026, q: "How is income not covered by other articles of the India-US treaty taxed?", expect: ["DTAA_US:art23(1)"]}
+  - {id: H-U08, category: us, year: 2025, q: "How many days in the US make me a US tax resident?", expect: ["IRS_PUB519:spt"]}

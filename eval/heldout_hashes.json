@@ -1,0 +1,9 @@
+{
+  "frozen_at": "2026-11-23T16:41:14",
+  "note": "Hashes recorded before any Phase H run; run_evaluation.py refuses to run if a held-out file changes.",
+  "sha256": {
+    "backend/tests/retrieval/queries_heldout.yaml": "64138578cd40de3240c241d557be12a92c04b192601957790acb3e8f6aa17ae6",
+    "backend/tests/answer/answer_cases_heldout.yaml": "288c8fde6a8235562adf17d7f95cc627b1045b43f86efdfc64fe570bf8c02a0c",
+    "backend/tests/answer/claim_pairs_heldout.yaml": "3169c0af05c27ed08d45b9b775a85a6baa85f806056d50c9e7a0a221cb55fedf"
+  }
+}

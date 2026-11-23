@@ -1,0 +1,44 @@
+# Hand check of the stage 2 judge on real answers (Phase H, RAG quality / faithfulness).
+# Every sentence of the held-out answers (35), labelled by the developer agent (not an independent person) on
+# 23 Nov 2026 AFTER the run, against the
+# text of the chunk(s) the sentence cites, with the claim_pairs.yaml rule:
+#   supported     = every element of the sentence is in the cited passage(s);
+#   not_supported = an element (number, condition, Act mapping, meaning) is missing or different.
+# The labeller could see the judge's verdict while labelling (not blind). A second person should re-check.
+# case / index point into eval/results/phase_h_answers_heldout.json (rows[].answer.sentences[index]).
+sentences:
+  - {case: HX03, index: 0, label: supported}
+  - {case: HX04, index: 0, label: supported}
+  - {case: HX04, index: 1, label: not_supported, note: "Claims the passages impose no source-of-income bar; an absence claim, and wrong on the contested point (A-16: income from a source outside India bars ITR-4)."}
+  - {case: HF01, index: 0, label: supported}
+  - {case: HF02, index: 0, label: supported}
+  - {case: HF02, index: 1, label: supported}
+  - {case: HF04, index: 0, label: supported}
+  - {case: HF04, index: 1, label: supported, note: "Pub 515 does describe Form 8233; but the premise (withholding on work done in India) should have been rejected."}
+  - {case: HF04, index: 2, label: supported, note: "The W-8BEN chunk mentions claiming treaty exemption from withholding."}
+  - {case: HF04, index: 3, label: not_supported, note: "s.160(2) covers a non-resident partner's share of firm income from a no-treaty country, not this case."}
+  - {case: HF04, index: 4, label: not_supported, note: "Same wording as s.160(2), but that relief is for no-treaty countries and non-resident partners; the US has a treaty (s.159)."}
+  - {case: HF04, index: 5, label: not_supported}
+  - {case: HF05, index: 0, label: supported}
+  - {case: HF05, index: 1, label: supported}
+  - {case: HF06, index: 0, label: supported, note: "Q13 lists the IT profession among the eligible specified professions and refers to s.62(4)."}
+  - {case: HF06, index: 1, label: supported}
+  - {case: HT01, index: 0, label: not_supported, note: "The 50 lakh limit is in s.63(1); 'replacement of section 44AB by section 63' is from the concordance, not this passage."}
+  - {case: HT01, index: 1, label: not_supported}
+  - {case: HT02, index: 0, label: supported}
+  - {case: HT02, index: 1, label: supported}
+  - {case: HT03, index: 0, label: not_supported, note: "10% for 8-12 lakh is in s.202(1); 'which replaces section 115BAC' is not."}
+  - {case: HT04, index: 0, label: not_supported}
+  - {case: HT04, index: 1, label: supported, note: "Supported, but answers the rebate amount, not the income limit the question asked for."}
+  - {case: HP01, index: 0, label: supported}
+  - {case: HP02, index: 0, label: supported}
+  - {case: HP03, index: 0, label: supported}
+  - {case: HP03, index: 1, label: supported}
+  - {case: HP04, index: 0, label: supported}
+  - {case: HP04, index: 1, label: supported}
+  - {case: HP04, index: 2, label: supported, note: "The Technical Explanation says the income may be taxed where there is a fixed base and it is attributable to it."}
+  - {case: HP04, index: 3, label: supported}
+  - {case: HP05, index: 0, label: supported}
+  - {case: HP06, index: 0, label: supported}
+  - {case: HP06, index: 1, label: supported}
+  - {case: HP07, index: 0, label: not_supported, note: "'including export of services' is not in s.22(1)."}

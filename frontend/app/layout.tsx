@@ -14,7 +14,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body>
         <div className="disclaimer" role="note">
-          <strong>Prototype.</strong> {DISCLAIMER} {ERROR_RATES}
+          <strong>Prototype.</strong> {DISCLAIMER} {ERROR_RATES} <Link href="/evaluation">See the evaluation and known failures.</Link>
         </div>
         <header className="site-header">
           <Link href="/" className="brand">CiteTax</Link>
@@ -23,7 +23,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Nav />
         <main>{children}</main>
         <footer className="site-footer">
-          <strong>Prototype.</strong> {DISCLAIMER} {ERROR_RATES}
+          <strong>Prototype.</strong> {DISCLAIMER} {ERROR_RATES} <Link href="/evaluation">See the evaluation and known failures.</Link>
         </footer>
       </body>
     </html>

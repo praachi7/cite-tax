@@ -1,0 +1,700 @@
+{
+  "date": "2026-11-23",
+  "git_commit": "258f1a9",
+  "model": "openai/gpt-oss-120b",
+  "embedding_model": "BAAI/bge-m3",
+  "corpus": {
+    "chunks_on_disk": 300,
+    "chunks_in_index": 300
+  },
+  "heldout": {
+    "sha256": {
+      "backend/tests/retrieval/queries_heldout.yaml": "64138578cd40de3240c241d557be12a92c04b192601957790acb3e8f6aa17ae6",
+      "backend/tests/answer/answer_cases_heldout.yaml": "288c8fde6a8235562adf17d7f95cc627b1045b43f86efdfc64fe570bf8c02a0c",
+      "backend/tests/answer/claim_pairs_heldout.yaml": "3169c0af05c27ed08d45b9b775a85a6baa85f806056d50c9e7a0a221cb55fedf"
+    },
+    "frozen_at": "2026-11-23T16:41:14",
+    "written_by": "the developer, after seeing the corpus and the Phase C/D sets; never used for tuning"
+  },
+  "counts": {
+    "personas": 10,
+    "figures": 189,
+    "retrieval_queries": {
+      "original": 40,
+      "heldout": 32
+    },
+    "claim_pairs": {
+      "original": 42,
+      "heldout": 22
+    },
+    "answer_cases": {
+      "original": 14,
+      "heldout": 31
+    },
+    "answer_cases_passed": {
+      "original": 14,
+      "heldout": 29
+    }
+  },
+  "known_failures": [
+    {
+      "set": "heldout",
+      "kind": "answer",
+      "id": "HF03",
+      "slice": "false_premise",
+      "problems": [
+        "status declined, expected ['answered', 'partially_verified']",
+        "false premise not reported"
+      ]
+    },
+    {
+      "set": "heldout",
+      "kind": "answer",
+      "id": "HF04",
+      "slice": "false_premise",
+      "problems": [
+        "false premise not reported"
+      ]
+    },
+    {
+      "set": "original",
+      "kind": "retrieval miss@5",
+      "id": "P07",
+      "q": "How much can I receive in cash and still use the 75 lakh limit?"
+    },
+    {
+      "set": "original",
+      "kind": "retrieval miss@5",
+      "id": "P08",
+      "q": "When must advance tax be paid by someone using presumptive taxation?"
+    },
+    {
+      "set": "original",
+      "kind": "retrieval miss@5",
+      "id": "P10",
+      "q": "Can a Hindu undivided family use the presumptive scheme for professions?"
+    },
+    {
+      "set": "original",
+      "kind": "retrieval miss@5",
+      "id": "P13",
+      "q": "What are the old regime tax slabs if I opt out?"
+    },
+    {
+      "set": "original",
+      "kind": "retrieval miss@5",
+      "id": "U02",
+      "q": "fixed base regularly available in the United States"
+    },
+    {
+      "set": "original",
+      "kind": "retrieval miss@5",
+      "id": "U05",
+      "q": "substantial presence test 183 days"
+    },
+    {
+      "set": "heldout",
+      "kind": "retrieval miss@5",
+      "id": "H-T12",
+      "q": "Rule 76 documents needed for foreign tax credit"
+    },
+    {
+      "set": "heldout",
+      "kind": "retrieval miss@5",
+      "id": "H-P03",
+      "q": "Can I claim depreciation or other deductions on top of the 50% presumptive income?"
+    },
+    {
+      "set": "heldout",
+      "kind": "retrieval miss@5",
+      "id": "H-P04",
+      "q": "Are business expenses deducted separately when a professional uses the presumptive scheme?"
+    },
+    {
+      "set": "original",
+      "kind": "paraphrase",
+      "id": "C13",
+      "label": "supported",
+      "verdict": "not_supported"
+    },
+    {
+      "set": "heldout",
+      "kind": "checker accepted an unsupported answer sentence",
+      "id": "HX04[1]",
+      "problems": [
+        "Claims the passages impose no source-of-income bar; an absence claim, and wrong on the contested point (A-16: income from a source outside India bars ITR-4)."
+      ]
+    },
+    {
+      "set": "heldout",
+      "kind": "checker accepted an unsupported answer sentence",
+      "id": "HF04[4]",
+      "problems": [
+        "Same wording as s.160(2), but that relief is for no-treaty countries and non-resident partners; the US has a treaty (s.159)."
+      ]
+    },
+    {
+      "set": "heldout",
+      "kind": "checker accepted an unsupported answer sentence",
+      "id": "HT01[0]",
+      "problems": [
+        "The 50 lakh limit is in s.63(1); 'replacement of section 44AB by section 63' is from the concordance, not this passage."
+      ]
+    },
+    {
+      "set": "original",
+      "kind": "contested question declined (notice shown, no answer)",
+      "id": "X02",
+      "slice": "contested",
+      "problems": [
+        "The provided passages do not contain any rule or provision about reporting foreign assets such as a Payoneer balance under the Indian Income-tax Act."
+      ]
+    },
+    {
+      "set": "heldout",
+      "kind": "contested question declined (notice shown, no answer)",
+      "id": "HX01",
+      "slice": "contested",
+      "problems": [
+        "The provided passages do not contain any information about Schedule FA or the requirement to declare foreign bank balances in it."
+      ]
+    },
+    {
+      "set": "heldout",
+      "kind": "contested question declined (notice shown, no answer)",
+      "id": "HX02",
+      "slice": "contested",
+      "problems": [
+        "The provided passages discuss US forms (W-8BEN, 8233) and US tax rules, but do not specify which Indian income‑tax return form a freelancer with US clients must file under the Indian Income‑Tax Act."
+      ]
+    }
+  ],
+  "slices": {
+    "arithmetic": {
+      "metric": "exact match per hand-computed, cited figure",
+      "personas": 10,
+      "personas_all_match": 10,
+      "figures": 189,
+      "matched": 189,
+      "by_persona": [
+        {
+          "id": "P1",
+          "title": "IT consultant, Tax Year 2026-27, Rs 24 lakh receipts, all electronic",
+          "figures": 19,
+          "matched": 19
+        },
+        {
+          "id": "P2",
+          "title": "The P1 profile for FY 2025-26 (Income-tax Act 1961); tests Act selection and the concordance",
+          "figures": 17,
+          "matched": 17
+        },
+        {
+          "id": "P3",
+          "title": "Rs 70 lakh receipts with 2% cash, Tax Year 2026-27; tests the Rs 75 lakh limit and no audit under s.63(2)",
+          "figures": 21,
+          "matched": 21
+        },
+        {
+          "id": "P4",
+          "title": "Rs 60 lakh receipts with 8% cash, Tax Year 2026-27; the limit falls to Rs 50 lakh so presumptive taxation is unavailable",
+          "figures": 25,
+          "matched": 25
+        },
+        {
+          "id": "P5",
+          "title": "A 95-day US visit with US tax withheld on the US-performed work, Tax Year 2026-27; tests the Article 15 trigger, FTC routing, Form 44 data and ITR-3",
+          "figures": 30,
+          "matched": 30
+        },
+        {
+          "id": "P6",
+          "title": "Remote work only, no W-8BEN, 30% withheld, Tax Year 2026-27; tests the refund route and that the tax is not creditable",
+          "figures": 17,
+          "matched": 17
+        },
+        {
+          "id": "P7",
+          "title": "A Payoneer balance held abroad, Tax Year 2026-27; tests the Schedule FA flag and ITR-3 under A-12",
+          "figures": 14,
+          "matched": 14
+        },
+        {
+          "id": "P8",
+          "title": "A past old-regime opt-out, Tax Year 2026-27; tests the election rules across both Acts",
+          "figures": 17,
+          "matched": 17
+        },
+        {
+          "id": "P9",
+          "title": "A US visit of about 85 days with US tax withheld on the US-performed work, Tax Year 2026-27; tests the Article 15 exemption below 90 days",
+          "figures": 14,
+          "matched": 14
+        },
+        {
+          "id": "P10",
+          "title": "Receipts Rs 30 lakh, profit declared at 40%, Tax Year 2026-27; tests tax on the declared profit and the books-and-audit flag",
+          "figures": 15,
+          "matched": 15
+        }
+      ],
+      "failures": [],
+      "note": "Expected values are hand-computed from the statute; the official e-filing calculator cross-check (NFR-5) has not been done."
+    },
+    "tax_year_retrieval": {
+      "metric": "hit@k and recall@5 with the tax-year pre-filter; wrong-Act chunks returned",
+      "original": {
+        "n": 40,
+        "n_queries": 42,
+        "overall": {
+          "n": 40,
+          "hit@1": 0.65,
+          "hit@3": 0.8,
+          "hit@5": 0.85,
+          "hit@10": 0.925,
+          "recall@5": 0.804,
+          "mrr": 0.734
+        },
+        "by_category": {
+          "plain": {
+            "n": 14,
+            "hit@1": 0.5,
+            "hit@3": 0.643,
+            "hit@5": 0.714,
+            "hit@10": 0.929,
+            "recall@5": 0.69,
+            "mrr": 0.592
+          },
+          "temporal": {
+            "n": 16,
+            "hit@1": 0.875,
+            "hit@3": 1.0,
+            "hit@5": 1.0,
+            "hit@10": 1.0,
+            "recall@5": 0.969,
+            "mrr": 0.938
+          },
+          "us": {
+            "n": 10,
+            "hit@1": 0.5,
+            "hit@3": 0.7,
+            "hit@5": 0.8,
+            "hit@10": 0.8,
+            "recall@5": 0.7,
+            "mrr": 0.608
+          }
+        },
+        "wrong_act_returned": [],
+        "misses_at_5": [
+          {
+            "id": "P07",
+            "q": "How much can I receive in cash and still use the 75 lakh limit?",
+            "expect": [
+              "IT2025:s58(2)/T3"
+            ],
+            "top5": [
+              "CBDT_FAQ_PRES:Q6",
+              "IT2025:s63(1)/T1",
+              "IT2025:s6(5)",
+              "FA2026:sch1-partIB-paraA(I)",
+              "IT2025:s58(2)/T1"
+            ]
+          },
+          {
+            "id": "P08",
+            "q": "When must advance tax be paid by someone using presumptive taxation?",
+            "expect": [
+              "IT1961:s211(1)"
+            ],
+            "top5": [
+              "CBDT_FAQ_ITR4:Q15",
+              "CBDT_FAQ_ITR4:Q17",
+              "IT1961:s210(1)",
+              "IT1961:s208",
+              "IT1961:s210(3)"
+            ]
+          },
+          {
+            "id": "P10",
+            "q": "Can a Hindu undivided family use the presumptive scheme for professions?",
+            "expect": [
+              "IT2025:s58(11)"
+            ],
+            "top5": [
+              "CBDT_FAQ_PRES:Q5",
+              "CBDT_FAQ_PRES:Q13",
+              "CBDT_FAQ_PRES:Q2",
+              "CBDT_FAQ_PRES:Q1",
+              "CBDT_FAQ_PRES:Q20"
+            ]
+          },
+          {
+            "id": "P13",
+            "q": "What are the old regime tax slabs if I opt out?",
+            "expect": [
+              "FA2026:sch1-partIB-paraA(I)"
+            ],
+            "top5": [
+              "CBDT_FAQ_PRES:Q12",
+              "RULES2026:r136",
+              "IRS_PUB901:form8833",
+              "CBDT_FAQ_PRES:Q11",
+              "CBDT_FAQ_PRES:Q18"
+            ]
+          },
+          {
+            "id": "U02",
+            "q": "fixed base regularly available in the United States",
+            "expect": [
+              "DTAA_US:art15(1)"
+            ],
+            "top5": [
+              "DTAA_US_TE:art15",
+              "DTAA_US:art5(4)",
+              "DTAA_US:art14(1)",
+              "DTAA_US:art5(1)",
+              "DTAA_US:art5(3)"
+            ]
+          },
+          {
+            "id": "U05",
+            "q": "substantial presence test 183 days",
+            "expect": [
+              "IRS_PUB519:spt"
+            ],
+            "top5": [
+              "DTAA_US:art5(2)",
+              "IT2025:s6(2)",
+              "IT2025:s6(6)",
+              "IRC:s861(a)(3)",
+              "IRS_W8BEN:validity"
+            ]
+          }
+        ]
+      },
+      "heldout": {
+        "n": 32,
+        "n_queries": 32,
+        "overall": {
+          "n": 32,
+          "hit@1": 0.75,
+          "hit@3": 0.906,
+          "hit@5": 0.906,
+          "hit@10": 0.938,
+          "recall@5": 0.875,
+          "mrr": 0.822
+        },
+        "by_category": {
+          "plain": {
+            "n": 12,
+            "hit@1": 0.583,
+            "hit@3": 0.833,
+            "hit@5": 0.833,
+            "hit@10": 0.833,
+            "recall@5": 0.792,
+            "mrr": 0.681
+          },
+          "temporal": {
+            "n": 12,
+            "hit@1": 0.833,
+            "hit@3": 0.917,
+            "hit@5": 0.917,
+            "hit@10": 1.0,
+            "recall@5": 0.917,
+            "mrr": 0.887
+          },
+          "us": {
+            "n": 8,
+            "hit@1": 0.875,
+            "hit@3": 1.0,
+            "hit@5": 1.0,
+            "hit@10": 1.0,
+            "recall@5": 0.938,
+            "mrr": 0.938
+          }
+        },
+        "wrong_act_returned": [],
+        "misses_at_5": [
+          {
+            "id": "H-T12",
+            "q": "Rule 76 documents needed for foreign tax credit",
+            "expect": [
+              "RULES1962:r128(8)"
+            ],
+            "top5": [
+              "RULES1962:r128(1)",
+              "RULES1962:r128(5)",
+              "RULES1962:r128(2)",
+              "RULES1962:r128(4)",
+              "RULES1962:r128(6)"
+            ]
+          },
+          {
+            "id": "H-P03",
+            "q": "Can I claim depreciation or other deductions on top of the 50% presumptive income?",
+            "expect": [
+              "IT2025:s58(4)"
+            ],
+            "top5": [
+              "CBDT_FAQ_PRES:Q15",
+              "CBDT_FAQ_PRES:Q22",
+              "CBDT_FAQ_PRES:Q9",
+              "CBDT_FAQ_PRES:Q14",
+              "CBDT_FAQ_PRES:Q18"
+            ]
+          },
+          {
+            "id": "H-P04",
+            "q": "Are business expenses deducted separately when a professional uses the presumptive scheme?",
+            "expect": [
+              "IT1961:s44ADA(2)"
+            ],
+            "top5": [
+              "CBDT_FAQ_ITR4:Q14",
+              "CBDT_FAQ_ITR4:Q13",
+              "CBDT_FAQ_ITR4:Q9",
+              "IT1961:s44ADA(3)",
+              "DTAA_US:art7(3)"
+            ]
+          }
+        ]
+      }
+    },
+    "temporal_traps": {
+      "metric": "retrieval: right Act in top 3 for old/new-number questions, wrong-Act rate; answers: cite only the year's Act",
+      "original": {
+        "retrieval_hit@3": 1.0,
+        "retrieval_n": 16,
+        "wrong_act_returned": 0,
+        "answers": {
+          "pass": 2,
+          "n": 2,
+          "rate": 1.0
+        }
+      },
+      "heldout": {
+        "retrieval_hit@3": 0.917,
+        "retrieval_n": 12,
+        "wrong_act_returned": 0,
+        "answers": {
+          "pass": 4,
+          "n": 4,
+          "rate": 1.0
+        }
+      }
+    },
+    "false_premise": {
+      "metric": "false premise reported (correct rejection rate)",
+      "original": {
+        "pass": 3,
+        "n": 3,
+        "rate": 1.0
+      },
+      "heldout": {
+        "pass": 4,
+        "n": 6,
+        "rate": 0.667
+      }
+    },
+    "wrong_jurisdiction": {
+      "metric": "declined, or the other-jurisdiction problem reported (decline rate)",
+      "original": null,
+      "heldout": {
+        "pass": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "note": "New in Phase H; the original Phase D set had no such cases."
+    },
+    "out_of_scope": {
+      "metric": "declined",
+      "original": {
+        "pass": 3,
+        "n": 3,
+        "rate": 1.0
+      },
+      "heldout": {
+        "pass": 2,
+        "n": 2,
+        "rate": 1.0
+      }
+    },
+    "contested_interpretation": {
+      "metric": "notice shown with both readings and citations (pass/fail)",
+      "original": {
+        "pass": 3,
+        "n": 3,
+        "rate": 1.0
+      },
+      "heldout": {
+        "pass": 4,
+        "n": 4,
+        "rate": 1.0
+      }
+    },
+    "citation_verification": {
+      "metric": "stage 2 judge vs hand labels (accuracy, false-support rate); stage 1 violations in answers",
+      "original": {
+        "n": 42,
+        "accuracy": 0.976,
+        "macro_f1": 0.976,
+        "false_support_rate": 0.0,
+        "missed_support_rate": 0.045,
+        "confusion": {
+          "tp": 21,
+          "tn": 20,
+          "fp": 0,
+          "fn": 1
+        },
+        "errors": [
+          {
+            "id": "C13",
+            "kind": "paraphrase",
+            "label": "supported",
+            "verdict": "not_supported"
+          }
+        ],
+        "stage1_violations": []
+      },
+      "heldout": {
+        "n": 22,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "false_support_rate": 0.0,
+        "missed_support_rate": 0.0,
+        "confusion": {
+          "tp": 12,
+          "tn": 10,
+          "fp": 0,
+          "fn": 0
+        },
+        "errors": [],
+        "stage1_violations": []
+      }
+    },
+    "rag_quality": {
+      "metric": "faithfulness = share of answer sentences the stage 2 judge rates supported; key-fact relevance; context recall. RAGAS was not used (see eval/REPORT.md).",
+      "original": {
+        "faithfulness": {
+          "sentences": 21,
+          "supported": 16,
+          "rate": 0.762,
+          "verdicts": {
+            "supported": 16,
+            "partially_supported": 4,
+            "not_supported": 1
+          }
+        },
+        "key_fact_cases": 0,
+        "key_fact_relevance": null,
+        "context_recall_cases": 0,
+        "context_recall": null,
+        "key_facts_missing": [],
+        "context_missed": []
+      },
+      "heldout": {
+        "faithfulness": {
+          "sentences": 35,
+          "supported": 25,
+          "rate": 0.714,
+          "verdicts": {
+            "supported": 25,
+            "not_supported": 5,
+            "partially_supported": 5
+          }
+        },
+        "key_fact_cases": 11,
+        "key_fact_relevance": 0.909,
+        "context_recall_cases": 17,
+        "context_recall": 0.706,
+        "key_facts_missing": [
+          {
+            "id": "HT04",
+            "missing": [
+              "12 lakh"
+            ]
+          }
+        ],
+        "context_missed": [
+          "HF01",
+          "HF03",
+          "HF04",
+          "HF06",
+          "HP01"
+        ],
+        "judge_vs_hand_check": {
+          "status": "done",
+          "n": 35,
+          "agreement": 0.8,
+          "false_support_rate": 0.333,
+          "negatives": 9,
+          "disagreements": [
+            {
+              "case": "HX04",
+              "index": 1,
+              "label": "not_supported",
+              "judge": "supported",
+              "text": "The passages do not impose any restriction based solely on the source of income being from foreign clients, so that factor does not prevent you from using ITR‑4",
+              "note": "Claims the passages impose no source-of-income bar; an absence claim, and wrong on the contested point (A-16: income from a source outside India bars ITR-4)."
+            },
+            {
+              "case": "HF04",
+              "index": 2,
+              "label": "supported",
+              "judge": "not_supported",
+              "text": "Alternatively, you may furnish Form W‑8BEN to certify your foreign status and claim the exemption under the treaty [\"P4\"].",
+              "note": "The W-8BEN chunk mentions claiming treaty exemption from withholding."
+            },
+            {
+              "case": "HF04",
+              "index": 4,
+              "label": "not_supported",
+              "judge": "supported",
+              "text": "The deduction is calculated at the lower of the Indian tax rate or the foreign (U.S.) rate [\"P5\"].",
+              "note": "Same wording as s.160(2), but that relief is for no-treaty countries and non-resident partners; the US has a treaty (s.159)."
+            },
+            {
+              "case": "HF06",
+              "index": 0,
+              "label": "supported",
+              "judge": "partially_supported",
+              "text": "Information technology is a specified profession under section 62(4) and therefore eligible for the presumptive taxation scheme of section 58(2) [Table S. No. 3]",
+              "note": "Q13 lists the IT profession among the eligible specified professions and refers to s.62(4)."
+            },
+            {
+              "case": "HT01",
+              "index": 0,
+              "label": "not_supported",
+              "judge": "supported",
+              "text": "For Tax Year 2026-27 the audit limit for professionals is gross receipts in the profession exceeding fifty lakh rupees in any tax year, as per the replacement of section 44AB by section 63 of the Income‑tax Act 2025.",
+              "note": "The 50 lakh limit is in s.63(1); 'replacement of section 44AB by section 63' is from the concordance, not this passage."
+            },
+            {
+              "case": "HP04",
+              "index": 2,
+              "label": "supported",
+              "judge": "not_supported",
+              "text": "U.S. Treasury guidance mirrors this rule, confirming that a fixed base allows the United States to tax the attributable income [P1].",
+              "note": "The Technical Explanation says the income may be taxed where there is a fixed base and it is attributable to it."
+            },
+            {
+              "case": "HP05",
+              "index": 0,
+              "label": "supported",
+              "judge": "partially_supported",
+              "text": "The RBI purpose code for software consultancy receipts from a US client is P0802 – Software consultancy/implementation (other than those covered in SOFTEX form).",
+              "note": ""
+            }
+          ],
+          "labelled_by": "developer, against the cited chunk text"
+        }
+      }
+    }
+  },
+  "requests": {
+    "sent": 0,
+    "cache_hits": 163,
+    "note": "Groq requests sent by this run (cached responses cost none)"
+  },
+  "seconds": 121
+}

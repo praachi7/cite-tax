@@ -1,0 +1,54 @@
+# Held-out end-to-end answer cases (Phase H). Written on 23 Nov 2026 BEFORE any Phase H run and never
+# used for tuning: no prompt, threshold, corpus or params change may be made because of these results.
+# Caveat: the developer wrote them after seeing the corpus and the Phase D cases (unseen, not blind).
+# Their SHA-256 is recorded in phase_h_summary.json.
+#
+# expect (as in answer_cases.yaml):
+#   status, notices, premise, cite_act
+# plus, for Phase H:
+#   jurisdiction: true  -> wrong-jurisdiction case: passes if declined or the premise/jurisdiction issue is reported
+#   key_facts:  list of alternatives groups; relevance = share of groups with at least one alternative in the answer text
+#   passages:   chunk ids that answer the question; context recall = any of them among the passages given to the model
+cases:
+  # ---- contested interpretation
+  - {id: HX01, slice: contested, year: 2026, q: "My clients pay me through Wise into a USD balance. Must I declare it in Schedule FA?", expect: {notices: [A-12], status: [answered, partially_verified, declined]}}
+  - {id: HX02, slice: contested, year: 2026, q: "Which return form should I file as a freelancer whose only clients are American?", expect: {notices: [A-16], status: [answered, partially_verified, declined]}}
+  - {id: HX03, slice: contested, year: 2026, q: "US tax was withheld on the work I did in New York. How much of it can I set off against my Indian tax?", expect: {notices: [A-5], status: [answered, partially_verified, declined]}}
+  - {id: HX04, slice: contested, year: 2025, q: "Can I use ITR-4 for FY 2025-26 if all my income comes from foreign clients?", expect: {notices: [A-16], status: [answered, partially_verified, declined]}}
+
+  # ---- false premise
+  - {id: HF01, slice: false_premise, year: 2026, q: "Since presumptive professionals pay advance tax in four instalments, how much is due by 15 June?", expect: {premise: true, status: [answered, partially_verified], passages: ["IT2025:s408(2)"]}}
+  - {id: HF02, slice: false_premise, year: 2026, q: "The new-regime rebate only covers income up to 7 lakh, so with 10 lakh of income I pay full tax, right?", expect: {premise: true, status: [answered, partially_verified], passages: ["IT2025:s156(2)"]}}
+  - {id: HF03, slice: false_premise, year: 2026, q: "As an IT consultant on the presumptive scheme I must get a tax audit every year. Who can do it?", expect: {premise: true, status: [answered, partially_verified], passages: ["IT2025:s63(2)", "IT2025:s58(3)"]}}
+  - {id: HF04, slice: false_premise, year: 2026, q: "My US client must withhold 30% on the work I do remotely from India. How do I get it back?", expect: {premise: true, status: [answered, partially_verified], passages: ["IRC:s862(a)(3)", "IRC:s861(a)(3)"]}}
+  - {id: HF05, slice: false_premise, year: 2025, q: "Under the 1961 Act a professional can use presumptive taxation up to 75 lakh no matter how much is received in cash, correct?", expect: {premise: true, status: [answered, partially_verified], passages: ["IT1961:s44ADA(1)"]}}
+  - {id: HF06, slice: false_premise, year: 2026, q: "Information technology is not a specified profession, so I cannot use presumptive taxation, can I?", expect: {premise: true, status: [answered, partially_verified], passages: ["IT2025:s62(4)"]}}
+
+  # ---- wrong jurisdiction (other countries, other treaties, US state or city law)
+  - {id: HJ01, slice: wrong_jurisdiction, year: 2026, q: "What are the UK income tax bands for a self-employed developer?", expect: {jurisdiction: true}}
+  - {id: HJ02, slice: wrong_jurisdiction, year: 2026, q: "Do I owe California state income tax on fees from a San Francisco client?", expect: {jurisdiction: true}}
+  - {id: HJ03, slice: wrong_jurisdiction, year: 2026, q: "Under the India-UK tax treaty, can the UK tax my consulting fees from a London client?", expect: {jurisdiction: true}}
+  - {id: HJ04, slice: wrong_jurisdiction, year: 2026, q: "How does the India-Canada treaty treat fees for technical services?", expect: {jurisdiction: true}}
+  - {id: HJ05, slice: wrong_jurisdiction, year: 2026, q: "What is the New York City unincorporated business tax rate for freelancers?", expect: {jurisdiction: true}}
+  - {id: HJ06, slice: wrong_jurisdiction, year: 2026, q: "Do I need to register for VAT in Germany when I bill a German client?", expect: {jurisdiction: true}}
+  - {id: HJ07, slice: wrong_jurisdiction, year: 2026, q: "What tax rate does Singapore charge a non-resident consultant?", expect: {jurisdiction: true}}
+  - {id: HJ08, slice: wrong_jurisdiction, year: 2026, q: "Do I need to file a Texas franchise tax report because my clients are in Texas?", expect: {jurisdiction: true}}
+
+  # ---- out of scope
+  - {id: HO01, slice: out_of_scope, year: 2026, q: "How much tax is due when I sell mutual fund units after two years?", expect: {status: [declined]}}
+  - {id: HO02, slice: out_of_scope, year: 2026, q: "What is a good recipe for chicken biryani?", expect: {status: [declined]}}
+
+  # ---- temporal traps (old numbering asked for the other year)
+  - {id: HT01, slice: temporal, year: 2026, q: "What is the section 44AB audit limit for professionals?", expect: {status: [answered, partially_verified], cite_act: IT2025, key_facts: [["50 lakh", "fifty lakh", "50,00,000", "5,000,000", "5000000"]], passages: ["IT2025:s63(1)/T1", "IT2025:s63(1)"]}}
+  - {id: HT02, slice: temporal, year: 2025, q: "When is advance tax due under section 408(2) for presumptive professionals?", expect: {status: [answered, partially_verified], cite_act: IT1961, key_facts: [["15 March", "15th March", "March 15", "15th day of March"]], passages: ["IT1961:s211(1)"]}}
+  - {id: HT03, slice: temporal, year: 2026, q: "What rate does section 115BAC apply to income between 8 and 12 lakh?", expect: {status: [answered, partially_verified], cite_act: IT2025, key_facts: [["10%", "10 per cent", "ten per cent", "10 percent"]], passages: ["IT2025:s202(1)"]}}
+  - {id: HT04, slice: temporal, year: 2025, q: "What is the rebate limit under section 156 of the new Act?", expect: {status: [answered, partially_verified], cite_act: IT1961, key_facts: [["12 lakh", "12,00,000", "1,200,000", "1200000", "twelve lakh", "twelve hundred thousand", "1.2 million"]], passages: ["IT1961:s87A"]}}
+
+  # ---- plain language
+  - {id: HP01, slice: plain, year: 2026, q: "Up to what gross receipts can a professional with almost no cash receipts use presumptive taxation?", expect: {status: [answered, partially_verified], cite_act: IT2025, key_facts: [["75 lakh", "seventy-five lakh", "seventy five lakh", "75,00,000", "7,500,000", "7500000"]], passages: ["IT2025:s58(2)/T3"]}}
+  - {id: HP02, slice: plain, year: 2026, q: "When is the return due for a presumptive professional whose accounts are not audited?", expect: {status: [answered, partially_verified], cite_act: IT2025, key_facts: [["31 August", "31st August", "August 31"]], passages: ["IT2025:s263(1)/T3"]}}
+  - {id: HP03, slice: plain, year: 2026, q: "How many days in India make an individual resident?", expect: {status: [answered, partially_verified], cite_act: IT2025, key_facts: [["182", "one hundred and eighty-two"]], passages: ["IT2025:s6(2)"]}}
+  - {id: HP04, slice: plain, year: 2026, q: "Can the US tax my professional income if I have a fixed base there?", expect: {status: [answered, partially_verified], key_facts: [["fixed base"]], passages: ["DTAA_US:art15(1)"]}}
+  - {id: HP05, slice: plain, year: 2026, q: "What purpose code applies to software consultancy receipts from a US client?", expect: {status: [answered, partially_verified], key_facts: [["P0802"]], passages: ["RBI_PC:receipts-08"]}}
+  - {id: HP06, slice: plain, year: 2025, q: "What interest do I pay if I do not pay advance tax?", expect: {status: [answered, partially_verified], cite_act: IT1961, key_facts: [["1%", "one per cent", "1 per cent", "1 percent"]], passages: ["IT1961:s234B(1)", "IT1961:s234C(1)"]}}
+  - {id: HP07, slice: plain, year: 2026, q: "Does GST registration apply above 20 lakh turnover for someone exporting services?", expect: {status: [answered, partially_verified], key_facts: [["20 lakh", "twenty lakh", "20,00,000", "2,000,000", "2000000"]], passages: ["CGST:s22(1)"]}}

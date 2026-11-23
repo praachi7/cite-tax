@@ -1,0 +1,18 @@
+{
+  "model": "openai/gpt-oss-120b",
+  "n": 22,
+  "accuracy": 1.0,
+  "macro_f1": 1.0,
+  "false_support_rate": 0.0,
+  "missed_support_rate": 0.0,
+  "confusion": {
+    "tp": 12,
+    "tn": 10,
+    "fp": 0,
+    "fn": 0
+  },
+  "seconds": 0,
+  "requests_sent": 0,
+  "cache_hits": 22,
+  "errors": []
+}

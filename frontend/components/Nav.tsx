@@ -11,6 +11,7 @@ const STEPS: [string, string][] = [
   ["/compliance", "4 · Compliance checklist"],
   ["/audit", "5 · Audit-risk report"],
   ["/ask", "Ask a question"],
+  ["/evaluation", "Evaluation"],
 ];
 
 export function Nav() {

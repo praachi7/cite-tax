@@ -83,7 +83,7 @@ The ten pipeline steps are in `backend/engine/steps/`. Assumption switches (A-3,
 
 ### Corpus and retrieval (Phase C)
 
-The corpus is a curated set of passages in `corpus/chunks/<SOURCE>.yaml`, one file per source, drafted from the PDFs according to `corpus/scope.yaml` and then reviewed by hand. Tables are typed by hand. Retrieval filters by tax year in SQL first, then fuses three ranked lists (exact citation match with concordance mapping, BGE-M3 vectors, Postgres full text). The source PDFs must be in `sources/`.
+The corpus is a curated set of passages in `corpus/chunks/<SOURCE>.yaml`, one file per source, drafted from the PDFs according to `corpus/scope.yaml` and then reviewed by hand. Tables are typed by hand. Retrieval filters by tax year in SQL first, then fuses two ranked lists by default (exact citation match with concordance mapping, and BGE-M3 vectors). A third list, Postgres full text, is built but off by default: it lowered hit@5 from 0.85 to 0.80 on the labelled queries. The source PDFs must be in `sources/`.
 
 ```
 .venv/Scripts/python scripts/extract_text.py          # PDFs -> build/text/ (needs poppler's pdftotext)
@@ -118,6 +118,7 @@ API endpoints (`backend/api/`):
 | `GET /personas`, `GET /personas/{id}/transactions.csv` | Test personas P1–P10 and their synthetic transactions. |
 | `GET /sources?ids=…` | The corpus passage behind each citation ID. |
 | `POST /ask` | A cited answer, verified sentence by sentence (needs the index and `GROQ_API_KEY`). |
+| `GET /evaluation` | The stored Phase H results (`eval/results/phase_h_summary.json`). |
 
 Run it locally (two terminals):
 
@@ -136,6 +137,18 @@ docker compose up -d --build        # db :5433, api :8000, frontend :3000
 CI (`.github/workflows/ci.yml`) runs ruff, mypy on `backend/api` (both pinned in `requirements-dev.txt`), `lawdata.validate --chunks` and `pytest -m "not db"` on the backend, and eslint, `tsc` and `next build` on the frontend. It uses no secrets and never calls the Groq API.
 
 Known gaps: invoice PDF upload is not built (no PDF ingestion yet); classification corrections are logged in the response and the browser session only, because there is no audit table yet.
+
+### Evaluation (Phase H)
+
+One script runs every evaluation slice of SRS/SDS section 3.8 and writes `eval/results/phase_h_summary.json`, which the **Evaluation** screen (`GET /evaluation`) and the disclaimer on every page read from. The method, the results and the known failures are in [`eval/REPORT.md`](eval/REPORT.md); the demo walk-through is [`DEMO.md`](DEMO.md).
+
+```
+docker compose up -d db                                         # index loaded (scripts/load_index.py)
+.venv/Scripts/python scripts/run_evaluation.py                  # all slices; needs GROQ_API_KEY for the model slices
+.venv/Scripts/python scripts/run_evaluation.py --skip-llm       # arithmetic and retrieval only, no model calls
+```
+
+Each slice is measured on the original labelled sets and on held-out sets (`*_heldout.yaml` in `backend/tests/retrieval/` and `backend/tests/answer/`) written before the Phase H run. Their hashes are in `eval/heldout_hashes.json`, and the script stops if a held-out file has changed. Model responses are cached in `build/llm_cache/`, so a re-run sends no requests. The three Phase C/D scripts still run on their own and take `--queries`, `--cases` or `--pairs` to point at another set.
 
 ## Disclaimer
 

@@ -1,0 +1,1687 @@
+{
+  "date": "2026-11-23",
+  "model": "openai/gpt-oss-120b",
+  "cases_file": "answer_cases_heldout.yaml",
+  "cases": 31,
+  "passed": 29,
+  "by_slice": {
+    "contested": {
+      "pass": 4,
+      "n": 4
+    },
+    "false_premise": {
+      "pass": 4,
+      "n": 6
+    },
+    "wrong_jurisdiction": {
+      "pass": 8,
+      "n": 8
+    },
+    "out_of_scope": {
+      "pass": 2,
+      "n": 2
+    },
+    "temporal": {
+      "pass": 4,
+      "n": 4
+    },
+    "plain": {
+      "pass": 7,
+      "n": 7
+    }
+  },
+  "sentence_verdicts": {
+    "supported": 25,
+    "not_supported": 5,
+    "partially_supported": 5
+  },
+  "seconds": 24,
+  "requests_sent": 0,
+  "cache_hits": 65,
+  "rows": [
+    {
+      "id": "HX01",
+      "slice": "contested",
+      "q": "My clients pay me through Wise into a USD balance. Must I declare it in Schedule FA?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "My clients pay me through Wise into a USD balance. Must I declare it in Schedule FA?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "declined",
+        "sentences": [],
+        "premise_issue": "",
+        "decline_reason": "The provided passages do not contain any information about Schedule FA or the requirement to declare foreign bank balances in it.",
+        "notices": [
+          {
+            "assumption_id": "A-12",
+            "question": "Are balances held abroad on payment platforms (Payoneer, Wise, PayPal) foreign assets for Schedule FA and the ITR-4 bar?",
+            "readings": [
+              {
+                "key": "a",
+                "statement": "Yes. A foreign-currency balance held by a platform in the user's name is a foreign account or asset, so Schedule FA applies and ITR-4 is barred, even if the balance is swept daily.",
+                "citations": [
+                  "RULES1962:r12(1)(ca)",
+                  "RULES2026:r164(6)(a)",
+                  "RULES2026:r164(6)(b)"
+                ],
+                "is_default": true
+              },
+              {
+                "key": "b",
+                "statement": "No, if the wallet is only a transit account and the money reaches an Indian bank account without a balance held abroad.",
+                "citations": [
+                  "RULES1962:r12(1)(ca)",
+                  "RULES2026:r164(6)(a)"
+                ],
+                "is_default": false
+              }
+            ],
+            "default_reason": "Disclosing a balance that did not need disclosing costs nothing; failing to disclose one that did can bring penalties.",
+            "config_flag": "platform_wallet_is_foreign_asset",
+            "triggered_by": [
+              "topic: through wise",
+              "topic: schedule fa"
+            ],
+            "disclaimer": "Not professionally reviewed: CiteTax has no chartered accountant; this is a documented assumption."
+          }
+        ],
+        "passages": [
+          "IRS_W8BEN:withholding",
+          "IRS_PUB515:personal_services",
+          "IRS_PUB901:form8833",
+          "IT2025:s58(9)",
+          "IT2025:s408(2)"
+        ],
+        "retrieval_similarity": 0.511,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {},
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": null
+    },
+    {
+      "id": "HX02",
+      "slice": "contested",
+      "q": "Which return form should I file as a freelancer whose only clients are American?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "Which return form should I file as a freelancer whose only clients are American?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "declined",
+        "sentences": [],
+        "premise_issue": "",
+        "decline_reason": "The provided passages discuss US forms (W-8BEN, 8233) and US tax rules, but do not specify which Indian income‑tax return form a freelancer with US clients must file under the Indian Income‑Tax Act.",
+        "notices": [
+          {
+            "assumption_id": "A-16",
+            "question": "Are fees from US clients \"income from any source outside India\", which bars ITR-4?",
+            "readings": [
+              {
+                "key": "a",
+                "statement": "No. Income from services generally arises where they are rendered, so work done in India for a foreign client is Indian-source income and ITR-4 remains available.",
+                "citations": [
+                  "RULES1962:r12(1)(ca)",
+                  "RULES2026:r164(6)(c)"
+                ],
+                "is_default": false
+              },
+              {
+                "key": "b",
+                "statement": "Yes. The payer is abroad and the work is used abroad (compare Ishikawajima-Harima, Supreme Court 2007, which required services to be both rendered and used in India), so the fees are income from a source outside India and ITR-3 is required.",
+                "citations": [
+                  "RULES1962:r12(1)(ca)",
+                  "RULES2026:r164(6)(c)"
+                ],
+                "is_default": true
+              }
+            ],
+            "default_reason": "ITR-3 is valid under either reading, while filing ITR-4 on the wrong reading risks a defective return.",
+            "config_flag": "itr4_foreign_client_income_is_indian_source",
+            "triggered_by": [
+              "topic: which return form"
+            ],
+            "disclaimer": "Not professionally reviewed: CiteTax has no chartered accountant; this is a documented assumption."
+          }
+        ],
+        "passages": [
+          "IRS_W8BEN:withholding",
+          "IRS_PUB515:personal_services",
+          "IRS_F8233:p1",
+          "IRC:s861(a)(3)",
+          "DTAA_US:art15(1)"
+        ],
+        "retrieval_similarity": 0.518,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {},
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": null
+    },
+    {
+      "id": "HX03",
+      "slice": "contested",
+      "q": "US tax was withheld on the work I did in New York. How much of it can I set off against my Indian tax?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "US tax was withheld on the work I did in New York. How much of it can I set off against my Indian tax?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "answered",
+        "sentences": [
+          {
+            "text": "India shall allow a resident of India to deduct from his Indian tax an amount equal to the United States tax paid on the same income, but the deduction cannot exceed the portion of Indian tax attributable to that U.S.-source income",
+            "cites": [
+              "P2"
+            ],
+            "chunk_ids": [
+              "DTAA_US:art25(2)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "The passage states India allows a deduction equal to US tax paid, but not exceeding the Indian tax attributable to that US-source income."
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [
+          {
+            "assumption_id": "A-5",
+            "question": "How is the foreign tax credit capped when Indian income is taxed presumptively?",
+            "readings": [
+              {
+                "key": "a",
+                "statement": "The credit is the lower of the foreign tax and the Indian tax attributable to the deemed (50%) income from the US-taxable receipts, apportioned pro rata to total income (including surcharge and cess).",
+                "citations": [
+                  "RULES1962:r128(5)(i)",
+                  "RULES2026:r76(7)(a)",
+                  "DTAA_US:art25(2)(a)"
+                ],
+                "is_default": true
+              },
+              {
+                "key": "b",
+                "statement": "The Indian tax is computed on the gross US receipts, so the cap is higher.",
+                "citations": [
+                  "DTAA_US:art25(2)(a)"
+                ],
+                "is_default": false
+              }
+            ],
+            "default_reason": "Capping the credit at Indian tax on the deemed income can only under-claim, never over-claim.",
+            "config_flag": "ftc_cap_basis",
+            "triggered_by": [
+              "passage: DTAA_US:art25(2)"
+            ],
+            "disclaimer": "Not professionally reviewed: CiteTax has no chartered accountant; this is a documented assumption."
+          }
+        ],
+        "passages": [
+          "DTAA_US:art25(1)",
+          "DTAA_US:art25(2)",
+          "DTAA_US:art14(1)",
+          "DTAA_US:art14(2)",
+          "IT2025:s156(1)"
+        ],
+        "retrieval_similarity": 0.617,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 1
+      },
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": null
+    },
+    {
+      "id": "HX04",
+      "slice": "contested",
+      "q": "Can I use ITR-4 for FY 2025-26 if all my income comes from foreign clients?",
+      "year": 2025,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "Can I use ITR-4 for FY 2025-26 if all my income comes from foreign clients?",
+        "tax_year": 2025,
+        "act_id": "IT1961",
+        "status": "answered",
+        "sentences": [
+          {
+            "text": "You can file ITR‑4 for AY 2026‑27 (FY 2025‑26) provided you satisfy the eligibility conditions listed, such as being a Resident Individual/HUF/Firm (other than LLP) with total income not exceeding ₹50 Lakh and having business income computed on a presumptive basis under sections 44AD, 44ADA or 44AE",
+            "cites": [
+              "P2"
+            ],
+            "chunk_ids": [
+              "CBDT_FAQ_ITR4:Q1"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "The passage confirms the eligibility criteria stated in the sentence"
+          },
+          {
+            "text": "The passages do not impose any restriction based solely on the source of income being from foreign clients, so that factor does not prevent you from using ITR‑4",
+            "cites": [
+              "P1",
+              "P2"
+            ],
+            "chunk_ids": [
+              "CBDT_FAQ_ITR4:Q2",
+              "CBDT_FAQ_ITR4:Q1"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "Passages list eligibility restrictions but do not mention foreign client income as a disqualifying factor"
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [
+          {
+            "assumption_id": "A-16",
+            "question": "Are fees from US clients \"income from any source outside India\", which bars ITR-4?",
+            "readings": [
+              {
+                "key": "a",
+                "statement": "No. Income from services generally arises where they are rendered, so work done in India for a foreign client is Indian-source income and ITR-4 remains available.",
+                "citations": [
+                  "RULES1962:r12(1)(ca)",
+                  "RULES2026:r164(6)(c)"
+                ],
+                "is_default": false
+              },
+              {
+                "key": "b",
+                "statement": "Yes. The payer is abroad and the work is used abroad (compare Ishikawajima-Harima, Supreme Court 2007, which required services to be both rendered and used in India), so the fees are income from a source outside India and ITR-3 is required.",
+                "citations": [
+                  "RULES1962:r12(1)(ca)",
+                  "RULES2026:r164(6)(c)"
+                ],
+                "is_default": true
+              }
+            ],
+            "default_reason": "ITR-3 is valid under either reading, while filing ITR-4 on the wrong reading risks a defective return.",
+            "config_flag": "itr4_foreign_client_income_is_indian_source",
+            "triggered_by": [
+              "topic: itr-4"
+            ],
+            "disclaimer": "Not professionally reviewed: CiteTax has no chartered accountant; this is a documented assumption."
+          }
+        ],
+        "passages": [
+          "CBDT_FAQ_ITR4:Q2",
+          "CBDT_FAQ_ITR4:Q1",
+          "CBDT_FAQ_ITR4:Q4",
+          "CBDT_FAQ_ITR4:Q3",
+          "CBDT_FAQ_ITR4:Q24"
+        ],
+        "retrieval_similarity": 0.654,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 2
+      },
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": null
+    },
+    {
+      "id": "HF01",
+      "slice": "false_premise",
+      "q": "Since presumptive professionals pay advance tax in four instalments, how much is due by 15 June?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "Since presumptive professionals pay advance tax in four instalments, how much is due by 15 June?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "answered",
+        "sentences": [
+          {
+            "text": "An assessee opting for the presumptive taxation scheme under Section 58(2) [Table S. No. 3] must pay the entire amount of advance tax on or before 15 March of the tax year",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "CBDT_FAQ_PRES:Q16"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "The passage states the assessee must pay the entire advance tax by March 15, matching the sentence."
+          }
+        ],
+        "premise_issue": "Presumptive professionals under section 58(2) [Table S. No. 3] are not required to pay advance tax in four instalments; they must discharge the whole advance tax by 15 March",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "CBDT_FAQ_PRES:Q16",
+          "IT2025:s408(1)",
+          "CBDT_FAQ_PRES:Q14",
+          "IT2025:s425(2)",
+          "CBDT_FAQ_PRES:Q11"
+        ],
+        "retrieval_similarity": 0.679,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 1
+      },
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": false
+    },
+    {
+      "id": "HF02",
+      "slice": "false_premise",
+      "q": "The new-regime rebate only covers income up to 7 lakh, so with 10 lakh of income I pay full tax, right?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "The new-regime rebate only covers income up to 7 lakh, so with 10 lakh of income I pay full tax, right?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "answered",
+        "sentences": [
+          {
+            "text": "Under the new‑regime, a resident individual can claim a rebate of 100 % of tax payable (or ₹60,000, whichever is less) only if total income does not exceed ₹12 lakh, not ₹7 lakh",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "IT2025:s156(2)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "Passage specifies the rebate applies when income ≤12 lakh with 100% tax or ₹60,000 limit, matching the sentence and contradicting a 7 lakh limit"
+          },
+          {
+            "text": "Therefore, with total income of ₹10 lakh you are eligible for the rebate, and you will not pay the full tax amount",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "IT2025:s156(2)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "The passage states that for income up to 12 lakh rupees a deduction (rebate) applies, so a ₹10 lakh income qualifies and reduces tax payable, meaning full tax is not paid."
+          }
+        ],
+        "premise_issue": "The question assumes the new‑regime rebate is limited to income up to ₹7 lakh, but under s.156(2) the rebate applies when total income does not exceed ₹12 lakh",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "IT2025:s156(2)",
+          "IT2025:s156(1)",
+          "FA2026:sch1-partIB-paraA(I)",
+          "IT2025:s516",
+          "IT2025:s202(1)"
+        ],
+        "retrieval_similarity": 0.637,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 2
+      },
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": true
+    },
+    {
+      "id": "HF03",
+      "slice": "false_premise",
+      "q": "As an IT consultant on the presumptive scheme I must get a tax audit every year. Who can do it?",
+      "year": 2026,
+      "pass": false,
+      "problems": [
+        "status declined, expected ['answered', 'partially_verified']",
+        "false premise not reported"
+      ],
+      "answer": {
+        "question": "As an IT consultant on the presumptive scheme I must get a tax audit every year. Who can do it?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "declined",
+        "sentences": [],
+        "premise_issue": "",
+        "decline_reason": "Passages do not specify who is authorized to conduct the tax audit required under the presumptive scheme.",
+        "notices": [],
+        "passages": [
+          "CBDT_FAQ_PRES:Q1",
+          "IT2025:s63(1)",
+          "CBDT_FAQ_PRES:Q10",
+          "IT2025:s63(4)",
+          "CBDT_FAQ_PRES:Q13"
+        ],
+        "retrieval_similarity": 0.624,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {},
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": false
+    },
+    {
+      "id": "HF04",
+      "slice": "false_premise",
+      "q": "My US client must withhold 30% on the work I do remotely from India. How do I get it back?",
+      "year": 2026,
+      "pass": false,
+      "problems": [
+        "false premise not reported"
+      ],
+      "answer": {
+        "question": "My US client must withhold 30% on the work I do remotely from India. How do I get it back?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "partially_verified",
+        "sentences": [
+          {
+            "text": "U.S. rules generally require a 30% withholding on compensation paid to a nonresident alien for services performed in the United States unless an exemption applies [\"P1\"].",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "IRS_PUB515:personal_services"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "The passage states a general 30% withholding on compensation to nonresident aliens for US services unless exempt, matching the sentence."
+          },
+          {
+            "text": "You can avoid the withholding by giving your U.S. client Form 8233 to claim a tax‑treaty exemption for independent personal services [\"P1\"].",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "IRS_PUB515:personal_services"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "Passage states Form 8233 is used to claim a tax‑treaty exemption from withholding for independent personal services"
+          },
+          {
+            "text": "Alternatively, you may furnish Form W‑8BEN to certify your foreign status and claim the exemption under the treaty [\"P4\"].",
+            "cites": [
+              "P4"
+            ],
+            "chunk_ids": [
+              "IRS_W8BEN:withholding"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "not_supported",
+            "reason": "Passage mentions using Form W‑8BEN to establish foreign status and claim beneficial ownership, but does not mention claiming a treaty exemption"
+          },
+          {
+            "text": "If tax was withheld, Indian law allows you to claim a deduction from Indian tax payable for the foreign tax paid on that income [\"P5\"].",
+            "cites": [
+              "P5"
+            ],
+            "chunk_ids": [
+              "IT2025:s160(2)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "partially_supported",
+            "reason": "Passage permits a deduction for foreign tax paid, but does not specify that tax must have been withheld"
+          },
+          {
+            "text": "The deduction is calculated at the lower of the Indian tax rate or the foreign (U.S.) rate [\"P5\"].",
+            "cites": [
+              "P5"
+            ],
+            "chunk_ids": [
+              "IT2025:s160(2)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "Passage states deduction is at the lower of the Indian rate or the foreign country's rate, matching the sentence"
+          },
+          {
+            "text": "The Indian deduction offsets the U.S. withholding; a direct refund from the U.S. is not described in the provided passages [\"P1\",\"P4\"].",
+            "cites": [
+              "P1",
+              "P4"
+            ],
+            "chunk_ids": [
+              "IRS_PUB515:personal_services",
+              "IRS_W8BEN:withholding"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "not_supported",
+            "reason": "Passages do not mention an Indian deduction offsetting U.S. withholding or any refund provision"
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [
+          {
+            "assumption_id": "A-5",
+            "question": "How is the foreign tax credit capped when Indian income is taxed presumptively?",
+            "readings": [
+              {
+                "key": "a",
+                "statement": "The credit is the lower of the foreign tax and the Indian tax attributable to the deemed (50%) income from the US-taxable receipts, apportioned pro rata to total income (including surcharge and cess).",
+                "citations": [
+                  "RULES1962:r128(5)(i)",
+                  "RULES2026:r76(7)(a)",
+                  "DTAA_US:art25(2)(a)"
+                ],
+                "is_default": true
+              },
+              {
+                "key": "b",
+                "statement": "The Indian tax is computed on the gross US receipts, so the cap is higher.",
+                "citations": [
+                  "DTAA_US:art25(2)(a)"
+                ],
+                "is_default": false
+              }
+            ],
+            "default_reason": "Capping the credit at Indian tax on the deemed income can only under-claim, never over-claim.",
+            "config_flag": "ftc_cap_basis",
+            "triggered_by": [
+              "passage: DTAA_US:art25(2)"
+            ],
+            "disclaimer": "Not professionally reviewed: CiteTax has no chartered accountant; this is a documented assumption."
+          }
+        ],
+        "passages": [
+          "IRS_PUB515:personal_services",
+          "DTAA_US:art25(1)",
+          "DTAA_US:art25(2)",
+          "IRS_W8BEN:withholding",
+          "IT2025:s160(2)"
+        ],
+        "retrieval_similarity": 0.61,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 3,
+        "not_supported": 2,
+        "partially_supported": 1
+      },
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": false
+    },
+    {
+      "id": "HF05",
+      "slice": "false_premise",
+      "q": "Under the 1961 Act a professional can use presumptive taxation up to 75 lakh no matter how much is received in cash, correct?",
+      "year": 2025,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "Under the 1961 Act a professional can use presumptive taxation up to 75 lakh no matter how much is received in cash, correct?",
+        "tax_year": 2025,
+        "act_id": "IT1961",
+        "status": "answered",
+        "sentences": [
+          {
+            "text": "Section 44ADA allows a professional whose total gross receipts do not exceed fifty lakh rupees to be taxed on fifty percent of those receipts, but only if cash receipts are five percent or less of the total, in which case the ceiling is increased to seventy‑five lakh rupees",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "IT1961:s44ADA(1)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "All elements of the sentence are directly stated in the passage"
+          },
+          {
+            "text": "The e‑Filing FAQ reiterates that the limit rises to seventy‑five lakh rupees only when cash receipts do not exceed five percent of total gross receipts",
+            "cites": [
+              "P2"
+            ],
+            "chunk_ids": [
+              "CBDT_FAQ_ITR4:Q13"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "The passage states the limit increases to 75 Lakh when cash receipts are ≤5% of total gross receipts, matching the sentence."
+          }
+        ],
+        "premise_issue": "The statement assumes the 75 lakh limit applies regardless of cash receipts, but the passages limit the 75 lakh ceiling to cases where cash receipts do not exceed five percent of total gross receipts.",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "IT1961:s44ADA(1)",
+          "CBDT_FAQ_ITR4:Q13",
+          "IT1961:s44AA(2)",
+          "IT1961:s44AB",
+          "IT1961:s44ADA(3)"
+        ],
+        "retrieval_similarity": 0.705,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 2
+      },
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": true
+    },
+    {
+      "id": "HF06",
+      "slice": "false_premise",
+      "q": "Information technology is not a specified profession, so I cannot use presumptive taxation, can I?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "Information technology is not a specified profession, so I cannot use presumptive taxation, can I?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "partially_verified",
+        "sentences": [
+          {
+            "text": "Information technology is a specified profession under section 62(4) and therefore eligible for the presumptive taxation scheme of section 58(2) [Table S. No. 3]",
+            "cites": [
+              "P2"
+            ],
+            "chunk_ids": [
+              "CBDT_FAQ_PRES:Q13"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "partially_supported",
+            "reason": "Passage lists IT as an eligible profession for section 58(2) scheme, but does not state it is specified under section 62(4)"
+          },
+          {
+            "text": "You may opt for the scheme provided your gross receipts do not exceed Rs. 50 lakh, or Rs. 75 lakh if cash receipts are 5% or less of total receipts, and you satisfy the other prescribed conditions",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "CBDT_FAQ_PRES:Q5"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "All details about gross receipt limits and cash receipt condition are stated in the passage"
+          }
+        ],
+        "premise_issue": "The question assumes IT is not a specified profession, but P2 lists \"Information technology profession\" as an eligible specified profession.",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "CBDT_FAQ_PRES:Q5",
+          "CBDT_FAQ_PRES:Q13",
+          "CBDT_FAQ_PRES:Q18",
+          "CBDT_FAQ_PRES:Q14",
+          "CBDT_FAQ_PRES:Q4"
+        ],
+        "retrieval_similarity": 0.666,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "partially_supported": 1,
+        "supported": 1
+      },
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": false
+    },
+    {
+      "id": "HJ01",
+      "slice": "wrong_jurisdiction",
+      "q": "What are the UK income tax bands for a self-employed developer?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "What are the UK income tax bands for a self-employed developer?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "declined",
+        "sentences": [],
+        "premise_issue": "",
+        "decline_reason": "The provided passages relate only to Indian income-tax rates and deductions; they do not contain any information about UK income tax bands.",
+        "notices": [],
+        "passages": [
+          "IT2025:s202(1)",
+          "IT2025:s156(1)",
+          "FA2026:sch1-partIB-paraF/T1",
+          "IRS_PUB901:india",
+          "FA2026:sch1-partIB-paraA(I)"
+        ],
+        "retrieval_similarity": 0.539,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {},
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": null
+    },
+    {
+      "id": "HJ02",
+      "slice": "wrong_jurisdiction",
+      "q": "Do I owe California state income tax on fees from a San Francisco client?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "Do I owe California state income tax on fees from a San Francisco client?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "declined",
+        "sentences": [],
+        "premise_issue": "",
+        "decline_reason": "The provided passages discuss the India‑US tax convention and U.S. federal rules, but contain no information on California state income tax obligations.",
+        "notices": [],
+        "passages": [
+          "DTAA_US:art12(1)",
+          "DTAA_US:art15(1)",
+          "DTAA_US:art12(2)",
+          "IRS_PUB901:india",
+          "DTAA_US:art14(1)"
+        ],
+        "retrieval_similarity": 0.551,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {},
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": null
+    },
+    {
+      "id": "HJ03",
+      "slice": "wrong_jurisdiction",
+      "q": "Under the India-UK tax treaty, can the UK tax my consulting fees from a London client?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "Under the India-UK tax treaty, can the UK tax my consulting fees from a London client?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "declined",
+        "sentences": [],
+        "premise_issue": "",
+        "decline_reason": "The provided passages only cover the India‑US Convention and do not contain any provisions of the India‑UK tax treaty relevant to consulting fees.",
+        "notices": [],
+        "passages": [
+          "DTAA_US:art15(1)",
+          "DTAA_US:art12(1)",
+          "DTAA_US:art12(2)",
+          "IRS_PUB901:india",
+          "DTAA_US:art14(1)"
+        ],
+        "retrieval_similarity": 0.581,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {},
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": null
+    },
+    {
+      "id": "HJ04",
+      "slice": "wrong_jurisdiction",
+      "q": "How does the India-Canada treaty treat fees for technical services?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "How does the India-Canada treaty treat fees for technical services?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "declined",
+        "sentences": [],
+        "premise_issue": "",
+        "decline_reason": "The provided passages only discuss the India‑US treaty; there is no information on the India‑Canada treaty treatment of fees for technical services.",
+        "notices": [],
+        "passages": [
+          "DTAA_US:art12(2)",
+          "DTAA_US:art12(1)",
+          "DTAA_US_TE:art15",
+          "DTAA_US:art15(1)",
+          "IRS_PUB515:personal_services"
+        ],
+        "retrieval_similarity": 0.613,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {},
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": null
+    },
+    {
+      "id": "HJ05",
+      "slice": "wrong_jurisdiction",
+      "q": "What is the New York City unincorporated business tax rate for freelancers?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "What is the New York City unincorporated business tax rate for freelancers?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "declined",
+        "sentences": [],
+        "premise_issue": "",
+        "decline_reason": "The provided passages do not contain any information about New York City unincorporated business tax rates.",
+        "notices": [],
+        "passages": [
+          "IRS_PUB515:personal_services",
+          "DTAA_US:art15(1)",
+          "IT2025:s202(1)",
+          "IRS_PUB901:india",
+          "DTAA_US:art14(1)"
+        ],
+        "retrieval_similarity": 0.483,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {},
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": null
+    },
+    {
+      "id": "HJ06",
+      "slice": "wrong_jurisdiction",
+      "q": "Do I need to register for VAT in Germany when I bill a German client?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "Do I need to register for VAT in Germany when I bill a German client?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "declined",
+        "sentences": [],
+        "premise_issue": "",
+        "decline_reason": "The provided passages do not contain any information about VAT registration requirements in Germany.",
+        "notices": [],
+        "passages": [
+          "IT2025:s159(5)",
+          "CGST:s22(1)",
+          "IRS_PUB515:personal_services",
+          "RULES2026:r76(16)",
+          "IRS_W8BEN:withholding"
+        ],
+        "retrieval_similarity": 0.522,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {},
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": null
+    },
+    {
+      "id": "HJ07",
+      "slice": "wrong_jurisdiction",
+      "q": "What tax rate does Singapore charge a non-resident consultant?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "What tax rate does Singapore charge a non-resident consultant?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "declined",
+        "sentences": [],
+        "premise_issue": "",
+        "decline_reason": "The provided passages contain no information about Singapore's tax rate for non-resident consultants.",
+        "notices": [],
+        "passages": [
+          "IT2025:s160(2)",
+          "IT2025:s202(1)",
+          "IT2025:s6(13)",
+          "IRS_PUB901:india",
+          "IRS_PUB515:personal_services"
+        ],
+        "retrieval_similarity": 0.494,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {},
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": null
+    },
+    {
+      "id": "HJ08",
+      "slice": "wrong_jurisdiction",
+      "q": "Do I need to file a Texas franchise tax report because my clients are in Texas?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "Do I need to file a Texas franchise tax report because my clients are in Texas?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "declined",
+        "sentences": [],
+        "premise_issue": "",
+        "decline_reason": "The provided passages do not address Texas franchise tax reporting requirements.",
+        "notices": [],
+        "passages": [
+          "RULES2026:r76(16)",
+          "IRS_PUB901:form8833",
+          "IRS_PUB515:personal_services",
+          "RULES2026:r76(17)",
+          "IRS_PUB901:india"
+        ],
+        "retrieval_similarity": 0.502,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {},
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": null
+    },
+    {
+      "id": "HO01",
+      "slice": "out_of_scope",
+      "q": "How much tax is due when I sell mutual fund units after two years?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "How much tax is due when I sell mutual fund units after two years?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "declined",
+        "sentences": [],
+        "premise_issue": "",
+        "decline_reason": "The provided passages do not contain any information on tax rates or rules for capital gains on the sale of mutual fund units after two years.",
+        "notices": [],
+        "passages": [
+          "DTAA_US:art25(1)",
+          "IT2025:s202(3)",
+          "IT2025:s202(1)",
+          "DTAA_US:art30(2)",
+          "RULES2026:r46(3)"
+        ],
+        "retrieval_similarity": 0.496,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {},
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": null
+    },
+    {
+      "id": "HO02",
+      "slice": "out_of_scope",
+      "q": "What is a good recipe for chicken biryani?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "What is a good recipe for chicken biryani?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "declined",
+        "sentences": [],
+        "premise_issue": "",
+        "decline_reason": "The corpus has no passage close enough to this question, so CiteTax will not answer it. It covers Indian income tax for IT professionals with US clients.",
+        "notices": [],
+        "passages": [
+          "NOTIF64_2026:p1-2",
+          "NOTIF64_2026:p3-4",
+          "CGST_RULES:r96A",
+          "IT2025:s58(2)/T2",
+          "IRS_W8BEN:withholding"
+        ],
+        "retrieval_similarity": 0.339,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {},
+      "key_facts": null,
+      "key_facts_missing": [],
+      "context_recall": null
+    },
+    {
+      "id": "HT01",
+      "slice": "temporal",
+      "q": "What is the section 44AB audit limit for professionals?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "What is the section 44AB audit limit for professionals?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "partially_verified",
+        "sentences": [
+          {
+            "text": "For Tax Year 2026-27 the audit limit for professionals is gross receipts in the profession exceeding fifty lakh rupees in any tax year, as per the replacement of section 44AB by section 63 of the Income‑tax Act 2025.",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "IT2025:s63(1)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "Passage states that for professions, audit is required if gross receipts exceed fifty lakh rupees, applicable from Tax Year 2026-27 under section 63, matching the sentence."
+          },
+          {
+            "text": "The numbering has changed: the question’s reference to section 44AB of the 1961 Act corresponds to section 63 of the 2025 Act for this tax year.",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "IT2025:s63(1)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "not_supported",
+            "reason": "Passage does not mention section 44AB of the 1961 Act or any correspondence to section 63"
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "IT2025:s63(1)",
+          "IT2025:s63(1)/T1",
+          "IT2025:s63(4)",
+          "IT2025:s63(2)",
+          "IT2025:s63(3)"
+        ],
+        "retrieval_similarity": 0.513,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 1,
+        "not_supported": 1
+      },
+      "key_facts": 1.0,
+      "key_facts_missing": [],
+      "context_recall": true
+    },
+    {
+      "id": "HT02",
+      "slice": "temporal",
+      "q": "When is advance tax due under section 408(2) for presumptive professionals?",
+      "year": 2025,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "When is advance tax due under section 408(2) for presumptive professionals?",
+        "tax_year": 2025,
+        "act_id": "IT1961",
+        "status": "answered",
+        "sentences": [
+          {
+            "text": "Presumptive professionals under section 44ADA must pay the entire advance tax amount on or before 15 March of the financial year.",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "IT1961:s211(1)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "Passage (b) states that assessee under section 44ADA must pay the whole advance tax on or before 15 March"
+          },
+          {
+            "text": "Any payment made on or before 31 March is also treated as advance tax for that financial year.",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "IT1961:s211(1)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "Passage explicitly states payments on or before 31 March are treated as advance tax for that financial year"
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "IT1961:s211(1)",
+          "IT1961:s211(2)",
+          "CBDT_FAQ_ITR4:Q15",
+          "IT1961:s210(1)",
+          "CBDT_FAQ_ITR4:Q13"
+        ],
+        "retrieval_similarity": 0.682,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 2
+      },
+      "key_facts": 1.0,
+      "key_facts_missing": [],
+      "context_recall": true
+    },
+    {
+      "id": "HT03",
+      "slice": "temporal",
+      "q": "What rate does section 115BAC apply to income between 8 and 12 lakh?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "What rate does section 115BAC apply to income between 8 and 12 lakh?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "partially_verified",
+        "sentences": [
+          {
+            "text": "Under the new‑regime (section 202, which replaces section 115BAC), income from ₹800,001 to ₹1,200,000 is taxed at 10%",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "IT2025:s202(1)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "partially_supported",
+            "reason": "Passage confirms the 10% rate for ₹800,001‑₹1,200,000 under section 202, but does not state that section 202 replaces section 115BAC"
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "IT2025:s202(1)",
+          "IT2025:s202(2)",
+          "IT2025:s156(1)",
+          "FA2026:sch1-partIB-paraA(I)",
+          "IT2025:s202(3)"
+        ],
+        "retrieval_similarity": 0.545,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "partially_supported": 1
+      },
+      "key_facts": 1.0,
+      "key_facts_missing": [],
+      "context_recall": true
+    },
+    {
+      "id": "HT04",
+      "slice": "temporal",
+      "q": "What is the rebate limit under section 156 of the new Act?",
+      "year": 2025,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "What is the rebate limit under section 156 of the new Act?",
+        "tax_year": 2025,
+        "act_id": "IT1961",
+        "status": "partially_verified",
+        "sentences": [
+          {
+            "text": "For FY 2025‑26, section 156 of the new Act corresponds to section 87A of the Income‑tax Act, 1961.",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "IT1961:s87A"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "not_supported",
+            "reason": "Passage does not mention section 156 of any new Act or a correspondence for FY 2025‑26"
+          },
+          {
+            "text": "Under the new tax regime, the rebate limit is Rs 60,000.",
+            "cites": [
+              "P2"
+            ],
+            "chunk_ids": [
+              "CBDT_FAQ_ITR4:Q23"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "Passage states the rebate under the new tax regime is Rs 60,000, matching the sentence."
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "IT1961:s87A",
+          "CBDT_FAQ_ITR4:Q23",
+          "IT1961:s288B",
+          "IT1961:s139(1)",
+          "IT1961:s115BAC(1)"
+        ],
+        "retrieval_similarity": 0.56,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "not_supported": 1,
+        "supported": 1
+      },
+      "key_facts": 0.0,
+      "key_facts_missing": [
+        "12 lakh"
+      ],
+      "context_recall": true
+    },
+    {
+      "id": "HP01",
+      "slice": "plain",
+      "q": "Up to what gross receipts can a professional with almost no cash receipts use presumptive taxation?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "Up to what gross receipts can a professional with almost no cash receipts use presumptive taxation?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "answered",
+        "sentences": [
+          {
+            "text": "A resident professional can use the presumptive taxation scheme under Section 58(2) [Table S. No. 3] if gross receipts do not exceed Rs. 50 lakh, or Rs. 75 lakh when cash receipts are 5% or less of total gross receipts.",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "CBDT_FAQ_PRES:Q5"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "All details about resident professional, Section 58(2) Table S. No. 3, Rs 50 lakh limit and Rs 75 lakh when cash receipts ≤5% are stated in the passage."
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "CBDT_FAQ_PRES:Q5",
+          "CBDT_FAQ_PRES:Q14",
+          "CBDT_FAQ_PRES:Q13",
+          "CBDT_FAQ_PRES:Q18",
+          "CBDT_FAQ_PRES:Q6"
+        ],
+        "retrieval_similarity": 0.672,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 1
+      },
+      "key_facts": 1.0,
+      "key_facts_missing": [],
+      "context_recall": false
+    },
+    {
+      "id": "HP02",
+      "slice": "plain",
+      "q": "When is the return due for a presumptive professional whose accounts are not audited?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "When is the return due for a presumptive professional whose accounts are not audited?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "answered",
+        "sentences": [
+          {
+            "text": "For a presumptive professional whose accounts are not required to be audited, the return is due on 31st August for Tax Year 2026-27.",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "IT2025:s263(1)/T3"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "Passage specifies that for a presumptive professional with unaudited accounts and where section 172 does not apply, the due date is 31 August for Tax Year 2026‑27 onward."
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "IT2025:s263(1)/T3",
+          "CBDT_FAQ_PRES:Q18",
+          "IT2025:s63(1)",
+          "CBDT_FAQ_PRES:Q14",
+          "IT2025:s263(1)"
+        ],
+        "retrieval_similarity": 0.621,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 1
+      },
+      "key_facts": 1.0,
+      "key_facts_missing": [],
+      "context_recall": true
+    },
+    {
+      "id": "HP03",
+      "slice": "plain",
+      "q": "How many days in India make an individual resident?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "How many days in India make an individual resident?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "answered",
+        "sentences": [
+          {
+            "text": "An individual is resident in India if he is in India for a total period of one hundred and eighty‑two days or more in that tax year",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "IT2025:s6(2)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "The passage states that an individual is resident if in India for a total period of 182 days or more in that tax year."
+          },
+          {
+            "text": "Alternatively, he is resident if he is in India for sixty days or more during that year and has been in India cumulatively for three hundred and sixty‑five days or more in the four years preceding that tax year",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "IT2025:s6(2)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "The passage states the same condition of 60 days in the year plus 365 days in the preceding four years"
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "IT2025:s6(2)",
+          "IT2025:s6(13)",
+          "IT2025:s6(6)",
+          "IT2025:s6(7)",
+          "IRS_PUB901:india"
+        ],
+        "retrieval_similarity": 0.686,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 2
+      },
+      "key_facts": 1.0,
+      "key_facts_missing": [],
+      "context_recall": true
+    },
+    {
+      "id": "HP04",
+      "slice": "plain",
+      "q": "Can the US tax my professional income if I have a fixed base there?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "Can the US tax my professional income if I have a fixed base there?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "partially_verified",
+        "sentences": [
+          {
+            "text": "Under Article 15 of the India‑US Convention, income from independent personal services is taxable only in India unless the person has a fixed base regularly available in the United States, in which case the United States may tax the portion of income attributable to that fixed base.",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "DTAA_US_TE:art15"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "Passage states income is taxable in the other State only if a fixed base is regularly available there and income is attributable to it, matching the sentence"
+          },
+          {
+            "text": "The Convention explicitly states that a fixed base in the other Contracting State triggers taxation of income attributable to that base [P3].",
+            "cites": [
+              "P3"
+            ],
+            "chunk_ids": [
+              "DTAA_US:art15(1)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "Passage states a fixed base in the other state allows taxation of income attributable to that base"
+          },
+          {
+            "text": "U.S. Treasury guidance mirrors this rule, confirming that a fixed base allows the United States to tax the attributable income [P1].",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "DTAA_US_TE:art15"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "not_supported",
+            "reason": "Passage does not mention U.S. Treasury guidance mirroring the rule"
+          },
+          {
+            "text": "U.S. IRS Publication 901 also notes that if a resident of India has a fixed base in the United States, they are taxed only on income attributable to that fixed base [P4].",
+            "cites": [
+              "P4"
+            ],
+            "chunk_ids": [
+              "IRS_PUB901:india"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "Passage states that residents of India with a fixed base in the US are taxed only on income attributable to that fixed base"
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "DTAA_US_TE:art15",
+          "DTAA_US:art14(1)",
+          "DTAA_US:art15(1)",
+          "IRS_PUB901:india",
+          "DTAA_US:art14(3)"
+        ],
+        "retrieval_similarity": 0.655,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 3,
+        "not_supported": 1
+      },
+      "key_facts": 1.0,
+      "key_facts_missing": [],
+      "context_recall": true
+    },
+    {
+      "id": "HP05",
+      "slice": "plain",
+      "q": "What purpose code applies to software consultancy receipts from a US client?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "What purpose code applies to software consultancy receipts from a US client?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "partially_verified",
+        "sentences": [
+          {
+            "text": "The RBI purpose code for software consultancy receipts from a US client is P0802 – Software consultancy/implementation (other than those covered in SOFTEX form).",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "RBI_PC:receipts-08"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "partially_supported",
+            "reason": "Passage confirms P0802 is for software consultancy/implementation, but does not mention US client"
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "RBI_PC:receipts-08",
+          "IRC:s862(a)(3)",
+          "DTAA_US:art12(2)",
+          "DTAA_US_TE:art15",
+          "IRS_W8BEN:withholding"
+        ],
+        "retrieval_similarity": 0.685,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "partially_supported": 1
+      },
+      "key_facts": 1.0,
+      "key_facts_missing": [],
+      "context_recall": true
+    },
+    {
+      "id": "HP06",
+      "slice": "plain",
+      "q": "What interest do I pay if I do not pay advance tax?",
+      "year": 2025,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "What interest do I pay if I do not pay advance tax?",
+        "tax_year": 2025,
+        "act_id": "IT1961",
+        "status": "answered",
+        "sentences": [
+          {
+            "text": "If you fail to pay the required advance tax, you must pay simple interest at the rate of one per cent for every month or part of a month from 1 April of the next financial year until the date of income‑tax determination or regular assessment, calculated on the shortfall between assessed tax and advance tax paid",
+            "cites": [
+              "P2"
+            ],
+            "chunk_ids": [
+              "IT1961:s234B(1)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "All elements of the sentence are stated in the passage"
+          },
+          {
+            "text": "Additionally, if the advance tax shortfall occurs on or before the prescribed dates (15 June, 15 September, 15 December or 15 March), interest of one per cent per month is payable for three months on the shortfall amount for the earlier dates, or one per cent on the shortfall for the 15 March date",
+            "cites": [
+              "P5"
+            ],
+            "chunk_ids": [
+              "IT1961:s234C(1)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "supported",
+            "reason": "Passage exactly states the interest rates and periods for shortfalls on the listed dates"
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "CBDT_FAQ_ITR4:Q15",
+          "IT1961:s234B(1)",
+          "CBDT_FAQ_ITR4:Q17",
+          "IT1961:s234B(2)",
+          "IT1961:s234C(1)"
+        ],
+        "retrieval_similarity": 0.68,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "supported": 2
+      },
+      "key_facts": 1.0,
+      "key_facts_missing": [],
+      "context_recall": true
+    },
+    {
+      "id": "HP07",
+      "slice": "plain",
+      "q": "Does GST registration apply above 20 lakh turnover for someone exporting services?",
+      "year": 2026,
+      "pass": true,
+      "problems": [],
+      "answer": {
+        "question": "Does GST registration apply above 20 lakh turnover for someone exporting services?",
+        "tax_year": 2026,
+        "act_id": "IT2025",
+        "status": "partially_verified",
+        "sentences": [
+          {
+            "text": "A supplier making taxable supplies of goods or services, including export of services, must be registered under the CGST Act if his aggregate turnover in a financial year exceeds twenty lakh rupees, subject to the special‑category State provisions in the same section.",
+            "cites": [
+              "P1"
+            ],
+            "chunk_ids": [
+              "CGST:s22(1)"
+            ],
+            "stage1_ok": true,
+            "stage1_problems": [],
+            "verdict": "partially_supported",
+            "reason": "Passage covers registration threshold and special‑category provisions but does not mention export of services"
+          }
+        ],
+        "premise_issue": "",
+        "decline_reason": "",
+        "notices": [],
+        "passages": [
+          "CGST:s22(1)",
+          "CGST_RULES:r96A",
+          "IT2025:s63(1)/T1",
+          "IT2025:s62(2)",
+          "IGST:s2(6)"
+        ],
+        "retrieval_similarity": 0.695,
+        "model": "openai/gpt-oss-120b"
+      },
+      "verdicts": {
+        "partially_supported": 1
+      },
+      "key_facts": 1.0,
+      "key_facts_missing": [],
+      "context_recall": true
+    }
+  ]
+}
