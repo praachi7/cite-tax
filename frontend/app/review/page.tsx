@@ -17,7 +17,8 @@ function Review({ run }: { run: StoredRun }) {
   const [showAll, setShowAll] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [before, setBefore] = useState<string | null>(null); // presumptive income before the last re-run
+  // Presumptive income before and after the last completed re-run; set only once the new result is in.
+  const [check, setCheck] = useState<{ before: string; after: string } | null>(null);
 
   const txById = new Map<string, Transaction>(r.transactions.map((t) => [t.id, t]));
   const rows = [...r.classifications].sort((a, b) => Number(needsReview(b)) - Number(needsReview(a)));
@@ -40,11 +41,12 @@ function Review({ run }: { run: StoredRun }) {
   async function rerun() {
     setBusy(true);
     setError(null);
-    setBefore(presumptive);
+    setCheck(null);
     try {
       const request = { ...run.request, relabels };
       const result = await uploadEstimate(request);
       saveRun({ ...run, request, result });
+      setCheck({ before: presumptive, after: result.estimate.income.presumptive_amount });
     } catch (e) {
       setError((e as Error).message);
     } finally {
@@ -65,9 +67,9 @@ function Review({ run }: { run: StoredRun }) {
           Presumptive income: <strong>{formatInr(presumptive)}</strong> (50% of gross receipts {formatInr(r.estimate.receipts_test.total)}).
           Expense labels never change it: they feed only the confidence flag and the profit comparison
           (s.44ADA(2) of the 1961 Act; s.58 of the 2025 Act).
-          {before !== null && (before === presumptive
+          {check !== null && (check.before === check.after
             ? <> <span className="badge ok">unchanged after re-run</span></>
-            : <> <span className="badge warn">changed — please report this as a bug</span></>)}
+            : <> <span className="badge warn">changed from {formatInr(check.before)}: please report this as a bug</span></>)}
         </p>
       </div>
 

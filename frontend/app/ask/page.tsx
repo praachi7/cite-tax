@@ -92,6 +92,7 @@ export default function AskPage() {
         {error && <p className="error" role="alert">{error}</p>}
         <div className="actions">
           <button type="submit" disabled={busy || question.trim().length < 3}>{busy ? "Retrieving, drafting and checking…" : "Ask"}</button>
+          {busy && <span className="muted small">This can take one to two minutes: every sentence is checked against its passage.</span>}
         </div>
       </form>
 

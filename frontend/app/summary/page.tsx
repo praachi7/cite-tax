@@ -16,7 +16,12 @@ function groupBySection(figures: Figure[]): [string, Figure[]][] {
 function Summary({ run }: { run: StoredRun }) {
   const r = run.result.estimate;
   const adv = r.compliance.advance_tax;
-  const figureCites = r.figures.flatMap((f) => f.citations);
+  // Every citation shown on this screen: figures, assumptions applied and the audit trace.
+  const figureCites = [
+    ...r.figures.flatMap((f) => f.citations),
+    ...r.assumptions_applied.flatMap((a) => a.citations),
+    ...r.trace.flatMap((t) => t.citations),
+  ];
   const blocking = r.flags.filter((f) => f.severity === "blocker" || f.severity === "high").length;
 
   return (

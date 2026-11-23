@@ -6,7 +6,6 @@ import type { Notice, Source } from "@/lib/types";
 import { sourceAnchor } from "./Cites";
 import { NoticeCard } from "./NoticeCard";
 
-const MAX_IDS = 60; // the API's limit per request
 
 interface Loaded {
   key: string;
@@ -17,8 +16,7 @@ interface Loaded {
 /** Sources and notices panel (SRS/SDS 3.5): the cited passages on this screen, then the interpretation notices. */
 export function SourcesPanel({ ids, notices }: { ids: string[]; notices: Notice[] }) {
   const all = [...new Set([...ids, ...notices.flatMap((n) => n.readings.flatMap((r) => r.citations))])].sort();
-  const shown = all.slice(0, MAX_IDS);
-  const key = shown.join("|");
+  const key = all.join("|");
   const [loaded, setLoaded] = useState<Loaded>({ key: "", sources: [], error: null });
 
   useEffect(() => {
@@ -45,7 +43,6 @@ export function SourcesPanel({ ids, notices }: { ids: string[]; notices: Notice[
       )}
 
       <h3>Cited passages ({all.length})</h3>
-      {all.length > shown.length && <p className="muted">Showing the first {shown.length} of {all.length} citations.</p>}
       {loading && <p className="muted">Loading passages…</p>}
       {loaded.error && <p className="error">Could not load passages: {loaded.error}</p>}
       {!loading && loaded.sources.map((s) => (

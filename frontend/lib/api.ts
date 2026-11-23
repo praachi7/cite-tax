@@ -9,7 +9,10 @@ async function asJson<T>(resp: Response): Promise<T> {
     const detail = body?.detail;
     const msg = Array.isArray(detail)
       ? detail.map((d: { loc?: string[]; msg?: string }) => `${(d.loc ?? []).slice(1).join(".")}: ${d.msg}`).join("; ")
-      : typeof detail === "string" ? detail : `HTTP ${resp.status}`;
+      : typeof detail === "string" ? detail
+      : resp.status >= 500
+        ? `The CiteTax API did not answer (HTTP ${resp.status}). It may not be running, or it took too long.`
+        : `HTTP ${resp.status}`;
     throw new Error(msg);
   }
   return body as T;
@@ -34,10 +37,16 @@ export async function uploadEstimate(req: UploadRequest): Promise<UploadResult> 
   return asJson<UploadResult>(resp);
 }
 
+const SOURCES_PER_REQUEST = 60; // the API's limit (MAX_SOURCE_IDS in backend/api/app.py)
+
 export async function getSources(ids: string[]): Promise<Source[]> {
-  if (!ids.length) return [];
-  const qs = ids.map((i) => `ids=${encodeURIComponent(i)}`).join("&");
-  return (await asJson<{ sources: Source[] }>(await fetch(`/api/sources?${qs}`))).sources;
+  const batches: string[][] = [];
+  for (let i = 0; i < ids.length; i += SOURCES_PER_REQUEST) batches.push(ids.slice(i, i + SOURCES_PER_REQUEST));
+  const results = await Promise.all(batches.map(async (batch) => {
+    const qs = batch.map((i) => `ids=${encodeURIComponent(i)}`).join("&");
+    return (await asJson<{ sources: Source[] }>(await fetch(`/api/sources?${qs}`))).sources;
+  }));
+  return results.flat();
 }
 
 export async function ask(question: string, tax_year: number): Promise<AskAnswer> {

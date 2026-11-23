@@ -32,6 +32,7 @@ jobs:
           cache-dependency-path: |
             requirements.txt
             requirements-api.txt
+            requirements-dev.txt
 
       # The non-db tests never load the embedding model (sentence-transformers is imported lazily),
       # so CI skips the PyTorch stack and installs everything else at the pinned versions.
@@ -40,7 +41,7 @@ jobs:
           grep -vE '^(torch|sentence-transformers|transformers)==' requirements.txt > requirements-ci.txt
           sed 's/^-r requirements.txt$/-r requirements-ci.txt/' requirements-api.txt > requirements-api-ci.txt
           python -m pip install --upgrade pip
-          pip install -r requirements-api-ci.txt ruff==0.17.6 mypy==2.4.1 types-PyYAML==6.0.12.20261122
+          pip install -r requirements-api-ci.txt -r requirements-dev.txt
 
       - name: Lint (ruff)
         run: ruff check backend
@@ -48,8 +49,8 @@ jobs:
       - name: Type-check (mypy)
         run: mypy backend/api
 
-      - name: Validate law data
-        run: python -m lawdata.validate
+      - name: Validate law data and corpus chunks
+        run: python -m lawdata.validate --chunks
 
       - name: Tests (excluding db)
         run: pytest -q -m "not db"

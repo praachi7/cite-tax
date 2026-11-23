@@ -1,0 +1,5 @@
+# CiteTax development tools: lint and type-check, as run by CI (.github/workflows/ci.yml).
+# Install: pip install -r requirements-dev.txt
+ruff==0.17.6
+mypy==2.4.1
+types-PyYAML==6.0.12.20261122

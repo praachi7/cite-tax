@@ -133,7 +133,7 @@ Or the whole stack in Docker (the first build downloads CPU PyTorch, about 1.5 G
 docker compose up -d --build        # db :5433, api :8000, frontend :3000
 ```
 
-CI (`.github/workflows/ci.yml`) runs ruff, mypy on `backend/api`, the law-data validator and `pytest -m "not db"` on the backend, and eslint, `tsc` and `next build` on the frontend. It uses no secrets and never calls the Groq API.
+CI (`.github/workflows/ci.yml`) runs ruff, mypy on `backend/api` (both pinned in `requirements-dev.txt`), `lawdata.validate --chunks` and `pytest -m "not db"` on the backend, and eslint, `tsc` and `next build` on the frontend. It uses no secrets and never calls the Groq API.
 
 Known gaps: invoice PDF upload is not built (no PDF ingestion yet); classification corrections are logged in the response and the browser session only, because there is no audit table yet.
 

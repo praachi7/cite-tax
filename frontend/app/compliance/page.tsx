@@ -29,7 +29,8 @@ function Compliance({ run }: { run: StoredRun }) {
   const engagements = (Array.isArray(run.request.profile.engagements) ? run.request.profile.engagements : []) as Record<string, Json>[];
   const usClients = engagements.filter((g) => g.client_is_us_person !== false);
   const w8Flags = flagsBy("W8BEN");
-  const w8Status: Status = usClients.length === 0 ? "na" : w8Flags.length ? "action" : "ok";
+  // No engagements entered says nothing about whether a client is a US person, so that is "not checked".
+  const w8Status: Status = w8Flags.length ? "action" : engagements.length === 0 ? "unknown" : usClients.length === 0 ? "na" : "ok";
 
   const faBar = c.itr4_bars.find((b) => b.bar === "foreign_assets");
   const faFlags = e.flags.filter((f) => f.code === "FOREIGN_ACCOUNT_HELD");
@@ -104,7 +105,9 @@ function Compliance({ run }: { run: StoredRun }) {
               <td><strong>W-8BEN</strong></td>
               <td><StatusBadge s={w8Status} /></td>
               <td>
-                {usClients.length === 0 ? "No US client in the profile." : `${usClients.length} US client(s).`}
+                {engagements.length === 0
+                  ? "No clients entered on the upload screen, so W-8BEN was not checked. Add each client (with its W-8BEN date) to check it."
+                  : usClients.length === 0 ? "No client is a US person." : `${usClients.length} US client(s).`}
                 {w8Flags.map((f) => <div key={f.code} className="small">{f.message}</div>)}
               </td>
               <td><Cites list={w8Flags.flatMap((f) => f.citations)} /></td>

@@ -184,3 +184,6 @@ a.cite:hover { outline: 1px solid var(--accent); }
 .badge.status-answered { background: var(--ok-bg); border-color: var(--ok-border); }
 .badge.status-partially_verified { background: var(--warn-bg); border-color: var(--warn-border); }
 .badge.status-declined { background: var(--block-bg); border-color: var(--block-border); }
+
+/* status and date badges stay on one line */
+.badge { white-space: nowrap; }
