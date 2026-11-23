@@ -11,6 +11,32 @@ import type { ClassificationRow, StoredRun, Transaction } from "@/lib/types";
 const needsReview = (c: ClassificationRow) =>
   c.method !== "user" && (c.category === "uncertain" || Number(c.confidence) < CONFIDENCE_FLOOR);
 
+// Two reasons a row is listed, shown differently so the highlight carries meaning:
+//   label   - the classifier has no answer (no rule matched, or rules disagree): the user must choose;
+//   confirm - it has an answer, but only from a generic keyword (75%, under the 80% review bar).
+type ReviewKind = "label" | "confirm";
+
+function reviewKind(c: ClassificationRow): ReviewKind | null {
+  if (!needsReview(c)) return null;
+  return c.category === "uncertain" ? "label" : "confirm";
+}
+
+const pct = (x: string | number) => Math.round(Number(x) * 100);
+
+function reviewWhy(c: ClassificationRow): string {
+  const p = c.predicted;
+  if (p.category === "uncertain") {
+    if (p.candidates.length > 1) {
+      const names = p.candidates.map((k) => CATEGORY_LABEL[k] ?? k).join(" vs ");
+      return `Rules point to different labels (${names}): choose the right one.`;
+    }
+    return "No rule recognised this description: choose a label.";
+  }
+  return `Matched only a generic word, so ${pct(p.confidence)}% is under the ${pct(CONFIDENCE_FLOOR)}% review bar: confirm or change it.`;
+}
+
+const KIND_BADGE: Record<ReviewKind, string> = { label: "Needs a label", confirm: "Please confirm" };
+
 function Review({ run }: { run: StoredRun }) {
   const r = run.result;
   const [relabels, setRelabels] = useState<Record<string, string>>(run.request.relabels);
@@ -21,8 +47,12 @@ function Review({ run }: { run: StoredRun }) {
   const [check, setCheck] = useState<{ before: string; after: string } | null>(null);
 
   const txById = new Map<string, Transaction>(r.transactions.map((t) => [t.id, t]));
-  const rows = [...r.classifications].sort((a, b) => Number(needsReview(b)) - Number(needsReview(a)));
+  const order = (c: ClassificationRow) => ({ label: 0, confirm: 1 } as Record<string, number>)[reviewKind(c) ?? ""] ?? 2;
+  const rows = [...r.classifications].sort((a, b) => order(a) - order(b));
   const flagged = rows.filter(needsReview);
+  const toLabel = flagged.filter((c) => reviewKind(c) === "label");
+  const toConfirm = flagged.filter((c) => reviewKind(c) === "confirm");
+  const unconfirmed = toConfirm.filter((c) => !(c.transaction_id in relabels));
   const visible = showAll ? rows : flagged;
   const pending = Object.entries(relabels).filter(([id, cat]) => run.request.relabels[id] !== cat).length +
     Object.keys(run.request.relabels).filter((id) => !(id in relabels)).length;
@@ -34,6 +64,15 @@ function Review({ run }: { run: StoredRun }) {
       const next = { ...cur };
       if (value === "") delete next[id];
       else next[id] = value;
+      return next;
+    });
+  }
+
+  // Keep the classifier's label for every generic-keyword row not yet touched; the re-run logs them as confirmations.
+  function confirmAllKeywordMatches() {
+    setRelabels((cur) => {
+      const next = { ...cur };
+      for (const c of toConfirm) if (!(c.transaction_id in next)) next[c.transaction_id] = c.predicted.category;
       return next;
     });
   }
@@ -60,8 +99,15 @@ function Review({ run }: { run: StoredRun }) {
 
       <div className="panel">
         <p style={{ margin: 0 }}>
-          <strong>{r.classifications.length}</strong> expenses classified · <strong>{flagged.length}</strong> need review
-          (uncertain, or confidence below {CONFIDENCE_FLOOR * 100}%) · <strong>{r.corrections.length}</strong> labelled by you
+          <strong>{r.classifications.length}</strong> expenses classified ·{" "}
+          <strong>{toLabel.length}</strong> need a label (the classifier had no answer) ·{" "}
+          <strong>{toConfirm.length}</strong> to confirm (generic-word matches) ·{" "}
+          <strong>{r.corrections.length}</strong> labelled by you
+        </p>
+        <p className="muted small" style={{ margin: "6px 0 0" }}>
+          Why so many to confirm? This prototype classifies by rules: a named merchant (e.g. GitHub) scores{" "}
+          95%, a generic word (e.g. &ldquo;pharmacy&rdquo;) only 75%, and anything under{" "}
+          {pct(CONFIDENCE_FLOOR)}% is listed for a quick check. A quick confirm is enough for most of them.
         </p>
         <p className="invariant">
           Presumptive income: <strong>{formatInr(presumptive)}</strong> (50% of gross receipts {formatInr(r.estimate.receipts_test.total)}).
@@ -93,22 +139,28 @@ function Review({ run }: { run: StoredRun }) {
             <input type="checkbox" checked={showAll} onChange={(e) => setShowAll(e.target.checked)} />
             Show all {rows.length} expenses (otherwise only the {flagged.length} that need review)
           </label>
+          {unconfirmed.length > 0 && (
+            <button type="button" className="secondary" onClick={confirmAllKeywordMatches}>
+              Confirm all {unconfirmed.length} generic-word matches as predicted
+            </button>
+          )}
         </div>
         <div className="panel table-wrap">
           <table>
             <thead>
-              <tr><th>Date</th><th>Description</th><th>Amount</th><th>Predicted</th><th>Confidence</th><th>Your label</th></tr>
+              <tr><th>Date</th><th>Description</th><th>Amount</th><th>Predicted</th><th>Confidence</th><th>Why listed</th><th>Your label</th></tr>
             </thead>
             <tbody>
               {visible.length === 0 && (
-                <tr><td colSpan={6} className="muted">Nothing needs review. Tick &ldquo;Show all&rdquo; to relabel any expense.</td></tr>
+                <tr><td colSpan={7} className="muted">Nothing needs review. Tick &ldquo;Show all&rdquo; to relabel any expense.</td></tr>
               )}
               {visible.map((c) => {
                 const t = txById.get(c.transaction_id);
                 const p = c.predicted;
                 const weak = p.category === "uncertain" || Number(p.confidence) < CONFIDENCE_FLOOR;
+                const kind = reviewKind(c);
                 return (
-                  <tr key={c.transaction_id} className={needsReview(c) ? "row-review" : undefined}>
+                  <tr key={c.transaction_id} className={kind === "label" ? "row-review" : kind === "confirm" ? "row-confirm" : undefined}>
                     <td>{t?.date}</td>
                     <td>
                       {t?.description}
@@ -122,6 +174,18 @@ function Review({ run }: { run: StoredRun }) {
                     <td>
                       <span className={weak ? "badge warn" : "badge"}>{Math.round(Number(p.confidence) * 100)}%</span>
                       <div className="muted small">{p.method === "rule" ? `rule ${p.rule_id ?? ""}` : "no rule"}</div>
+                    </td>
+                    <td>
+                      {kind ? (
+                        <>
+                          <span className={kind === "label" ? "badge warn" : "badge"}>{KIND_BADGE[kind]}</span>
+                          <div className="small">{reviewWhy(c)}</div>
+                        </>
+                      ) : c.method === "user" ? (
+                        <span className="muted small">Labelled by you</span>
+                      ) : (
+                        <span className="muted small">Named-merchant match</span>
+                      )}
                     </td>
                     <td>
                       <select

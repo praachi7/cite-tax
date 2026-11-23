@@ -142,6 +142,8 @@ textarea {
 
 .invariant { margin: 8px 0 0; padding: 8px 10px; background: var(--info-bg); border-radius: 6px; font-size: 0.9rem; }
 tr.row-review td { background: var(--warn-bg); }
+/* lighter: the classifier has an answer, only a quick confirmation is asked for */
+tr.row-confirm td:first-child { box-shadow: inset 4px 0 0 var(--warn-border); }
 label.file { flex-direction: row; align-items: center; gap: 8px; }
 
 /* checklist statuses */
