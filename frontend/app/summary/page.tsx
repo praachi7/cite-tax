@@ -1,19 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useSyncExternalStore } from "react";
-import { loadEstimate } from "@/lib/api";
+import { Cites } from "@/components/Cites";
+import { RunGate } from "@/components/RunGate";
+import { SourcesPanel } from "@/components/SourcesPanel";
 import { formatInr, formatValue } from "@/lib/format";
-import type { Figure, StoredEstimate } from "@/lib/types";
-
-function Cites({ list }: { list: string[] }) {
-  if (!list.length) return <span className="muted">—</span>;
-  return (
-    <span className="cites">
-      {list.map((c) => <span className="cite" key={c}>{c}</span>)}
-    </span>
-  );
-}
+import type { Figure, StoredRun } from "@/lib/types";
 
 function groupBySection(figures: Figure[]): [string, Figure[]][] {
   const out = new Map<string, Figure[]>();
@@ -21,55 +13,31 @@ function groupBySection(figures: Figure[]): [string, Figure[]][] {
   return [...out.entries()];
 }
 
-// sessionStorage is read on the client only; the server render shows the loading state.
-let cached: { raw: string | null; value: StoredEstimate | null } = { raw: null, value: null };
-function readStore(): StoredEstimate | null {
-  const value = loadEstimate();
-  const raw = value ? JSON.stringify(value) : null;
-  if (raw !== cached.raw) cached = { raw, value };
-  return cached.value;
-}
-const noSubscribe = () => () => {};
-
-export default function SummaryPage() {
-  const stored = useSyncExternalStore(noSubscribe, readStore, () => undefined);
-
-  if (stored === undefined) return <p className="muted">Loading…</p>;
-  if (stored === null) {
-    return (
-      <div className="panel">
-        <p>No estimate to show yet.</p>
-        <Link href="/">Go to the input screen</Link>
-      </div>
-    );
-  }
-
-  const r = stored.result;
+function Summary({ run }: { run: StoredRun }) {
+  const r = run.result.estimate;
   const adv = r.compliance.advance_tax;
+  // Every citation shown on this screen: figures, assumptions applied and the audit trace.
+  const figureCites = [
+    ...r.figures.flatMap((f) => f.citations),
+    ...r.assumptions_applied.flatMap((a) => a.citations),
+    ...r.trace.flatMap((t) => t.citations),
+  ];
+  const blocking = r.flags.filter((f) => f.severity === "blocker" || f.severity === "high").length;
 
   return (
     <div>
       <h1>Tax summary</h1>
       <div className="panel">
-        <p style={{ margin: 0 }}><strong>{stored.label}</strong></p>
-        <p style={{ margin: "4px 0 0" }}>
-          Governing law: <strong>{r.act.label}</strong> ({r.act.act_id}), parameters from <code>{r.act.param_version}</code>
+        <p style={{ margin: 0 }}>
+          Governing law: <span className="badge act">{r.act.act_id === "IT2025" ? "Income-tax Act 2025" : "Income-tax Act 1961"}</span>{" "}
+          <strong>{r.act.label}</strong>, parameters from <code>{r.act.param_version}</code>
         </p>
-        <div className="actions"><Link href="/">← Change input</Link></div>
+        <p style={{ margin: "6px 0 0" }}>
+          {r.flags.length} flag{r.flags.length === 1 ? "" : "s"}
+          {blocking > 0 && <> ({blocking} high or blocker)</>} · see the <Link href="/audit">audit-risk report</Link> and the{" "}
+          <Link href="/compliance">compliance checklist</Link>.
+        </p>
       </div>
-
-      {r.flags.length > 0 && (
-        <section>
-          <h2>Flags</h2>
-          {r.flags.map((f) => (
-            <div key={f.code + f.rule_id} className={`flag ${f.severity}`}>
-              <div><span className="badge">{f.severity}</span> <strong>{f.code}</strong> · <code>{f.rule_id}</code></div>
-              <div>{f.message}</div>
-              <Cites list={f.citations} />
-            </div>
-          ))}
-        </section>
-      )}
 
       {groupBySection(r.figures).map(([section, figs]) => (
         <section key={section}>
@@ -117,13 +85,6 @@ export default function SummaryPage() {
         </section>
       )}
 
-      {r.compliance.depends_on_contested.length > 0 && (
-        <p className="flag warning">
-          The ITR form choice rests on contested assumption(s) {r.compliance.depends_on_contested.join(", ")}.
-          {r.compliance.itr4_possible_under_other_reading && " Under the other reading, ITR-4 would apply."}
-        </p>
-      )}
-
       <section>
         <h2>Assumptions applied</h2>
         <div className="panel table-wrap">
@@ -158,6 +119,12 @@ export default function SummaryPage() {
           </details>
         ))}
       </section>
+
+      <SourcesPanel ids={figureCites} notices={run.result.notices} />
     </div>
   );
+}
+
+export default function SummaryPage() {
+  return <RunGate>{(run) => <Summary run={run} />}</RunGate>;
 }

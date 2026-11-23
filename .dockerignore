@@ -1,0 +1,21 @@
+# Build context for backend/Dockerfile (the repository root). Keep secrets and large local folders out.
+.env
+.env.*
+!.env.example
+.git
+.venv
+venv
+**/__pycache__
+**/*.py[cod]
+.pytest_cache
+.mypy_cache
+.ruff_cache
+docs
+sources
+build
+eval
+scripts
+frontend
+.claude
+.vscode
+.idea

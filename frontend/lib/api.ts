@@ -1,6 +1,7 @@
-import type { ConfigOverrides, EstimateResult, Json, Persona, StoredEstimate } from "./types";
+import type { AskAnswer, Persona, Source, StoredRun, UploadRequest, UploadResult } from "./types";
 
-const STORE_KEY = "citetax.estimate";
+export const STORE_KEY = "citetax.run";
+const STORE_EVENT = "citetax-run";
 
 async function asJson<T>(resp: Response): Promise<T> {
   const body = await resp.json().catch(() => null);
@@ -8,7 +9,10 @@ async function asJson<T>(resp: Response): Promise<T> {
     const detail = body?.detail;
     const msg = Array.isArray(detail)
       ? detail.map((d: { loc?: string[]; msg?: string }) => `${(d.loc ?? []).slice(1).join(".")}: ${d.msg}`).join("; ")
-      : typeof detail === "string" ? detail : `HTTP ${resp.status}`;
+      : typeof detail === "string" ? detail
+      : resp.status >= 500
+        ? `The CiteTax API did not answer (HTTP ${resp.status}). It may not be running, or it took too long.`
+        : `HTTP ${resp.status}`;
     throw new Error(msg);
   }
   return body as T;
@@ -18,28 +22,66 @@ export async function getPersonas(): Promise<Persona[]> {
   return asJson<Persona[]>(await fetch("/api/personas"));
 }
 
-export async function estimate(input: Record<string, Json>, config: ConfigOverrides): Promise<EstimateResult> {
-  const resp = await fetch("/api/tax/estimate", {
+export async function getPersonaCsv(id: string): Promise<string> {
+  const resp = await fetch(`/api/personas/${encodeURIComponent(id)}/transactions.csv`);
+  if (!resp.ok) throw new Error(`Could not load the sample CSV for ${id} (HTTP ${resp.status})`);
+  return resp.text();
+}
+
+export async function uploadEstimate(req: UploadRequest): Promise<UploadResult> {
+  const resp = await fetch("/api/tax/estimate/upload", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ input, config }),
+    body: JSON.stringify(req),
   });
-  return asJson<EstimateResult>(resp);
+  return asJson<UploadResult>(resp);
 }
 
-export function saveEstimate(e: StoredEstimate): void {
+const SOURCES_PER_REQUEST = 60; // the API's limit (MAX_SOURCE_IDS in backend/api/app.py)
+
+export async function getSources(ids: string[]): Promise<Source[]> {
+  const batches: string[][] = [];
+  for (let i = 0; i < ids.length; i += SOURCES_PER_REQUEST) batches.push(ids.slice(i, i + SOURCES_PER_REQUEST));
+  const results = await Promise.all(batches.map(async (batch) => {
+    const qs = batch.map((i) => `ids=${encodeURIComponent(i)}`).join("&");
+    return (await asJson<{ sources: Source[] }>(await fetch(`/api/sources?${qs}`))).sources;
+  }));
+  return results.flat();
+}
+
+export async function ask(question: string, tax_year: number): Promise<AskAnswer> {
+  const resp = await fetch("/api/ask", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ question, tax_year }),
+  });
+  return asJson<AskAnswer>(resp);
+}
+
+// ---- the current run, kept in sessionStorage so every screen reads the same upload ----
+
+export function saveRun(run: StoredRun): void {
   try {
-    sessionStorage.setItem(STORE_KEY, JSON.stringify(e));
+    sessionStorage.setItem(STORE_KEY, JSON.stringify(run));
   } catch {
-    /* storage unavailable: the summary page will say there is nothing to show */
+    /* storage unavailable or full: screens will say there is nothing to show */
   }
+  window.dispatchEvent(new Event(STORE_EVENT));
 }
 
-export function loadEstimate(): StoredEstimate | null {
+export function readRunRaw(): string | null {
   try {
-    const raw = sessionStorage.getItem(STORE_KEY);
-    return raw ? (JSON.parse(raw) as StoredEstimate) : null;
+    return sessionStorage.getItem(STORE_KEY);
   } catch {
     return null;
   }
+}
+
+export function subscribeRun(cb: () => void): () => void {
+  window.addEventListener(STORE_EVENT, cb);
+  window.addEventListener("storage", cb);
+  return () => {
+    window.removeEventListener(STORE_EVENT, cb);
+    window.removeEventListener("storage", cb);
+  };
 }

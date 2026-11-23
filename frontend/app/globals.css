@@ -113,3 +113,77 @@ code, .cite {
 details { margin-bottom: 6px; }
 summary { cursor: pointer; }
 pre { overflow-x: auto; background: var(--code-bg); padding: 8px; border-radius: 6px; font-size: 0.8rem; }
+
+/* ---- Phase G screens ---- */
+:root { --ok-bg: #e3f3e6; --ok-border: #4f9a5c; }
+@media (prefers-color-scheme: dark) { :root { --ok-bg: #1c3322; --ok-border: #5fae6c; } }
+
+.small { font-size: 0.85rem; }
+textarea {
+  font: inherit; padding: 6px 8px; border: 1px solid var(--border); border-radius: 6px;
+  background: var(--bg); color: var(--text); resize: vertical;
+}
+
+.steps {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  max-width: 1100px; margin: 0 auto; padding: 10px 16px 0;
+}
+.step {
+  padding: 4px 10px; border: 1px solid var(--border); border-radius: 999px;
+  text-decoration: none; font-size: 0.88rem; background: var(--panel);
+}
+.step.current { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+.run-banner { font-size: 0.9rem; margin-bottom: 8px; color: var(--muted); }
+.badge.act { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.badge.warn { background: var(--warn-bg); border-color: var(--warn-border); margin-left: 4px; }
+.badge.ok { background: var(--ok-bg); border-color: var(--ok-border); }
+.badge + .badge { margin-left: 4px; }
+
+.invariant { margin: 8px 0 0; padding: 8px 10px; background: var(--info-bg); border-radius: 6px; font-size: 0.9rem; }
+tr.row-review td { background: var(--warn-bg); }
+label.file { flex-direction: row; align-items: center; gap: 8px; }
+
+/* checklist statuses */
+.status-ok, .readiness-ready, .deadline-done { background: var(--ok-bg); border-color: var(--ok-border); }
+.status-action, .readiness-missing, .deadline-passed { background: var(--block-bg); border-color: var(--block-border); }
+.status-unknown, .readiness-pending, .deadline-due_soon { background: var(--warn-bg); border-color: var(--warn-border); }
+.status-na, .readiness-not_required { color: var(--muted); }
+
+/* sources and notices */
+.sources-panel { border-top: 2px solid var(--border); margin-top: 2rem; padding-top: 0.5rem; }
+.sources-panel h3 { font-size: 1rem; margin: 1rem 0 0.5rem; }
+.source:target { outline: 2px solid var(--accent); }
+.source summary { display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; }
+pre.passage { white-space: pre-wrap; word-break: break-word; font-size: 0.85rem; }
+a.cite { text-decoration: none; color: var(--text); }
+a.cite:hover { outline: 1px solid var(--accent); }
+
+.notice {
+  border: 1px solid var(--warn-border); border-left: 5px solid var(--warn-border);
+  background: var(--panel); border-radius: 6px; padding: 10px 14px; margin-bottom: 12px;
+}
+.notice-q { font-weight: 600; margin: 6px 0; }
+.readings { margin: 0; padding-left: 1.2rem; display: grid; gap: 8px; }
+.reading.default { background: var(--info-bg); border-radius: 4px; padding: 4px 6px; }
+.not-reviewed {
+  font-size: 0.85rem; font-weight: 600; margin: 6px 0 0;
+  padding: 4px 8px; background: var(--warn-bg); border-radius: 4px; display: inline-block;
+}
+
+/* ask: per-sentence verdicts */
+.sentences { padding-left: 1.2rem; display: grid; gap: 10px; }
+.sentence { padding: 6px 8px; border-left: 4px solid var(--border); border-radius: 4px; }
+.sentence-meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 4px; }
+.verdict-supported { border-left-color: var(--ok-border); }
+.badge.verdict-supported { background: var(--ok-bg); border-color: var(--ok-border); }
+.verdict-partial { border-left-color: var(--warn-border); }
+.badge.verdict-partial { background: var(--warn-bg); border-color: var(--warn-border); }
+.verdict-not, .verdict-bad-cite { border-left-color: var(--block-border); background: var(--block-bg); }
+.badge.verdict-not, .badge.verdict-bad-cite { border-color: var(--block-border); }
+.badge.status-answered { background: var(--ok-bg); border-color: var(--ok-border); }
+.badge.status-partially_verified { background: var(--warn-bg); border-color: var(--warn-border); }
+.badge.status-declined { background: var(--block-bg); border-color: var(--block-border); }
+
+/* status and date badges stay on one line */
+.badge { white-space: nowrap; }

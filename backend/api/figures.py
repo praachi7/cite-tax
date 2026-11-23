@@ -92,7 +92,7 @@ def _dig(data: Any, dotted: str) -> Any:
 
 def build_figures(result: EngineResult, dumped: dict) -> list[Figure]:
     """Figures whose step ran and whose value exists. Steps that did not run (e.g. no India tax) are left out."""
-    steps = {}
+    steps: dict[str, dict[str, Any]] = {}
     for t in result.trace:
         s = steps.setdefault(t.rule_id, {"citations": [], "param_version": t.param_version})
         s["citations"] += [c for c in t.citations if c not in s["citations"]]
