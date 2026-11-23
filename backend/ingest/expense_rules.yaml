@@ -1,0 +1,78 @@
+# Rule-first expense classifier (Phase E, before any LLM stage).
+#
+# Each rule matches the description and counterparty of an expense row, lower-cased, by whole-word
+# regular expression. Tiers:
+#   merchant  a named merchant whose spend is almost always one category   confidence 0.95
+#   keyword   a generic word that usually points to one category           confidence 0.75
+# A merchant hit beats keyword hits. If the hits at the winning tier point to different categories,
+# or nothing matches, the answer is "uncertain" with confidence 0.
+#
+# The confidence figures are placeholders that rank the two tiers. They are not measured probabilities;
+# the plan replaces them with agreement across repeated LLM samples. Merchants that sell both
+# business and personal goods (Amazon, Flipkart, Uber, Swiggy) are deliberately left out so that they
+# fall to "uncertain" and the user decides.
+#
+# Classification feeds only the actual-profit comparison and the evidence trail. It never changes
+# gross receipts or presumptive income (s.44ADA(2); s.58(4) of the 2025 Act).
+
+version: 2026-11-23
+tiers:
+  merchant: 0.95
+  keyword: 0.75
+
+rules:
+  # software and cloud
+  - {id: M.github,       tier: merchant, category: software_subscriptions, pattern: 'github'}
+  - {id: M.jetbrains,    tier: merchant, category: software_subscriptions, pattern: 'jetbrains'}
+  - {id: M.aws,          tier: merchant, category: software_subscriptions, pattern: 'aws|amazon web services'}
+  - {id: M.gcp,          tier: merchant, category: software_subscriptions, pattern: 'google cloud|gcp'}
+  - {id: M.azure,        tier: merchant, category: software_subscriptions, pattern: 'azure'}
+  - {id: M.digitalocean, tier: merchant, category: software_subscriptions, pattern: 'digitalocean'}
+  - {id: M.atlassian,    tier: merchant, category: software_subscriptions, pattern: 'atlassian|jira'}
+  - {id: M.figma,        tier: merchant, category: software_subscriptions, pattern: 'figma'}
+  - {id: M.notion,       tier: merchant, category: software_subscriptions, pattern: 'notion'}
+  - {id: M.slack,        tier: merchant, category: software_subscriptions, pattern: 'slack'}
+  - {id: M.zoom,         tier: merchant, category: software_subscriptions, pattern: 'zoom'}
+  - {id: M.ms365,        tier: merchant, category: software_subscriptions, pattern: 'microsoft 365|office 365'}
+  - {id: M.openai,       tier: merchant, category: software_subscriptions, pattern: 'openai|chatgpt'}
+  - {id: M.anthropic,    tier: merchant, category: software_subscriptions, pattern: 'anthropic'}
+  - {id: M.vercel,       tier: merchant, category: software_subscriptions, pattern: 'vercel|netlify|heroku'}
+  - {id: M.domains,      tier: merchant, category: software_subscriptions, pattern: 'godaddy|namecheap|cloudflare'}
+  - {id: K.subscription, tier: keyword,  category: software_subscriptions, pattern: 'saas|software licen[cs]e|hosting|domain renewal'}
+
+  # hardware
+  - {id: M.apple_store,  tier: merchant, category: hardware_equipment, pattern: 'apple store|imagine store'}
+  - {id: M.croma,        tier: merchant, category: hardware_equipment, pattern: 'croma|reliance digital|vijay sales'}
+  - {id: M.dell,         tier: merchant, category: hardware_equipment, pattern: 'dell|lenovo|hp store|logitech'}
+  - {id: K.hardware,     tier: keyword,  category: hardware_equipment, pattern: 'laptop|monitor|keyboard|ssd|router|webcam|headset'}
+
+  # connectivity
+  - {id: M.airtel,       tier: merchant, category: internet_phone, pattern: 'airtel|jio|act fibernet|bsnl|vodafone idea|vi postpaid'}
+  - {id: K.broadband,    tier: keyword,  category: internet_phone, pattern: 'broadband|fibre|fiber|postpaid|internet bill'}
+
+  # workspace
+  - {id: M.wework,       tier: merchant, category: office_rent_coworking, pattern: 'wework|91springboard|awfis|innov8|smartworks'}
+  - {id: K.coworking,    tier: keyword,  category: office_rent_coworking, pattern: 'coworking|co-working|hot desk|office rent'}
+
+  # travel
+  - {id: M.airlines,     tier: merchant, category: business_travel, pattern: 'indigo|air india|vistara|akasa|united airlines|delta air'}
+  - {id: M.travel_ota,   tier: merchant, category: business_travel, pattern: 'makemytrip|cleartrip|booking\.com|airbnb'}
+  - {id: K.client_trip,  tier: keyword,  category: business_travel, pattern: 'client visit|client meeting|conference|visa fee'}
+
+  # professional services
+  - {id: K.ca_fees,      tier: keyword,  category: professional_services, pattern: 'chartered accountant|ca fees|accountant|bookkeeping|legal fees|advocate'}
+  - {id: M.cleartax,     tier: merchant, category: professional_services, pattern: 'cleartax|taxbuddy'}
+
+  # bank and platform charges
+  - {id: M.payoneer_fee, tier: merchant, category: bank_platform_fees, pattern: 'payoneer fee|wise fee|paypal fee|skydo fee'}
+  - {id: K.bank_charge,  tier: keyword,  category: bank_platform_fees, pattern: 'bank charges?|swift charges?|forex markup|fx margin|firc charges?|remittance charges?'}
+
+  # learning
+  - {id: M.courses,      tier: merchant, category: training_books, pattern: 'udemy|coursera|pluralsight|oreilly|o.reilly|manning|frontend masters'}
+  - {id: K.books,        tier: keyword,  category: training_books, pattern: 'technical books?|certification exam|course fee'}
+
+  # not business expenses
+  - {id: X.tax_paid,     tier: merchant, category: tax_payment, pattern: 'advance tax|self.assessment tax|challan 280|gst payment|gst challan|pmt-06|tds payment'}
+  - {id: X.own_transfer, tier: merchant, category: own_transfer, pattern: 'self transfer|own account|to savings|sweep|fd booking|fixed deposit'}
+  - {id: M.personal,     tier: merchant, category: personal, pattern: 'netflix|spotify|hotstar|zomato|bigbasket|blinkit|zepto|myntra|nykaa|bookmyshow|lic premium'}
+  - {id: K.personal,     tier: keyword,  category: personal, pattern: 'grocery|groceries|rent for flat|house rent|school fees|medical|pharmacy|dining|restaurant|movie'}
