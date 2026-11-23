@@ -23,10 +23,7 @@ def check_receipts_limit(ctx: Ctx, eligibility: Eligibility) -> ReceiptsTest:
     ctx.log(3, "ENG.03.receipts_limit", "Gross receipts limit",
             inputs={"total_receipts": total, "cash_like_receipts": cash_like},
             outputs={"cash_share_percent": share, "low_cash": low_cash, "applicable_limit": limit,
-                     "within_limit": within, "percent_of_limit": pct})
-    if near:
-        ctx.flag("RECEIPTS_NEAR_LIMIT", "warning",
-                 f"Receipts are {pct:.1f}% of the Rs {limit:,.0f} limit.", "ENG.03.receipts_limit",
-                 ctx.params.cite("presumptive.profession.limit_inr"))
+                     "within_limit": within, "percent_of_limit": pct, "near_limit": near})
+    # RECEIPTS_NEAR_LIMIT and CASH_SHARE_ABOVE_5 are raised from these outputs in step 10 (flag_rules).
     return ReceiptsTest(total=total, cash_like=cash_like, cash_share_percent=share, low_cash=low_cash,
                         applicable_limit=limit, within_limit=within, percent_of_limit=pct, near_limit=near)

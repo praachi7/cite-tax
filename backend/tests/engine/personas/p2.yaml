@@ -4,10 +4,14 @@ title: The P1 profile for FY 2025-26 (Income-tax Act 1961); tests Act selection 
 # what this persona must show, is the Act, the section citations and the rule IDs (see trace_expect).
 #   deemed income = 50% x 24,00,000 = 12,00,000 [s.44ADA(1)]; slab tax 60,000 [s.115BAC(1A)];
 #   rebate 60,000 [s.87A proviso]; payable nil. Old regime: 1,79,400 as for P1.
+# Phase F: viewed on 10 August 2026 with the return not yet filed. The return is due 31 August 2026
+#   [s.139(1)], 21 days later, inside the 30-day warning window -> RETURN_DUE (info). Nil tax, so no
+#   advance tax is due; no engagements, remittances or classifier output, so nothing else is checked.
 input:
   persona_id: P2
   tax_year: 2025
   receipts: {electronic: 2400000}
+  as_of: 2026-08-10
 expected:
   act.act_id: {value: IT1961, cite: ["IT1961:s44ADA(1)"], work: "FY 2025-26 is governed by the Income-tax Act 1961."}
   act.rules_id: {value: RULES1962, cite: ["RULES1962:r12(1)(ca)"], work: "Rules 1962 apply with the 1961 Act."}
@@ -21,6 +25,11 @@ expected:
   compliance.itr_form: {value: ITR-3, cite: ["RULES1962:r12(1)(ca)", "RULES1962:r12(1)(d)"], work: "A-16 default bars ITR-4."}
   compliance.advance_tax.required: {value: false, cite: ["IT1961:s208"], work: "Nil tax is below Rs 10,000."}
   compliance.return_due_date: {value: "2026-08-31", cite: ["IT1961:s139(1)"], work: "Assessment year 2026-27, non-audit."}
+  compliance.deadlines.0.key: {value: gst_lut, cite: ["CGST:s22(1)"], work: "Turnover of 24L with exports is above the Rs 20L GST threshold, so the LUT date (31 March 2025, before the year) is tracked and sorts first."}
+  compliance.deadlines.1.key: {value: return, cite: ["IT1961:s139(1)"], work: "Nil tax and no credit, so the return is the only other dated obligation."}
+  compliance.deadlines.1.days_left: {value: 21, cite: ["IT1961:s139(1)"], work: "10 August to 31 August 2026."}
+  compliance.deadlines.1.status: {value: due_soon, cite: ["IT1961:s139(1)"], work: "21 days is within the 30-day window."}
+  flag_codes: {value: [RETURN_DUE], cite: ["IT1961:s139(1)"], work: "Return due in 21 days and not yet filed."}
 trace_expect:
   has_cite: ["IT1961:s44ADA(1)", "IT1961:s87A", "IT1961:s115BAC(1A)"]
   lacks_prefix: ["IT2025", "RULES2026"]

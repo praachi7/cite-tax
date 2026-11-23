@@ -32,7 +32,7 @@ def run(inp: TaxpayerInput, config: EngineConfig | None = None, params: ParamSet
     source = apply_source_rule(ctx)
     treaty = apply_article_15(ctx, source)
     relief = route_relief(ctx, india, receipts, presence, source, treaty)
-    compliance = compliance_outputs(ctx, india, income, relief, regime)
+    compliance = compliance_outputs(ctx, india, income, relief, regime, elig, receipts, treaty)
 
     return EngineResult(persona_id=inp.persona_id, act=act, regime=regime, eligibility=elig,
                         receipts_test=receipts, income=income, india_tax=india, us_presence=presence,

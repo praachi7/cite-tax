@@ -27,3 +27,7 @@ params:
   # ---- Product settings (not law) ----
   flags.receipts_near_limit_percent: {value: 90, unit: percent, status: design_choice, note: "RECEIPTS_NEAR_LIMIT warns at 90% of the applicable limit (SRS/SDS Table 3.1)."}
   flags.us_days_warning_threshold: {value: 80, unit: days, status: design_choice, note: "US_DAYS_WARNING fires at 80 US days, ahead of the 90-day treaty trigger (SRS/SDS Table 3.1)."}
+  flags.deadline_warning_days: {value: 30, unit: days, status: design_choice, note: "A deadline is due_soon, and RETURN_DUE, ADVANCE_TAX_DUE and the Form 44 window warning fire, from this many days before it (SRS/SDS FR-21)."}
+  flags.classification_confidence_min_percent: {value: 80, unit: percent, status: design_choice, note: "LOW_CLASSIFICATION_CONFIDENCE fires below this agreement across repeated samples, e.g. fewer than 4 of 5 (SRS/SDS Table 3.1, NFR-7)."}
+  flags.classification_uncertain_label: {value: uncertain, status: design_choice, note: "The classifier's abstain label; any item with it raises LOW_CLASSIFICATION_CONFIDENCE."}
+  flags.fira_purpose_code_required: {value: true, status: design_choice, note: "FIRA_MISSING also fires when the purpose code is missing. Source: RBI purpose codes, secondary and not yet in corpus/registry.yaml (to verify)."}

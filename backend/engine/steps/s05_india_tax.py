@@ -37,7 +37,7 @@ def regime_tax(ctx: Ctx, regime: Regime, income: Decimal) -> RegimeTax:
     surcharge = Decimal(0)
     if income > D(ctx.p("tax.surcharge.start_income_inr")):
         surcharge = percent_of(after, ctx.p("tax.surcharge.first_rate_percent"))
-        ctx.flag("SURCHARGE_APPROXIMATE", "warning",
+        ctx.flag("SURCHARGE_APPROXIMATE", "medium",
                  "Total income exceeds the surcharge threshold; marginal relief and the higher bands are not modelled.",
                  "ENG.05.surcharge", ctx.params.cite("tax.surcharge.start_income_inr"))
     cess = percent_of(after + surcharge, ctx.p("tax.cess_percent"))

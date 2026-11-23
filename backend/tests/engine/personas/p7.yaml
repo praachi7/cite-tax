@@ -9,11 +9,17 @@ title: A Payoneer balance held abroad, Tax Year 2026-27; tests the Schedule FA f
 #   A-12 default (reading a): a wallet balance held abroad is a foreign asset -> Schedule FA and ITR-4 barred  [r.164(6)(a), (b)]
 #   A-16 default (reading b): fees from a foreign client bar ITR-4 as well                            [r.164(6)(c)]
 #   so ITR-3, resting on both A-12 and A-16; advance tax 1,09,200 once by 15 Mar 2027
+# Phase F: two inward remittances are recorded. The bank transfer has an e-FIRA and purpose code P0802;
+#   the Payoneer withdrawal (Rs 12 lakh) has neither -> FIRA_MISSING (medium). The source (RBI purpose
+#   codes) is secondary and not yet in corpus/registry.yaml, so the flag carries a source note, not a citation.
 input:
   persona_id: P7
   tax_year: 2026
   receipts: {electronic: 3000000}
   platform_wallet_balance_abroad: true
+  remittances:
+    - {label: Bank transfer, amount_inr: 1800000, fira_ref: EFIRA-2026-0412, purpose_code: P0802}
+    - {label: Payoneer withdrawal, amount_inr: 1200000}
 expected:
   income.income: {value: 1500000, cite: ["IT2025:s58(2)/T3"], work: "50% of 30,00,000."}
   india_tax.in_force.slab_tax: {value: 105000, cite: ["IT2025:s202(1)"], work: "20,000 + 40,000 + 45,000."}
@@ -28,4 +34,4 @@ expected:
   compliance.advance_tax.net_tax_inr: {value: 109200, cite: ["IT2025:s404"], work: "No credit."}
   compliance.advance_tax.schedule: {value: single_instalment, cite: ["IT2025:s408(2)"], work: "s.58(2) Sl.3 declarant."}
   compliance.return_due_date: {value: "2027-08-31", cite: ["IT2025:s263(1)/T3"], work: "Non-audit."}
-  flag_codes: {value: [SCHEDULE_FA_REQUIRED], cite: ["RULES2026:r164(6)(a)"], work: "The wallet balance must be reported in Schedule FA."}
+  flag_codes: {value: [FOREIGN_ACCOUNT_HELD, FIRA_MISSING], cite: ["RULES2026:r164(6)(a)"], work: "The wallet balance must be reported in Schedule FA (A-12); the Payoneer withdrawal has no FIRA or purpose code (RBI source, secondary)."}

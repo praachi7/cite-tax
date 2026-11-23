@@ -108,7 +108,7 @@ def test_treaty_is_not_reached_without_us_source_income():
 @pytest.mark.parametrize("days, present, trigger", [(79, False, False), (80, True, False), (89, True, False), (90, False, True)])
 def test_us_days_warning_and_trigger_flags(days, present, trigger):
     c = codes(run(make(engagements=[eng()], days={2026: days})))
-    assert ("US_DAYS_WARNING" in c) is present and ("ARTICLE_15_TRIGGERED" in c) is trigger
+    assert ("US_DAYS_WARNING" in c) is present and ("US_DAYS_TRIGGER" in c) is trigger
 
 
 # ---- step 9: relief routing ----
@@ -164,7 +164,7 @@ def test_remote_work_withholding_is_a_refund_not_a_credit():
     assert r.relief.route == "refund" and r.relief.ftc is None
     assert r.relief.refunds[0].reason == "NOT_US_SOURCE" and r.relief.refunds[0].amount_inr == 1200000
     assert r.relief.refunds[0].forms == ["Form 1040-NR", "Form W-8BEN"]
-    assert "W8BEN_MISSING" in codes(r)
+    assert "W8BEN_INVALID" in codes(r)
 
 
 def test_treaty_exempt_us_work_withholding_is_refundable():

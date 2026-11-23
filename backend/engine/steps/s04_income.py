@@ -38,10 +38,7 @@ def compute_income(ctx: Ctx, elig: Eligibility, rt: ReceiptsTest, reg: RegimeRes
             if declared > exempt:
                 books_audit = tax_audit = True
                 note = "Profit declared below 50% of receipts and income above the exemption limit."
-                ctx.flag("BOOKS_AUDIT_REQUIRED", "warning",
-                         "Books of account and a tax audit are required because the profit declared is below "
-                         f"{rate}% of receipts and income exceeds Rs {exempt:,.0f}.", "ENG.04.books_audit",
-                         ctx.params.cite("presumptive.profession.books_audit_if_lower_profit_and_income_above_exemption"))
+                # PROFIT_BELOW_50 is raised from this result in step 10 (flag_rules).
         if not books_audit and total > audit_threshold:
             ctx.p("audit.exempt_if_declared_as_presumptive")
             note = "Receipts exceed the audit threshold, but a person declaring under the presumptive scheme is exempt."
@@ -52,7 +49,7 @@ def compute_income(ctx: Ctx, elig: Eligibility, rt: ReceiptsTest, reg: RegimeRes
         tax_audit = total > audit_threshold
         if tax_audit:
             note = "Presumptive taxation is unavailable and receipts exceed the audit threshold."
-            ctx.flag("TAX_AUDIT_REQUIRED", "warning",
+            ctx.flag("TAX_AUDIT_REQUIRED", "medium",
                      f"Receipts exceed Rs {audit_threshold:,.0f} and the presumptive scheme is not available.",
                      "ENG.04.books_audit", ctx.params.cite("audit.profession.receipts_threshold_inr"))
         if declared is None:

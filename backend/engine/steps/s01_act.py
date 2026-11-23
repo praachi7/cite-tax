@@ -31,7 +31,7 @@ def resolve_regime(ctx: Ctx) -> RegimeResolution:
     for h in prior:
         if h.regime == Regime.old:
             if withdrawals_before >= limit:
-                ctx.flag("REGIME_HISTORY_INCONSISTENT", "warning",
+                ctx.flag("REGIME_HISTORY_INCONSISTENT", "medium",
                          f"Tax year {h.tax_year} shows an opt-out after the one allowed withdrawal.",
                          "ENG.01.regime", ctx.params.cite("regime.switch_back_limit"))
             opted_out = True
