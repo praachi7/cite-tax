@@ -14,6 +14,9 @@ title: A 95-day US visit with US tax withheld on the US-performed work, Tax Year
 #   ITR: foreign tax relief is claimed -> ITR-4 barred -> ITR-3 (and A-16 default also bars it)    [r.164(6), r.164(7)]
 #   advance tax: 2,08,000 - 41,600 = 1,66,400, in one instalment by 15 Mar 2027                    [s.404, s.408(2)]
 #   return due 31 Aug 2027 (no audit)                                                              [s.263(1)/T3]
+# Phase F, Form 44 readiness: no documents are recorded yet (FtcDocuments defaults), so the foreign TIN,
+#   the tax certificate, the DTAA article and rate, and the accountant's verification are missing
+#   -> FTC_DOCS_INCOMPLETE (high). No as_of, so the return and statement items are pending, not missing.
 input:
   persona_id: P5
   tax_year: 2026
@@ -45,4 +48,11 @@ expected:
   compliance.advance_tax.schedule: {value: single_instalment, cite: ["IT2025:s408(2)"], work: "s.58(2) Sl.3 declarant pays once."}
   compliance.advance_tax.instalments.0.due: {value: "2027-03-15", cite: ["IT2025:s408(2)"], work: "15 March of the year."}
   compliance.return_due_date: {value: "2027-08-31", cite: ["IT2025:s263(1)/T3"], work: "Non-audit business or profession income."}
-  flag_codes: {value: [ARTICLE_15_TRIGGERED, US_RETURN_REQUIRED, FTC_CAP_ASSUMPTION, FTC_ACCOUNTANT_VERIFICATION], cite: ["DTAA_US:art15(1)(b)", "RULES2026:r76(16)(b)"], work: "Trigger reached, US return needed, A-5 applied, verification threshold crossed."}
+  compliance.ftc_readiness.applicable: {value: true, cite: ["RULES2026:r76(10)"], work: "A credit is claimed."}
+  compliance.ftc_readiness.form: {value: "Form 44", cite: ["RULES2026:r76(10)"], work: "2025-Act form."}
+  compliance.ftc_readiness.statement_due: {value: "2028-03-31", cite: ["RULES2026:r76(12)"], work: "12 months after 31 Mar 2027."}
+  compliance.ftc_readiness.ready: {value: false, cite: ["RULES2026:r76(10)"], work: "Documents not yet in hand."}
+  compliance.ftc_readiness.items.3.key: {value: accountant_verification, cite: ["RULES2026:r76(16)(b)"], work: "Fourth item."}
+  compliance.ftc_readiness.items.3.status: {value: missing, cite: ["RULES2026:r76(16)(b)"], work: "Required because 2,40,000 >= 1,00,000, and not yet obtained."}
+  compliance.ftc_readiness.items.4.status: {value: pending, cite: ["RULES2026:r76(12)"], work: "Timely return: no as_of, so not yet due."}
+  flag_codes: {value: [US_DAYS_TRIGGER, US_RETURN_REQUIRED, FTC_CAP_ASSUMPTION, FTC_ACCOUNTANT_VERIFICATION, FTC_DOCS_INCOMPLETE], cite: ["DTAA_US:art15(1)(b)", "RULES2026:r76(16)(b)", "RULES2026:r76(10)"], work: "Trigger reached, US return needed, A-5 applied, verification threshold crossed, Form 44 documents missing."}

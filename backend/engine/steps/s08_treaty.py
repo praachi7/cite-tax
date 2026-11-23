@@ -11,7 +11,6 @@ from .s06_us_presence import us_calendar_year
 def apply_article_15(ctx: Ctx, source: SourceResult) -> TreatyResult:
     threshold = ctx.p("treaty.art15.stay_days_threshold")
     days = ctx.inp.us_days_by_year.get(us_calendar_year(ctx), 0)
-    warn_at = ctx.p("flags.us_days_warning_threshold")
     ctx.p("treaty.art15.counting_period")
 
     if not source.any_us_source:
@@ -32,17 +31,12 @@ def apply_article_15(ctx: Ctx, source: SourceResult) -> TreatyResult:
             inputs={"us_days": days, "fixed_base": ctx.inp.us_fixed_base, "us_source_inr": source.us_source_inr},
             outputs={"us_may_tax": may_tax, "basis": basis},
             note="Days are counted in the calendar year, the US taxable year of an individual.")
+    # US_DAYS_WARNING and US_DAYS_TRIGGER are raised from this result in step 10 (flag_rules).
     if basis == "fixed_base":
-        ctx.flag("US_FIXED_BASE", "warning", "A fixed base regularly available in the US lets the US tax the income "
+        ctx.flag("US_FIXED_BASE", "high", "A fixed base regularly available in the US lets the US tax the income "
                  "attributable to it.", "ENG.08.article_15", ctx.params.cite("treaty.art15.fixed_base_test"))
-    elif basis == "days_threshold":
-        ctx.flag("ARTICLE_15_TRIGGERED", "warning", f"{days} US days reach the {threshold}-day trigger, so the US may "
-                 "tax the income from work done there.", "ENG.08.article_15", ctx.params.cite("treaty.art15.stay_days_threshold"))
-    elif days >= warn_at:
-        ctx.flag("US_DAYS_WARNING", "warning", f"{days} US days is close to the {threshold}-day trigger.",
-                 "ENG.08.article_15", ctx.params.cite("treaty.art15.stay_days_threshold"))
     if may_tax:
-        ctx.flag("US_RETURN_REQUIRED", "warning", "The US may tax this income; a US return (Form 1040-NR) is needed.",
+        ctx.flag("US_RETURN_REQUIRED", "medium", "The US may tax this income; a US return (Form 1040-NR) is needed.",
                  "ENG.08.article_15", ctx.params.cite("treaty.art15.stay_days_threshold") + ["IRS_1040NR:all"])
     return TreatyResult(reached=True, us_may_tax=may_tax, basis=basis, us_days=days, days_threshold=threshold,
                         us_taxable_inr=source.us_source_inr if may_tax else Decimal(0))

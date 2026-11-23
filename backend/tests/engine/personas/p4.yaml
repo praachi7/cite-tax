@@ -37,4 +37,4 @@ expected:
   compliance.advance_tax.instalments.3.cumulative_amount_inr: {value: 592800, cite: ["IT2025:s408(1)"], work: "100% of 5,92,800."}
   compliance.return_due_date: {value: "2027-10-31", cite: ["IT2025:s263(1)"], work: "Accounts are required to be audited."}
   compliance.return_due_basis: {value: audit_case, cite: ["IT2025:s263(1)"], work: "Audit case."}
-  flag_codes: {value: [TAX_AUDIT_REQUIRED], cite: ["IT2025:s63(1)/T1(c)"], work: "Audit bar crossed."}
+  flag_codes: {value: [TAX_AUDIT_REQUIRED, CASH_SHARE_ABOVE_5], cite: ["IT2025:s63(1)/T1(c)", "IT2025:s58(2)/T3", "IT2025:s58(9)"], work: "Audit bar crossed; cash at 8% is above 5%, so the limit is 50L not 75L."}

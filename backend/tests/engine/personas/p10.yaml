@@ -6,11 +6,18 @@ title: Receipts Rs 30 lakh, profit declared at 40%, Tax Year 2026-27; tests tax 
 #   tax is computed on the declared 12,00,000 (decision confirmed for this project)
 #   slabs 60,000, rebate 60,000, payable nil. The flag is raised even though the tax is nil, because the
 #   rule turns on income exceeding the exemption limit and not on tax payable.
+# Phase F: the actual 40% profit rests on classified expenses. Of three, one is labelled "uncertain" and
+#   one has 60% agreement (below 80%) -> LOW_CLASSIFICATION_CONFIDENCE (low, internal rule NFR-7).
+#   The classification does not change the declared profit or the tax.
 input:
   persona_id: P10
   tax_year: 2026
   receipts: {electronic: 3000000}
   declared_profit: 1200000
+  expense_classifications:
+    - {label: software_subscriptions, confidence: "1.0", amount_inr: 600000, description: "Cloud and tools"}
+    - {label: uncertain, confidence: "0.4", amount_inr: 900000, description: "Card payment, unclear merchant"}
+    - {label: travel, confidence: "0.6", amount_inr: 300000, description: "Taxi rides"}
 expected:
   income.presumptive_amount: {value: 1500000, cite: ["IT2025:s58(2)/T3"], work: "50% of 30,00,000."}
   income.basis: {value: declared_lower, cite: ["IT2025:s58(3)"], work: "12,00,000 is below 15,00,000."}
@@ -26,4 +33,4 @@ expected:
   compliance.advance_tax.required: {value: false, cite: ["IT2025:s404"], work: "Tax payable is nil."}
   compliance.return_due_date: {value: "2027-10-31", cite: ["IT2025:s263(1)"], work: "Accounts must be audited."}
   compliance.return_due_basis: {value: audit_case, cite: ["IT2025:s263(1)"], work: "Audit case."}
-  flag_codes: {value: [BOOKS_AUDIT_REQUIRED], cite: ["IT2025:s58(3)"], work: "Declared below 50% with income above the exemption limit."}
+  flag_codes: {value: [PROFIT_BELOW_50, LOW_CLASSIFICATION_CONFIDENCE], cite: ["IT2025:s58(3)"], work: "Declared below 50% with income above the exemption limit; two of three expenses below the confidence floor (internal NFR-7, no statute)."}

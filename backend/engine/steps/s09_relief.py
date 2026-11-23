@@ -38,11 +38,7 @@ def route_relief(ctx: Ctx, india: IndiaTax | None, rt: ReceiptsTest, spt: Substa
     engagements = ctx.inp.engagements
     src = {i: s for i, s in enumerate(source.engagements)}
 
-    for e in engagements:
-        if e.client_is_us_person and e.us_tax_withheld_inr > 0 and not e.w8ben_on_file:
-            ctx.flag("W8BEN_MISSING", "info", f"US tax was withheld by {e.label or 'a client'} and no Form W-8BEN "
-                     "is on file; giving the client a valid W-8BEN stops further withholding.",
-                     "ENG.09.relief", ctx.params.cite("us.withholding.foreign_person_rate_percent"))
+    # W8BEN_INVALID and US_TAX_ON_INDIA_WORK are raised in step 10 (flag_rules).
 
     if spt.substantial_presence:
         ctx.log(9, "ENG.09.relief", "Relief routing", outputs={"route": "manual_review"},
@@ -64,7 +60,7 @@ def route_relief(ctx: Ctx, india: IndiaTax | None, rt: ReceiptsTest, spt: Substa
     claim = None
     if creditable > 0:
         if india is None:
-            ctx.flag("FTC_NOT_COMPUTED", "warning", "Indian tax is unknown, so the credit cannot be capped.",
+            ctx.flag("FTC_NOT_COMPUTED", "medium", "Indian tax is unknown, so the credit cannot be capped.",
                      "ENG.09.relief")
         else:
             cap, basis = _cap(ctx, india, rt, treaty.us_taxable_inr)
@@ -76,7 +72,7 @@ def route_relief(ctx: Ctx, india: IndiaTax | None, rt: ReceiptsTest, spt: Substa
             ctx.flag("FTC_CAP_ASSUMPTION", "info", "The credit cap rests on assumption A-5 (contested).",
                      "ENG.09.relief", ctx.params.cite("ftc.credit_is_lower_of_indian_and_foreign_tax"))
             if claim.accountant_verification:
-                ctx.flag("FTC_ACCOUNTANT_VERIFICATION", "warning", f"Foreign tax of Rs {creditable:,.0f} needs "
+                ctx.flag("FTC_ACCOUNTANT_VERIFICATION", "medium", f"Foreign tax of Rs {creditable:,.0f} needs "
                          "verification by an accountant.", "ENG.09.relief",
                          ctx.params.cite("ftc.accountant_verification_threshold_inr"))
 

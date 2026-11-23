@@ -36,11 +36,13 @@ class Ctx:
             param_keys=keys, citations=citations,
             inputs=_plain(inputs or {}), outputs=_plain(outputs or {}), note=note))
 
-    def flag(self, code: str, severity: str, message: str, rule_id: str, cites: list[str] | None = None) -> None:
+    def flag(self, code: str, severity: str, message: str, rule_id: str, cites: list[str] | None = None, *,
+             assumptions: list[str] | None = None, source_note: str | None = None) -> None:
         if any(f.code == code and f.rule_id == rule_id for f in self.flags):
             return
         self.flags.append(Flag(code=code, severity=severity, message=message, rule_id=rule_id,
-                               citations=list(cites or [])))
+                               citations=list(dict.fromkeys(cites or [])), assumptions=list(assumptions or []),
+                               source_note=source_note))
 
 
 def _plain(d: dict) -> dict:

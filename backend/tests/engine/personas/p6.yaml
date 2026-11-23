@@ -32,4 +32,5 @@ expected:
   compliance.itr4_possible_under_other_reading: {value: true, cite: ["RULES2026:r164(6)(c)"], work: "Under reading a the bar falls away and ITR-4 is available."}
   compliance.depends_on_contested: {value: [A-16], cite: ["RULES2026:r164(6)(c)"], work: "The form choice rests on A-16."}
   compliance.advance_tax.net_tax_inr: {value: 208000, cite: ["IT2025:s404"], work: "No credit to deduct."}
-  flag_codes: {value: [W8BEN_MISSING], cite: ["IRS_W8BEN:withholding"], work: "Tax was withheld and no W-8BEN is on file."}
+  compliance.ftc_readiness.applicable: {value: false, cite: ["RULES2026:r76(7)(a)"], work: "No credit is claimed, so Form 44 is not needed."}
+  flag_codes: {value: [W8BEN_INVALID, US_TAX_ON_INDIA_WORK], cite: ["IRS_W8BEN:validity", "RULES2026:r76(7)(a)", "IRC:s862(a)(3)"], work: "No W-8BEN with a US client; Rs 12,00,000 withheld on work done in India, not creditable, refund via 1040-NR."}

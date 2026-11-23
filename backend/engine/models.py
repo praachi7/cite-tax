@@ -1,6 +1,7 @@
 """Input and output shapes for the tax engine. Money is Decimal rupees."""
 from __future__ import annotations
 
+from datetime import date
 from decimal import Decimal
 from enum import Enum
 from typing import Optional
@@ -71,7 +72,37 @@ class Engagement(_Strict):
     amount_usd: Optional[Decimal] = None   # needed only for the s.861(a)(3) de minimis test
     client_is_us_person: bool = True
     w8ben_on_file: bool = True             # a valid Form W-8BEN given to this client
+    w8ben_signed: Optional[date] = None    # when it was signed; needed for the expiry check
     us_tax_withheld_inr: Decimal = Decimal(0)   # converted at the rate in ftc.rate_conversion
+
+
+class Remittance(_Strict):
+    """One inward export receipt and its bank evidence (Transaction.fira_ref and purpose_code in SRS/SDS 3.4)."""
+
+    label: str = ""
+    amount_inr: Decimal
+    fira_ref: Optional[str] = None         # FIRA or e-FIRA reference
+    purpose_code: Optional[str] = None     # RBI purpose code, e.g. P0802
+
+
+class ClassifiedExpense(_Strict):
+    """One expense as labelled by the classifier (Phase E). It never changes presumptive income."""
+
+    label: str                             # a label from the fixed set, or "uncertain"
+    confidence: Decimal                    # agreement across repeated samples, 0 to 1
+    amount_inr: Decimal = Decimal(0)
+    description: str = ""
+
+
+class FtcDocuments(_Strict):
+    """What the taxpayer already has for the Form 44 / Form 67 statement. False means not yet in hand."""
+
+    foreign_tin: bool = False
+    foreign_tax_certificate: bool = False      # certificate or statement of the US tax deducted or paid
+    dtaa_article_and_rate: bool = False        # the treaty article and rate the claim relies on
+    accountant_verification: bool = False      # needed only where the foreign tax reaches the threshold
+    foreign_tax_disputed: bool = False         # some of the US tax is in dispute
+    statement_filed: bool = False              # Form 44 / Form 67 already furnished
 
 
 class RegimeElection(_Strict):
@@ -102,6 +133,14 @@ class TaxpayerInput(_Strict):
     foreign_assets_held: bool = False
     platform_wallet_balance_abroad: bool = False
     other_itr4_bars: list[str] = Field(default_factory=list)
+    # ---- compliance inputs (Phase F). Unknown means "not checked", and a check that is not made raises no flag. ----
+    as_of: Optional[date] = None             # the date deadlines are measured from; None leaves them undated
+    advance_tax_paid_inr: Decimal = Decimal(0)
+    return_filed: bool = False
+    ftc_documents: FtcDocuments = Field(default_factory=FtcDocuments)
+    remittances: list[Remittance] = Field(default_factory=list)
+    lut_current: Optional[bool] = None       # a GST Letter of Undertaking in force for this year; None is unknown
+    expense_classifications: list[ClassifiedExpense] = Field(default_factory=list)
 
     @model_validator(mode="after")
     def _engagements_within_receipts(self) -> "TaxpayerInput":
@@ -114,6 +153,10 @@ class TaxpayerInput(_Strict):
             raise ValueError("election_history has two entries for the same tax year")
         if any(y >= self.tax_year for y in years):
             raise ValueError("election_history must hold earlier tax years only")
+        if self.advance_tax_paid_inr < 0:
+            raise ValueError("advance_tax_paid_inr cannot be negative")
+        if any(not (0 <= c.confidence <= 1) for c in self.expense_classifications):
+            raise ValueError("classification confidence must be between 0 and 1")
         return self
 
 
@@ -259,6 +302,36 @@ class AdvanceTax(_Strict):
     shortfall_interest_percent: Optional[Decimal] = None
 
 
+class Deadline(_Strict):
+    key: str                         # return | advance_tax_1.. | ftc_statement | w8ben:<label> | gst_lut
+    title: str
+    due: str                         # ISO date
+    citations: list[str]
+    status: str                      # scheduled (no as_of) | upcoming | due_soon | passed | done
+    days_left: Optional[int] = None  # from as_of; negative once passed
+    amount_inr: Optional[Decimal] = None
+    source_note: Optional[str] = None
+
+
+class ReadinessItem(_Strict):
+    key: str
+    title: str
+    status: str                      # ready | missing | pending | not_required
+    citations: list[str]
+    note: Optional[str] = None
+
+
+class FtcReadiness(_Strict):
+    """Form 44 (Rule 76, 2026) or Form 67 (Rule 128, 1962) readiness."""
+
+    applicable: bool                 # a credit is being claimed
+    form: str
+    rule: str
+    statement_due: Optional[str]
+    items: list[ReadinessItem]
+    ready: bool                      # nothing missing (pending items are not yet due)
+
+
 class ComplianceResult(_Strict):
     itr_form: str
     itr_form_reasons: list[str]      # NOT_PRESUMPTIVE, or the ITR-4 bars that apply
@@ -269,6 +342,8 @@ class ComplianceResult(_Strict):
     return_due_date: str
     return_due_basis: str            # non_audit | audit_case
     regime_filing: Optional[str] = None
+    ftc_readiness: Optional[FtcReadiness] = None
+    deadlines: list[Deadline] = Field(default_factory=list)
 
 
 class EngineResult(_Strict):

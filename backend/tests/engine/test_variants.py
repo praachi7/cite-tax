@@ -41,20 +41,20 @@ def test_p1_default_is_itr3_and_says_it_rests_on_a16():
 def test_p7_with_a12_transit_wallet_reading_drops_the_a12_bar_only():
     r = run(persona("P7"), EngineConfig.defaults(platform_wallet_is_foreign_asset=False))
     assert r.compliance.itr_form == "ITR-3" and r.compliance.depends_on_contested == ["A-16"]
-    assert "SCHEDULE_FA_REQUIRED" not in codes(r)
+    assert "FOREIGN_ACCOUNT_HELD" not in codes(r)
 
 
 def test_p7_with_both_contested_points_resolved_the_other_way_gives_itr4():
     cfg = EngineConfig.defaults(platform_wallet_is_foreign_asset=False, itr4_foreign_client_income_is_indian_source=True)
     r = run(persona("P7"), cfg)
-    assert r.compliance.itr_form == "ITR-4" and "SCHEDULE_FA_REQUIRED" not in codes(r)
+    assert r.compliance.itr_form == "ITR-4" and "FOREIGN_ACCOUNT_HELD" not in codes(r)
 
 
 def test_p7_stated_foreign_assets_are_a_firm_bar_whatever_the_flags():
     cfg = EngineConfig.defaults(platform_wallet_is_foreign_asset=False, itr4_foreign_client_income_is_indian_source=True)
     r = run(persona("P7", foreign_assets_held=True), cfg)
     assert r.compliance.itr_form == "ITR-3" and not r.compliance.itr4_possible_under_other_reading
-    assert "SCHEDULE_FA_REQUIRED" in codes(r)
+    assert "FOREIGN_ACCOUNT_HELD" in codes(r)
 
 
 def test_p5_with_a5_gross_receipts_reading_raises_the_credit():

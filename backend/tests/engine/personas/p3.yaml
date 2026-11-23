@@ -9,10 +9,15 @@ title: Rs 70 lakh receipts with 2% cash, Tax Year 2026-27; tests the Rs 75 lakh 
 #   no rebate (income above 12L, relief cap 23L is above tax), no surcharge (below 50L)
 #   cess 4% x 6,30,000 = 25,200; payable 6,55,200
 #   Old regime: 12,500 + 1,00,000 + 7,50,000 = 8,62,500; cess 34,500; 8,97,000
+# Phase F: viewed on 1 March 2027 with no advance tax paid. All 6,55,200 is due by 15 March 2027
+#   [s.408(2)], 14 days later, inside the 30-day window -> ADVANCE_TAX_DUE (medium), shortfall 6,55,200,
+#   interest at 1% [s.425(3)]. The return (31 August 2027) is 183 days away, so RETURN_DUE does not fire.
 input:
   persona_id: P3
   tax_year: 2026
   receipts: {electronic: 6860000, cash: 140000}
+  as_of: 2027-03-01
+  advance_tax_paid_inr: 0
 expected:
   receipts_test.cash_share_percent: {value: 2, cite: ["IT2025:s58(2)/T3"], work: "1,40,000 / 70,00,000."}
   receipts_test.low_cash: {value: true, cite: ["IT2025:s58(2)/T3"], work: "2% is 5% or less."}
@@ -34,4 +39,4 @@ expected:
   compliance.advance_tax.schedule: {value: single_instalment, cite: ["IT2025:s408(2)"], work: "A s.58(2) Sl.3 declarant pays everything by 15 March."}
   compliance.advance_tax.instalments.0.due: {value: "2027-03-15", cite: ["IT2025:s408(2)"], work: "15 March at the end of the financial year."}
   compliance.return_due_date: {value: "2027-08-31", cite: ["IT2025:s263(1)/T3"], work: "No audit under s.63(2)."}
-  flag_codes: {value: [RECEIPTS_NEAR_LIMIT], cite: ["IT2025:s58(2)/T3"], work: "93.3% of the limit is above 90%."}
+  flag_codes: {value: [RECEIPTS_NEAR_LIMIT, ADVANCE_TAX_DUE], cite: ["IT2025:s58(2)/T3", "IT2025:s408(2)"], work: "93.3% of the limit is above 90%; 6,55,200 unpaid 14 days before 15 March."}
