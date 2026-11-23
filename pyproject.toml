@@ -2,3 +2,31 @@
 pythonpath = ["backend"]
 testpaths = ["backend/tests"]
 markers = ["db: needs the Postgres retrieval index (docker compose up -d db); skipped when it is not running"]
+
+# Lint (CI): ruff's default correctness rules over the whole backend. Pinned here so a user-level ruff
+# config cannot change what CI checks.
+[tool.ruff]
+line-length = 130
+src = ["backend"]
+extend-exclude = ["frontend", "build", "sources"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+
+[tool.ruff.lint.per-file-ignores]
+# Pre-existing engine tests, left unchanged in Phase G.
+"backend/tests/engine/test_india_position.py" = ["E731"]
+"backend/tests/engine/test_purity.py" = ["F401"]
+
+# Type check (CI): the API layer. Imported packages are followed for types but their own errors are not
+# reported here (they are outside Phase G and are changed only through their public functions).
+[tool.mypy]
+python_version = "3.12"
+mypy_path = "backend"
+explicit_package_bases = true
+ignore_missing_imports = true
+check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = ["engine.*", "ingest.*", "answer.*", "lawdata.*", "retrieval.*"]
+follow_imports = "silent"

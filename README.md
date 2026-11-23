@@ -2,7 +2,7 @@
 
 An AI-assisted decision-support prototype for **India-resident freelancers in specified professions (such as information technology) who work for clients in the United States**. It works out what tax is owed in India, whether the US can tax any of the income, and which filings and documents are needed. Every figure, classification and flag comes with a **verified citation** to the governing law, and the system says so openly when the law is unclear.
 
-> **Status: Phase A (law as data) and Phase B (the deterministic tax engine) are built. Phase C (corpus and retrieval) is built and awaiting hand review of the corpus. The later phases have not started.**
+> **Status: Phases A to G are built: law as data, the deterministic tax engine, corpus and retrieval (awaiting hand review of the corpus), cited answers, ingestion and classification, compliance and audit-risk flags, and the API, dashboard and deployment. Phase H (evaluation) has not started, so error rates are not yet measured.**
 > This is an educational student project. It does not give legal or tax advice, and it uses synthetic data only.
 
 ## The idea in one paragraph
@@ -32,9 +32,9 @@ Fees for work done physically in India are foreign-source income under US law, s
 - **Tax years:** FY 2025-26 (1961 Act) and Tax Year 2026-27 (2025 Act).
 - **Country:** United States only, with a design that can extend to others.
 
-## Planned stack
+## Stack
 
-Next.js, FastAPI, PostgreSQL with pgvector, BGE-M3 embeddings run locally, one hosted LLM API, and Docker Compose. The LLM provider will be chosen when Phase D begins.
+Next.js, FastAPI, PostgreSQL with pgvector, BGE-M3 embeddings run locally, Groq as the hosted LLM API (Phase D), and Docker Compose.
 
 ## Documentation
 
@@ -59,7 +59,7 @@ The law the system relies on comes from official publications: the Income-tax Ac
 
 ## Running the project
 
-There is no app yet. What exists is the law data (`params/`, `corpus/`), the loader and validator (`backend/lawdata/`), the tax engine (`backend/engine/`) and retrieval (`backend/retrieval/`).
+The parts are the law data (`params/`, `corpus/`), the loader and validator (`backend/lawdata/`), the tax engine (`backend/engine/`), retrieval (`backend/retrieval/`), cited answers (`backend/answer/`), ingestion (`backend/ingest/`), the API (`backend/api/`) and the dashboard (`frontend/`). The web app is described under "Web app (Phase G)" below.
 
 ```
 python -m venv .venv && .venv/Scripts/pip install -r requirements.txt    # Python 3.12
@@ -104,6 +104,38 @@ res.hits[0].ranks     # which ranked lists found it, and at what rank
 ```
 
 Tests marked `db` need the index loaded and are skipped otherwise.
+
+### Web app (Phase G)
+
+Screens, in the order of SRS/SDS section 3.5: **Persona & upload** (a P1–P10 persona or your own profile, plus a transactions CSV; each persona has a synthetic sample CSV) → **Classification review** (low-confidence and uncertain expenses first; relabel and re-run) → **Tax summary** → **Compliance checklist** → **Audit-risk report**, with a **Sources and notices** panel on the last three, and an **Ask a question** screen on `POST /ask`. The prototype disclaimer is on every page.
+
+API endpoints (`backend/api/`):
+
+| Endpoint | What it does |
+|---|---|
+| `POST /tax/estimate/upload` | Profile + transactions CSV (+ optional relabels) → parse → classify → `to_engine` → engine. Returns the estimate, transactions, classifications, the correction log, profit comparison and notices. Receipts come only from the CSV; relabels never change presumptive income. |
+| `POST /tax/estimate` | The engine on figures typed in directly. |
+| `GET /personas`, `GET /personas/{id}/transactions.csv` | Test personas P1–P10 and their synthetic transactions. |
+| `GET /sources?ids=…` | The corpus passage behind each citation ID. |
+| `POST /ask` | A cited answer, verified sentence by sentence (needs the index and `GROQ_API_KEY`). |
+
+Run it locally (two terminals):
+
+```
+.venv/Scripts/pip install -r requirements-api.txt
+.venv/Scripts/python -m uvicorn api.app:app --app-dir backend --port 8000
+cd frontend && npm install && npm run dev                                 # http://localhost:3000
+```
+
+Or the whole stack in Docker (the first build downloads CPU PyTorch, about 1.5 GB; the first `/ask` downloads BGE-M3):
+
+```
+docker compose up -d --build        # db :5433, api :8000, frontend :3000
+```
+
+CI (`.github/workflows/ci.yml`) runs ruff, mypy on `backend/api`, the law-data validator and `pytest -m "not db"` on the backend, and eslint, `tsc` and `next build` on the frontend. It uses no secrets and never calls the Groq API.
+
+Known gaps: invoice PDF upload is not built (no PDF ingestion yet); classification corrections are logged in the response and the browser session only, because there is no audit table yet.
 
 ## Disclaimer
 

@@ -1,0 +1,91 @@
+# CiteTax CI: lint, type-check and test the backend and the frontend.
+# No secrets are used. Tests marked `db` (they need the Postgres retrieval index) are excluded, and the
+# /ask tests use a fake answerer, so the Groq API is never called. GROQ_API_KEY is set empty on purpose.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backend:
+    name: Backend (ruff, mypy, pytest)
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: backend
+      GROQ_API_KEY: ""
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-api.txt
+
+      # The non-db tests never load the embedding model (sentence-transformers is imported lazily),
+      # so CI skips the PyTorch stack and installs everything else at the pinned versions.
+      - name: Install dependencies (without torch)
+        run: |
+          grep -vE '^(torch|sentence-transformers|transformers)==' requirements.txt > requirements-ci.txt
+          sed 's/^-r requirements.txt$/-r requirements-ci.txt/' requirements-api.txt > requirements-api-ci.txt
+          python -m pip install --upgrade pip
+          pip install -r requirements-api-ci.txt ruff==0.17.6 mypy==2.4.1 types-PyYAML==6.0.12.20261122
+
+      - name: Lint (ruff)
+        run: ruff check backend
+
+      - name: Type-check (mypy)
+        run: mypy backend/api
+
+      - name: Validate law data
+        run: python -m lawdata.validate
+
+      - name: Tests (excluding db)
+        run: pytest -q -m "not db"
+
+  frontend:
+    name: Frontend (eslint, tsc, build)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - run: npm ci --no-audit --no-fund
+
+      - name: Lint (eslint)
+        run: npm run lint
+
+      - name: Type-check (tsc)
+        run: npx tsc --noEmit
+
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: "1"
+
+  compose:
+    name: Docker Compose config
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate docker-compose.yml
+        run: docker compose config --quiet

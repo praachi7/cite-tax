@@ -1,6 +1,15 @@
-# CiteTax local services. Phase C: PostgreSQL 17 with pgvector for the retrieval index.
-# Start: docker compose up -d db    Stop: docker compose down
-# The index is rebuilt from corpus/chunks/*.yaml, so the volume holds nothing that cannot be regenerated.
+# CiteTax local services.
+#   Database only (development, as before):  docker compose up -d db
+#   Whole stack (Phase G):                    docker compose up -d --build
+#   Stop:                                     docker compose down
+# The index is rebuilt from corpus/chunks/*.yaml, so the db volume holds nothing that cannot be regenerated
+# (load it from the host with scripts/load_index.py; the api container reads the same database).
+# Secrets: the api service reads GROQ_API_KEY from .env (git-ignored). Without it, /ask answers 503 and
+# everything else works.
+
+# Fixed project name, so every checkout (including git worktrees) uses the same treatyshield_* volumes.
+name: treatyshield
+
 services:
   db:
     image: pgvector/pgvector:pg17
@@ -19,5 +28,37 @@ services:
       timeout: 3s
       retries: 20
 
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: citetax-api
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      # Inside the compose network the database is db:5432, whatever .env says for the host.
+      CITETAX_DB_URL: postgresql://citetax:citetax@db:5432/citetax
+    ports:
+      - "8000:8000"
+    volumes:
+      - citetax-hf-cache:/cache/huggingface   # BGE-M3 weights, downloaded once on the first /ask
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        CITETAX_API_URL: http://api:8000
+    container_name: citetax-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      api:
+        condition: service_healthy
+
 volumes:
   citetax-pgdata:
+  citetax-hf-cache:
