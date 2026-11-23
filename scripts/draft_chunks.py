@@ -335,15 +335,15 @@ MODES = {"pages": draft_pages,"statute": draft_statute, "article": draft_article
 # ---------------------------------------------------------------- output
 
 def year_label(src: SourceEntry) -> str | None:
-    f, l = src.tax_year_first, src.tax_year_last
+    first, last = src.tax_year_first, src.tax_year_last
     fy = lambda y: f"{y}-{(y + 1) % 100:02d}"  # noqa: E731
-    if f is None and l is None:
+    if first is None and last is None:
         return None
-    if f is None:
-        return f"FY {fy(l)} and earlier"
-    if l is None:
-        return f"Tax Year {fy(f)} onward"
-    return f"FY {fy(f)}" if f == l else f"FY {fy(f)} to {fy(l)}"
+    if first is None:
+        return f"FY {fy(last)} and earlier"
+    if last is None:
+        return f"Tax Year {fy(first)} onward"
+    return f"FY {fy(first)}" if first == last else f"FY {fy(first)} to {fy(last)}"
 
 
 def make(src: SourceEntry, cfg: dict, cid: str, pretty: str, heading: str | None, text: str, pages: list[int]) -> dict:
