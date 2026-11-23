@@ -33,7 +33,7 @@ export interface TraceStep {
 
 export interface Flag {
   code: string;
-  severity: "info" | "warning" | "blocker" | string;
+  severity: "info" | "low" | "medium" | "high" | "blocker" | string;
   message: string;
   rule_id: string;
   citations: string[];

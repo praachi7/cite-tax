@@ -103,7 +103,9 @@ code, .cite {
 .cites { display: flex; flex-wrap: wrap; gap: 4px; }
 
 .flag { border-left: 4px solid var(--border); padding: 8px 12px; margin-bottom: 8px; background: var(--info-bg); border-radius: 4px; }
-.flag.warning { border-left-color: var(--warn-border); background: var(--warn-bg); }
+/* Phase F severities: info | low | medium | high | blocker. "warning" is kept for the contested-assumption notice. */
+.flag.warning, .flag.medium, .flag.high { border-left-color: var(--warn-border); background: var(--warn-bg); }
+.flag.high { border-left-width: 6px; }
 .flag.blocker { border-left-color: var(--block-border); background: var(--block-bg); }
 
 .badge { display: inline-block; padding: 0 6px; border-radius: 4px; font-size: 0.8rem; border: 1px solid var(--border); }
