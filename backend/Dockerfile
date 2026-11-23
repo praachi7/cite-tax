@@ -19,6 +19,8 @@ RUN pip install --index-url https://download.pytorch.org/whl/cpu torch==2.9.1 \
 COPY params ./params
 COPY corpus ./corpus
 COPY backend ./backend
+# Phase H measured results, served by GET /evaluation.
+COPY eval/results ./eval/results
 
 # BGE-M3 is downloaded on the first /ask into HF_HOME (a named volume in docker-compose.yml).
 RUN useradd --create-home --uid 10001 citetax \

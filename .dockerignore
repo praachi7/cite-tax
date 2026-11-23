@@ -13,7 +13,8 @@ venv
 docs
 sources
 build
-eval
+eval/*
+!eval/results
 scripts
 frontend
 .claude

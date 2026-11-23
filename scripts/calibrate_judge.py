@@ -4,10 +4,11 @@ Runs every pair through each candidate model (in parallel: Groq's free limits ar
 reports accuracy, macro-F1 and the false-support rate (a wrong sentence judged supported), which is
 the error that matters most. Responses are cached, so re-runs cost no quota.
 
-Run from the repo root:  .venv/Scripts/python scripts/calibrate_judge.py [model ...]
+Run from the repo root:  .venv/Scripts/python scripts/calibrate_judge.py [model ...] [--pairs FILE] [--out FILE]
 """
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 import time
@@ -56,10 +57,19 @@ def run_model(model: str, pairs: list[dict], resolver: Resolver) -> dict:
             "errors": [r for r in rows if not r["correct"]]}
 
 
+def load_pairs(path: Path = PAIRS) -> list[dict]:
+    return yaml.safe_load(path.read_text(encoding="utf8"))["pairs"]
+
+
 def main(argv: list[str]) -> int:
     sys.stdout.reconfigure(encoding="utf-8")  # model explanations contain characters the Windows console lacks
-    models = argv or MODELS
-    pairs = yaml.safe_load(PAIRS.read_text(encoding="utf8"))["pairs"]
+    ap = argparse.ArgumentParser()
+    ap.add_argument("models", nargs="*", default=MODELS)
+    ap.add_argument("--pairs", type=Path, default=PAIRS, help="e.g. the Phase H held-out pairs")
+    ap.add_argument("--out", type=Path, default=OUT)
+    args = ap.parse_args(argv)
+    models = args.models or MODELS
+    pairs = load_pairs(args.pairs)
     resolver = Resolver(load_all_chunks())
     missing = [p["chunk"] for p in pairs if resolver.resolve(p["chunk"]) is None]
     if missing:
@@ -73,10 +83,10 @@ def main(argv: list[str]) -> int:
               f"({r['seconds']} s, {r['requests_sent']} requests, {r['cache_hits']} cached)")
         for e in r["errors"]:
             print(f"    {e['id']} [{e['kind']}] label={e['label']} verdict={e['verdict']}: {e['reason'][:110]}")
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps({"date": date.today().isoformat(), "pairs": len(pairs), "results": results},
-                              indent=2, ensure_ascii=False), encoding="utf8")
-    print(f"written {OUT.relative_to(ROOT)}")
+    args.out.parent.mkdir(parents=True, exist_ok=True)
+    args.out.write_text(json.dumps({"date": date.today().isoformat(), "pairs_file": args.pairs.name, "pairs": len(pairs),
+                                    "results": results}, indent=2, ensure_ascii=False), encoding="utf8")
+    print(f"written {args.out}")
     return 0
 
 

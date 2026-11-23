@@ -6,11 +6,14 @@ GET  /personas              P1-P10 engine inputs
 GET  /personas/{id}/transactions.csv   the persona's synthetic transactions (ingest.synthetic)
 GET  /sources?ids=...       corpus passages behind citation IDs
 POST /ask                   Phase D cited answers
+GET  /evaluation            Phase H measured results (eval/results/phase_h_summary.json)
 
 Run: uvicorn api.app:app --app-dir backend --port 8000
 """
 from __future__ import annotations
 
+import json
+from pathlib import Path
 from typing import Any, Callable, Optional
 
 from fastapi import FastAPI, HTTPException, Query
@@ -28,6 +31,7 @@ from .personas import load_personas
 from .upload import UploadError, UploadRequest, run_upload
 
 MAX_SOURCE_IDS = 60
+EVALUATION_SUMMARY = Path(__file__).resolve().parents[2] / "eval" / "results" / "phase_h_summary.json"
 
 DISCLAIMER = ("CiteTax is an educational prototype. Its output is not legal or tax advice, has not been "
               "reviewed by a chartered accountant or other professional, and should not be relied on for filing a return.")
@@ -96,10 +100,17 @@ def _engine_config(cfg: ConfigOverrides) -> EngineConfig:
         raise HTTPException(status_code=422, detail=e.errors(include_url=False, include_context=False))
 
 
-def create_app(answerer: Optional[Callable] = None) -> FastAPI:
+def create_app(answerer: Optional[Callable] = None, evaluation_summary: Path = EVALUATION_SUMMARY) -> FastAPI:
     """answerer(question, tax_year) -> answer.pipeline.Answer; tests pass a fake."""
     app = FastAPI(title="CiteTax API", version="0.1.0", description=DISCLAIMER)
     ask_fn = answerer or _default_answerer()
+
+    @app.get("/evaluation")
+    def evaluation() -> dict:
+        """The stored Phase H results; written by scripts/run_evaluation.py, never computed on request."""
+        if not evaluation_summary.exists():
+            raise HTTPException(status_code=404, detail="no evaluation results yet: run scripts/run_evaluation.py")
+        return {**json.loads(evaluation_summary.read_text(encoding="utf8")), "disclaimer": DISCLAIMER}
 
     @app.post("/ask")
     def ask(req: AskRequest) -> dict:

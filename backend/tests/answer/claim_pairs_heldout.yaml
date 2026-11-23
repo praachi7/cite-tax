@@ -1,0 +1,27 @@
+# Held-out claim-passage pairs for the stage 2 judge (Phase H). Written on 23 Nov 2026 BEFORE any Phase H
+# run; not used to change prompts or the model. Same format and labelling rules as claim_pairs.yaml.
+# Labelled by the developer against the chunk text; a second person should re-check them.
+# Caveat: the developer wrote them after seeing the corpus and the Phase D pairs (unseen, not blind).
+pairs:
+  - {id: H01, chunk: "IT2025:s6(2)", label: supported, kind: paraphrase, claim: "An individual who is in India for 182 days or more in a tax year is resident in India."}
+  - {id: H02, chunk: "IT2025:s6(2)", label: not_supported, kind: wrong_number, claim: "An individual becomes resident in India after spending 120 days there in a tax year."}
+  - {id: H03, chunk: "IT2025:s404", label: supported, kind: paraphrase, claim: "Advance tax is payable only when the tax for the year is ₹10,000 or more."}
+  - {id: H04, chunk: "IT2025:s404", label: not_supported, kind: wrong_number, claim: "Advance tax is payable when the tax for the year is ₹5,000 or more."}
+  - {id: H05, chunk: "IT2025:s58(4)", label: supported, kind: paraphrase, claim: "No loss, allowance or deduction is allowed against income computed under the presumptive scheme of section 58(2)."}
+  - {id: H06, chunk: "IT2025:s58(4)", label: not_supported, kind: wrong_condition, claim: "Depreciation can be deducted from presumptive income computed under section 58(2)."}
+  - {id: H07, chunk: "IT2025:s63(2)", label: supported, kind: paraphrase, claim: "The tax audit requirement of section 63 does not apply where the profits declared are as per section 58(2)."}
+  - {id: H08, chunk: "IT2025:s425(1)", label: supported, kind: paraphrase, claim: "Interest on a shortfall in advance tax due by 15 March is charged at 1%."}
+  - {id: H09, chunk: "IT2025:s425(1)", label: not_supported, kind: wrong_number, claim: "Interest on a shortfall in advance tax is charged at 2% per month."}
+  - {id: H10, chunk: "RULES2026:r76(10)", label: supported, kind: paraphrase, claim: "To claim foreign tax credit, the assessee must furnish a statement of foreign income and foreign tax in Form No. 44."}
+  - {id: H11, chunk: "RULES2026:r76(10)", label: not_supported, kind: wrong_act, claim: "Foreign tax credit is claimed by furnishing a statement in Form No. 67."}
+  - {id: H12, chunk: "IT1961:s288A", label: supported, kind: paraphrase, claim: "Total income is rounded off to the nearest multiple of ten rupees."}
+  - {id: H13, chunk: "IT1961:s288A", label: not_supported, kind: wrong_number, claim: "Total income is rounded off to the nearest multiple of one hundred rupees."}
+  - {id: H14, chunk: "DTAA_US:art5(2)", label: supported, kind: paraphrase, claim: "Furnishing services in the other country through employees for more than 90 days in a twelve-month period can create a permanent establishment."}
+  - {id: H15, chunk: "DTAA_US:art12(2)", label: not_supported, kind: wrong_number, claim: "The treaty caps the source-country tax on fees for included services at 25 percent of the gross amount."}
+  - {id: H16, chunk: "DTAA_US:art25(2)", label: supported, kind: paraphrase, claim: "India allows a deduction for income tax paid in the United States, limited to the Indian tax attributable to the income that the US may tax."}
+  - {id: H17, chunk: "IRS_PUB519:spt", label: supported, kind: paraphrase, claim: "The substantial presence test needs at least 31 days in the current year and 183 days over three years, counting a third of the prior year's days and a sixth of the year before."}
+  - {id: H18, chunk: "IRS_W8BEN:withholding", label: not_supported, kind: not_in_passage, claim: "A Form W-8BEN stays valid until the last day of the third calendar year after it is signed."}
+  - {id: H19, chunk: "RBI_PC:receipts-08", label: supported, kind: paraphrase, claim: "Purpose code P0802 covers software consultancy and implementation."}
+  - {id: H20, chunk: "CGST:s22(1)", label: not_supported, kind: wrong_number, claim: "A supplier in an ordinary State must register for GST once aggregate turnover exceeds ten lakh rupees."}
+  - {id: H21, chunk: "CGST_RULES:r96A", label: supported, kind: paraphrase, claim: "A registered person exporting services without paying integrated tax must furnish a bond or Letter of Undertaking in FORM GST RFD-11 before export."}
+  - {id: H22, chunk: "IT1961:s91(1)", label: not_supported, kind: wrong_condition, claim: "Section 91 relief applies to tax paid in a country with which India has a tax treaty."}

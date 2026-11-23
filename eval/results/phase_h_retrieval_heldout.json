@@ -1,0 +1,666 @@
+{
+  "date": "2026-11-23",
+  "embedding_model": "BAAI/bge-m3",
+  "queries_file": "queries_heldout.yaml",
+  "n_queries": 32,
+  "configs": {
+    "default (exact+dense)": {
+      "overall": {
+        "n": 32,
+        "hit@1": 0.75,
+        "hit@3": 0.906,
+        "hit@5": 0.906,
+        "hit@10": 0.938,
+        "recall@5": 0.875,
+        "mrr": 0.822
+      },
+      "by_category": {
+        "plain": {
+          "n": 12,
+          "hit@1": 0.583,
+          "hit@3": 0.833,
+          "hit@5": 0.833,
+          "hit@10": 0.833,
+          "recall@5": 0.792,
+          "mrr": 0.681
+        },
+        "temporal": {
+          "n": 12,
+          "hit@1": 0.833,
+          "hit@3": 0.917,
+          "hit@5": 0.917,
+          "hit@10": 1.0,
+          "recall@5": 0.917,
+          "mrr": 0.887
+        },
+        "us": {
+          "n": 8,
+          "hit@1": 0.875,
+          "hit@3": 1.0,
+          "hit@5": 1.0,
+          "hit@10": 1.0,
+          "recall@5": 0.938,
+          "mrr": 0.938
+        }
+      },
+      "wrong_act_returned": [],
+      "queries": [
+        {
+          "id": "H-T01",
+          "category": "temporal",
+          "year": 2026,
+          "q": "section 44AB audit for a professional with gross receipts above 50 lakh",
+          "expect": [
+            "IT2025:s63(1)/T1",
+            "IT2025:s63(1)"
+          ],
+          "top5": [
+            "IT2025:s63(1)",
+            "IT2025:s63(1)/T1",
+            "IT2025:s63(4)",
+            "IT2025:s63(2)",
+            "IT2025:s58(2)/T3"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.03278688524590164
+        },
+        {
+          "id": "H-T02",
+          "category": "temporal",
+          "year": 2026,
+          "q": "section 234B interest for not paying advance tax",
+          "expect": [
+            "IT2025:s425(1)"
+          ],
+          "top5": [
+            "IT2025:s425(1)",
+            "IT2025:s425(3)",
+            "IT2025:s425(2)",
+            "IT2025:s425(4)",
+            "IT2025:s425(6)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.03252247488101534
+        },
+        {
+          "id": "H-T03",
+          "category": "temporal",
+          "year": 2026,
+          "q": "section 91 relief for tax paid in a country with no treaty",
+          "expect": [
+            "IT2025:s160(1)"
+          ],
+          "top5": [
+            "IT2025:s160(1)",
+            "IT2025:s160(2)",
+            "IT2025:s160(3)",
+            "IT2025:s159(8)",
+            "DTAA_US:art25(3)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.032266458495966696
+        },
+        {
+          "id": "H-T04",
+          "category": "temporal",
+          "year": 2026,
+          "q": "section 90(2) treaty provisions apply where more beneficial",
+          "expect": [
+            "IT2025:s159(4)"
+          ],
+          "top5": [
+            "IT2025:s159(4)",
+            "IT2025:s159(6)",
+            "IT2025:s159(1)",
+            "IT2025:s159(5)",
+            "IT2025:s159(3)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.030117753623188408
+        },
+        {
+          "id": "H-T05",
+          "category": "temporal",
+          "year": 2026,
+          "q": "section 208 when advance tax is payable",
+          "expect": [
+            "IT2025:s404"
+          ],
+          "top5": [
+            "IT2025:s404",
+            "IT2025:s406(1)",
+            "IT2025:s408(3)",
+            "IT2025:s408(2)",
+            "IT2025:s408(1)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.03278688524590164
+        },
+        {
+          "id": "H-T06",
+          "category": "temporal",
+          "year": 2025,
+          "q": "section 404 advance tax threshold",
+          "expect": [
+            "IT1961:s208"
+          ],
+          "top5": [
+            "IT1961:s208",
+            "CBDT_FAQ_ITR4:Q10",
+            "CBDT_FAQ_ITR4:Q15",
+            "IT1961:s209(4)",
+            "CBDT_FAQ_ITR4:Q17"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.03131881575727918
+        },
+        {
+          "id": "H-T07",
+          "category": "temporal",
+          "year": 2025,
+          "q": "section 425 interest on shortfall in advance tax",
+          "expect": [
+            "IT1961:s234B(1)",
+            "IT1961:s234C(1)"
+          ],
+          "top5": [
+            "IT1961:s234B(1)",
+            "IT1961:s234B(2)",
+            "IT1961:s234B(4)",
+            "IT1961:s234C(1)",
+            "IT1961:s234B(5)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.032018442622950824
+        },
+        {
+          "id": "H-T08",
+          "category": "temporal",
+          "year": 2025,
+          "q": "section 202 new regime tax rates",
+          "expect": [
+            "IT1961:s115BAC(1A)"
+          ],
+          "top5": [
+            "IT1961:s115BAC(1)",
+            "IT1961:s115BAC(1A)",
+            "IT1961:s115BAC(4)",
+            "IT1961:s115BAC(2)",
+            "FA2026:sch1-partIA-paraA(I)"
+          ],
+          "first_relevant_rank": 2,
+          "recall@5": 1.0,
+          "top_score": 0.032018442622950824
+        },
+        {
+          "id": "H-T09",
+          "category": "temporal",
+          "year": 2026,
+          "q": "section 288A rounding off total income",
+          "expect": [
+            "IT2025:s516"
+          ],
+          "top5": [
+            "IT2025:s516",
+            "IT2025:s202(2)",
+            "IT2025:s58(2)/T1",
+            "IT2025:s58(3)",
+            "IT2025:s58(8)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-T10",
+          "category": "temporal",
+          "year": 2025,
+          "q": "Form 44 statement of foreign income and tax",
+          "expect": [
+            "FORM67:p1",
+            "RULES1962:r128(8)"
+          ],
+          "top5": [
+            "FORM67:p1",
+            "FORM67:p2",
+            "IRS_W8BEN:withholding",
+            "RULES1962:r128(8)",
+            "RULES1962:r128(2)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.03278688524590164
+        },
+        {
+          "id": "H-T11",
+          "category": "temporal",
+          "year": 2026,
+          "q": "section 6(1)(a) resident if in India 182 days",
+          "expect": [
+            "IT2025:s6(2)"
+          ],
+          "top5": [
+            "IT2025:s6(2)",
+            "IT2025:s6(1)",
+            "IT2025:s6(6)",
+            "IT2025:s6(5)",
+            "IT2025:s6(3)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.03252247488101534
+        },
+        {
+          "id": "H-T12",
+          "category": "temporal",
+          "year": 2025,
+          "q": "Rule 76 documents needed for foreign tax credit",
+          "expect": [
+            "RULES1962:r128(8)"
+          ],
+          "top5": [
+            "RULES1962:r128(1)",
+            "RULES1962:r128(5)",
+            "RULES1962:r128(2)",
+            "RULES1962:r128(4)",
+            "RULES1962:r128(6)"
+          ],
+          "first_relevant_rank": 7,
+          "recall@5": 0.0,
+          "top_score": 0.032018442622950824
+        },
+        {
+          "id": "H-P01",
+          "category": "plain",
+          "year": 2026,
+          "q": "How many days must I be in India in a year to count as a resident?",
+          "expect": [
+            "IT2025:s6(2)"
+          ],
+          "top5": [
+            "IT2025:s6(2)",
+            "IT2025:s6(13)",
+            "IT2025:s6(6)",
+            "IT2025:s6(7)",
+            "IT2025:s6(12)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-P02",
+          "category": "plain",
+          "year": 2025,
+          "q": "How many days must I be in India in a year to count as a resident?",
+          "expect": [
+            "IT1961:s6"
+          ],
+          "top5": [
+            "IT1961:s6",
+            "IRS_PUB519:spt",
+            "IRS_PUB901:india",
+            "IRS_PUB519:spt_days",
+            "DTAA_US:art4(2)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-P03",
+          "category": "plain",
+          "year": 2026,
+          "q": "Can I claim depreciation or other deductions on top of the 50% presumptive income?",
+          "expect": [
+            "IT2025:s58(4)"
+          ],
+          "top5": [
+            "CBDT_FAQ_PRES:Q15",
+            "CBDT_FAQ_PRES:Q22",
+            "CBDT_FAQ_PRES:Q9",
+            "CBDT_FAQ_PRES:Q14",
+            "CBDT_FAQ_PRES:Q18"
+          ],
+          "first_relevant_rank": null,
+          "recall@5": 0.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-P04",
+          "category": "plain",
+          "year": 2025,
+          "q": "Are business expenses deducted separately when a professional uses the presumptive scheme?",
+          "expect": [
+            "IT1961:s44ADA(2)"
+          ],
+          "top5": [
+            "CBDT_FAQ_ITR4:Q14",
+            "CBDT_FAQ_ITR4:Q13",
+            "CBDT_FAQ_ITR4:Q9",
+            "IT1961:s44ADA(3)",
+            "DTAA_US:art7(3)"
+          ],
+          "first_relevant_rank": null,
+          "recall@5": 0.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-P05",
+          "category": "plain",
+          "year": 2026,
+          "q": "What is the due date for my return if my accounts do not need an audit?",
+          "expect": [
+            "IT2025:s263(1)/T3"
+          ],
+          "top5": [
+            "IT2025:s263(1)/T3",
+            "IGST:s16(3)",
+            "IT2025:s263(1)",
+            "IT2025:s63(5)",
+            "IT2025:s63(1)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-P06",
+          "category": "plain",
+          "year": 2026,
+          "q": "Is interest charged if I pay my advance tax late?",
+          "expect": [
+            "IT2025:s425(1)"
+          ],
+          "top5": [
+            "IT2025:s425(2)",
+            "IT2025:s425(3)",
+            "IT2025:s425(1)",
+            "IT2025:s425(4)",
+            "IT2025:s408(3)"
+          ],
+          "first_relevant_rank": 3,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-P07",
+          "category": "plain",
+          "year": 2026,
+          "q": "Below what amount of tax do I not need to pay advance tax at all?",
+          "expect": [
+            "IT2025:s404"
+          ],
+          "top5": [
+            "IT2025:s425(2)",
+            "IT2025:s425(4)",
+            "IT2025:s404",
+            "IT2025:s425(1)",
+            "CBDT_FAQ_PRES:Q11"
+          ],
+          "first_relevant_rank": 3,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-P08",
+          "category": "plain",
+          "year": 2026,
+          "q": "What documents do I need to claim credit for tax deducted abroad?",
+          "expect": [
+            "RULES2026:r76(10)",
+            "FORM44:p1"
+          ],
+          "top5": [
+            "RULES2026:r76(10)",
+            "RULES2026:r76(11)",
+            "RULES2026:r76(16)",
+            "RULES2026:r76(7)",
+            "RULES2026:r76(1)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 0.5,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-P09",
+          "category": "plain",
+          "year": 2026,
+          "q": "Which purpose code applies to software consultancy money received from abroad?",
+          "expect": [
+            "RBI_PC:receipts-08"
+          ],
+          "top5": [
+            "RBI_PC:receipts-08",
+            "IRC:s862(a)(3)",
+            "RULES2026:r76(16)",
+            "DTAA_US:art15(1)",
+            "IRC:s861(a)(3)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-P10",
+          "category": "plain",
+          "year": 2026,
+          "q": "Do I need a letter of undertaking to export services without paying IGST?",
+          "expect": [
+            "CGST_RULES:r96A",
+            "IGST:s16(3)"
+          ],
+          "top5": [
+            "CGST_RULES:r96A",
+            "IGST:s16(3)",
+            "IGST:s2(6)",
+            "IRS_PUB515:personal_services",
+            "IRS_F8233:p1"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-P11",
+          "category": "plain",
+          "year": 2025,
+          "q": "When does a professional have to get the accounts audited?",
+          "expect": [
+            "IT1961:s44AB"
+          ],
+          "top5": [
+            "IT1961:s44AA(1)",
+            "IT1961:s44AB",
+            "RULES1962:r6F(1)",
+            "IT1961:s44ADA(4)",
+            "RULES1962:r6F(6)"
+          ],
+          "first_relevant_rank": 2,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-P12",
+          "category": "plain",
+          "year": 2026,
+          "q": "Is export of services a zero-rated supply under GST?",
+          "expect": [
+            "IGST:s16(1)"
+          ],
+          "top5": [
+            "IGST:s16(1)",
+            "IGST:s2(6)",
+            "IGST:s16(3)",
+            "CGST_RULES:r96A",
+            "CGST:s2(6)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-U01",
+          "category": "us",
+          "year": 2026,
+          "q": "What withholding rate applies to US payments to foreign persons for services?",
+          "expect": [
+            "IRS_W8BEN:withholding",
+            "IRS_PUB515:personal_services"
+          ],
+          "top5": [
+            "IRS_PUB515:personal_services",
+            "IRS_W8BEN:withholding",
+            "IRS_F8233:p1",
+            "IRC:s861(a)(3)",
+            "DTAA_US:art14(2)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-U02",
+          "category": "us",
+          "year": 2026,
+          "q": "Who is a resident of a country for the India-US treaty?",
+          "expect": [
+            "DTAA_US:art4(1)"
+          ],
+          "top5": [
+            "DTAA_US:art4(1)",
+            "DTAA_US:art4(2)",
+            "DTAA_US:art4(3)",
+            "DTAA_US:art4(4)",
+            "IT2025:s6(13)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-U03",
+          "category": "us",
+          "year": 2026,
+          "q": "Does furnishing services in the US for more than 90 days create a permanent establishment?",
+          "expect": [
+            "DTAA_US:art5(2)"
+          ],
+          "top5": [
+            "DTAA_US:art5(2)",
+            "DTAA_US:art5(3)",
+            "DTAA_US:art5(1)",
+            "DTAA_US:art5(4)",
+            "DTAA_US:art5(6)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-U04",
+          "category": "us",
+          "year": 2026,
+          "q": "What rate does the treaty allow on fees for included services?",
+          "expect": [
+            "DTAA_US:art12(2)"
+          ],
+          "top5": [
+            "DTAA_US:art12(2)",
+            "DTAA_US:art12(1)",
+            "IRS_PUB515:personal_services",
+            "DTAA_US:art7(7)",
+            "DTAA_US:art14(1)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-U05",
+          "category": "us",
+          "year": 2026,
+          "q": "What is the penalty for not disclosing a treaty position with Form 1040-NR?",
+          "expect": [
+            "IRS_1040NR:treaty_disclosure",
+            "IRS_PUB901:form8833"
+          ],
+          "top5": [
+            "IRS_PUB901:form8833",
+            "IRS_W8BEN:withholding",
+            "IRS_PUB515:personal_services",
+            "NOTIF64_2026:p3-4",
+            "NOTIF64_2026:p1-2"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 0.5,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-U06",
+          "category": "us",
+          "year": 2026,
+          "q": "Are business profits taxable in the US without a permanent establishment there?",
+          "expect": [
+            "DTAA_US:art7(1)"
+          ],
+          "top5": [
+            "DTAA_US:art14(1)",
+            "DTAA_US:art7(1)",
+            "DTAA_US:art7(3)",
+            "DTAA_US:art7(4)",
+            "DTAA_US:art7(2)"
+          ],
+          "first_relevant_rank": 2,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-U07",
+          "category": "us",
+          "year": 2026,
+          "q": "How is income not covered by other articles of the India-US treaty taxed?",
+          "expect": [
+            "DTAA_US:art23(1)"
+          ],
+          "top5": [
+            "DTAA_US:art23(1)",
+            "DTAA_US:art23(3)",
+            "IRS_PUB901:india",
+            "IT2025:s160(3)",
+            "DTAA_US:art25(1)"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        },
+        {
+          "id": "H-U08",
+          "category": "us",
+          "year": 2025,
+          "q": "How many days in the US make me a US tax resident?",
+          "expect": [
+            "IRS_PUB519:spt"
+          ],
+          "top5": [
+            "IRS_PUB519:spt",
+            "IRS_PUB519:spt_days",
+            "IRS_PUB901:india",
+            "IRC:s861(a)(3)",
+            "IT1961:s6"
+          ],
+          "first_relevant_rank": 1,
+          "recall@5": 1.0,
+          "top_score": 0.01639344262295082
+        }
+      ]
+    }
+  }
+}

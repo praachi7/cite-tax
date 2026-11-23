@@ -1,0 +1,30 @@
+{
+  "model": "openai/gpt-oss-120b",
+  "n": 42,
+  "accuracy": 0.976,
+  "macro_f1": 0.976,
+  "false_support_rate": 0.0,
+  "missed_support_rate": 0.045,
+  "confusion": {
+    "tp": 21,
+    "tn": 20,
+    "fp": 0,
+    "fn": 1
+  },
+  "seconds": 0,
+  "requests_sent": 0,
+  "cache_hits": 42,
+  "errors": [
+    {
+      "id": "C13",
+      "chunk": "IT2025:s156(2)",
+      "label": "supported",
+      "kind": "paraphrase",
+      "claim": "Just above twelve lakh rupees, the tax cannot exceed the amount by which income exceeds twelve lakh rupees.",
+      "verdict": "not_supported",
+      "predicted": "not_supported",
+      "correct": false,
+      "reason": "The passage describes a deduction when tax exceeds the income excess, not that tax is limited to that amount"
+    }
+  ]
+}

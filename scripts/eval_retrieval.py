@@ -4,9 +4,11 @@ Runs the full hybrid and each ranked list alone (ablation), then writes
 eval/results/phase_c_retrieval.json. Phase H shows these numbers in the interface.
 
 Run from the repo root (index loaded, database up):  .venv/Scripts/python scripts/eval_retrieval.py
+Phase H options: --queries FILE (e.g. the held-out set), --out FILE, --default-only (skip the ablation).
 """
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 import time
@@ -29,8 +31,11 @@ CONFIGS = {"default (exact+dense)": ("exact", "dense"), "all three lists": ("exa
            "dense+keyword": ("dense", "keyword")}
 
 
-def load_queries() -> list[dict]:
-    return yaml.safe_load(QUERIES.read_text(encoding="utf8"))["queries"]
+DEFAULT_CONFIG = "default (exact+dense)"
+
+
+def load_queries(path: Path = QUERIES) -> list[dict]:
+    return yaml.safe_load(path.read_text(encoding="utf8"))["queries"]
 
 
 def wrong_act(conn, ids: list[str], year: int) -> list[str]:
@@ -70,21 +75,33 @@ def evaluate(conn, queries: list[dict], use: tuple[str, ...]) -> dict:
             "wrong_act_returned": sorted(set(wrong)), "queries": per_query}
 
 
-def main() -> int:
-    queries = load_queries()
-    results = {"date": date.today().isoformat(), "embedding_model": MODEL_NAME, "n_queries": len(queries), "configs": {}}
+def run(queries_path: Path = QUERIES, configs: dict[str, tuple[str, ...]] | None = None) -> dict:
+    queries = load_queries(queries_path)
+    results = {"date": date.today().isoformat(), "embedding_model": MODEL_NAME, "queries_file": queries_path.name,
+               "n_queries": len(queries), "configs": {}}
     with connect() as conn:
-        for name, use in CONFIGS.items():
+        for name, use in (configs or CONFIGS).items():
             t0 = time.time()
             results["configs"][name] = evaluate(conn, queries, use)
             o = results["configs"][name]
-            print(f"{name:22} {o['overall']}  temporal hit@3={o['by_category']['temporal']['hit@3']}"
+            print(f"{name:22} {o['overall']}  temporal hit@3={o['by_category'].get('temporal', {}).get('hit@3')}"
                   f"  wrong-Act={len(o['wrong_act_returned'])}  ({time.time() - t0:.0f} s)")
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding="utf8")
-    print(f"written {OUT.relative_to(ROOT)}")
+    return results
+
+
+def main(argv: list[str]) -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--queries", type=Path, default=QUERIES)
+    ap.add_argument("--out", type=Path, default=OUT)
+    ap.add_argument("--default-only", action="store_true")
+    args = ap.parse_args(argv)
+    configs = {DEFAULT_CONFIG: CONFIGS[DEFAULT_CONFIG]} if args.default_only else CONFIGS
+    results = run(args.queries, configs)
+    args.out.parent.mkdir(parents=True, exist_ok=True)
+    args.out.write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding="utf8")
+    print(f"written {args.out}")
     return 0
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    raise SystemExit(main(sys.argv[1:]))
